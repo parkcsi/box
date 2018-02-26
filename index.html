@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		
+		// 브라우저 창 넓이에 따라 한줄에 들어올 리스트 갯수 변수 선언
+		var win_width = 0;
+
+		// 브라우저 창 넓이에 따라 리스트 갯수 변경
+		if($(window).width() >= 960){
+			win_width = 4;
+		} else if($(window).width() < 960 && $(window).width() >= 760){
+			win_width = 3;
+		} else if($(window).width() < 760){
+			win_width = 2;
+		}
+
+		// 브라우저 창 사이즈 변경 시 함수 실행
+		$(window).resize(function(){
+
+			if($(window).width() >= 960){
+				win_width = 4;
+			} else if($(window).width() < 960 && $(window).width() >= 760){
+				win_width = 3;
+			} else if($(window).width() < 760){
+				win_width = 2;
+			}
+
+			changsonry(win_width);
+
+		})
+
+		changsonry(win_width);
+		
+		function changsonry(num){
+			
+			// 리스트 부모의 높이값을 정하기 위해 리스트의 위치를 담을 배열 선언
+			var wrap_height = new Array;
+			
+			// 리스트 갯수만큼 반복하여 기능을 넣어줌
+			$(".wrap ul li").each(function(){
+
+				// 현재 리스트 번호를 담은 변수 선언
+				var idx = $(this).index();
+				// 각 리스트의 포지션 top 값을 담을 변수 선언
+				var top_sum = 0;
+
+				// 리스트의 두번째 줄 부터 현재 번호의 리스트 까지 반복문을 실행
+				for(var i = num; i <= idx; i++){
+
+					// 현재 리스트와 세로로 같은 줄에 있는 리스트에만 적용
+					if(idx % num == i % num){
+
+						// 현재 리스트의 세로로 위에있는 리스트들의 높이값과 여백값을 전부 더함
+						top_sum = top_sum + $(".wrap ul li:eq(" + ( i - num ) + ")").height() + 20;
+						
+					}
+
+				}
+
+				// 각 리스트 별로 top값과 left값 부여(left값은 각 리스트넓이에 여백을 더한 후 왼쪽기준으로 위치한 칸의 번호를 곱한다.)
+				$(this).css({ "top" : top_sum , "left" : (idx % num) * ($(this).width() + 20) });
+
+				// 각 리스트의 top값에 높이값을 더한 값을 배열에 넣는다.
+				wrap_height.push(top_sum + $(this).height());
+
+				// 리스트 부모의 높이를 리스트에서 가장 밑에 있는 리스트 기준으로 부여한다.
+				$(".wrap ul").height(Math.max.apply(null, wrap_height))
+
+			})
+
+		}
+		
+	})
+
+
+	</script>
+	<style>
+	*{padding:0; margin:0;}
+	li{list-style:none;}
+	.wrap{padding:50px; max-width:860px; min-width:500px; margin:0 auto; background:#ccc;}
+	.wrap ul{position:relative;}
+	.wrap ul li{position:absolute; width:200px; background:#fff; -webkit-transition: all 0.5s ease-in-out 0.05s; -moz-transition: all 0.5s ease-in-out 0.05s; -ms-transition: all 0.5s ease-in-out 0.05s; -o-transition: all 0.5s ease-in-out 0.05s; transition: all 0.5s ease-in-out 0.05s;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<!-- <li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li>
+			<li style="height:200px"></li> -->
+
+			<li style="height:250px"></li>
+			<li style="height:280px"></li>
+			<li style="height:210px"></li>
+			<li style="height:290px"></li>
+			<li style="height:550px"></li>
+			<li style="height:150px"></li>
+			<li style="height:280px"></li>
+			<li style="height:310px"></li>
+			<li style="height:280px"></li>
+			<li style="height:410px"></li>
+			<li style="height:290px"></li>
+			<li style="height:350px"></li>
+			<li style="height:150px"></li>
+			<li style="height:380px"></li>
+			<li style="height:210px"></li>
+			<li style="height:290px"></li>
+			<li style="height:350px"></li>
+			<li style="height:150px"></li>
+			<li style="height:280px"></li>
+		</ul>
+	</div>
+</body>
+</html>
