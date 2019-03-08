@@ -1,0 +1,62 @@
+<!-- 2019-03-08 -->
+<script type="text/javascript">
+function lfn_hdSetCookie( name, value, expiredays ) {
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+// 2017-03-31 김수현 수정 - 백그라운드 넓게쓰기
+function lfn_hdClose() {
+
+   if ($('#checkbox_1').is(":checked") ){
+      lfn_hdSetCookie( "sfMaindiv", "done" , 1 );
+   }
+   $('#top').slideUp(200);
+   $('#header').css('background-position','50% 0'); //추가 2017-0327
+}
+      cookiedata = document.cookie;
+      if ( cookiedata.indexOf("sfMaindiv=done") < 0 ){
+          $('#top').show(); // 이부분을 주석처리 하면 공지사항 팝업이 숨기처리 됩니다.
+          $('#header').css('background-position','50% 120px'); //추가 2017-0327
+      }else{
+         $('#top').hide();
+         $('#header').css('background-position','50% 0'); //추가 2017-0327
+      }
+
+$(function(){
+   var $topFrame = $('#header').children().is('#top');
+   
+   if($topFrame){
+      $('#header').css('background-position','50% 120px');
+   }else{
+      $('#header').css('background-position','50% 0');
+   }
+});
+</script>
+
+	<div class="top_nav">
+
+		<!-- #top_baner -->
+		<div class="top_baner" id="topBanner">
+			<!-- <span class="top_line1">
+				<a href="#" data-tap="navigate('SFEC0082R',{BBRD_SQNO:'4548'});"><img src="/content/nhsangho/images/cn/common/top_baner01.png" alt="콕콕신용대출 대출기간부터 상환방법까지 고객맞춤형 신용대출!" /></a>
+			</span>
+			<span class="top_line2">
+				<a href="javascript:common_navigateToContent('/nhsangho/ec/sfec0002c.thtml')" ><img src="/content/nhsangho/images/cn/common/top_baner02.png" alt="금융상품마켓서비스를 편리하게 이용하실 수 있도록 이용방법을 안내해드립니다." /></a>
+			</span> -->
+			<span class="top_line3">
+				<a href="javascript:common_navigateToContent('/nhsangho/ec/sfec0002c.thtml')" ><img src="/content/nhsangho/images/cn/common/top_baner03.png" alt="금융상품마켓서비스를 편리하게 이용하실 수 있도록 이용방법을 안내해드립니다." /></a>
+			</span>
+		</div>
+
+		<!-- //#top_baner -->
+
+		<!-- 2018-12-13  for="checkbox_1" 추가 -->
+		<div class="top_close">
+			<label for="checkbox_1">
+				<input type="checkbox" class="one_checkbox" id="checkbox_1" title="1일간 열지 않음">
+				1일간 열지 않음
+			</label>
+			<a href="#header" onclick="lfn_hdClose();return false;" class="baner_close"></a>
+		</div>
+	</div>
