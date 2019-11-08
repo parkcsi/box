@@ -18,7 +18,7 @@ blockquote, q {quotes:none;}
 blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
 table {border-collapse:collapse; border-spacing:0;}
 caption {width:0; height:0; visibility:hidden; line-height:0; font-size:0; overflow:hidden;}
-a,a:visited,a:hover,a:active{text-decoration:none;}
+a,a:visited,a:hover,a:active{text-decoration:none; color:#333;}
 input, select, textarea, button {margin:0; padding:0; letter-spacing:-1px; font-family:'NanumGothic','나눔고딕', '돋움', dotum, Helvetica, sans-serif;}
 button {margin:0; padding:0; background:none; border:none; cursor:pointer;}
 
