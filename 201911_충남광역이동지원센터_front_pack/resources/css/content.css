@@ -55,8 +55,43 @@
 .main_visual_list li.main_bg02 a{background:url(../images/content/main_banner01.jpg) no-repeat; background-size:cover;}
 .main_visual_list li.main_bg03 a{background:url(../images/content/main_banner01.jpg) no-repeat; background-size:cover;}
 
+.main_info_list{overflow:hidden;}
+.main_info_list > li{position:relative; float:left; width:50%;}
+.main_info_list > li:after{content:""; display:block; position:absolute; top:24px; right:15px; width:17px; height:17px; background:url(../images/content/info_more_btn.png) no-repeat;}
+.main_info_list > li.info_bg01{background:url(../images/content/main_info_bg01.jpg) no-repeat; background-size:cover;}
+.main_info_list > li.info_bg02{background:url(../images/content/main_info_bg02.jpg) no-repeat; background-size:cover;}
+.main_info_list > li.info_bg03{background:url(../images/content/main_info_bg03.jpg) no-repeat; background-size:cover;}
+.main_info_list > li.info_bg04{background:url(../images/content/main_info_bg04.jpg) no-repeat; background-size:cover;}
+.main_info_list > li a{display:block; height:150px; padding:20px 15px 0; box-sizing:border-box;}
+.main_info_list > li a dl{color:#fff;}
+.main_info_list > li a dl dt{position:relative; padding-bottom:2px; margin-bottom:15px; font-size:17px;}
+.main_info_list > li a dl dt h3{letter-spacing:-2px;}
+.main_info_list > li a dl dt:before{content:""; display:block; position:absolute; left:0; bottom:0; width:18px; height:2px; background:#fff;}
+.main_info_list > li a dl dd{font-size:14px;}
+.main_info_list > li a dl dd .oper_txt{font-size:12px;}
+.main_info_list > li a dl dd .oper_txt li:first-child{margin-bottom:6px; font-size:14px;}
+.main_info_list > li a dl dd .call_txt{display:block; padding-top:15px;}
+.main_info_list > li a dl dd .call_txt strong{font-size:24px;}
 
-/*footer*/
+.info_bnr_wrap{height:150px; border:1px solid #1197d5; box-sizing:border-box;}
+.info_bnr_wrap .info_bnr_zone{height:148px;}
+.info_bnr_wrap .info_bnr_zone .info_bnr_tit{height:43px; line-height:43px; padding-left:20px; color:#fff; font-size:18px; background:#1197d5;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li{font-size:0; height:105px;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li a{display:block; height:100%;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li.bzone_bg01{background:url(../images/content/bzone_bg01.jpg) no-repeat; background-size:cover;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li.bzone_bg02{background:url(../images/content/bzone_bg01.jpg) no-repeat; background-size:cover;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li.bzone_bg03{background:url(../images/content/bzone_bg01.jpg) no-repeat; background-size:cover;}
+.info_bnr_wrap .info_bnr_zone .info_visual_list li.bzone_bg04{background:url(../images/content/bzone_bg01.jpg) no-repeat; background-size:cover;}
+.info_bnr_wrap .info_bnr_zone .swiper-pagination-fraction{bottom:auto; top:12px; padding-right:15px; text-align:right; z-index:1; font-size:14px; color:#fff; box-sizing:border-box;}
+.info_bnr_wrap .info_bnr_zone .swiper-pagination-fraction .swiper-pagination-current{color:#00608c;}
+.info_bnr_wrap .info_bnr_zone .swiper-button-next{width:7px; height:13px; margin-top:0; top:14px; right:75px; background:url(../images/content/bzone_arrow_r.png) no-repeat;}
+.info_bnr_wrap .info_bnr_zone .swiper-button-prev{width:7px; height:13px; margin-top:0; top:14px; left:auto; right:135px; background:url(../images/content/bzone_arrow_l.png) no-repeat;}
+.info_bnr_wrap .info_bnr_zone .auto_btn{position:absolute; top:15px; right:102px; z-index:10;}
+.info_bnr_wrap .info_bnr_zone .auto_btn .stop{display:block; width:9px; height:11px; font-size:0; background:url(../images/content/bzone_btn_stop.png) no-repeat; }
+.info_bnr_wrap .info_bnr_zone .auto_btn .start{display:block; width:9px; height:11px; font-size:0; background:url(../images/content/bzone_btn_stop.png) no-repeat; }
+
+
+	/*footer*/
 .footer_inner{position:relative; width:1000px; margin:0 auto; min-height:100px;}
 .footer_inner .copright{padding-top:25px; line-height:1.4; font-size:12px; color:#878787;}
 .footer_inner .footer_logo{position:absolute; right:0; top:15px;}
