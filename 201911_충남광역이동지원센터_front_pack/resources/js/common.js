@@ -1,6 +1,7 @@
 $(function(){
 
 	$(window).resize(function(){
+		//gnb 호버
 		if($(window).width() >= 768){
 			$(".gnb_wrap .gnb_list > li").hover(function(){
 				$(this).addClass("on");
@@ -17,16 +18,18 @@ $(function(){
 				$(".gnb_depth2_wrap").removeClass("on");
 			});
 		};
+
 		if($(window).width() <= 767){
 			$(".gnb_depth2_wrap.on").removeClass("on");
 			$(".gnb_wrap").find(".on").removeClass("on");
+			$(".depth2_tit").parent().find(">ul").hide();
 		};
 		if($(window).width() >= 768){
 			$(".header_inner.m_type").removeClass("m_type");
+			$(".depth2_tit").parent().find(">ul").show();
 		};
 	});
 	$(window).resize();
-	//gnb 호버
 
 	// 모바일 gnb 토글
 	$(".m_gnb_toggle a").click(function(){
@@ -67,7 +70,7 @@ $(function(){
 		});
 	};
 
-	// 배너존 슬라이더
+	// 메인 배너존 슬라이더
 	if($(".info_bnr_zone").length){
 		var bzone_visual = new Swiper ('.info_bnr_zone.swiper-container', {
 			direction: 'horizontal',
@@ -96,6 +99,13 @@ $(function(){
 			}
 		});
 	};
+
+	// top 버튼
+	$(document).on("click", ".floating_btn .top_btn",function(){
+		$('html, body').animate({
+            scrollTop : 0
+        }, 400);
+	})
 
 });
 //Layer Content

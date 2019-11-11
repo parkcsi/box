@@ -125,6 +125,11 @@
 .main_cont_wrap .community_cont .com_gal_cont .com_gal_list li a{display:block;}
 .main_cont_wrap .community_cont .com_gal_cont .com_gal_list li a img{width:100%;}
 
+.floating_btn{display:none; position:fixed; bottom:8px; right:8px; z-index:1;}
+.floating_btn ul li{margin-top:5px;}
+.floating_btn ul li a{display:block;}
+.floating_btn ul li a img{width:35px;}
+
 
 /*footer*/
 .footer_inner{position:relative; width:1000px; margin:0 auto; min-height:100px;}
@@ -250,6 +255,8 @@
 	.main_cont_wrap .community_cont .com_gal_cont .com_gal_list li{width:calc(50% - 4px); height:auto; box-sizing:border-box; margin-right:2px;}
 	.main_cont_wrap .community_cont .com_gal_cont .com_gal_list li:nth-child(even){margin-right:0; margin-left:2px;}
 	.main_cont_wrap .community_cont .com_gal_cont .com_gal_list li:nth-child(n + 3){margin-top:4px;}
+
+	.floating_btn{display:block;}
 
 	.footer_inner{min-height:130px;}
 	.footer_inner .copright{font-size:1.2rem; padding-top:20px; text-align:center;}
