@@ -31,6 +31,37 @@ $(function(){
 	});
 	$(window).resize();
 
+	/* 191114 : 추가 */
+	// top버튼
+	$(window).scroll(function(){
+		if($(".m_gnb_toggle").is(':visible')){
+			if($(window).scrollTop() > 80){
+				$(".floating_btn").fadeIn(200);
+			}else{
+				$(".floating_btn").fadeOut(200);
+			}
+		}else{
+			if($(window).scrollTop() > 0){
+				$(".floating_btn").fadeIn(200);
+			}else{
+				$(".floating_btn").fadeOut(200);
+			}
+		}
+	});
+	$(window).scroll();
+
+	if($(window).width() <= 1023){
+		$(".path_inner").find(".depth3 a").click(function(){
+			if($(this).parent().hasClass("on")){
+				$(this).parent().removeClass("on");
+			}else{
+				$(this).parent().addClass("on");
+			}
+		})
+
+	}
+	/* //191114 : 추가 */
+
 	// 모바일 gnb 토글
 	$(".m_gnb_toggle a").click(function(){
 		if($(this).parents(".header_inner").hasClass("m_type")){
