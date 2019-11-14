@@ -1,20 +1,37 @@
 $(function(){
+	// 검색 필터 열기
+	$(document).on("click", ".search_select .select_txt", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on");
+		}else{
+			$(this).parent().addClass("on");
+		};
+	});
+
+	// 검색 필터 선택
+	$(document).on("click", ".select_list li a", function(){
+		$(".select_txt").text($(this).text());
+		$(this).parent().addClass("sel").siblings().removeClass("sel");
+		$(".search_select").removeClass("on");
+	});
+
+	// 검색 필터 선택
+	$(document).on("click", ".link_sel > a", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on");
+		}else{
+			$(this).parent().addClass("on");
+		};
+	});
 
 	$(window).resize(function(){
 		//gnb 호버
 		if($(window).width() >= 768){
-			$(".gnb_wrap .gnb_list > li").hover(function(){
+			$(".gnb_wrap .gnb_list > li, .gnb_depth2_wrap").hover(function(){
 				$(this).addClass("on");
-				$(".gnb_depth2_wrap").addClass("on").find(".depth2_inner h2 .tit0"+$(this).index()).addClass("on").siblings().removeClass("on");
+				$(".gnb_depth2_wrap").addClass("on");
 			}, function(){
 				$(this).removeClass("on");
-				$(".gnb_depth2_wrap").removeClass("on");
-			});
-			$(".gnb_depth2_wrap .depth2_inner > ul > li").hover(function(){
-				$(".gnb_wrap .gnb_list > li").eq($(this).index()).addClass("on");
-				$(".gnb_depth2_wrap").addClass("on").find(".depth2_inner h2 .tit0"+$(this).index()).addClass("on").siblings().removeClass("on");
-			}, function(){
-				$(".gnb_wrap .gnb_list > li").eq($(this).index()).removeClass("on");
 				$(".gnb_depth2_wrap").removeClass("on");
 			});
 		};
@@ -30,6 +47,7 @@ $(function(){
 		};
 	});
 	$(window).resize();
+
 
 	// 모바일 gnb 토글
 	$(".m_gnb_toggle a").click(function(){
@@ -51,14 +69,10 @@ $(function(){
 	});
 
 	// 메인 슬라이더
-	if($(".main_top_cont").length){
-		var main_visual = new Swiper ('.main_top_cont.swiper-container', {
+	if($(".main_top_bnr").length){
+		var main_visual = new Swiper ('.main_top_bnr.swiper-container', {
 			direction: 'horizontal',
 			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -67,6 +81,15 @@ $(function(){
 				delay: 5000,
 				disableOnInteraction: false,
 			},
+		});
+		$(document).on("click", ".main_top_bnr .auto_btn .auto_btn_bg a", function(){
+			if($(this).hasClass("stop")){
+				main_visual.autoplay.stop();
+				$(this).removeClass("stop").addClass("start").text("시작");
+			}else{
+				main_visual.autoplay.start();
+				$(this).removeClass("start").addClass("stop").text("정지");
+			}
 		});
 	};
 
@@ -89,15 +112,6 @@ $(function(){
 			},
 		});
 
-		$(document).on("click", ".info_bnr_zone .auto_btn a", function(){
-			if($(this).hasClass("stop")){
-				bzone_visual.autoplay.stop();
-				$(this).removeClass("stop").addClass("start").text("시작");
-			}else{
-				bzone_visual.autoplay.start();
-				$(this).removeClass("start").addClass("stop").text("정지");
-			}
-		});
 	};
 
 	// top 버튼
