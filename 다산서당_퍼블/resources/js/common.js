@@ -75,7 +75,7 @@ $(function(){
 
 	// 메인 슬라이더
 	if($(".top_list_cont").length){
-		var main_visual = new Swiper ('.top_list_cont.swiper-container', {
+		var top_list = new Swiper ('.top_list_cont.swiper-container', {
 			direction: 'vertical',
 			loop: false,
 			slidesPerView: 4,
