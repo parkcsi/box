@@ -48,26 +48,6 @@ $(function(){
 	});
 	$(window).resize();
 
-
-	// 모바일 gnb 토글
-	$(".m_gnb_toggle a").click(function(){
-		if($(this).parents(".header_inner").hasClass("m_type")){
-			$(this).parents(".header_inner").removeClass("m_type");
-		}else{
-			$(this).parent().addClass("m_type");
-			$(this).parents(".header_inner").addClass("m_type");
-		};
-	})
-
-	// 모바일 gnb 하위메뉴 토글
-	$(".depth2_tit > a").click(function(){
-		if($(this).parents("li").hasClass("on")){
-			$(this).parents("li").removeClass("on").find(">ul").stop().slideUp();
-		}else{
-			$(this).parents("li").addClass("on").find(">ul").stop().slideDown().parents("li").siblings().removeClass("on").find(">ul").stop().slideUp();
-		};
-	});
-
 	// 메인 슬라이더
 	if($(".main_top_bnr").length){
 		var main_visual = new Swiper ('.main_top_bnr.swiper-container', {
@@ -93,26 +73,43 @@ $(function(){
 		});
 	};
 
-	// 메인 배너존 슬라이더
-	if($(".info_bnr_zone").length){
-		var bzone_visual = new Swiper ('.info_bnr_zone.swiper-container', {
-			direction: 'horizontal',
-			loop: true,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'fraction',
-			},
+	// 메인 슬라이더
+	if($(".top_list_cont").length){
+		var main_visual = new Swiper ('.top_list_cont.swiper-container', {
+			direction: 'vertical',
+			loop: false,
+			slidesPerView: 4,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
+				prevEl: '.top_list_up',
+				nextEl: '.top_list_down',
 			},
 		});
-
 	};
+
+	$(".local_list li a").click(function(){
+		$(".map_btn_wrap > img").attr("src", "../resources/images/content/" + $(this).attr("title") + ".png");
+		$(".map_btn_wrap > img").attr("alt", $(this).text());
+	});
+
+	// // 모바일 gnb 토글
+	// $(".m_gnb_toggle a").click(function(){
+	// 	if($(this).parents(".header_inner").hasClass("m_type")){
+	// 		$(this).parents(".header_inner").removeClass("m_type");
+	// 	}else{
+	// 		$(this).parent().addClass("m_type");
+	// 		$(this).parents(".header_inner").addClass("m_type");
+	// 	};
+	// })
+
+	// // 모바일 gnb 하위메뉴 토글
+	// $(".depth2_tit > a").click(function(){
+	// 	if($(this).parents("li").hasClass("on")){
+	// 		$(this).parents("li").removeClass("on").find(">ul").stop().slideUp();
+	// 	}else{
+	// 		$(this).parents("li").addClass("on").find(">ul").stop().slideDown().parents("li").siblings().removeClass("on").find(">ul").stop().slideUp();
+	// 	};
+	// });
+
 
 	// top 버튼
 	$(document).on("click", ".floating_btn .top_btn",function(){
