@@ -73,7 +73,7 @@ $(function(){
 		});
 	};
 
-	// 메인 슬라이더
+	// 기관별강좌 슬라이더
 	if($(".top_list_cont").length){
 		var top_list = new Swiper ('.top_list_cont.swiper-container', {
 			direction: 'vertical',
@@ -82,6 +82,19 @@ $(function(){
 			navigation: {
 				prevEl: '.top_list_up',
 				nextEl: '.top_list_down',
+			},
+		});
+	};
+
+	// 강좌목록 슬라이더
+	if($(".class_list_inner").length){
+		var class_list = new Swiper ('.class_list_inner.swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			slidesPerView: 4,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
 		});
 	};
