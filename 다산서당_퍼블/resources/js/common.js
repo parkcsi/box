@@ -61,13 +61,12 @@ $(function(){
 				nextEl: '.top_list_down',
 			},
 			breakpoints:{
-				640: {
-					slidesPerView: 1,
-				},
 				1299: {
-					direction: 'vertical',
 					slidesPerView: 1,
 					slidesPerColumn: 4,
+				},
+				767: {
+					slidesPerColumn: 2,
 				}
 			}
 		});
@@ -176,7 +175,34 @@ $(function(){
 
 	$(window).resize(function(){
 		//gnb 호버
-		if($(window).width() >= 768){
+		if($(window).width() >= 1300){
+			if($(".top_list_cont").length){
+				var top_list = new Swiper ('.top_list_cont.swiper-container', {
+					direction: 'vertical',
+					loop: false,
+					slidesPerView: 4,
+					slidesPerColumn: 1,
+					navigation: {
+						prevEl: '.top_list_up',
+						nextEl: '.top_list_down',
+					},
+				});
+			};
+		}
+		else if($(window).width() <= 1299 && $(window).width() >= 768){
+			if($(".top_list_cont").length){
+				var top_list = new Swiper ('.top_list_cont.swiper-container', {
+					direction: 'vertical',
+					loop: false,
+					slidesPerView: 1,
+					slidesPerColumn: 4,
+					navigation: {
+						prevEl: '.top_list_up',
+						nextEl: '.top_list_down',
+					},
+				});
+			};
+		}else if($(window).width() >= 768){
 			$(".gnb_wrap .gnb_list > li, .gnb_depth2_wrap").hover(function(){
 				if(!$(this).hasClass("search")){
 					$(this).addClass("on");
@@ -188,17 +214,26 @@ $(function(){
 					$(".gnb_depth2_wrap").removeClass("on");
 				}
 			});
-		};
+			// $(".header_inner.m_type").removeClass("m_type");
+			// $(".depth2_tit").parent().find(">ul").show();
+		}else if($(window).width() <= 767){
+			// $(".gnb_depth2_wrap.on").removeClass("on");
+			// $(".gnb_wrap").find(".on").removeClass("on");
+			// $(".depth2_tit").parent().find(">ul").hide();
 
-		if($(window).width() <= 767){
-			$(".gnb_depth2_wrap.on").removeClass("on");
-			$(".gnb_wrap").find(".on").removeClass("on");
-			$(".depth2_tit").parent().find(">ul").hide();
-		};
-		if($(window).width() >= 768){
-			$(".header_inner.m_type").removeClass("m_type");
-			$(".depth2_tit").parent().find(">ul").show();
-		};
+			if($(".top_list_cont").length){
+				var top_list = new Swiper ('.top_list_cont.swiper-container', {
+					direction: 'vertical',
+					loop: false,
+					slidesPerView: 1,
+					slidesPerColumn: 2,
+					navigation: {
+						prevEl: '.top_list_up',
+						nextEl: '.top_list_down',
+					},
+				});
+			};
+		}
 	});
 	$(window).resize();
 
