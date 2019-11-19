@@ -24,6 +24,17 @@ $(function(){
 		};
 	});
 
+	// 푸터 관련사이트 선택
+	$(document).on("click", ".gnb_list .search > a", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on");
+			$(".search_wrap").removeClass("on");
+		}else{
+			$(this).parent().addClass("on");
+			$(".search_wrap").addClass("on");
+		};
+	});
+
 
 	if($(window).width() >= 768){
 		$(".gnb_wrap .gnb_list > li, .gnb_depth2_wrap").hover(function(){
@@ -60,29 +71,6 @@ $(function(){
 			}else{
 				main_visual.autoplay.start();
 				$(this).removeClass("start").addClass("stop").text("정지");
-			}
-		});
-	};
-
-	// 기관별강좌 슬라이더
-	if($(".top_list_cont").length){
-		var top_list = new Swiper ('.top_list_cont.swiper-container', {
-			direction: 'vertical',
-			loop: false,
-			slidesPerView: 4,
-			slidesPerColumn: 1,
-			navigation: {
-				prevEl: '.top_list_up',
-				nextEl: '.top_list_down',
-			},
-			breakpoints:{
-				1299: {
-					slidesPerView: 1,
-					slidesPerColumn: 4,
-				},
-				767: {
-					slidesPerColumn: 2,
-				}
 			}
 		});
 	};
@@ -194,35 +182,43 @@ $(function(){
 		$(".noti_tab_cont > li").eq($(this).parent().index()).addClass("on").siblings().removeClass("on");
 	});
 
+
 	$(window).resize(function(){
-		if($(window).width() >= 1300){
-			if($(".top_list_cont").length){
-				var top_list = new Swiper ('.top_list_cont.swiper-container', {
-					direction: 'vertical',
-					loop: false,
-					slidesPerView: 4,
-					slidesPerColumn: 1,
-					navigation: {
-						prevEl: '.top_list_up',
-						nextEl: '.top_list_down',
+
+	
+		// 기관별강좌 슬라이더
+		if($(".top_list_cont").length){
+			var top_list = new Swiper ('.top_list_cont.swiper-container', {
+				direction: 'vertical',
+				loop: false,
+				slidesPerView: 4,
+				slidesPerColumn: 1,
+				navigation: {
+					prevEl: '.top_list_up',
+					nextEl: '.top_list_down',
+				},
+				breakpoints:{
+					767: {
+						slidesPerView: 1,
+						slidesPerColumn: 2,
 					},
-				});
-			};
-		}
-		if($(window).width() <= 1299 && $(window).width() >= 768){
-			if($(".top_list_cont").length){
-				var top_list = new Swiper ('.top_list_cont.swiper-container', {
-					direction: 'vertical',
-					loop: false,
-					slidesPerView: 1,
-					slidesPerColumn: 4,
-					navigation: {
-						prevEl: '.top_list_up',
-						nextEl: '.top_list_down',
+					1299: {
+						slidesPerView: 1,
+						slidesPerColumn: 4,
 					},
-				});
-			};
-		}
+					2000: {
+						on: {
+							init: function(){
+								if($(window).width() >= 1300){
+									top_list.destroy(true, true);
+								}
+							}
+						},
+					}
+				},
+			});
+		};
+
 		if($(window).width() >= 768){
 			$(".header_inner.m_type").removeClass("m_type");
 
@@ -240,18 +236,8 @@ $(function(){
 		}
 		if($(window).width() <= 767){
 			$(".gnb_depth2_wrap.on").removeClass("on");
-			if($(".top_list_cont").length){
-				var top_list = new Swiper ('.top_list_cont.swiper-container', {
-					direction: 'vertical',
-					loop: false,
-					slidesPerView: 1,
-					slidesPerColumn: 2,
-					navigation: {
-						prevEl: '.top_list_up',
-						nextEl: '.top_list_down',
-					},
-				});
-			};
+			$(".search_wrap.on").removeClass("on");
+			$(".gnb_list li.search.on").removeClass("on");
 		}
 	});
 	$(window).resize();

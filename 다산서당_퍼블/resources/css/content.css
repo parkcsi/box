@@ -288,6 +288,16 @@ PC : 1.0rem = 10px
 	.header_inner_top .gnb_wrap .gnb_list li.search a img{vertical-align:middle; margin-top:-1px;}
 	.header_inner .header_inner_top .search_wrap{display:none;}
 
+	/* 191119 : 추가 */
+	.header_inner .header_inner_top .search_wrap.on{position:absolute; display:block; width:100%; height:60px; top:152px; padding:10px 25px; background:#99b419; box-sizing:border-box;}
+	.header_inner .header_inner_top .search_wrap.on .search_select{display:none;}
+	.header_inner .header_inner_top .search_wrap.on .search_ipt{padding-left:20px; border:1px solid #e8e9eb; background:#fff;}
+	.header_inner .header_inner_top .search_wrap.on .search_ipt .search_btn{margin-right:20px; float:right;}
+	.header_inner .header_inner_top .search_wrap.on .search_ipt input{width:calc(100% - 60px);}
+	.header_inner_top .gnb_wrap .gnb_list li.search.on{background:#99b419 url(../images/content/search_btn_close.png) no-repeat center center;}
+	.header_inner_top .gnb_wrap .gnb_list li.search.on img{visibility:hidden;}
+	/* //191119 : 추가 */
+
 	.header_inner .header_inner_top .gnb_depth2_wrap{top:152px;}
 	.gnb_depth2_wrap:before{display:none;}
 	.gnb_depth2_wrap .depth2_inner{width:100%;}
