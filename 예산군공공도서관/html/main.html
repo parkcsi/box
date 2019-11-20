@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- No cache -->
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+    <!-- Summary -->
+    <meta property="og:title" content="project">
+    <meta property="og:description" content="project">
+    <title>PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.css">   
+    <link rel="stylesheet" type="text/css" href="../resources/css/content.css"> 
+    <!--[if lt IE 9]>
+        <script src="../resources/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div id="header">
+            <div class="header_inner">
+                <h1 class="main_logo">
+                    <a href="javascript:void(0);">
+                        <img src="../resources/images/common/main_logo.png" alt="예산군공공도서관">
+                    </a>
+                </h1>
+
+                <div class="mo_gnb_btn">
+                    <a href="javascript:void(0);" title="전체메뉴 토글버튼"></a>
+                </div>
+                <div class="mo_search_btn">
+                    <a href="javascript:void(0);" title="검색영역 토글버튼"></a>
+                </div>
+
+                <div class="top_nav">
+                    <ul class="nav_list">
+                        <!-- 로그아웃 시 -->
+                        <li><a href="javascript:void(0);">로그인</a></li>
+                        <li><a href="javascript:void(0);">회원가입</a></li>
+                        <!-- //로그아웃 시 -->
+                        <!-- 로그인 시 -->
+                        <!-- <li><a href="javascript:void(0);">로그인</a></li>
+                        <li><a href="javascript:void(0);">회원가입</a></li> -->
+                        <!-- //로그인 시 -->
+                        <li class="site_map"><a href="javascript:void(0);">사이트맵</a></li>
+                    </ul>
+                    <div class="my_menu">
+                        <a href="javascript:void(0);" class="my_menu_btn">나만의도서관</a>
+                        <div class="my_menu_box">
+                            <ul class="my_menu_list">
+                                <li class="depth_row">
+                                    <a href="javascript:void(0);">내 서재</a>
+                                    <ul class="depth2">
+                                        <li><a href="javascript:void(0);">- 대출조회</a></li>
+                                        <li><a href="javascript:void(0);">- 대출이력</a></li>
+                                        <li><a href="javascript:void(0);">- 희망도서</a></li>
+                                        <li><a href="javascript:void(0);">- 도서예약</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);">행사신청내역</a></li>
+                                <li><a href="javascript:void(0);">회원정보수정</a></li>
+                            </ul>
+                            <a href="javascript:void(0);" class="my_menu_close"><img src="../resources/images/common/ico_my_menu_close.png" alt="닫기"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gnb_wrap">
+                    <ul class="gnb_list">
+                        <li class="on">
+                            <a href="javascript:void(0);">도서관소개</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>도서관소개</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">인사말</a></li>
+                                            <!-- 하위 댑스 존재 시 "depth3"클래스 추가 -->
+                                            <li class="depth3">
+                                                <a href="javascript:void(0);">도서관현황</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0);">예산군립도서관</a></li>
+                                                    <li><a href="javascript:void(0);">삽교공공도서관</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:void(0);">도서관발자취</a></li>
+                                            <!-- 하위 댑스 존재 시 "depth3"클래스 추가 -->
+                                            <li class="depth3">
+                                                <a href="javascript:void(0);">작은도서관안내</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0);">공립작은도서관</a></li>
+                                                    <li><a href="javascript:void(0);">사립작은도서관</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:void(0);">조직도/직원안내</a></li>
+                                            <li><a href="javascript:void(0);">도서관오시는길</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">도서관 이용안내</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>도서관 이용안내</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">이용시간/휴관일</a></li>
+                                            <li><a href="javascript:void(0);">회원가입</a></li>
+                                            <li><a href="javascript:void(0);">자료이용</a></li>
+                                            <li><a href="javascript:void(0);">부대시설</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">디지털도서관</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>디지털도서관</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">전자책</a></li>
+                                            <li><a href="javascript:void(0);">모바일서비스</a></li>
+                                            <li><a href="javascript:void(0);">학습실좌석현황</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">자료검색</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>자료검색</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">통합검색</a></li>
+                                            <li><a href="javascript:void(0);">신착자료</a></li>
+                                            <li><a href="javascript:void(0);">대출베스트</a></li>
+                                            <li><a href="javascript:void(0);">특화도서/비도서</a></li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">도서관행사</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>도서관행사</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">행사일정</a></li>
+                                            <li><a href="javascript:void(0);">행사안내</a></li>
+                                            <li><a href="javascript:void(0);">참가신청</a></li>
+                                            <li><a href="javascript:void(0);">행사앨범</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">이용자마당</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>이용자마당</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li><a href="javascript:void(0);">공지사항</a></li>
+                                            <li><a href="javascript:void(0);">자주하는질문</a></li>
+                                            <li><a href="javascript:void(0);">참여게시판</a></li>
+                                            <li><a href="javascript:void(0);">자원봉사</a></li>
+                                            <li><a href="javascript:void(0);">도서관견학</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gnb_my_menu">
+                            <a href="javascript:void(0);">나만의도서관</a>
+                            <div class="gnb_depth2">
+                                <div class="depth2_inner">
+                                    <div class="gnb_tit_wrap">
+                                        <dl>
+                                            <dt>나만의도서관</dt>
+                                            <dd>손끝에서 열리는 지식의 보고<br/>예산군공공도서관</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="gnb_inner_list">
+                                        <ul>
+                                            <li class="depth3">
+                                                <a href="javascript:void(0);">내서재</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0);">대출조회</a></li>
+                                                    <li><a href="javascript:void(0);">대출이력</a></li>
+                                                    <li><a href="javascript:void(0);">희망도서</a></li>
+                                                    <li><a href="javascript:void(0);">도서예약</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:void(0);">행사신청내역</a></li>
+                                            <li><a href="javascript:void(0);">회원정보수정</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="gnb_close_btn"><a href="javascript:;" title="하위메뉴 닫기"></a></p>
+                </div>
+            </div>
+
+            <div class="search_wrap main_search">
+                <div class="search_inner">
+                    <div class="search_ico_bnr bnr_left swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="javascript:void(0);">
+                                    <img src="../resources/images/contents/ico_search_bnr01.png" alt="사서에게물어보세요">
+                                    <span><strong>사서에게</strong>물어보세요</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:void(0);">
+                                    <img src="../resources/images/contents/ico_search_bnr02.png" alt="책이음서비스">
+                                    <span><strong>책이음</strong>서비스</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:void(0);">
+                                    <img src="../resources/images/contents/ico_search_bnr03.png" alt="책바다서비스">
+                                    <span><strong>책바다</strong>서비스</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="search_bg">
+                        <div class="search_select">
+                            <a href="javascript:void(0);" class="select_txt">전체</a>
+                            <ul class="select_list">
+                                <!-- 선택된 항목 li태그에 "sel"클래스 추가 -->
+                                <li class="sel"><a href="javascript:void(0);">전체</a></li>
+                                <li><a href="javascript:void(0);">표제</a></li>
+                                <li><a href="javascript:void(0);">저자</a></li>
+                                <li><a href="javascript:void(0);">발행자</a></li>
+                                <li><a href="javascript:void(0);">키워드</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_ipt">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <a href="javascript:void(0);" class="search_btn"><img src="../resources/images/common/search_btn.png" alt="검색"></a>
+                        </div>
+                    </div>
+                    <div class="search_ico_bnr bnr_right swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="javascript:void(0);">
+                                    <img src="../resources/images/contents/ico_search_bnr04.png" alt="자주 물어보는 질문">
+                                    <span><strong>자주 물어보는</strong> 질문</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:void(0);">
+                                    <img src="../resources/images/contents/ico_search_bnr05.png" alt="자원봉사">
+                                    <span><strong>자원</strong>봉사</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="search_ico_bnr mo_type swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <img src="../resources/images/contents/ico_search_bnr01.png" alt="사서에게물어보세요">
+                            <span><strong>사서에게</strong>물어보세요</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <img src="../resources/images/contents/ico_search_bnr02.png" alt="책이음서비스">
+                            <span><strong>책이음</strong>서비스</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <img src="../resources/images/contents/ico_search_bnr03.png" alt="책바다서비스">
+                            <span><strong>책바다</strong>서비스</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <img src="../resources/images/contents/ico_search_bnr04.png" alt="자주 물어보는 질문">
+                            <span><strong>자주 물어보는</strong> 질문</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <img src="../resources/images/contents/ico_search_bnr05.png" alt="자원봉사">
+                            <span><strong>자원</strong>봉사</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- contents -->
+        <div id="content">
+            <div class="main_top_wrap">
+                <div class="main_top_bnr swiper-container">
+                    <ul class="main_visual_list swiper-wrapper">
+                        <li class="main_bg01 swiper-slide">
+                            <a href="javascript:void(0);">
+                                <span>
+                                    세상을 읽는 힘, 미래를 이끄는<br/><strong>예산군공공도서관</strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="main_bg02 swiper-slide">
+                            <a href="javascript:void(0);">
+                                <span>
+                                    세상을 읽는 힘, 미래를 이끄는<br/><strong>예산군공공도서관</strong>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="main_bg03 swiper-slide">
+                            <a href="javascript:void(0);">
+                                <span>
+                                    세상을 읽는 힘, 미래를 이끄는<br/><strong>예산군공공도서관</strong>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination">
+                        
+                    </div>
+                </div>
+                <div class="main_visual_cont">
+                    <div class="visual_cont_top">
+                        <div class="visual_inner_box month_box">
+                            <div class="inner_tit">
+                                <a href="javascript:void(0);">
+                                    <dl>
+                                        <dt>이달의 일정</dt>
+                                        <dd>소통하는 예산군공공도서관의<br/>다양한 행사 알리미</dd>
+                                    </dl>
+                                    <span class="tit_img"><img src="../resources/images/contents/img_main_top01.png" alt="이달의 일정"></span>
+                                </a>
+                            </div>
+                            <div class="inner_cont">
+                                <ul class="month_list">
+                                    <li>
+                                        <div class="month_tit">
+                                            <a href="javascript:void(0);" class="prev"><img src="../resources/images/contents/arrow_visual_cont_l.png" alt="이전 달"></a>
+                                            <p>2019.05</p>
+                                            <a href="javascript:void(0);" class="next"><img src="../resources/images/contents/arrow_visual_cont_r.png" alt="다음 달"></a>
+                                        </div>
+                                        <div class="day_list_wrap">
+                                            <ul class="day_list">
+                                                <!-- li태그에 "on"클래스 추가 시 노출 -->
+                                                <li class="on">
+                                                    <a href="javascript:void(0);"><span>10</span> 제55회 도서관주간 및 세계책...</a>
+                                                </li>
+                                                <li class="on">
+                                                    <a href="javascript:void(0);"><span>17</span> 윤봉길 평화축제 도서한마당윤봉길 평화축제 도서한마당윤봉길 평화축제 도서한마당</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><span>20</span> 제55회 도서관주간 및 세계책...</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><span>27</span> 윤봉길 평화축제 도서한마당</a>
+                                                </li>
+                                            </ul>
+                                            <div class="day_btn">
+                                                <a href="javascript:void(0);" class="day_up"><img src="../resources/images/contents/arrow_day_up.png" alt="위로"></a>
+                                                <a href="javascript:void(0);" class="day_down"><img src="../resources/images/contents/arrow_day_down.png" alt="아래로"></a>
+                                            </div>
+                                        </div>
+                                        <div class="rest_box">
+                                            <p class="rest_tit">도서관휴관일</p>
+                                            <ul class="rest_list">
+                                                <li>1</li>
+                                                <li>8</li>
+                                                <li>15</li>
+                                                <li>22</li>
+                                                <li>29</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="visual_inner_box best_box">
+                            <div class="inner_tit">
+                                <a href="javascript:void(0);">
+                                    <dl>
+                                        <dt>대출 베스트</dt>
+                                        <dd>소통하는 예산군공공도서관의<br/>다양한 행사 알리미</dd>
+                                    </dl>
+                                    <span class="tit_img"><img src="../resources/images/contents/img_main_top02.png" alt="대출 베스트"></span>
+                                </a>
+                            </div>
+                            <div class="inner_cont">
+                                <div class="best_inner swiper-container">
+                                    <ul class="best_list swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <a href="javascript:void(0);">
+                                                <span class="img">
+                                                    <span class="badge">New</span>
+                                                    <img src="../resources/images/contents/best_book01.jpg" alt="서서히 스미는">
+                                                </span>
+                                                <span class="name">[일반] 천천히 스미는</span>
+                                                <span class="writer">G.K. 체스터튼 외</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="javascript:void(0);">
+                                                <span class="img">
+                                                    <span class="badge">New</span>
+                                                    <img src="../resources/images/contents/best_book01.jpg" alt="서서히 스미는">
+                                                </span>
+                                                <span class="name">[일반] 천천히 스미는</span>
+                                                <span class="writer">G.K. 체스터튼 외</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="javascript:void(0);">
+                                                <span class="img">
+                                                    <span class="badge">New</span>
+                                                    <img src="../resources/images/contents/best_book01.jpg" alt="서서히 스미는">
+                                                </span>
+                                                <span class="name">[일반] 천천히 스미는</span>
+                                                <span class="writer">G.K. 체스터튼 외</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="javascript:void(0);">
+                                                <span class="img">
+                                                    <span class="badge">New</span>
+                                                    <img src="../resources/images/contents/best_book01.jpg" alt="자원봉사">
+                                                </span>
+                                                <span class="name">[일반] 천천히 스미는</span>
+                                                <span class="writer">G.K. 체스터튼 외</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual_cont_bottom">
+                        <div class="fast_cont">
+                            <div class="fast_tit">
+                                <strong>빠른서비스</strong>
+                                <span>예산군공공도서관 주요메뉴 바로가기</span>
+                            </div>
+                            <div class="fast_list swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="javascript:void(0);">
+                                            <img src="../resources/images/contents/ico_fast01.png" alt="회원가입">
+                                            <span>회원가입</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="javascript:void(0);">
+                                            <img src="../resources/images/contents/ico_fast02.png" alt="대출조회">
+                                            <span>대출조회</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="javascript:void(0);">
+                                            <img src="../resources/images/contents/ico_fast03.png" alt="희망도서">
+                                            <span>희망도서</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="javascript:void(0);">
+                                            <img src="../resources/images/contents/ico_fast04.png" alt="도서관견학신청">
+                                            <span>도서관견학신청</span>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="javascript:void(0);">
+                                            <img src="../resources/images/contents/ico_fast05.png" alt="행사참가신청">
+                                            <span>행사참가신청</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_cont_wrap">
+                <div class="main_cont_inner">
+                    <div class="cont_line_top">
+                        <div class="box4 box_my">
+                            <a href="javascript:void(0);">
+                                <span class="txt">My library</span>
+                                <span class="tit">내 서재</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont01.png" alt="내 서재"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont01.png" alt="내 서재 이동"></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_notice mo_type">
+                            <a href="javascript:void(0);" class="plus">
+                                <span class="tit">공지사항</span>
+                                <span class="txt">예산군공공도서관 공지사항 알리미</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont02.png" alt="공지사항"></span>
+                            </a>
+                        </div>
+                        <div class="box2">
+                            <div class="notice_wrap">
+                                <ul class="notice_list">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color1">예산</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color1">예산</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color1">예산</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color1">예산</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color2">삽교</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <span class="badge color2">삽교</span>
+                                            <span class="txt">예산군공공도서관 제55회 도서관주간 및 세계책의날 기념 행사</span>
+                                            <span class="date">19-01-17</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box4 box_notice">
+                            <a href="javascript:void(0);" class="plus">
+                                <span class="tit">공지사항</span>
+                                <span class="txt">예산군공공도서관 공지사항 알리미</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont02.png" alt="공지사항"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cont_line_middle">
+                        <div class="box4 box_pop">
+                            <a href="javascript:void(0);">
+                                <span class="tit">팝업존</span>
+                                <span class="txt">예산군공공도서관 주요메뉴 바로가기</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont03.png" alt="팝업존"></span>
+                            </a>
+                        </div>
+                        <div class="box2 box_bnr swiper-container">
+                            <ul class="pop_bnr_list swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <img src="../resources/images/contents/main_cont_bnr01.jpg" alt="팝업존 배너1">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <img src="../resources/images/contents/main_cont_bnr02.jpg" alt="팝업존 배너2">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="control_box">
+                                <div class="swiper-pagination"></div>
+                                <div class="auto_btn">
+                                    <a href="javascript:void(0);" class="stop">정지</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box4 box_mo">
+                            <a href="javascript:void(0);">
+                                <span class="txt">Smartphone library</span>
+                                <span class="tit">모바일서비스</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont04.png" alt="모바일서비스"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont02.png" alt="모바일서비스 이동"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cont_line_bottom">
+                        <div class="box4 box_map">
+                            <a href="javascript:void(0);">
+                                <span class="txt">Directions</span>
+                                <span class="tit">오시는 길</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont05.png" alt="오시는 길"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont03.png" alt="오시는 길 이동"></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_guide">
+                            <a href="javascript:void(0);" class="plus">
+                                <span class="tit">이용안내</span>
+                                <span class="txt">간단한 회원가입 후 무료로 이용하세요.</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont06.png" alt=""></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_link">
+                            <div class="guide_wrap">
+                                <ul class="guide_list">
+                                    <li><a href="javascript:void(0);">이용시간</a></li>
+                                    <li><a href="javascript:void(0);">회원가입</a></li>
+                                    <li><a href="javascript:void(0);">자료이용</a></li>
+                                    <li><a href="javascript:void(0);">부대시설</a></li>
+                                </ul>
+                                <dl>
+                                    <dt>정기휴관일 안내</dt>
+                                    <dd>매주 월요일 / 법정 공휴일(일요일제외) </dd>
+                                    <dt>예산군공공도서관 이용문의</dt>
+                                    <dd><strong>041-339-8221~4</strong></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="box4 box_my mo_type">
+                            <a href="javascript:void(0);">
+                                <span class="txt">My library</span>
+                                <span class="tit">내 서재</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont01.png" alt="내 서재"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont01.png" alt="내 서재 이동"></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_mo mo_type">
+                            <a href="javascript:void(0);">
+                                <span class="txt">Smartphone library</span>
+                                <span class="tit">모바일서비스</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont04.png" alt="모바일서비스"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont02.png" alt="모바일서비스 이동"></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_map mo_type">
+                            <a href="javascript:void(0);">
+                                <span class="txt">Directions</span>
+                                <span class="tit">오시는 길</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont05.png" alt="오시는 길"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont03.png" alt="오시는 길 이동"></span>
+                            </a>
+                        </div>
+                        <div class="box4 box_lib mo_type">
+                            <a href="javascript:void(0);">
+                                <span class="tit">전자도서관</span>
+                                <span class="txt">스마트기기로 어디서든 간단하게 도서열람</span>
+                                <span class="ico"><img src="../resources/images/contents/ico_main_cont07.png" alt="전자도서관"></span>
+                                <span class="arrow"><img src="../resources/images/contents/arrow_main_cont04.png" alt="전자도서관 이동"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link_list_wrap">
+                <div class="link_list_inner">
+                    <div class="swiper-container">
+                        <ul class="link_list swiper-wrapper">
+                            <li class="swiper-slide"><a href="javascript:void(0);"><img src="../resources/images/contents/img_bottom_link01.png" alt=""></a></li>
+                            <li class="swiper-slide"><a href="javascript:void(0);"><img src="../resources/images/contents/img_bottom_link02.png" alt=""></a></li>
+                            <li class="swiper-slide"><a href="javascript:void(0);"><img src="../resources/images/contents/img_bottom_link03.png" alt=""></a></li>
+                            <li class="swiper-slide"><a href="javascript:void(0);"><img src="../resources/images/contents/img_bottom_link04.png" alt=""></a></li>
+                            <li class="swiper-slide"><a href="javascript:void(0);"><img src="../resources/images/contents/img_bottom_link05.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="control_box">
+                        <div class="swiper-button-prev"></div>
+                        <div class="auto_btn">
+                            <a href="javascript:void(0);" class="stop">정지</a>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contents -->
+        <!-- footer -->
+        <div id="footer">
+            <div class="footer_inner">
+                <div class="footer_left">
+                    <div class="footer_link">
+                        <ul class="link_list">
+                            <li><a href="javascript:void(0);">개인정보보호방침</a></li>
+                            <li><a href="javascript:void(0);">이메일무단수집거부</a></li>
+                            <li><a href="javascript:void(0);">뷰어다운로드</a></li>
+                            <!-- 모바일 버전에서만 노출 -->
+                            <li class="mo_site"><a href="javascript:void(0);">사이트맵</a></li>
+                        </ul>
+                        <div class="link_sel">
+                            <a href="javascript:void(0);">관련사이트</a>
+                            <ul class="link_sel_list">
+                                <li><a href="javascript:void(0);" target="_blank">책바다</a></li>
+                                <li><a href="javascript:void(0);" target="_blank">전자도서관</a></li>
+                                <li><a href="javascript:void(0);" target="_blank">사서에게 물어보세요</a></li>
+                                <li><a href="javascript:void(0);" target="_blank">1365자원봉사 포털</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <ul>
+                            <li><strong>예산군립도서관</strong><span>충청남도 예산군 예산읍 벗꽃로 214</span><span>TEL. 041-339-8221~4</span><span>FAX. 041-339-8229</span></li>
+                            <li><strong>삽교읍공공도서관</strong><span>충청남도 예산군 삽교읍 두리별리길 34</span><span>TEL. 041-339-8225</span><span>FAX. 041-339-8209</span></li>
+                        </ul>
+                        <p class="copright">Copyright(c) <strong>YESAN PUBLIC Library.</strong> All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <a href="javascript:void(0);" class="top_btn">위로</a>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script>
+    $(function(){
+
+    });
+    </script>
+</body>
+</html>

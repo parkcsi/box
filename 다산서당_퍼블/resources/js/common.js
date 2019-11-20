@@ -267,6 +267,15 @@ $(function(){
 	});
 
 });
+
+
+
+function mapSel(e){
+	$(".map_btn_wrap > img").attr("src", "../resources/images/content/" + e.attr("title") + ".png");
+	$(".map_btn_wrap > img").attr("alt", e.attr("alt"));
+};
+
+
 //Layer Content
 function layerContShow(thisClass){
     $('.'+thisClass).show();

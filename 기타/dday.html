@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Document</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<script>
+	/* 
+	변경할 부분
+	
+	- 메인 함수는 클래스명만 입력받고 해당 클래스 하위 li가 4개인 형태가 기본이다.
+	- init을 만들어 처음에 각 부분별로 span을 넣는다.
+	- 입력부에 id명이 없이도 해당 기능이 작동하게한다.
+	- 입력부를 select로 바꾼다.
+	- 
+	*/
+	$(document).ready(function(){
+		function autoTime(day, num){
+			// 입력받은 시간을 문자열로 변환
+			var numStr = String(day);
+			// 문자열로 변환한 시간을 시간입력 양식에 맞게 중간에 "/"나 ":"를 넣어줌
+			var strDay =  numStr.substring(0, 4) + "/" + numStr.substring(4, 6) + "/" + numStr.substring(6, 8) + "/" + numStr.substring(8, 10) + ":" + numStr.substring(10, 12) + ":" + numStr.substring(12, 14);
+			// 현재 시간
+			var now = new Date();
+			// 입력한 시간
+			var then = new Date(strDay);
+			// getTime메서드를 사용하여 숫자 형식으로 변환시킨 후 입력한 시간에서 현재 시간을 빼준다.(두개를 빼주면 입력시간과 현재시간의 차이가 나온다.)
+			var gap = then.getTime() - now.getTime();
+			// 일, 시, 분, 초를 구한다.
+			var textDate = Math.floor(gap / (1000 * 60 * 60 * 24));
+			var textHour = Math.floor((gap / (1000 * 60 * 60))%24);
+			var textMin = Math.floor((gap / (1000 * 60))%60);
+			var textSec = Math.floor((gap / (1000))%60);
+			var textArr = new Array(textDate, textHour, textMin, textSec);
+			// 현재 시간보다 이전 시간을 입력할 경우 alert창이 뜬다.
+			if( gap < 0 ){
+				alert("현재 날짜 이후 날짜를 입력해주세요.")
+			} else {
+				// 일, 시, 분, 초를 넣을곳과 값을 변수로 받는다.
+				function ddayNumbers(target,date){
+					var singNum = null;
+					
+					// 입력받은 값을 문자열로 변환
+					numStr = String(date);
+					// 값이 한자리일 경우 앞에 0을 붙혀준다.
+					if(numStr <= 9){
+						singNum = "0"+numStr;
+					} else if (numStr >= 9){
+						singNum = numStr;
+					}
+					// 값을 자릿수대로 각 span에 넣어준다.
+					target.each(function(i){
+						var arr = new Array();
+						// 값을 배열에 1자리씩 담아준다.
+						arr.push(singNum.substring(i, i+1));
+						$(this).text(arr);
+					});
+				}
+				for(var i in textArr){
+					ddayNumbers($('.timeWrap>li').eq(num).find(".time_area").find("li").eq(i).find("span"), textArr[i]);
+				}
+				if( $('.timeWrap>li').eq(num).find(".playBtn").find("input[type=button]").attr("value") == "멈춤" ){
+					setTimeout(function(){autoTime(day, num)},100);
+				}else if( $(this).attr("value") == "시작" ){
+					clearTimeout(autoTime());
+				}
+				
+				if( $(this).parents("li").find(".sec").find("span").text() !== "" ){
+					autoTime(writeDay, thisNum);
+				} else {
+					
+				}
+			}
+		}
+		$(document).on("click", ".write_time input[type=button]", function(){
+			var thisNum = $(this).parents("li").index();
+			var writeDay = $(this).parent().find("select[name=year]").val() + $(this).parent().find("select[name=month]").val() + $(this).parent().find("select[name=day]").val() + $(this).parent().find("select[name=hour]").val() + $(this).parent().find("select[name=minutes]").val();
+			
+			autoTime(writeDay, thisNum);
+		})
+		$(document).on("click", ".playBtn input[type=button]", function(){
+			if( $(this).attr("value") == "멈춤" ){
+				$(this).attr("value", "시작")
+			}else if( $(this).attr("value") == "시작" ){
+				$(this).attr("value", "멈춤")
+				var thisNum = $(this).parents("li").index()
+				var writeDay = $(this).parent().find("select[name=year]").val() + $(this).parent().find("select[name=month]").val() + $(this).parent().find("select[name=day]").val() + $(this).parent().find("select[name=hour]").val() + $(this).parent().find("select[name=minutes]").val();
+				if( $(this).parents("li").find(".sec").find("span").text() !== "" ){
+					autoTime(writeDay, thisNum);
+				}
+			}
+		})
+	})
+	</script>
+
+	<style>
+	*{margin:0;padding:0;}
+	li{list-style:none;}
+	.timeWrap{padding-left:30px;}
+	.timeWrap>li{width:100%;}
+	.write_time{margin:30px 0 20px ;}
+	.time_area{width:100%;height:60px;}
+	.time_area li{float:left; font-size:30px;margin-right:30px;}
+	.playBtn{margin-bottom:20px;}
+	</style>
+
+</head>
+
+<body>
+	<ul class="timeWrap">
+		<li>
+			<div class="write_time">
+				<select name="year" id="year01">
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+					<option value="2023">2023</option>
+					<option value="2024">2024</option>
+					<option value="2025">2025</option>
+					<option value="2026">2026</option>
+					<option value="2027">2027</option>
+					<option value="2028">2028</option>
+				</select>
+				<select name="month" id="month01">
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+				<select name="day" id="day01">
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<select name="hour" id="hour01">
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+				</select>
+				<select name="minutes" id="minutes01">
+					<option value="00">00</option>
+					<option value="05">05</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="35">35</option>
+					<option value="40">40</option>
+					<option value="45">45</option>
+					<option value="50">50</option>
+					<option value="55">55</option>
+				</select>
+				<input type="button" id="save1" value="입력"/>
+			</div>
+			<p  class="playBtn"><input type="button" value="멈춤"></p>
+			<ul class="time_area">
+				<li class="date">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					일
+				</li>
+				<li class="hh">
+					<span></span>
+					<span></span>
+					시간
+				</li>
+				<li class="min">
+					<span></span>
+					<span></span>
+					분
+				</li>
+				<li class="sec">
+					<span></span>
+					<span></span>
+					초
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+
+</html>
