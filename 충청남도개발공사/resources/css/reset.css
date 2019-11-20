@@ -9,7 +9,7 @@ small, strike, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;vertical-align:baseline;}
 html, body, div, applet, object, iframe,p, blockquote, pre, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {font-family:'NanumGothic','나눔고딕', '돋움', dotum, Helvetica, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:100%;}
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {font-family:'NanumGothic','나눔고딕', '돋움', dotum, Helvetica, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:100%;box-sizing:border-box;}
 h1, h2, h3, h4, h5, h6, label{margin:0; padding:0; border:0; vertical-align:baseline; font-family:'NanumGothic','나눔고딕', '돋움', dotum, Helvetica, sans-serif; font-weight:bold; letter-spacing:0px;}
 
 /* HTML5 display-role reset for older browsers */
