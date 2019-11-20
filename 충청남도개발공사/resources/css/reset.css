@@ -33,23 +33,3 @@ button {margin:0; padding:0; background:none; border:none; cursor:pointer;}
 .a11y {display:block; overflow:hidden; position:absolute; left:-9999px; width:1px; height:1px; font-size:0; line-height:0; text-indent:-9999px;}
 .noBg {background:none !important;}
 
-
-/* placeholder color */
-::-webkit-input-placeholder {color:#999 !important}
-:-webkit-input-placeholder {color:#999 !important}
-::-moz-placeholder {color:#999 !important}
-:-moz-placeholder {color:#999 !important}
-:-ms-input-placeholder {color:#999 !important}
-
-/* disable blue highlight 
-a, button {
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-*/
