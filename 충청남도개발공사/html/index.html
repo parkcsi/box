@@ -30,9 +30,11 @@
         <div class="header_inner">
             <div class="header_left">
                 <h1 class="main_logo">
+                    <!-- 기본 로고 -->
                     <a href="javascript:;">
                         <img src="../resources/images/content/main_logo.png" alt="충청남도개발공사 메인 로고">
                     </a>
+                    <!-- header 호버시 로고 -->
                     <a href="javascript:;" class="h_logo">
                         <img src="../resources/images/content/main_logo_hover.png" alt="충청남도개발공사 메인 로고">
                     </a>
@@ -42,7 +44,6 @@
                         <a href="javascript:;" class="depth01">주요사업</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">도시개발사업</a></li>
@@ -102,7 +103,6 @@
                         <a href="javascript:;" class="depth01">보상/분양/임대</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">보상</a></li>
@@ -141,7 +141,6 @@
                         <a href="javascript:;" class="depth01">고객서비스</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">고객서비스헌장</a></li>
@@ -193,7 +192,6 @@
                         <a href="javascript:;" class="depth01">공고/소식</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">공지사항</a></li>
@@ -235,7 +233,6 @@
                         <a href="javascript:;" class="depth01">정보공개</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">정보공개제도안내</a></li>
@@ -296,7 +293,6 @@
                         <a href="javascript:;" class="depth01">공사소개</a>
                         <div class="gnb_row_depth">
                             <div class="row_depth_inner">
-                                <!-- -ms-display: flexbox -->
                                 <div class="rd_cnt">
                                     <ul>
                                         <li class="depth02"><a href="javascript:;">CEO인사말</a></li>
@@ -342,7 +338,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- 태블릿에서 검색버튼을 열었을경우 left보다 z-index를 높게 -->
             <div class="header_right">
                 <div class="search_wrap">
                     <input type="text" placeholder="검색어를 입력하세요" >
@@ -360,7 +355,7 @@
     </header>
 
     <!-- all menu -->
-    <div id="allMenu" style="display:none;">
+    <div id="allMenu">
         <div class="am_top">
             <p class="am_logo">
                 <a href="javascript:;"><img src="../resources/images/content/main_logo.png" alt="충청남도개발공사 메인 로고"></a>
@@ -370,7 +365,7 @@
                 <li class="signin"><a href="javascript:;">회원가입</a></li>
             </ul>
         </div>
-        <div class="am_depth01">
+        <div class="am_d1">
             <ul>
                 <li><a href="#">주요사업</a></li>    
                 <li><a href="#">보상/분양/임대</a></li>    
@@ -381,193 +376,202 @@
                 <li><a href="#">이용안내</a></li>    
             </ul>
         </div>
-        <!-- 전체리스트 1줄로 -->
-        <ul class="all_menu_wrap">
-            <li class="depth01_m">
-                <h2>주요산업</h2>
-                <ul class="depth02_m">
-                    <li class="down">
-                        <a href="javascript:;">도시개발사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">관광단지개발사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">공동주택사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">산업단지조성사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">대행사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">임대사업</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">사업소개</a></li>
-                            <li><a href="javascript:;">진행사업</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>보상/분양/임대</h2>
-                <ul class="depth02_m">
-                    <li class="down">
-                        <a href="javascript:;">보상</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">보상안내</a></li>
-                            <li><a href="javascript:;">보상공고</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">분양</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">분양안내</a></li>
-                            <li><a href="javascript:;">분양공고</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">임대</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">임대안내</a></li>
-                            <li><a href="javascript:;">임대공고</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>고객서비스</h2>
-                <ul class="depth02_m">
-                    <li class="down">
-                        <a href="javascript:;">고객서비스헌장</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">고객서비스헌장</a></li>
-                            <li><a href="javascript:;">두드림봉사단 소개</a></li>
-                            <li><a href="javascript:;">두드림봉사단 활동</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;">칭찬합니다</a></li>
-                    <li><a href="javascript:;">제안합니다</a></li>
-                    <li><a href="javascript:;">질의응답</a></li>
-                    <li class="down">
-                        <a href="javascript:;">부조리신고센터</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">제도안내</a></li>
-                            <li><a href="javascript:;">부조리/갑질신고</a></li>
-                            <li><a href="javascript:;">하도급부조리신고</a></li>
-                            <li><a href="javascript:;">인권침해신고센터</a></li>
-                            <li><a href="javascript:;">성희롱신고센터</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">적극행정</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">적극행정 관련자료</a></li>
-                            <li><a href="javascript:;">소극행정 신고센터</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>공고/소식</h2>
-                <ul class="depth02_m">
-                    <li><a href="javascript:;">공지사항</a></li>
-                    <li><a href="javascript:;">입찰공고</a></li>
-                    <li><a href="javascript:;">채용공고</a></li>
-                    <li><a href="javascript:;">보도자료</a></li>
-                    <li><a href="javascript:;">포토갤러리</a></li>
-                    <li><a href="javascript:;">계약실적요청</a></li>
-                    <li><a href="javascript:;">VOC 질의응답</a></li>
-                    <li><a href="javascript:;">사회공헌활동</a></li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>정보공개</h2>
-                <ul class="depth02_m">
-                    <li class="down">
-                        <a href="javascript:;">정보공개제도안내</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">정보공개제도란</a></li>
-                            <li><a href="javascript:;">청구권자</a></li>
-                            <li><a href="javascript:;">업무처리절차</a></li>
-                            <li><a href="javascript:;">불복구제절차</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;">경영공시</a></li>
-                    <li><a href="javascript:;">충남개발공사 사규</a></li>
-                    <li><a href="javascript:;">공개자료</a></li>
-                    <li><a href="javascript:;">수의계약정보공개</a></li>
-                    <li><a href="javascript:;">업무추진비</a></li>
-                    <li><a href="javascript:;">정보목록공개</a></li>
-                    <li class="down">
-                        <a href="javascript:;">공공데이터개방</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">공공데이터 소개</a></li>
-                            <li><a href="javascript:;">공공데이터 개방</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;">사전정보공표</a></li>
-                    <li><a href="javascript:;">비공개대상 정보</a></li>
-                    <li class="nlink"><a href="javascript:;">계약정보공개시스템</a></li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>공사소개</h2>
-                <ul class="depth02_m">
-                    <li><a href="javascript:;">CEO인사말</a></li>
-                    <li><a href="javascript:;">일반현황</a></li>
-                    <li><a href="javascript:;">미션·비전</a></li>
-                    <li class="down">
-                        <a href="javascript:;">부서안내</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">조직안내</a></li>
-                            <li><a href="javascript:;">직원안내</a></li>
-                            <li><a href="javascript:;">부서소개</a></li>
-                        </ul>
-                    </li>
-                    <li class="down">
-                        <a href="javascript:;">여자정구선수단</a>
-                        <ul class="depth03_m">
-                            <li><a href="javascript:;">선수단소개</a></li>
-                            <li><a href="javascript:;">선수안내</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:;">CI소개</a></li>
-                    <li><a href="javascript:;">오시는 길</a></li>
-                </ul>
-            </li>
-            <li class="depth01_m">
-                <h2>이용안내</h2>
-                <ul class="depth02_m">
-                    <li><a href="javascript:;">사이트맵</a></li>
-                    <li><a href="javascript:;">개인정보처리방침</a></li>
-                    <li><a href="javascript:;">영상정보처리운영방침</a></li>
-                    <li><a href="javascript:;">이메일무단수집거부</a></li>
-                    <li><a href="javascript:;">뷰어프로그램다운로드</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="all_menu_wrap">
+            <ul class="all_menu_inner">
+                <li class="d1_m">
+                    <h2>주요산업</h2>
+                    <ul class="d2_m">
+                        <li class="down">
+                            <a href="javascript:;">도시개발사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">관광단지개발사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">공동주택사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">산업단지조성사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">대행사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">임대사업</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">사업소개</a></li>
+                                <li><a href="javascript:;">진행사업</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>보상/분양/임대</h2>
+                    <ul class="d2_m">
+                        <li class="down">
+                            <a href="javascript:;">보상</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">보상안내</a></li>
+                                <li><a href="javascript:;">보상공고</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">분양</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">분양안내</a></li>
+                                <li><a href="javascript:;">분양공고</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">임대</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">임대안내</a></li>
+                                <li><a href="javascript:;">임대공고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>고객서비스</h2>
+                    <ul class="d2_m">
+                        <li class="down">
+                            <a href="javascript:;">고객서비스헌장</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">고객서비스헌장</a></li>
+                                <li><a href="javascript:;">두드림봉사단 소개</a></li>
+                                <li><a href="javascript:;">두드림봉사단 활동</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">칭찬합니다</a></li>
+                        <li><a href="javascript:;">제안합니다</a></li>
+                        <li><a href="javascript:;">질의응답</a></li>
+                        <li class="down">
+                            <a href="javascript:;">부조리신고센터</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">제도안내</a></li>
+                                <li><a href="javascript:;">부조리/갑질신고</a></li>
+                                <li><a href="javascript:;">하도급부조리신고</a></li>
+                                <li><a href="javascript:;">인권침해신고센터</a></li>
+                                <li><a href="javascript:;">성희롱신고센터</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">적극행정</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">적극행정 관련자료</a></li>
+                                <li><a href="javascript:;">소극행정 신고센터</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>공고/소식</h2>
+                    <ul class="d2_m">
+                        <li><a href="javascript:;">공지사항</a></li>
+                        <li><a href="javascript:;">입찰공고</a></li>
+                        <li><a href="javascript:;">채용공고</a></li>
+                        <li><a href="javascript:;">보도자료</a></li>
+                        <li><a href="javascript:;">포토갤러리</a></li>
+                        <li><a href="javascript:;">계약실적요청</a></li>
+                        <li><a href="javascript:;">VOC 질의응답</a></li>
+                        <li><a href="javascript:;">사회공헌활동</a></li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>정보공개</h2>
+                    <ul class="d2_m">
+                        <li class="down">
+                            <a href="javascript:;">정보공개제도안내</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">정보공개제도란</a></li>
+                                <li><a href="javascript:;">청구권자</a></li>
+                                <li><a href="javascript:;">업무처리절차</a></li>
+                                <li><a href="javascript:;">불복구제절차</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">경영공시</a></li>
+                        <li><a href="javascript:;">충남개발공사 사규</a></li>
+                        <li><a href="javascript:;">공개자료</a></li>
+                        <li><a href="javascript:;">수의계약정보공개</a></li>
+                        <li><a href="javascript:;">업무추진비</a></li>
+                        <li><a href="javascript:;">정보목록공개</a></li>
+                        <li class="down">
+                            <a href="javascript:;">공공데이터개방</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">공공데이터 소개</a></li>
+                                <li><a href="javascript:;">공공데이터 개방</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">사전정보공표</a></li>
+                        <li><a href="javascript:;">비공개대상 정보</a></li>
+                        <li class="nlink"><a href="javascript:;">계약정보공개시스템</a></li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>공사소개</h2>
+                    <ul class="d2_m">
+                        <li><a href="javascript:;">CEO인사말</a></li>
+                        <li><a href="javascript:;">일반현황</a></li>
+                        <li><a href="javascript:;">미션·비전</a></li>
+                        <li class="down">
+                            <a href="javascript:;">부서안내</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">조직안내</a></li>
+                                <li><a href="javascript:;">직원안내</a></li>
+                                <li><a href="javascript:;">부서소개</a></li>
+                            </ul>
+                        </li>
+                        <li class="down">
+                            <a href="javascript:;">여자정구선수단</a>
+                            <ul class="d3_m">
+                                <li><a href="javascript:;">선수단소개</a></li>
+                                <li><a href="javascript:;">선수안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">CI소개</a></li>
+                        <li><a href="javascript:;">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="d1_m">
+                    <h2>이용안내</h2>
+                    <ul class="d2_m">
+                        <li><a href="javascript:;">사이트맵</a></li>
+                        <li><a href="javascript:;">개인정보처리방침</a></li>
+                        <li><a href="javascript:;">영상정보처리운영방침</a></li>
+                        <li><a href="javascript:;">이메일무단수집거부</a></li>
+                        <li><a href="javascript:;">뷰어프로그램다운로드</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="al_bg">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <a href="javascript:;" class="am_close">닫기</a>
     </div>
 

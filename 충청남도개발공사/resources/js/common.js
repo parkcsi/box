@@ -38,6 +38,22 @@ $(function(){
 			$(this).removeClass("d3_h");
 		});
 
+		// 전체메뉴 열기
+		var am_btn = $(".allmenu > a");
+		var am_cnt = $("#allMenu");
+		var am_close = $(".am_close");
+
+		am_btn.click(function(){
+			am_cnt.fadeIn(300, function(){
+				am_cnt.css("overflow-y","scroll");
+			});
+		});
+		am_close.click(function(){
+			am_cnt.fadeOut(300, function(){
+				am_cnt.css("overflow-y","auto");
+			});
+		});
+
 
 
 	};
