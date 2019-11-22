@@ -74,7 +74,7 @@ $(function(){
 		});
 	};
 
-
+	// 메인 슬라이더 기능
 	$(".main_slide").on("afterChange init", function(event, slick, currentSlide, nextSlide){
 		var slide = $(this).find(".slick-active"),
 			slideLi = slide.find(".slide"),
@@ -118,6 +118,7 @@ $(function(){
 		$('.slick-cloned.next-slide').removeClass('next-slide'); // 복제 슬라이드 클래스명 삭제
 	});
 
+	// 메인슬라이더 실행
 	$(".main_slide").slick({
 		infinite : true,
 		arrow : true,
@@ -133,6 +134,7 @@ $(function(){
 		pauseOnHover:false,
 	});
 
+	// 메인슬라이더 이미지 관련
 	function mainSlide(){ 
 
 		var	slide_width = $(window).width() / 1.38;
@@ -161,8 +163,6 @@ $(function(){
 		mainSlide();
 		header();
 	}).resize();
-
-	
 
 });
 

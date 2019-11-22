@@ -104,7 +104,7 @@ PC : 1.0rem = 10px
 
 
 /*content*/
-.main_banner{position:relative; width:100%; height:32vw;}
+.main_banner{position:relative; width:100%; height:34vw;}
 .main_banner .main_banner_bg{position:absolute; top:0; left:0; width:100%; height:88%; transition: all 1s;}
 .main_banner .main_banner_bg:before{content:""; position:absolute; bottom:10px; left:10%; width:100%; height:70%; background:url(../images/content/main_banner_bg.png) no-repeat bottom left; background-size:auto 100%;}
 .main_banner .slide_txt{position:absolute; left:13.5%; top:38%; z-index:1; width:35%; height:37%; display:block; text-align:left; z-index:50;}
@@ -123,15 +123,7 @@ PC : 1.0rem = 10px
 
 /*footer*/
 
-
-@media screen and (max-width:1500px){
-	.main_banner{height:33vw;}
-}
-
-@media screen and (max-width:1400px){
-	.main_banner{height:34vw;}
-}
-
+/*화면 크기별 css*/
 @media screen and (max-width:1300px){
 	.header_inner > div.header_left .main_logo{height:50px;}
 	.header_inner > div.header_left .gnb_menu{position:absolute; top:94px; left:0; width:100%; height:70px; padding:0 15px; text-align:center;}
@@ -166,27 +158,13 @@ PC : 1.0rem = 10px
 	.main_banner .slide_txt .slide_txt_inner .more_btn > a{font-size:1.5vw;}
 }
 
-@media screen and (max-width:1200px){
-	.main_banner{height:41vw;}
-}
-
 @media screen and (max-width:1100px){
-	.main_banner{height:42vw;}
-	.main_banner .slide_txt{top:40%;}
-}
-
-@media screen and (max-width:1000px){
 	.main_banner{height:43vw;}
-	.main_banner .slide_txt{top:42%;}
+	.main_banner .slide_txt{top:43%;}
 }
 
 @media screen and (max-width:900px){
 	.header_inner > div.header_left .gnb_menu > li > a{font-size:1.9rem;}	
-	.main_banner{height:44vw;}
-	.main_banner .slide_txt{top:44%;}
-}
-
-@media screen and (max-width:800px){
 	.main_banner{height:45vw;}
 	.main_banner .slide_txt{top:46%;}
 }
