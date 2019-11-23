@@ -159,6 +159,26 @@ $(function(){
 
 	};
 
+	// 메인슬라이더 컨트롤러
+	var slickDots = $('.slick-dots');
+	$('.slide_pause').after(slickDots);
+
+	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
+	$('.mainVisual .slide_pause').on('click',function(){
+		$(this).hide();
+		$('.visualSlide').slick('slickPause');
+		$('.slide-play').show();
+		$('.slick-progressbar > span > i').stop();
+	});
+	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
+	$('.mainVisual .slide_play').on('click',function(){
+		$(this).hide();
+		$('.visualSlide').slick('slickPlay');
+		$('.slide-pause').show();
+		$('.slick-progressbar > span > i').css({'width': '0'}).animate({'width': '100%'}, 5000); // 아래 slick 옵션 중 autoplaySpeed와 같게 5000 (5초)를 넣어준다
+	});
+	 
+
 	$(window).resize(function(){
 		mainSlide();
 		header();
