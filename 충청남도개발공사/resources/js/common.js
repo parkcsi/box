@@ -177,9 +177,13 @@ $(function(){
 	// 셀렉트 형식 팝업 다른 영역 클릭 시 닫기
 	$(document).mouseup(function(e){
 		var el01 = $(".local_list > ul");
+		var el02 = $(".link_sel > ul");
 
 		if(el01.has(e.target).length === 0){
 			el01.removeClass("on");
+		}
+		if(el02.has(e.target).length === 0){
+			el02.parent().removeClass("on");
 		}
 	});
 
@@ -218,6 +222,48 @@ $(function(){
 			}
 		});
 	};
+
+	// 관련 사이트 리스트 슬라이드
+	if($(".link_list_inner").length){
+		var link_bnr = new Swiper ('.link_list_inner .swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			slidesPerView: 5,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: '.link_list_inner .swiper-button-next',
+				prevEl: '.link_list_inner .swiper-button-prev',
+			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			breakpoints:{
+				359: {
+					slidesPerView: 1,
+				},
+				640: {
+					slidesPerView: 2,
+				},
+				950: {
+					slidesPerView: 3,
+				},
+				1300: {
+					slidesPerView: 4,
+				}
+			}
+		});
+		
+		$(document).on("click", ".link_list_inner .auto_btn a", function(){
+			if($(this).hasClass("stop")){
+				link_bnr.autoplay.stop();
+				$(this).removeClass("stop").addClass("start").text("시작");
+			}else{
+				link_bnr.autoplay.start();
+				$(this).removeClass("start").addClass("stop").text("정지");
+			}
+		})
+	};
 	
 	// 메인슬라이더 컨트롤러
 	var slickDots = $(".slick-dots");
@@ -236,9 +282,48 @@ $(function(){
 		$(".slide_pause").css("display","inline-block");
 	});
 
+	// 푸터 관련사이트 선택
+	$(document).on("click", ".link_sel > a", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on");
+		}else{
+			$(this).parent().addClass("on");
+		};
+	});
+
+	// 걷색영역 열기
+	$(".hr_ico_list > .search > a").click(function(){
+		$(".search_wrap").addClass("on");
+	})
+
+	// 걷색영역 닫기
+	$(".search_wrap > .close").click(function(){
+		$(".search_wrap").removeClass("on");
+	})
+
 	$(window).resize(function(){
 		mainSlide();
 		header();
+
+		if($(window).width() <= 768){
+			// 아이콘리스트 슬라이더
+			if($(".ico_menu_wrap").length){
+				var top_list = new Swiper ('.ico_menu_wrap.swiper-container', {
+					direction: 'vertical',
+					loop: false,
+					slidesPerView: 1,
+					slidesPerColumn: 3,
+					pagination: {
+						el: ".swiper-pagination",
+						type: "fraction",
+					},
+					navigation: {
+						prevEl: '.top_list_up',
+						nextEl: '.top_list_down',
+					},
+				});
+			};
+		};
 	}).resize();
 
 });
