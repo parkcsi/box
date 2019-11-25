@@ -98,8 +98,8 @@ $(function(){
 
 		for(var i = 0; i < slick.$slides.length; i++){
 			var $slides = $(slick.$slides[i]);
-			if($slides.hasClass('slick-active')){
-				$slides.next().addClass('next-slide');
+			if($slides.hasClass("slick-active")){
+				$slides.next().addClass("next-slide");
 				break;
 			}
 		};
@@ -114,8 +114,8 @@ $(function(){
 		captionTitle.css({"top": "0","display":"block", "opacity": 1}).animate({"top": "20%","display":"none", "opacity": 0}, 300);
 		captionMore.css({"left": "0","display":"block", "opacity": 1}).animate({"left": "20%","display":"none", "opacity": 0}, 300);
 		
-		slick.$slides.removeClass('next-slide'); // 다음 슬라이드 클래스명 삭제
-		$('.slick-cloned.next-slide').removeClass('next-slide'); // 복제 슬라이드 클래스명 삭제
+		slick.$slides.removeClass("next-slide"); // 다음 슬라이드 클래스명 삭제
+		$(".slick-cloned.next-slide").removeClass("next-slide"); // 복제 슬라이드 클래스명 삭제
 	});
 
 	// 메인슬라이더 실행
@@ -159,25 +159,6 @@ $(function(){
 
 	};
 
-	// 메인슬라이더 컨트롤러
-	var slickDots = $('.slick-dots');
-	$('.slide_pause').after(slickDots);
-
-	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
-	$('.mainVisual .slide_pause').on('click',function(){
-		$(this).hide();
-		$('.visualSlide').slick('slickPause');
-		$('.slide-play').show();
-		$('.slick-progressbar > span > i').stop();
-	});
-	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
-	$('.mainVisual .slide_play').on('click',function(){
-		$(this).hide();
-		$('.visualSlide').slick('slickPlay');
-		$('.slide-pause').show();
-		$('.slick-progressbar > span > i').css({'width': '0'}).animate({'width': '100%'}, 5000);
-	});
-
 	// 공지사항 탭
 	$(".main_noti_tab > li > a").click(function(){
 		$(this).parent().addClass("on").siblings().removeClass("on")
@@ -185,12 +166,12 @@ $(function(){
 	});
 
 	// 주요사업안내 지역 셀렉트
-	$(".local_list > a").click(function(){
+	$(".work_list_wrap > .local_list > a").click(function(){
 		$(this).parent().find(">ul").addClass("on");
 	});
-	$(".local_list > ul > li > a").click(function(){
+	$(".work_list_wrap > .local_list > ul > li > a").click(function(){
 		$(this).parents("ul").css("top", - ($(this).parent().index() * $(this).height() + 1)).removeClass("on");
-		$(".local_list > a").text($(this).text());
+		$(".work_list_wrap > .local_list > a").text($(this).text());
 	});
 
 	// 셀렉트 형식 팝업 다른 영역 클릭 시 닫기
@@ -202,12 +183,71 @@ $(function(){
 		}
 	});
 
+	// 지역별 강좌 선택
+	$(document).on("click", ".map_btn_wrap .local_list li a", function(){
+		$(this).parent().addClass("on").siblings().removeClass("on");
+		$(".map_btn_wrap > img").attr("src", "../resources/images/content/" + $(this).attr("title") + ".png");
+		$(".map_btn_wrap > img").attr("alt", $(this).text());
+	});
+
+	if($(".noti_bnr_wrap").length){
+		var bzone_visual = new Swiper (".noti_bnr_wrap.swiper-container", {
+			direction: "horizontal",
+			loop: true,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "fraction",
+			},
+			navigation: {
+				nextEl: ".swiper_button_next",
+				prevEl: ".swiper_button_prev",
+			},
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+		});
+
+		$(document).on("click", ".noti_bnr_wrap .auto_btn a", function(){
+			if($(this).hasClass("stop")){
+				bzone_visual.autoplay.stop();
+				$(this).removeClass("stop").addClass("start").text("시작");
+			}else{
+				bzone_visual.autoplay.start();
+				$(this).removeClass("start").addClass("stop").text("정지");
+			}
+		});
+	};
+	
+	// 메인슬라이더 컨트롤러
+	var slickDots = $(".slick-dots");
+	$(".slide_pause").after(slickDots);
+
+	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
+	$(document).on("click", ".main_banner > .main_banner_control > .slide_pause", function(){
+		$(this).hide();
+		$(".main_slide").slick("slickPause");
+		$(".slide_start").css("display","inline-block");
+	});
+	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
+	$(document).on("click", ".main_banner > .main_banner_control > .slide_start", function(){
+		$(this).hide();
+		$(".main_slide").slick("slickPlay");
+		$(".slide_pause").css("display","inline-block");
+	});
+
 	$(window).resize(function(){
 		mainSlide();
 		header();
 	}).resize();
 
 });
+
+function mapSel(e){
+	$(".map_btn_wrap > img").attr("src", "../resources/images/content/" + e.attr("title") + ".png");
+	$(".map_btn_wrap > img").attr("alt", e.attr("alt"));
+	$(".local_list > li").eq(e.index()).addClass("on").siblings().removeClass("on");
+};
 
 //Layer Content
 function layerContShow(thisClass){

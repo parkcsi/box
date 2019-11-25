@@ -615,6 +615,7 @@
             </div>
             <div class="main_banner_bg"></div>
             <div class="main_banner_control">
+                <button type="button" class="slide_start">시작</button>
                 <button type="button" class="slide_pause">정지</button>
             </div>
         </div>
@@ -805,55 +806,126 @@
                             </ul>
                         </div>
                         <div class="map_btn_wrap">
-                            <img src="../resources/images/content/map_img01.png" border="0" width="351" height="310" orgwidth="351" orgheight="310" usemap="#map_btn" alt="태안군">
+                            <img src="../resources/images/content/map_img01.png" border="0" width="356" height="313" orgwidth="356" orgheight="313" usemap="#map_btn" alt="태안군">
                             <map name="map_btn" id="map_btn">
                                 <area  alt="태안군" title="map_img01" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="47,26,51,31,50,36,54,46,50,56,45,61,47,67,54,69,58,77,57,90,59,99,58,107,62,120,61,124,64,129,63,136,66,150,75,162,75,168,81,176,80,183,77,182,71,184,64,185,57,180,58,170,54,162,52,154,54,149,51,142,51,135,50,133,45,133,45,127,46,126,46,111,41,111,38,107,41,101,37,99,29,105,26,105,25,108,20,110,7,110,7,108,16,104,21,98,30,98,29,91,24,90,23,88,15,81,13,85,15,90,15,97,11,99,7,96,8,92,8,87,5,84,7,80,10,73,13,72,25,56,21,54,24,46,33,41,38,42,32,46,43,52,44,41,47,39" style="outline:none;"/>
                                 <area alt="서산시" title="map_img02" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="68,21,55,14,81,12,90,26,90,39,87,47,105,69,112,68,129,77,130,85,117,96,118,103,112,116,106,116,96,121,82,118,80,128,73,128,62,120,58,108,57,91,58,80,57,71,61,65,54,61,54,56,63,54,77,45,77,37,68,34,58,25" style="outline:none;">
                                 <area alt="당진시" title="map_img03" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="165,36,165,42,173,47,173,62,176,77,161,87,143,78,130,83,114,68,104,68,85,46,89,40,90,25,83,12,100,0,121,13,152,18,158,33" style="outline:none;">
                                 <area alt="아산시" title="map_img04" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="232,37,227,50,232,58,230,66,235,72,235,85,229,89,212,118,206,121,201,113,200,106,194,106,180,96,176,96,170,81,176,78,172,62,173,46,184,46,188,42,209,33,216,37,218,34,230,33" style="outline:none;">
                                 <area alt="천안시" title="map_img05" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="245,109,246,117,243,125,224,124,220,126,212,119,228,89,234,85,234,72,231,67,233,62,228,50,232,38,230,32,236,27,248,27,261,38,274,44,277,54,289,60,296,66,302,74,304,80,296,81,282,95,278,107,258,99,250,94,241,94,241,104" style="outline:none;">
-
-
-
-
-
-
-
-
-
-
-
-
-                                <area alt="진건읍" title="map_img06" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="93,104,97,102,106,105,106,112,116,120,127,113,136,119,126,129,125,135,124,137,115,142,115,153,111,153,107,159,100,156,98,158,99,166,82,170,74,170,58,166,58,159,63,155,61,135,63,129,68,125,74,111,88,111,88,102" style="outline:none;">
-                                <area alt="금곡동" title="map_img07" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="115,153,115,150,123,151,126,158,131,159,135,164,118,180,108,180,101,177,103,175,103,168,98,165,98,159,100,156,107,159,111,154" style="outline:none;">
-                                <area alt="평내동" title="map_img08" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="124,135,132,135,138,142,147,143,154,148,157,153,156,158,148,158,141,164,135,164,131,158,126,158,124,151,115,150,115,142,123,138" style="outline:none;">
-                                <area alt="호평동" title="map_img09" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="169,115,162,117,157,130,163,140,156,155,154,149,147,143,137,142,133,135,125,135,126,129,136,119,156,113,167,112" style="outline:none;">
-                                <area alt="화도읍" title="map_img10" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="262,119,248,161,243,162,229,191,220,192,218,189,204,189,203,193,200,197,185,193,177,179,174,163,162,165,156,158,163,141,157,131,162,117,168,116,168,113,170,102,170,92,178,94,191,87,198,94,208,98,210,111,205,119,205,125,211,128,222,119,230,117,244,105,251,103,257,116,260,115" style="outline:none;">
-                                <area alt="다산 1동" title="map_img11" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="58,166,77,170,81,184,67,197,61,197,57,184" style="outline:none;">
-                                <area alt="다산 2동" title="map_img12" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="77,189,82,197,88,201,92,200,88,209,91,214,80,224,71,220,70,214,75,214,76,211,74,208,62,203,61,197,67,197" style="outline:none;">
-                                <area alt="양정동" title="map_img13" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="103,167,102,177,107,180,118,180,114,186,111,194,111,200,120,204,119,206,107,216,105,214,91,212,88,210,93,200,88,201,87,197,83,197,77,189,81,185,78,170,95,168,98,166" style="outline:none;">
-                                <area alt="와부읍" title="map_img14" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="174,164,177,180,185,193,172,211,164,209,163,220,155,230,155,242,163,248,166,262,158,275,137,262,130,244,121,241,121,234,108,217,119,204,111,200,111,194,115,184,135,164,140,164,147,158,156,159,161,165" style="outline:none;">
-                                <area alt="조안면" title="map_img15" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="229,191,224,225,197,279,200,298,181,305,175,287,159,275,166,263,163,250,155,242,156,232,163,221,164,210,172,212,185,194,200,198,204,192,202,189,219,189" style="outline:none;">
+                                <area alt="홍성군" title="map_img06" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="121,128,125,123,133,123,143,116,148,116,157,130,149,143,153,153,151,159,152,164,141,170,136,170,134,168,116,167,91,154,91,150,86,145,87,140,86,135,80,128,82,120,88,118,95,122,104,117,112,116,117,121" style="outline:none;">
+                                <area alt="예산군" title="map_img07" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="199,106,202,113,195,125,196,135,185,144,184,142,177,141,172,146,170,151,154,153,149,146,157,132,148,116,145,117,135,121,125,121,119,129,117,122,112,117,119,102,117,97,130,84,135,85,141,79,146,84,160,86,170,82,175,96" style="outline:none;">
+                                <area alt="보령시" title="map_img08" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="136,170,132,180,142,197,140,204,136,220,144,234,141,238,140,250,134,251,129,256,107,252,93,256,100,246,100,235,105,230,106,221,97,214,99,205,101,200,97,194,91,191,97,180,88,173,86,160,90,153,114,167,130,168" style="outline:none;">
+                                <area alt="청양군" title="map_img09" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="218,184,210,190,210,196,206,200,206,207,202,205,196,207,190,204,178,203,164,188,157,188,154,192,140,198,132,182,136,170,152,165,153,154,169,151,175,142,182,141,185,148,184,160,193,173,200,169,211,182" style="outline:none;">
+                                <area alt="공주시" title="map_img10" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="274,186,270,194,273,202,266,210,256,205,254,209,242,215,231,213,218,225,212,224,207,213,206,201,210,198,210,193,218,185,212,182,201,169,192,173,183,162,185,142,195,136,195,127,201,114,204,120,210,118,215,125,226,125,238,125,241,124,244,132,252,140,257,145,257,153,262,160,267,165,266,174" style="outline:none;">
+                                <area alt="연기군" title="map_img11" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="297,145,293,150,292,174,288,181,276,184,273,186,266,173,266,161,264,161,256,152,258,143,243,134,244,126,246,113,241,105,241,96,248,93,265,102,278,104,274,114,281,128,281,136,291,137" style="outline:none;">
+                                <area alt="서천군" title="map_img12" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="160,253,157,260,162,264,170,265,172,276,178,285,178,292,169,294,149,294,150,301,144,305,135,304,129,294,130,287,124,280,128,278,123,273,116,273,104,262,94,265,93,258,106,253,122,257,132,256,139,250,153,253,156,250" style="outline:none;">
+                                <area alt="부여군" title="map_img13" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="219,225,217,232,213,231,213,239,209,244,205,249,210,261,193,260,186,266,185,272,177,281,173,276,170,264,157,261,158,252,157,250,153,252,139,250,140,239,144,234,136,223,142,196,151,195,156,190,158,188,164,188,172,198,180,207,180,204,188,204,193,209,198,206,206,208,210,224" style="outline:none;">
+                                
+                                <area alt="논산시" title="map_img14" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="288,245,287,250,282,254,280,269,270,269,261,279,244,282,237,286,225,280,220,260,211,259,205,249,213,240,212,233,218,230,224,220,230,217,232,214,244,214,253,209,253,218,255,224,260,223,263,230,274,230,272,238" style="outline:none;">
+                                <area alt="계룡시" title="map_img15" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="266,218,271,224,274,229,272,230,262,230,264,227,261,222,253,222,254,210,255,206,259,205,265,209" style="outline:none;">
+                                <area alt="금산군" title="map_img16" href="javascript:;" onclick="mapSel($(this));" shape="poly" coords="352,304,349,302,344,294,334,295,334,303,325,309,310,304,309,299,303,297,298,303,293,298,293,289,288,280,290,276,291,272,287,267,280,269,281,254,286,252,288,245,290,244,292,230,298,232,302,238,308,240,309,247,318,244,322,236,332,234,344,239,346,244,345,249,348,258,345,264,348,270,352,276,354,284,354,300" style="outline:none;">
                             </map>
-                            <!-- <ul class="local_list">
-                                <li class="local01"><a href="javascript:;" title="map_img01">태안군</a></li>
-                                <li class="local02"><a href="javascript:;" title="map_img02">서산시</a></li>
-                                <li class="local03"><a href="javascript:;" title="map_img03">당진시</a></li>
-                                <li class="local04"><a href="javascript:;" title="map_img04">아산시</a></li>
-                                <li class="local05"><a href="javascript:;" title="map_img05">천안시</a></li>
-                                <li class="local06"><a href="javascript:;" title="map_img06">홍성군</a></li>
-                                <li class="local07"><a href="javascript:;" title="map_img07">예산군</a></li>
-                                <li class="local08"><a href="javascript:;" title="map_img08">보령시</a></li>
-                                <li class="local09"><a href="javascript:;" title="map_img09">청양군</a></li>
-                                <li class="local10"><a href="javascript:;" title="map_img10">공주시</a></li>
-                                <li class="local11"><a href="javascript:;" title="map_img11">연기군</a></li>
-                                <li class="local12"><a href="javascript:;" title="map_img12">서천군</a></li>
-                                <li class="local13"><a href="javascript:;" title="map_img13">부여군</a></li>
-                                <li class="local14"><a href="javascript:;" title="map_img14">논산시</a></li>
-                                <li class="local15"><a href="javascript:;" title="map_img15">계룡시</a></li>
-                                <li class="local16"><a href="javascript:;" title="map_img16">금산군</a></li>
-                            </ul> -->
+                            <ul class="local_list">
+                                <li class="local01 on"><a href="javascript:;" title="map_img01">태안군<span>12</span></a></li>
+                                <li class="local02"><a href="javascript:;" title="map_img02">서산시<span>12</span></a></li>
+                                <li class="local03"><a href="javascript:;" title="map_img03">당진시<span>12</span></a></li>
+                                <li class="local04"><a href="javascript:;" title="map_img04">아산시<span>12</span></a></li>
+                                <li class="local05"><a href="javascript:;" title="map_img05">천안시<span>12</span></a></li>
+                                <li class="local06"><a href="javascript:;" title="map_img06">홍성군<span>12</span></a></li>
+                                <li class="local07"><a href="javascript:;" title="map_img07">예산군<span>12</span></a></li>
+                                <li class="local08"><a href="javascript:;" title="map_img08">보령시<span>12</span></a></li>
+                                <li class="local09"><a href="javascript:;" title="map_img09">청양군<span>12</span></a></li>
+                                <li class="local10"><a href="javascript:;" title="map_img10">공주시<span>12</span></a></li>
+                                <li class="local11"><a href="javascript:;" title="map_img11">연기군<span>12</span></a></li>
+                                <li class="local12"><a href="javascript:;" title="map_img12">서천군<span>12</span></a></li>
+                                <li class="local13"><a href="javascript:;" title="map_img13">부여군<span>12</span></a></li>
+                                <li class="local14"><a href="javascript:;" title="map_img14">논산시<span>12</span></a></li>
+                                <li class="local15"><a href="javascript:;" title="map_img15">계룡시<span>12</span></a></li>
+                                <li class="local16"><a href="javascript:;" title="map_img16">금산군<span>12</span></a></li>
+                            </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_mid_cont">
+                <ul class="ico_menu_list">
+                    <li class="list_ico01"><a href="javascript:;">직원안내</a></li>
+                    <li class="list_ico02"><a href="javascript:;">채용공고</a></li>
+                    <li class="list_ico03"><a href="javascript:;">오시는길</a></li>
+                    <li class="list_ico04"><a href="javascript:;">정보공개</a></li>
+                    <li class="list_ico05"><a href="javascript:;">보도자료</a></li>
+                    <li class="list_ico06"><a href="javascript:;">질문답변</a></li>
+                    <li class="list_ico07"><a href="javascript:;">임대안내</a></li>
+                    <li class="list_ico08"><a href="javascript:;">분양안내</a></li>
+                    <li class="list_ico09"><a href="javascript:;">보상안내</a></li>
+                    <li class="list_ico10"><a href="javascript:;">포토뉴스</a></li>
+                </ul>
+            </div>
+            <div class="main_btm_cont">
+                <div class="photo_new_wrap">
+                    <div class="cont_tit">
+                        <p class="tit">포토뉴스</p>
+                        <a href="javascript:;" class="more">더보기</a>
+                    </div>
+                    <ul>
+                        <li class="on">
+                            <a href="javascript:;">
+                                <span class="img"><img src="../resources/images/content/photo_news01.jpg" alt="더 행복한 주택 사업 협약식"></span>
+                                <span class="tit">더 행복한 주택 사업 협약식</span>
+                                <span class="date">2019-05-08</span>
+                            </a>
+                        </li>    
+                        <li>
+                            <a href="javascript:;">
+                                <span class="img"><img src="../resources/images/content/photo_news02.jpg" alt="내포신도시 봄맞이 환경정화활동"></span>
+                                <span class="tit">내포신도시 봄맞이 환경정화활동</span>
+                                <span class="date">2019-05-08</span>
+                            </a>
+                        </li>    
+                        <li>
+                            <a href="javascript:;">
+                                <span class="img"><img src="../resources/images/content/photo_news03.jpg" alt="충청남도 개발공사 시무식"></span>
+                                <span class="tit">충청남도 개발공사 시무식</span>
+                                <span class="date">2019-05-08</span>
+                            </a>
+                        </li>    
+                    </ul>
+                </div>
+                <div class="noti_bnr_wrap swiper-container">
+                    <p class="noti_bnr_tit">알림판</p>
+                    <ul class="noti_visual_list swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="javascript:;">
+                                <img src="../resources/images/content/noti_banner01.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="javascript:;">
+                                <img src="../resources/images/content/noti_banner01.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="javascript:;">
+                                <img src="../resources/images/content/noti_banner01.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="javascript:;">
+                                <img src="../resources/images/content/noti_banner01.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="javascript:;">
+                                <img src="../resources/images/content/noti_banner01.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper_button_next"></div>
+                    <div class="swiper_button_prev"></div>
+                    <div class="auto_btn">
+                        <a href="javascript:;" class="stop">정지</a>
                     </div>
                 </div>
             </div>
