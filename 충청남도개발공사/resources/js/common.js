@@ -175,9 +175,32 @@ $(function(){
 		$(this).hide();
 		$('.visualSlide').slick('slickPlay');
 		$('.slide-pause').show();
-		$('.slick-progressbar > span > i').css({'width': '0'}).animate({'width': '100%'}, 5000); // 아래 slick 옵션 중 autoplaySpeed와 같게 5000 (5초)를 넣어준다
+		$('.slick-progressbar > span > i').css({'width': '0'}).animate({'width': '100%'}, 5000);
 	});
-	 
+
+	// 공지사항 탭
+	$(".main_noti_tab > li > a").click(function(){
+		$(this).parent().addClass("on").siblings().removeClass("on")
+		$(".main_noti_cont > .main_noti_list").eq($(this).parent().index()).addClass("on").siblings().removeClass("on")
+	});
+
+	// 주요사업안내 지역 셀렉트
+	$(".local_list > a").click(function(){
+		$(this).parent().find(">ul").addClass("on");
+	});
+	$(".local_list > ul > li > a").click(function(){
+		$(this).parents("ul").css("top", - ($(this).parent().index() * $(this).height() + 1)).removeClass("on");
+		$(".local_list > a").text($(this).text());
+	});
+
+	// 셀렉트 형식 팝업 다른 영역 클릭 시 닫기
+	$(document).mouseup(function(e){
+		var el01 = $(".local_list > ul");
+
+		if(el01.has(e.target).length === 0){
+			el01.removeClass("on");
+		}
+	});
 
 	$(window).resize(function(){
 		mainSlide();
