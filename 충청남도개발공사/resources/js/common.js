@@ -118,6 +118,16 @@ $(function(){
 		$(".slick-cloned.next-slide").removeClass("next-slide"); // 복제 슬라이드 클래스명 삭제
 	});
 
+	// 모바일메인 슬라이더 기능
+	$(".m_main_slide").on("afterChange init", function(event, slick, currentSlide, nextSlide){
+		var slide = $(this).find(".slick-active"),
+			slideLi = slide.find(".slide"),
+			slideLink =  slideLi.find(">a").attr("href"),
+			slideCaptionMore_A = $(".main_bnr_more > a");
+
+		slideCaptionMore_A.attr("href", slideLink);
+	});
+
 	// 메인슬라이더 실행
 	$(".main_slide").slick({
 		infinite : true,
@@ -132,6 +142,57 @@ $(function(){
 		draggable:false,
 		focusOnselect: false,
 		pauseOnHover:false,
+	});
+	
+	// 메인슬라이더 컨트롤러
+	var slickDots = $(".main_banner .slick-dots");
+	$(".slide_pause").after(slickDots);
+
+	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
+	$(document).on("click", ".main_banner > .main_banner_control > .slide_pause", function(){
+		$(this).hide();
+		$(".main_slide").slick("slickPause");
+		$(".slide_start").css("display","inline-block");
+	});
+	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
+	$(document).on("click", ".main_banner > .main_banner_control > .slide_start", function(){
+		$(this).hide();
+		$(".main_slide").slick("slickPlay");
+		$(".slide_pause").css("display","inline-block");
+	});
+
+	// 모바일 메인슬라이더 실행
+	$(".m_main_slide").slick({
+		infinite : true,
+		arrow : false,
+		speed : 500,
+		autoplay : true,
+		autoplaySpeed : 5000,
+		centerMode: false,
+		slidesToshow:1,
+		variableWidth:false,
+		touchMove:true,
+		dots:true,
+		draggable:false,
+		focusOnselect: false,
+		pauseOnHover:false,
+	});
+
+	// 모바일 메인슬라이더 컨트롤러
+	var m_slickDots = $(".m_main_banner .slick-dots");
+	$(".m_pause").after(m_slickDots);
+
+	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
+	$(document).on("click", ".m_main_banner > .m_main_control > .m_pause", function(){
+		$(this).hide();
+		$(".m_main_slide").slick("slickPause");
+		$(".m_start").css("display","inline-block");
+	});
+	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
+	$(document).on("click", ".m_main_banner > .m_main_control > .m_start", function(){
+		$(this).hide();
+		$(".m_main_slide").slick("slickPlay");
+		$(".m_pause").css("display","inline-block");
 	});
 
 	// 메인슬라이더 이미지 관련
@@ -264,23 +325,6 @@ $(function(){
 			}
 		})
 	};
-	
-	// 메인슬라이더 컨트롤러
-	var slickDots = $(".slick-dots");
-	$(".slide_pause").after(slickDots);
-
-	// - 정지 : 슬라이드 정지 버튼 클릭 시 이벤트
-	$(document).on("click", ".main_banner > .main_banner_control > .slide_pause", function(){
-		$(this).hide();
-		$(".main_slide").slick("slickPause");
-		$(".slide_start").css("display","inline-block");
-	});
-	// - 재생 : 슬라이드 재생 버튼 클릭 시 이벤트
-	$(document).on("click", ".main_banner > .main_banner_control > .slide_start", function(){
-		$(this).hide();
-		$(".main_slide").slick("slickPlay");
-		$(".slide_pause").css("display","inline-block");
-	});
 
 	// 푸터 관련사이트 선택
 	$(document).on("click", ".link_sel > a", function(){
@@ -294,12 +338,27 @@ $(function(){
 	// 걷색영역 열기
 	$(".hr_ico_list > .search > a").click(function(){
 		$(".search_wrap").addClass("on");
-	})
+	});
 
 	// 걷색영역 닫기
 	$(".search_wrap > .close").click(function(){
 		$(".search_wrap").removeClass("on");
-	})
+	});
+
+
+	// 모바일 햄버거메뉴 1뎁스
+	$(document).on("click", ".am_d1 a", function(){
+		$(this).parent().addClass("on").siblings().removeClass("on");
+		$(".all_menu_inner > .d1_m").eq($(this).parent().index()).addClass("on").siblings().removeClass("on");
+	});
+	// 모바일 햄버거메뉴 2뎁스
+	$(document).on("click", ".d2_m .down a", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on").find(".d3_m").slideUp();
+		}else{
+			$(this).parent().addClass("on").find(".d3_m").slideDown().parent().siblings().removeClass("on").find(".d3_m").slideUp();
+		};
+	});
 
 	$(window).resize(function(){
 		mainSlide();
