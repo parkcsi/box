@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+
+/***** 
+    responsive 
+                */
+/*
+폰트사이즈 기준
+-----------------
+PC : 1.0rem = 10px
+타블렛 : 1.0rem = 9px
+모바일 : 1.0rem = 10px
+
+디바이스 크기별 폰트사이즈 조정 시 아래 형식과 같이 기준폰트 변경으로 일괄 조정
+@media screen and (max-width:767px){
+	html{font-size:10px;}
+}
+
+*/
+
+#header{position:absolute; z-index:102;}
+#container{position:relative; z-index:101;}
+#footer{position:relative; z-index:100;}
+
+/*header*/
+
+/*content*/
+
+/*footer*/
+
+/*화면 크기별 css*/
+@media screen and (max-width:1239px){
+
+}
+
+@media screen and (max-width:767px){
+
+}
+
+@media screen and (max-width:359px){
+
+}
