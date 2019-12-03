@@ -463,7 +463,9 @@ PC : 1.0rem = 10px
 	.m_main_banner .slick-arrow{display:none !important;}
 
 	.cont_tit > .tit{font-size:1.5rem;}
-	.main_top_cont{padding:0 20px;}
+	/*191203 : top버튼 추가*/
+	.main_top_cont{position:relative; padding:0 20px; z-index:2;}
+	/*//191203 : top버튼 추가*/
 	.main_top_cont .main_noti_wrap{width:100%; padding-right:0; margin-bottom:20px;}
 	.main_noti_tab li a{font-size:1.5rem;}
 	.main_noti_cont{height:auto;}
@@ -494,6 +496,13 @@ PC : 1.0rem = 10px
 	.photo_new_wrap{width:100%; padding-right:0; margin-bottom:20px;}
 	.noti_bnr_wrap{width:100%;}
 
+	/*191203 : top버튼 추가*/
+	.floating_btn{display:none; position:fixed; bottom:8px; right:8px; z-index:100;}
+	.floating_btn ul li{margin-top:5px;}
+	.floating_btn ul li a{display:block;}
+	.floating_btn ul li a img{width:66px;}
+	/*//191203 : top버튼 추가*/
+
 	.footer_inner .footer_left{width:100%; margin-bottom:40px; border-right:0; text-align:center;}
 	.footer_left .footer_link_list{margin-bottom:80px;}
 	.footer_left .footer_link_list li{margin-right:10px; margin-left:10px;}
@@ -504,7 +513,6 @@ PC : 1.0rem = 10px
 	.footer_right .link_sel_wrap{padding-left:0; margin-bottom:20px;}
 	.footer_right .link_sel{width:100%; margin-bottom:12px; margin-left:0;}
 	.footer_right .copright{padding-left:0; text-align:center;}
-
 
 
 

@@ -383,7 +383,35 @@ $(function(){
 				});
 			};
 		};
+
+		// 191203 : top버튼 스크립트 추가
+		if($(window).width() >= 768){
+			// top버튼
+			$(".floating_btn").hide();
+		};
+
+		$(".photo_new_wrap span.img").width($(".photo_new_wrap li").width() - 2);
+
 	}).resize();
+
+	// 191203 : top버튼 스크립트 추가
+	// top버튼
+	$(window).scroll(function(){
+		if($(window).width() <= 768){
+			if($(window).scrollTop() > 80){
+				$(".floating_btn").fadeIn(200);
+			}else{
+				$(".floating_btn").fadeOut(200);
+			}
+		}
+	});
+	$(window).scroll();
+
+	$(document).on("click", ".floating_btn .top_btn",function(){
+		$('html, body').animate({
+            scrollTop : 0
+        }, 400);
+	})
 
 });
 
