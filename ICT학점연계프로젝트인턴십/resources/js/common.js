@@ -68,6 +68,8 @@ $(function(){
 				1239: {
 					slidesPerView: 3,
 					slidesPerGroup: 3,
+					loopAdditionalSlides: 0,
+					spaceBetween: 40,
 				},
 				767: {
 					slidesPerView: 1,
