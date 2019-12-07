@@ -277,7 +277,7 @@
 	.header_inner .gnb_wrap .depth01 > li > .depth02 > li{width:100%; margin:0; border:0; border-top:1px solid #dbdbdb;}
 	.header_inner .gnb_wrap .depth01 > li > .depth02 > li a{padding:10px 40px; line-height:1.4; text-align:left;}
 
-	.main_banner{height:55vw;}
+	.main_banner{height:55vw; border-bottom:0;}
 	.main_visual_list li a img.t_img{display:none;}
 	.main_visual_list li a img.m_img{display:block;}
 
@@ -301,6 +301,8 @@
 	.main_noti_wrap .main_noti_bnr{width:100%;}
 	.main_noti_wrap .main_noti_bnr .tit{border:0;}
 	.main_noti_wrap .main_quick_menu{width:100%; margin-left:0;}
+	.noti_bnr_wrap{height:auto;}
+	.noti_bnr_wrap li a img{width:100%;}
 
 	.main_comp_list{padding:10px 30px 20px;}
 
