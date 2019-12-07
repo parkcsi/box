@@ -85,6 +85,34 @@ $(function(){
 		$(".noti_tab_cont > li").eq($(this).parent().index()).addClass("on").siblings().removeClass("on");
 	});
 
+	// 모바일 gnb
+	$(".gnb_btn").on("click", function(){
+		$(".header_inner .gnb_wrap").show().addClass("m_type");
+		$(".header_inner .dim").show();
+	});
+	$(".m_gnb_nav .gnb_close").on("click", function(){
+		$(".header_inner .gnb_wrap").hide().removeClass("m_type");
+		$(".header_inner .dim").hide();
+	});
+	$(document).on("click", ".m_type .depth01 > li > a", function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on").find(".depth02").slideUp();
+		}else{
+			$(this).parent().addClass("on").find(".depth02").slideDown().parent().siblings().removeClass("on").find(".depth02").slideUp();
+		}
+	});
+
+	$(".layer_pop .pop_btn a").on("click", function(){
+		$(".layer_pop").hide();
+	});
+
+	$(window).resize(function(){
+
+		if($(window).width() <= 768){
+			$(".gnb_wrap.m_type").removeClass("m_type");
+		}
+	}).resize();
+
 });
 
 //Layer Content
