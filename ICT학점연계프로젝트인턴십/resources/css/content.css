@@ -231,7 +231,7 @@
 
 }
 
-@media screen and (min-width:768px)) and (max-width:1239px){
+@media screen and (min-width:768px) and (max-width:1239px){
 	.main_noti_wrap .main_quick_menu{width:100%; height:156px; margin-left:0;}
 	.main_noti_wrap .main_quick_menu .tit{display:inline-block; width:20%; height:100%; line-height:156px; padding-left:0; text-align:center;}
 	.quick_menu_list{display:inline-block; width:80%; height:100%; vertical-align:top;}
