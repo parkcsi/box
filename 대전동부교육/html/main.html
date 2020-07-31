@@ -17,20 +17,424 @@
     <title>PROJECT</title>
     <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.css">   
+    <link rel="stylesheet" type="text/css" href="../resources/css/slick.css">   
     <link rel="stylesheet" type="text/css" href="../resources/css/content.css"> 
     <!--[if lt IE 9]>
         <script src="../resources/js/html5shiv.min.js"></script>
     <![endif]-->
 </head>
 <body>
+    <!-- 바로가기 버튼 -->
+    <div id="skipArea">
+        <a href="#gnb">메인메뉴 바로가기</a>
+        <a href="#content">본문으로 바로가기</a>
+    </div>
+
     <div id="wrap">
         <!-- header -->
         <div id="header">
+            <h1 class="main_logo">
+                <a href="">
+                    <img src="../resources/images/main_logo.png" alt="대전광역시동부교육지원청">
+                </a>
+            </h1>
+            <div class="h_option">
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <h3>글자크기</h3>
+                        <a href="" class="minus">글자축소</a>
+                        <a href="" class="plus">글자확대</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="h_util">
+                <li><a href="">통합검색</a></li>
+                <li><a href="">로그인</a></li>
+            </ul>
+            <div class="search">
+                <div class="search_wrap">
+                    <span class="search_inner">
+                        <label for="total_search" class="hid"></label>
+                        <input type="text" name="" id="total_search" placeholder="검색어를 입력해주세요">
+                        <button type="button">검색</button>
+                    </span>
+                </div>
+                <div class="keyword">
+                    <ul>
+                        <li><a href=""><span>#</span>학교찾기</a></li> 
+                        <li><a href=""><span>#</span>선생님 찾기</a></li> 
+                        <li><a href=""><span>#</span>유치원검색</a></li> 
+                        <li><a href=""><span>#</span>민원신청</a></li> 
+                        <li><a href=""><span>#</span>학교공제</a></li> 
+                    </ul>
+                </div>
+            </div>
+            <nav class="gnb_wrap">
+                <ul class="gnb_depth1">
+                    <li>
+                        <a href="">전자민원창구</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li class="row">
+                                    <a href="">민원안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">민원사무안내</a></li>
+                                        <li><a href="">민원도우미제</a></li>
+                                        <li><a href="">민원자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">분야별민원안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">학원,공익법인 안내</a></li>
+                                        <li><a href="">전,편입학 안내</a></li>
+                                        <li><a href="">유치원 인가</a></li>
+                                        <li><a href="">유아학비지원</a></li>
+                                        <li><a href="">교육환경보호구역내위해 업소심의</a></li>
+                                        <li class="link"><a href="">보호구역안내</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">제증명민원신청</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">제증명접수예약</a></li>
+                                        <li class="link"><a href="">홈에듀민원서비스</a></li>
+                                        <li class="link"><a href="">전자정부민원창구</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">대전동부교육신문고</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">안전신문고</a>
+                                </li>
+                                <li>
+                                    <a href="">110화상/수화/채팅상담</a>
+                                </li>
+                                <li class="row">
+                                    <a href="">나의민원</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">제증명민원</a></li>
+                                        <li><a href="">대전동부교육신문고</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">정보공개/개방</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li class="row">
+                                    <a href="">정보공개안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">정보공개안내</a></li>
+                                        <li><a href="">정보공개수수료</a></li>
+                                        <li><a href="">비공개대상정보</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">사전정보공표목록</a>
+                                </li>
+                                <li>
+                                    <a href="">정보공개자료실</a>
+                                </li>
+                                <li>
+                                    <a href="">정보공개목록</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">정보공개청구</a>
+                                </li>
+                                <li>
+                                    <a href="">공공데이터개방</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">참여마당</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li class="row">
+                                    <a href="">청렴사랑방</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">청렴정책 비전 및 목표</a></li>
+                                        <li><a href="">교육장 청렴 서한문</a></li>
+                                        <li><a href="">청렴 행사</a></li>
+                                        <li><a href="">청렴교육자료</a></li>
+                                        <li><a href="">청렴도 자가진단테스트</a></li>
+                                        <li><a href="">청렴 동부교육 고객만족도 조사</a></li>
+                                        <li><a href="">업무추진비공개</a></li>
+                                        <li><a href="">정책추진알림방</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">교육부조리신고</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">학교폭력/성폭력신고센터</a>
+                                </li>
+                                <li>
+                                    <a href="">선수고충처리센터</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">정책토론</a>
+                                </li>
+                                <li>
+                                    <a href="">설문조사</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">정보마당</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li>
+                                    <a href="">학교안내</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">기간제교사신청</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">학교인력채용공고</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">방과후학교강사풀</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">스승찾기</a>
+                                </li>
+                                <li>
+                                    <a href="">포상방</a>
+                                </li>
+                                <li>
+                                    <a href="">자체규정자료실</a>
+                                </li>
+                                <li class="link">
+                                    <a href="">입찰/낙찰안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">과별홈페이지</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li class="row">
+                                    <a href="">유초등교육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">중등교육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li><a href="">자유학기MOU체결</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">평생교육체육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li><a href="">학원·공익법인자료실</a></li>
+                                        <li><a href="">학원·공익법인 안내</a></li>
+                                        <li><a href="">급식자료실</a></li>
+                                        <li class="link"><a href="">체육시설 안내</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">학생생활지원센터</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li class="link"><a href="">Wee센터</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">운영지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li class="link"><a href="">감사정보</a></li>
+                                        <li><a href="">전보희망신청</a></li>
+                                        <li><a href="">휴복직상담실</a></li>
+                                        <li><a href="">인사고충상담실</a></li>
+                                        <li><a href="">기록관</a></li>
+                                        <li><a href="">을지태극연습</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">재정지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li><a href="">계약자료실</a></li>
+                                        <li><a href="">학교시설공사WHO정보</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">시설지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">과사업</a></li>
+                                        <li><a href="">사무분장</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li class="link"><a href="">학교시설종합정보서비스</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">교육지원청소개</a>
+                        <div class="gnb_depth2">
+                            <ul>
+                                <li class="row">
+                                    <a href="">열린교육장실</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">교육장인사말</a></li>
+                                        <li><a href="">역대교육장</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">연혁</a>
+                                </li>
+                                <li class="row">
+                                    <a href="">교육기본방향</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">기본방향</a></li>
+                                        <li><a href="">정책방향</a></li>
+                                        <li><a href="">일반현황</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="">제증명민원신청</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">공통 이행기준</a></li>
+                                        <li><a href="">부서별 이행기준</a></li>
+                                        <li><a href="">고객만족도 조사 결과</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">조직도</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="">조직도</a></li>
+                                        <li><a href="">전화번호안내</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">교육지원청위치</a>
+                                </li>
+                                <li>
+                                    <a href="">동부교육소식</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <!-- //header -->
         <!-- contents -->
         <div id="content">
+            <div class="m_cont01">
+                <div class="cont_wrap">
+                    <div class="main_banner">
+                        <div class="main_banner_list">
+                            <!-- 이미지 대체텍스트 a태그에 필수 기입 -->
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/main_banner_p01.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            </div>
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/main_banner_p02.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            </div>
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/main_banner_p03.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            </div>
+                        </div>
+                        <div class="main_banner_control">
+                            <!-- dotsClass 옵션으로 클래스명 변경 -->
+                            <ul class="main_banner_dot">
+                            </ul>
+                            <!-- prevArrow, nextArrow .slick('slickPause'); -->
+                            <div class="main_banner_arrow">
+                                <button type="button" class="prev"></button>
+                                <button type="button" class="stop"></button>
+                                <button type="button" class="play"></button>
+                                <button type="button" class="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_zone">
+                        <div class="banner_zone_list">
+                            <!-- https://codepen.io/corvus-007/pen/KZZPoZ 슬라이드 번호 -->
+                            <div class="banner_zone_control">
+                                <h3>배너존</h3>
+                                <span class="num"></span>
+                                <div class="banner_zone_arrow">
+                                    <button type="button" class="prev"></button>
+                                    <button type="button" class="stop"></button>
+                                    <button type="button" class="play"></button>
+                                    <button type="button" class="next"></button>
+                                </div>
+                            </div>
+                            <!-- 이미지 대체텍스트 a태그에 필수 기입 -->
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/banner_zone01.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                            </div>
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/banner_zone02.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                            </div>
+                            <div class="item">
+                                <a href="" style="background:url(../images/common/banner_zone03.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_cont02">
+                <div class="link_group">
+                    <div class="link_group_list">
+                        <div class="item">
+                            <a href="">제증명<br/>접수예약</a>
+                        </div>
+                        <div class="item">
+                            <a href="">전입학안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="">학원 및<br/>공익법인안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="">교육환경<br/>보호구역안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="">청렴사랑방</a>
+                        </div>
+                        <div class="item">
+                            <a href="">학교알리미</a>
+                        </div>
+                        <div class="item">
+                            <a href="">제증명<br/>접수예약</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_cont03">
+                
+            </div>
         </div>
         <!-- //contents -->
         <!-- footer -->
@@ -42,7 +446,7 @@
     <!-- Javascript -->
     <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/slick.js"></script>
     <script type="text/javascript" src="../resources/js/common.js"></script>
     <script>
     $(function(){
