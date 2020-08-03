@@ -6,11 +6,36 @@
     responsive 
                 */
 
-#header{position:relative; z-index:102;}
+#header{position:relative; z-index:102; background:url(../images/common/header_bg.png) repeat-x;}
 #contents{position:relative; z-index:101;}
 #footer{position:relative; z-index:100;}
 
 /*header*/
+.header_inner{position:relative; width:1232px; margin:0 auto;}
+
+.main_logo{position:absolute; top:80px; left:0;}
+
+.h_option{position:absolute; top:0; right:0;}
+.h_option ul{overflow:hidden;}
+.h_option ul li{float:left; border-left:1px solid #416aa2;}
+.h_option ul li a{display:block; line-height:40px; padding:0 15px; font-size:14px; color:#ffffff;}
+.h_option ul li.plus{border-left:0;}
+.h_option ul li.minus a{width:40px; height:40px; padding:0; background:#002752 url(../images/common/h_opt_minus.png) no-repeat center center; font-size:0;}
+.h_option ul li.plus a{width:40px; height:40px; padding:0; background:#002752 url(../images/common/h_opt_plus.png) no-repeat center center; font-size:0;}
+.h_option ul li h3{line-height:40px; padding:0 15px; font-size:14px; color:#ffffff; font-weight:300;}
+
+.h_util{position:absolute; top:70px; right:70px; overflow:hidden;}
+.h_util li{float:left; margin-left:30px;}
+.h_util li a{display:block; font-size:12px; color:#616161; text-align:center;}
+.h_util li a:before{content:""; display:block; width:40px; height:40px; margin:0 auto 10px; border-radius:40px;}
+.h_util li a.ico01:before{background:#eeeeee url(../images/common/h_util_ico01.png) no-repeat center center;}
+.h_util li a.ico02:before{background:#eeeeee url(../images/common/h_util_ico02.png) no-repeat center center;}
+
+.search_wrap{position:absolute; top:72px; left:50%; width:400px; margin-left:-200px;}
+.search_wrap .search_inner{height:36px; border:2px solid #009380;}
+.search_wrap .search_inner .search_list{display:block; position:relative;}
+.search_wrap .search_inner .search_list input{width:80%; padding:8px 12px; border:0;}
+.search_wrap .search_inner .search_list button{position:absolute; top:0; right:0; width:54px; height:36px; background:#009380 url(../images/common/h_search_btn.png) no-repeat center center; font-size:0;
 
 /*gnb*/
 
