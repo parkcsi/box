@@ -48,10 +48,10 @@
                             <h3>글자크기</h3>
                         </li>
                         <li class="plus">
-                            <a href="#">글자확대</a>
+                            <a href="javascript:zoomIn()">글자확대</a>
                         </li>
                         <li class="minus">
-                            <a href="#">글자축소</a>
+                            <a href="javascript:zoomOut()">글자축소</a>
                         </li>
                     </ul>
                 </div>
@@ -357,7 +357,7 @@
                         </div>
                     </li>
                 </ul>
-                <a href="" class="all_menu_open">전체메뉴 열기</a>
+                <a href="#" class="all_menu_open">전체메뉴 열기</a>
             </nav>
             <!-- //GNB -->
         </div>
@@ -365,343 +365,329 @@
         <!-- contents -->
         <div id="content">
             <div class="m_cont01">
-                <div class="cont_wrap">
-                    <div class="main_banner">
-                        <div class="main_banner_list">
-                            <!-- 이미지 대체텍스트 a태그에 필수 기입 -->
-                            <div class="item">
-                                <a href="#" style="background:url(../images/common/main_banner_p01.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
-                            </div>
-                            <div class="item">
-                                <a href="#" style="background:url(../images/common/main_banner_p02.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
-                            </div>
-                            <div class="item">
-                                <a href="#" style="background:url(../images/common/main_banner_p03.png);">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
-                            </div>
+                <div class="main_banner">
+                    <div class="main_banner_list">
+                        <div class="item">
+                            <a href="#" style="background:url(../resources/images/common/main_banner_p01.png) no-repeat center center;" class="main_img_p">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_t01.png) no-repeat center center;" class="main_img_t">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_m01.png) no-repeat center center;" class="main_img_m">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
                         </div>
-                        <div class="main_banner_control">
-                            <!-- dotsClass 옵션으로 클래스명 변경 -->
-                            <ul class="main_banner_dot">
-                            </ul>
-                            <!-- prevArrow, nextArrow .slick('slickPause'); -->
-                            <div class="main_banner_btn">
-                                <button type="button" class="prev"></button>
-                                <button type="button" class="stop"></button>
-                                <button type="button" class="play"></button>
-                                <button type="button" class="next"></button>
-                            </div>
+                        <div class="item">
+                            <a href="#" style="background:url(../resources/images/common/main_banner_p02.png) no-repeat center center;" class="main_img_p">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_t02.png) no-repeat center center;" class="main_img_t">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_m02.png) no-repeat center center;" class="main_img_m">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                        </div>
+                        <div class="item">
+                            <a href="#" style="background:url(../resources/images/common/main_banner_p03.png) no-repeat center center;" class="main_img_p">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_t03.png) no-repeat center center;" class="main_img_t">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
+                            <a href="#" style="background:url(../resources/images/common/main_banner_m03.png) no-repeat center center;" class="main_img_m">행복한 학교! 미래를 여는 대전동부교육 학생들이 꿈과 끼를 펼쳐 배움이 일어나고 교사가 가르침의 보람과 긍지를 느끼는 교육</a>
                         </div>
                     </div>
-                    <div class="banner_zone">
+                </div>
+                <div class="banner_zone">
+                    <div class="banner_zone_wrap">
+                        <div class="banner_zone_control">
+                            <h3>배너존</h3>
+                            <span class="num"></span>
+                            <div class="banner_zone_btn">
+                                <button type="button" class="prev">이전</button>
+                                <button type="button" class="stop">정지</button>
+                                <button type="button" class="next">다음</button>
+                            </div>
+                        </div>
                         <div class="banner_zone_list">
-                            <!-- https://codepen.io/corvus-007/pen/KZZPoZ 슬라이드 번호 -->
-                            <div class="banner_zone_control">
-                                <h3>배너존</h3>
-                                <span class="num"></span>
-                                <div class="banner_zone_btn">
-                                    <button type="button" class="prev"></button>
-                                    <button type="button" class="stop"></button>
-                                    <button type="button" class="play"></button>
-                                    <button type="button" class="next"></button>
-                                </div>
-                            </div>
-                            <!-- 이미지 대체텍스트 a태그에 필수 기입 -->
                             <div class="item">
-                                <a href="#" style="background:url(../images/common/banner_zone01.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                                <a href="#" style="background:url(../resources/images/common/banner_zone01.png) no-repeat center center;">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
                             </div>
                             <div class="item">
-                                <a href="#" style="background:url(../images/common/banner_zone02.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                                <a href="#" style="background:url(../resources/images/common/banner_zone02.png) no-repeat center center;">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
                             </div>
                             <div class="item">
-                                <a href="#" style="background:url(../images/common/banner_zone03.png);">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
+                                <a href="#" style="background:url(../resources/images/common/banner_zone03.png) no-repeat center center;">국민생각함 청년의 목소리를 들어 정책으로 실현합니다 국민생각함 특별관 청년정책 제안 바로가기</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="m_cont02">
-                <div class="cont_wrap">
-                    <div class="link_group">
-                        <div class="link_group_list">
-                            <div class="item">
-                                <a href="#">제증명<br/>접수예약</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">전입학안내</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">학원 및<br/>공익법인안내</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">유치원<br/>인가안내</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">교육환경<br/>보호구역안내</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">청렴사랑방</a>
-                            </div>
-                            <div class="item">
-                                <a href="#">학교알리미</a>
-                            </div>
+                <div class="link_group">
+                    <div class="link_group_list">
+                        <div class="item">
+                            <a href="#">제증명<br/>접수예약</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">전입학안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">학원 및<br/>공익법인안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">유치원<br/>인가안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">교육환경<br/>보호구역안내</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">청렴사랑방</a>
+                        </div>
+                        <div class="item">
+                            <a href="#">학교알리미</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="m_cont03">
-                <div class="cont_wrap">
-                    <ul class="ico_list">
-                        <li class="ico01"><a href="#">Wee 센터</a></li>
-                        <li class="ico02"><a href="#">특수교육 지원센터</a></li>
-                        <li class="ico03"><a href="#">학습종합 클리닉센터</a></li>
-                        <li class="ico04"><a href="#">유치원</a></li>
-                        <li class="ico05"><a href="#">영재교육원</a></li>
+                <ul class="ico_list">
+                    <li class="ico01"><a href="#">Wee 센터</a></li>
+                    <li class="ico02"><a href="#">특수교육 지원센터</a></li>
+                    <li class="ico03"><a href="#">학습종합 클리닉센터</a></li>
+                    <li class="ico04"><a href="#">유치원</a></li>
+                    <li class="ico05"><a href="#">영재교육원</a></li>
+                </ul>
+                <div class="notice_wrap">
+                    <ul class="notice_list">
+                        <li>
+                            <h3>
+                                <a href="#">공지사항</a>
+                            </h3>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>교육환경보호구역 해제고시</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="notice_more">공지사항 더보기</a>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">고시/공고</a>
+                            </h3>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>교육환경보호구역 해제고시</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="notice_more">고시/공고 더보기</a>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">동부교육소식</a>
+                            </h3>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date"><strong>20</strong><br/>2020.05</span>
+                                        <dl>
+                                            <dt>교육환경보호구역 해제고시</dt>
+                                            <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="notice_more">동부교육소식 더보기</a>
+                        </li>
                     </ul>
-                    <div class="notice_wrap">
-                        <ul class="notice_list">
+                </div>
+                <div class="custom_service">
+                    <div class="custom_service_tab">
+                        <h3>맞춤서비스</h3>
+                        <ul>
                             <li>
-                                <h3>
-                                    <a href="#">공지사항</a>
-                                </h3>
-                                <ul class="list_box">
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>교육환경보호구역 해제고시</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#" class="notice_more">공지사항 더보기</a>
+                                <h4><a href="#">학생/학부모</a></h4>
+                                <div class="custom_service_list">
+                                    <div class="item ico1_1">
+                                        <a href="#">학구도<br/>안내서비스</a>
+                                    </div>
+                                    <div class="item ico1_2">
+                                        <a href="#">학부모<br/>서비스</a>
+                                    </div>
+                                    <div class="item ico1_3">
+                                        <a href="#">유치원<br/>알리미</a>
+                                    </div>
+                                    <div class="item ico1_4">
+                                        <a href="#">학교<br/>알리미</a>
+                                    </div>
+                                    <div class="item ico1_5">
+                                        <a href="#">대학<br/>알리미</a>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <h3>
-                                    <a href="#">고시/공고</a>
-                                </h3>
-                                <ul class="list_box">
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>교육환경보호구역 해제고시</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#" class="notice_more">고시/공고 더보기</a>
+                                <h4><a href="#">교직원</a></h4>
+                                <div class="custom_service_list">
+                                    <div class="item ico2_1">
+                                        <a href="#">교육행정<br/>정보시스템</a>
+                                    </div>
+                                    <div class="item ico2_2">
+                                        <a href="#">교육포털<br/>(에듀랑)</a>
+                                    </div>
+                                    <div class="item ico2_3">
+                                        <a href="#">에듀넷</a>
+                                    </div>
+                                    <div class="item ico2_4">
+                                        <a href="#">학생생활<br/>지원센터</a>
+                                    </div>
+                                    <div class="item ico2_5">
+                                        <a href="#">고시/공고<br/>대장</a>
+                                    </div>
+                                    <div class="item ico2_6">
+                                        <a href="#">특수교육<br/>지원센터</a>
+                                    </div>
+                                    <div class="item ico2_7">
+                                        <a href="#">Wee센터</a>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <h3>
-                                    <a href="#">동부교육소식</a>
-                                </h3>
-                                <ul class="list_box">
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>2020년 8월말 퇴직교원 정부포상 추천대상자 공개</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>학교 열화상카메라 공급 업체 선정 결과</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>[긴급] 코로나19예방을 위한 집단감염 위험시설 운영제한 조치시행안 ...</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="date"><strong>20</strong><br/>2020.05</span>
-                                            <dl>
-                                                <dt>교육환경보호구역 해제고시</dt>
-                                                <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.</dd>
-                                            </dl>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#" class="notice_more">동부교육소식 더보기</a>
+                                <h4><a href="#">일반인</a></h4>
+                                <div class="custom_service_list">
+                                    <div class="item ico3_1">
+                                        <a href="#">선생님<br/>찾기</a>
+                                    </div>
+                                    <div class="item ico3_2">
+                                        <a href="#">기간제<br/>교사신청</a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="custom_service">
-                        <div class="custom_service_tab">
-                            <h3>맞춤서비스</h3>
-                            <ul>
-                                <li>
-                                    <h4><a href="#">학생/학부모</a></h4>
-                                    <div class="custom_service_list">
-                                        <div class="item ico1_1">
-                                            <a href="#">학구도<br/>안내서비스</a>
-                                        </div>
-                                        <div class="item ico1_2">
-                                            <a href="#">학부모<br/>서비스</a>
-                                        </div>
-                                        <div class="item ico1_3">
-                                            <a href="#">유치원<br/>알리미</a>
-                                        </div>
-                                        <div class="item ico1_4">
-                                            <a href="#">학교<br/>알리미</a>
-                                        </div>
-                                        <div class="item ico1_5">
-                                            <a href="#">대학<br/>알리미</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><a href="#">교직원</a></h4>
-                                    <div class="custom_service_list">
-                                        <div class="item ico2_1">
-                                            <a href="#">교육행정<br/>정보시스템</a>
-                                        </div>
-                                        <div class="item ico2_2">
-                                            <a href="#">교육포털<br/>(에듀랑)</a>
-                                        </div>
-                                        <div class="item ico2_3">
-                                            <a href="#">에듀넷</a>
-                                        </div>
-                                        <div class="item ico2_4">
-                                            <a href="#">학생생활<br/>지원센터</a>
-                                        </div>
-                                        <div class="item ico2_5">
-                                            <a href="#">고시/공고<br/>대장</a>
-                                        </div>
-                                        <div class="item ico2_6">
-                                            <a href="#">특수교육<br/>지원센터</a>
-                                        </div>
-                                        <div class="item ico2_7">
-                                            <a href="#">Wee센터</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h4><a href="#">일반인</a></h4>
-                                    <div class="custom_service_list">
-                                        <div class="item ico3_1">
-                                            <a href="#">선생님<br/>찾기</a>
-                                        </div>
-                                        <div class="item ico3_2">
-                                            <a href="#">기간제<br/>교사신청</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                    <div class="custom_link">
+                        <ul>
+                            <li>
+                                <h3>온라인 설문지</h3>
+                                <div class="custom_sel">
+                                    <a href="#">온라인설문 선택</a>
+                                    <ul class="custom_sel_list">
+                                        <li><a href="#">온라인설문1</a></li>
+                                        <li><a href="#">온라인설문2</a></li>
+                                        <li><a href="#">온라인설문3</a></li>
+                                        <li><a href="#">온라인설문4</a></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="custom_more">GO</a>
+                            </li>
+                            <li>
+                                <h3>학교찾기</h3>
+                                <div class="custom_ipt">
+                                    <label for="school_search" class="hid"></label>
+                                    <input type="text" name="" id="school_search" placeholder="검색어 입력">
+                                    <button type="button">검색</button>
+                                </div>
+                                <a href="#" class="custom_more">GO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link_list_wrap">
+                    <div class="link_list_inner">
+                        <div class="link_list">
+                            <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link01.png" alt=""></a></div>
+                            <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link02.png" alt=""></a></div>
+                            <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
+                            <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
+                            <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
                         </div>
-                        <div class="custom_link">
-                            <ul>
-                                <li>
-                                    <h3>온라인 설문지</h3>
-                                    <div class="custom_sel">
-                                        <a href="#">온라인설문 선택</a>
-                                        <ul class="custom_sel_list">
-                                            <li><a href="#">온라인설문1</a></li>
-                                            <li><a href="#">온라인설문2</a></li>
-                                            <li><a href="#">온라인설문3</a></li>
-                                            <li><a href="#">온라인설문4</a></li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="custom_more">GO</a>
-                                </li>
-                                <li>
-                                    <h3>학교찾기</h3>
-                                    <div class="custom_ipt">
-                                        <label for="school_search" class="hid"></label>
-                                        <input type="text" name="" id="school_search" placeholder="검색어 입력">
-                                        <button type="button">검색</button>
-                                    </div>
-                                    <a href="#" class="custom_more">GO</a>
-                                </li>
-                            </ul>
+                        <div class="control_box">
+                            <h3>배너모음</h3>
+                            <button type="button" class="prev"></button>
+                            <button type="button" class="stop"></button>
+                            <button type="button" class="play"></button>
+                            <button type="button" class="next"></button>
                         </div>
                     </div>
-                    <div class="link_list_wrap">
-                        <div class="link_list_inner">
-                            <div class="link_list">
-                                <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link01.png" alt=""></a></div>
-                                <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link02.png" alt=""></a></div>
-                                <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
-                                <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
-                                <div class="item"><a href="#"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
-                            </div>
-                            <div class="control_box">
-                                <h3>배너모음</h3>
-                                <button type="button" class="prev"></button>
-                                <button type="button" class="stop"></button>
-                                <button type="button" class="play"></button>
-                                <button type="button" class="next"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
+                </div>
             </div>
         </div>
         <!-- //contents -->
