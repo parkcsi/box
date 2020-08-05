@@ -20,6 +20,25 @@ $(function(){
     });
 	/*//gnb 2뎁스 높이*/
 
+    /* 검색어 키워드 슬라이드 */
+    if($('.keyword_wrap').length){
+        var key_bnr = $(".keyword_list");
+        key_bnr.slick({
+            infinite: true,
+            accessibility: true,
+            slidesToScroll: 1,
+            variableWidth: true,
+            autoplay: true,
+            draggable: false,
+            prevArrow: $('.keyword_wrap .keyword_list_control .prev'),
+            nextArrow: $('.keyword_wrap .keyword_list_control .next')
+        });
+        $('.keyword_list_control .stop').click(function(){
+            bnr_stop(key_bnr, $(this));
+        });
+    }
+    /* //검색어 키워드 슬라이드 */
+
     /* 메인 슬라이드 */
     if($('.main_banner').length){
         var main_bnr = $(".main_banner_list");
@@ -69,7 +88,6 @@ $(function(){
             infinite: true,
             accessibility: true,
             slidesToScroll: 1,
-            variableWidth: true,
             autoplay: true,
             draggable: false,
             prevArrow: $('.banner_zone_wrap .banner_zone_control .prev'),
@@ -81,24 +99,22 @@ $(function(){
     }
     /* //배너존 슬라이드 */
 
-    /* 검색어 키워드 슬라이드 */
-    if($('.keyword_wrap').length){
-        var key_bnr = $(".keyword_list");
-        key_bnr.slick({
+    /* 링크그룹 슬라이드 */
+    if($('.link_group').length){
+        var link_bnr = $(".link_group_list");
+        link_bnr.slick({
             infinite: true,
-            accessibility: true,
+            slidesToShow: 6,
             slidesToScroll: 1,
-            variableWidth: true,
-            autoplay: true,
-            draggable: false,
-            prevArrow: $('.keyword_wrap .keyword_list_control .prev'),
-    		nextArrow: $('.keyword_wrap .keyword_list_control .next')
-        });
-        $('.keyword_list_control .stop').click(function(){
-            bnr_stop(key_bnr, $(this));
+            draggable: false
         });
     }
-    /* //검색어 키워드 슬라이드 */
+    /* //링크그룹 슬라이드 */
+
+    $('.notice_list > li > h3 > a').on('click', function(){
+        $(this).closest('li').addClass('on').siblings('li').removeClass('on');
+        return false;
+    });
 
 
 	$(window).resize(function(){

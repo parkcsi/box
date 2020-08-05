@@ -52,7 +52,7 @@ url(../font/NotoSans-Bold.woff) format('woff');
 
 /*skip 메뉴*/
 #skipArea, #skipArea ul {height:0; width:100%}
-#skipArea a {position:absolute; top:-9999px; left:0; z-index:100; width:100%; height:30px; background-color:#000; color:#fff; line-height:30px; font-family:'NotoR'; opacity:0.6; text-align:center; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter:alpha(opacity=60)}
+#skipArea a {position:absolute; top:-9999px; left:0; z-index:103; width:100%; height:30px; background-color:#000; color:#fff; line-height:30px; font-family:'NotoR'; opacity:0.6; text-align:center; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter:alpha(opacity=60)}
 #skipArea a:focus, #skipArea a:hover, #skipArea a:active {top:0}
 
 /* Helper classes */
