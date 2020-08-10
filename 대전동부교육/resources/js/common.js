@@ -62,10 +62,11 @@ $(function(){
 	if($('.keyword_wrap').length){
 		var keyword_bnr = $(".keyword_list");
 		keyword_bnr.slick({
-			infinite: true,
-			accessibility: true,
-			slidesToScroll: 1,
+			infinite: false,
+			slidesToScroll: 5,
 			variableWidth: true,
+			slidesToShow: 5,
+			rows: 1,
 			autoplay: true,
 			draggable: false,
 			prevArrow: $('.keyword_wrap .keyword_list_control .prev'),
@@ -229,11 +230,66 @@ $(function(){
 			infinite: true,
 			accessibility: true,
 			slidesToScroll: 1,
-			variableWidth: true,
+			slidesToShow: 5,
+			// variableWidth: true,
 			autoplay: true,
 			draggable: false,
 			prevArrow: $('.link_list_inner .control_box .prev'),
-			nextArrow: $('.link_list_inner .control_box .next')
+			nextArrow: $('.link_list_inner .control_box .next'),
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 4,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				},
+				{
+					breakpoint: 1000,
+					settings: {
+						slidesToShow: 3,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				},
+				{
+					breakpoint: 800,
+					settings: {
+						slidesToShow: 2,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				}
+			]
 		});
 		$('.control_box .stop').click(function(){
 			bnr_stop(link_list_bnr, $(this));

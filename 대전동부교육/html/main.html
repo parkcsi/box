@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/slick.css">   
     <link rel="stylesheet" type="text/css" href="../resources/css/content.css"> 
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.mCustomScrollbar.css"> 
     <!--[if lt IE 9]>
         <script src="../resources/js/html5shiv.min.js"></script>
     <![endif]-->
@@ -77,6 +78,7 @@
                             <div class="item"><a href="javascript:;"><span>#</span>유치원검색</a></div> 
                             <div class="item"><a href="javascript:;"><span>#</span>민원신청</a></div> 
                             <div class="item"><a href="javascript:;"><span>#</span>학교공제</a></div> 
+                            <div class="item"><a href="javascript:;">궁금한 사항은 키워드 검색</a></div> 
                         </div>
                         <div class="keyword_list_control">
                             <button type="button" class="prev">이전</button>
@@ -690,6 +692,11 @@
                             <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
                             <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
                             <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
+                            <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link01.png" alt=""></a></div>
+                            <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link02.png" alt=""></a></div>
+                            <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
+                            <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
+                            <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
                         </div>
                         <div class="control_box">
                             <h3>배너모음</h3>
@@ -1189,10 +1196,15 @@
     <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../resources/js/slick.js"></script>
     <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.js"></script>
     <script>
     $(function(){
-
     });
+    (function($){
+        $(window).on("load",function(){
+            $(".all_menu_wrap .all_menu_inner .all_menu_list").mCustomScrollbar();
+        });
+    })(jQuery);
     </script>
 </body>
 </html>
