@@ -1,15 +1,18 @@
 $(function(){
 	/*gnb 오픈*/
 	$(".gnb_depth1 > li > a").on("mouseenter focusin", function(){
-		$(this).parent("li").addClass("on").find(".gnb_depth2").stop().slideDown().parent("li").siblings("li").removeClass("on").find(".gnb_depth2").stop().hide();
+		$(this).parent("li").addClass("on").find(".gnb_depth2").clearQueue().slideDown().parent("li").siblings("li").removeClass("on").find(".gnb_depth2").clearQueue().hide();
 	});
 	$(".gnb_depth1").on("mouseleave", function(){
-		$(".gnb_depth1 > li").removeClass("on").find(".gnb_depth2").stop().hide();
+		$(".gnb_depth1 > li").removeClass("on").find(".gnb_depth2").clearQueue().hide();
 	});
 	/*//gnb 오픈*/
 
 	/*전체메뉴*/
 	$(".all_menu_btn").click(function(){
+		if($(".search_btn").hasClass("close")){
+			$(".search_btn a").click();
+		}
 		$(".all_menu_wrap").show();
 		$(".all_menu_close").focus();
 		dim_open();
@@ -25,7 +28,7 @@ $(function(){
 		// gnb 포커스
 		var el01 = $(".gnb_depth1");
 		if(el01.parents("#gnb").has(e.target).length === 0){
-			el01.find("li").removeClass("on").find(".gnb_depth2").stop().hide();
+			el01.find("li").removeClass("on").find(".gnb_depth2").hide();
 		}
 		// 전체메뉴 포커스
 		var el02 = $(".all_menu_wrap");
@@ -49,8 +52,8 @@ $(function(){
 		for(var j = 0; j < li_h1.length; j++){
 			depth2_li.eq(j).height(Math.max.apply(null, li_h1));
 		};
-		for(var k = 5; k < li_h1.length; k++){
-			depth2_li.eq(k).height(Math.max.apply(null, li_h2));
+		for(var k = 0; k < li_h2.length; k++){
+			depth2_li.eq(k+5).height(Math.max.apply(null, li_h2));
 		};
 	});
 	/*//gnb 2뎁스 높이*/
@@ -298,12 +301,34 @@ $(function(){
 	});
 	/*//모바일 검색영역*/
 
+	/*모바일 전체메뉴*/
+	$(".all_menu_depth1 > li > a").click(function(){
+		if($(this).closest("li").hasClass("on")){
+			$(this).closest("li").removeClass("on").find(".all_menu_depth2").clearQueue().slideUp();
+		}else{
+			$(".all_menu_list .all_menu_depth1 > li").removeClass("on").find(".all_menu_depth2").clearQueue().slideUp();
+			$(this).closest("li").addClass("on").find(".all_menu_depth2").clearQueue().slideDown();
+		}
+	});
+	$(".all_menu_depth2 > ul > li > a").click(function(){
+		if($(this).closest("li").hasClass("on")){
+			$(this).closest("li").removeClass("on").find(".all_menu_depth3").clearQueue().slideUp();
+		}else{
+			$(this).closest("li").siblings("li").removeClass("on").find(".all_menu_depth3").clearQueue().slideUp();
+			$(this).closest("li").addClass("on").find(".all_menu_depth3").clearQueue().slideDown();
+		}
+	});
+	/*//모바일 전체메뉴*/
+
 	$(window).resize(function(){
 
 		if($(window).width() >= 1200){
 			$(".search_wrap").removeAttr("style");
 			$(".search_btn.close a").click();
+			$(".all_menu_wrap").removeClass("m_all_menu").find("li").removeClass("on");
+			$(".all_menu_depth2, .all_menu_depth3").removeAttr("style");
 		} else if($(window).width() <= 1199){
+			$(".all_menu_wrap").addClass("m_all_menu");
 		}
 
 	});
