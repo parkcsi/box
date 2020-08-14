@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- No cache -->
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+    <!-- Summary -->
+    <meta property="og:title" content="project">
+    <meta property="og:description" content="project">
+    <title>PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/slick.css">   
+    <link rel="stylesheet" type="text/css" href="../resources/css/content.css"> 
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.mCustomScrollbar.css"> 
+    <!--[if lt IE 9]>
+        <script src="../resources/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 바로가기 버튼 -->
+    <div id="skipArea">
+        <a href="#gnb">메인메뉴 바로가기</a>
+        <a href="#content">본문으로 바로가기</a> 
+    </div>
+
+    <div id="wrap">
+        <!-- header -->
+        <div id="header">
+            <div class="header_inner">
+                <h1 class="main_logo">
+                    <a href="javascript:;">
+                        <img src="../resources/images/common/main_logo.png" alt="대전광역시서부교육지원청 로고">
+                    </a>
+                </h1>
+                <div class="h_option">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">통합검색</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">로그인</a>
+                        </li>
+                        <li class="h_util">
+                            <span>화면크기</span>
+                            <a href="javascript:zoomIn()" class="plus">글자확대</a>
+                            <a href="javascript:zoomOut()" class="minus">글자축소</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_btn">
+                    <a href="javascript:;">검색영역 열기</a>
+                </div>
+                <div class="search_wrap">
+                    <div class="search_inner">
+                        <span class="search_list">
+                            <label for="total_search" class="hid">검색어 입력</label>
+                            <input type="text" name="" id="total_search" placeholder="검색어를 입력해주세요">
+                            <button type="button">검색</button>
+                        </span>
+                        <a href="javascript:;" class="search_close">검색어입력 닫기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- GNB -->
+            <nav class="gnb_wrap" id="gnb">
+                <ul class="gnb_depth1">
+                    <li>
+                        <a href="javascript:;">전자민원창구</a>
+                        <div class="gnb_depth2">
+                            <div class="gnb_tit">
+                                <h2>전자<br/>민원창구</h2>
+                            </div>
+                            <ul>
+                                <li class="row">
+                                    <a href="javascript:;">민원안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">민원처리안내</a></li>
+                                        <li><a href="javascript:;">민원후견인제</a></li>
+                                        <li><a href="javascript:;">민원자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">분야별민원안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">전입학안내</a></li>
+                                        <li><a href="javascript:;">학원공익법인안내</a></li>
+                                        <li class="link"><a href="javascript:;">보호구역심의안내</a></li>
+                                        <li><a href="javascript:;">유아학비지원안내</a></li>
+                                        <li><a href="javascript:;">유치원인가민원안내</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">제증명민원신청</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">예약접수창구</a></li>
+                                        <li class="link"><a href="javascript:;">Home-Edu 민원서비스</a></li>
+                                        <li class="link"><a href="javascript:;">민원24시</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">신고센터</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">대전서부교육신문고</a></li>
+                                        <li class="link"><a href="javascript:;">학교폭력/성폭력신고</a></li>
+                                        <li><a href="javascript:;">안전신문고</a></li>
+                                        <li><a href="javascript:;">학생선수고충처리센터</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">110화상/수화/채팅상담</a>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">행정서비스헌장</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">서비스헌장</a></li>
+                                        <li><a href="javascript:;">공통이행기준</a></li>
+                                        <li><a href="javascript:;">부서별이행기준</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">정보공개</a>
+                        <div class="gnb_depth2">
+                            <div class="gnb_tit">
+                                <h2>정보공개</h2>
+                            </div>
+                            <ul>
+                                <li class="row">
+                                    <a href="javascript:;">정보공개안내</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">정보공개안내</a></li>
+                                        <li><a href="javascript:;">정보공개수수료</a></li>
+                                        <li><a href="javascript:;">비공개대상정보</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">사전정보공표목록</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">정보공개자료실</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">정보공개목록</a>
+                                </li>
+                                <li class="link">
+                                    <a href="javascript:;" title="새창으로 이동" target="_blank">정보공개청구</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">공공데이터개방</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">행정정보마당</a>
+                        <div class="gnb_depth2">
+                            <div class="gnb_tit">
+                                <h2>행정<br/>정보마당</h2>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">집행기준안내</a>
+                                </li>
+                                <li class="link">
+                                    <a href="javascript:;" title="새창으로 이동" target="_blank">입찰공고/낙찰안내</a>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">고시/공고</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">고시대장</a></li>
+                                        <li><a href="javascript:;">공고대장</a></li>
+                                        <li><a href="javascript:;">고시공고게시판</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">공시송달공고</a>
+                                </li>
+                                <li class="link">
+                                    <a href="javascript:;" title="새창으로 이동" target="_blank">학교인력채용공고</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">자체규정자료실</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">MOU 체결현황</a>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">청렴사랑방</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">청렴자료방</a></li>
+                                        <li><a href="javascript:;">Happy Call</a></li>
+                                        <li><a href="javascript:;">청렴교육자료</a></li>
+                                        <li><a href="javascript:;">정책추진알림방</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">과별홈페이지</a>
+                        <div class="gnb_depth2">
+                            <div class="gnb_tit">
+                                <h2>과별<br/>홈페이지</h2>
+                            </div>
+                            <ul>
+                                <li class="row">
+                                    <a href="javascript:;">유초등교육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">유아교육자료실</a></li>
+                                        <li><a href="javascript:;">초등장학자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">특수교육지원센터</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">중등교육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">중등장학자료실</a></li>
+                                        <li><a href="javascript:;">보도자료</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">평생교육체육과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">급식게시판</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li class="link"><a href="javascript:;">체육시설안내서비스</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">학생생활지원센터</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">Wee센터</a></li>
+                                        <li><a href="javascript:;">찾아오시는길</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">운영지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">학교행정력향상동아리</a></li>
+                                        <li><a href="javascript:;">감사정보</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">재정지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">하자보수정보방</a></li>
+                                    </ul>
+                                </li>
+                                <li class="row">
+                                    <a href="javascript:;">시설지원과</a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="javascript:;">개인별사무분장</a></li>
+                                        <li><a href="javascript:;">공개자료실</a></li>
+                                        <li><a href="javascript:;">학교시설종합정보서비스</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">교육지원청소개</a>
+                        <div class="gnb_depth2">
+                            <div class="gnb_tit">
+                                <h2>교육지원청<br/>소개</h2>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">교육장인사말</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">역대교육장</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">연혁</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">일반현황</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">교육시책</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">조직구성도</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">전화번호</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">찾아오시는길</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m_menu"><a href="javascript:;" class="login">로그인</a></li>
+                    <li class="m_menu"><a href="javascript:;" class="search">통합검색</a></li>
+                </ul>
+            </nav>
+            <div class="all_menu_btn">
+                <a href="javascript:;">전체메뉴 열기</a>
+            </div>
+            <!-- //GNB -->
+            <!-- all menu -->
+            <div class="all_menu_wrap">
+                <div class="all_menu_inner">
+                    <div class="all_menu_tit">
+                        <h2>전체메뉴</h2>
+                    </div>
+                    <div class="all_menu_list">
+                        <ul class="all_menu_depth1">
+                            <li>
+                                <a href="javascript:;">전자민원창구</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">민원안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">민원처리안내</a></li>
+                                                <li><a href="javascript:;">민원후견인제</a></li>
+                                                <li><a href="javascript:;">민원자료실</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">분야별민원안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">전입학안내</a></li>
+                                                <li><a href="javascript:;">학원공익법인안내</a></li>
+                                                <li class="link"><a href="javascript:;">보호구역심의안내</a></li>
+                                                <li><a href="javascript:;">유아학비지원안내</a></li>
+                                                <li><a href="javascript:;">유치원인가민원안내</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">제증명민원신청</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">예약접수창구</a></li>
+                                                <li class="link"><a href="javascript:;">Home-Edu 민원서비스</a></li>
+                                                <li class="link"><a href="javascript:;">민원24시</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">신고센터</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">대전서부교육신문고</a></li>
+                                                <li class="link"><a href="javascript:;">학교폭력/성폭력신고</a></li>
+                                                <li><a href="javascript:;">안전신문고</a></li>
+                                                <li><a href="javascript:;">학생선수고충처리센터</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">110화상/수화/채팅상담</a>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">행정서비스헌장</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">서비스헌장</a></li>
+                                                <li><a href="javascript:;">공통이행기준</a></li>
+                                                <li><a href="javascript:;">부서별이행기준</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">기타</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">로그인</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">사이트맵</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">배너모음</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">사이버투표</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">통합검색</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">학교찾기</a>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">개인정보처리방침</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">이전개인정보처리방침</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">저작권정책</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">정보공개</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">정보공개안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">정보공개안내</a></li>
+                                                <li><a href="javascript:;">정보공개수수료</a></li>
+                                                <li><a href="javascript:;">비공개대상정보</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">사전정보공표목록</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">정보공개자료실</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">정보공개목록</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="javascript:;" title="새창으로 이동" target="_blank">정보공개청구</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">공공데이터개방</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">Wee센터</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">Wee센터소개</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">연혁</a></li>
+                                                <li><a href="javascript:;">조직</a></li>
+                                                <li><a href="javascript:;">상징</a></li>
+                                                <li><a href="javascript:;">역대센터장</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">이용안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">사업내용</a></li>
+                                                <li><a href="javascript:;">센터시설</a></li>
+                                                <li><a href="javascript:;">협약기관</a></li>
+                                                <li><a href="javascript:;">이용안내</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">Wee센터소식</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">행사 및 활동알림</a></li>
+                                                <li><a href="javascript:;">센터소식지</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">자료실</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">영재교육원</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">영재교육원 소개</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">인사말</a></li>
+                                                <li><a href="javascript:;">연혁</a></li>
+                                                <li><a href="javascript:;">오시는 길</a></li>
+                                                <li><a href="javascript:;">조직</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">운영안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">운영계획</a></li>
+                                                <li><a href="javascript:;">현황</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">영재교육원 소식</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">자료실</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">행정정보마당</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">집행기준안내</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="javascript:;" title="새창으로 이동" target="_blank">입찰공고/낙찰안내</a>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">고시/공고</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">고시대장</a></li>
+                                                <li><a href="javascript:;">공고대장</a></li>
+                                                <li><a href="javascript:;">고시공고게시판</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">공시송달공고</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="javascript:;" title="새창으로 이동" target="_blank">학교인력채용공고</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">자체규정자료실</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">MOU 체결현황</a>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">청렴사랑방</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">청렴자료방</a></li>
+                                                <li><a href="javascript:;">Happy Call</a></li>
+                                                <li><a href="javascript:;">청렴교육자료</a></li>
+                                                <li><a href="javascript:;">정책추진알림방</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">특수교육 지원센터</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">지원센터안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">특수교육정보</a>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">게시판</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">공지사항</a></li>
+                                                <li><a href="javascript:;">자료실</a></li>
+                                                <li><a href="javascript:;">특수교육Q&A</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">기록관</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">기록관안내</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">공개자료실</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">온라인전시</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">과별홈페이지</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">유초등교육과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">유아교육자료실</a></li>
+                                                <li><a href="javascript:;">초등장학자료실</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">특수교육지원센터</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">중등교육과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">중등장학자료실</a></li>
+                                                <li><a href="javascript:;">보도자료</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">평생교육체육과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">급식게시판</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li class="link"><a href="javascript:;">체육시설안내서비스</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">학생생활지원센터</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">Wee센터</a></li>
+                                                <li><a href="javascript:;">찾아오시는길</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">운영지원과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">학교행정력향상동아리</a></li>
+                                                <li><a href="javascript:;">감사정보</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">재정지원과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">하자보수정보방</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">시설지원과</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">개인별사무분장</a></li>
+                                                <li><a href="javascript:;">공개자료실</a></li>
+                                                <li><a href="javascript:;">학교시설종합정보서비스</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">교육지원청소개</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">교육장인사말</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">역대교육장</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">연혁</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">일반현황</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">교육시책</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">조직구성도</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">전화번호</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">찾아오시는길</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;">교육지원청소개</a>
+                                <div class="all_menu_depth2">
+                                    <ul>
+                                        <li class="row">
+                                            <a href="javascript:;">센터소개</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">연혁</a></li>
+                                                <li><a href="javascript:;">조직</a></li>
+                                                <li><a href="javascript:;">상징</a></li>
+                                                <li><a href="javascript:;">역대센터장</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="row">
+                                            <a href="javascript:;">이용안내</a>
+                                            <ul class="gnb_depth3">
+                                                <li><a href="javascript:;">사업내용</a></li>
+                                                <li><a href="javascript:;">센터시설</a></li>
+                                                <li><a href="javascript:;">운영개요</a></li>
+                                                <li><a href="javascript:;">학습바우처협약기관</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">센터소식</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">자료실</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="line_bg">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <p class="all_menu_txt">DAEJEON SEOGBU OFFICE OF EDUCATION</p>
+                </div>
+            </div>
+            <!-- //all menu -->
+        </div>
+        <!-- //header -->
+        <!-- contents -->
+        <div id="content">
+            <div class="m_cont01">
+                <p class="top_tit"><img src="../resources/images/common/main_top_title.png"></p>
+                <div class="main_banner">
+                    <!-- PC, tablet 메인배너 컨트롤 영역 js파일에서 생성 -->
+                    <div class="main_banner_list">
+                        <div class="item">
+                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner_p01.png);">2020년 주민참여 제안사업 공무 기간 2020.6.1.(월) ~ 7.31.(금) 대상 학생, 학부모, 교직원, 시민 누구나 참여방법 대전광역시 교육청 홈페이지, 우편 방문, 팩스(042-616-8149) 2021년도 대전교육 예산편성에 반영할 참신한 교육정책사업 발굴을 위해 주민참여 제안사업 공모를 실시하니, 적극 참여해 주시기 바랍니다.</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner_p02.png);">학생의 꿈을 키우는 희망찬 대전서부교육 대전서부교육지원청</a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner_p03.png);">대전서부교육지원청 홈페이지 리뉴얼 OPEN 이제 서부교육지원청을 스마트폰 태블릿에서도 쉽게 이용하실 수 있습니다.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link_group">
+                    <div class="link_group_list">
+                        <div class="item">
+                            <a href="javascript:;" class="ico01"><span>Wee 센터</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" class="ico02"><span>특수교육<br/>지원센터</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" class="ico03"><span>학습종합<br/>클리닉센터</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" class="ico04"><span>영재교육원</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" class="ico05"><span>방과후학교</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="javascript:;" class="ico06"><span>기록관</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="favor_group">
+                    <h3>자추찾는 메뉴</h3>
+                    <ul class="favor_group_list">
+                        <li>
+                            <a href="javascript:;" class="ico01">제증명 예약접수</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ico02">행정서비스헌장</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ico03">전입학 처리안내</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ico04">학원공익법인안내</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ico05">유치원인가안내</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ico06">교육환경 보호구역</a>
+                        </li>
+                    </ul>
+                    <p class="top_btn"><a href="javascript:;">TOP</a></p>
+                </div>
+            </div>
+            <div class="m_cont02">
+                <div class="notice_wrap">
+                    <ul class="notice_list">
+                        <li class="on">
+                            <h3>
+                                <a href="javascript:;">공지사항</a>
+                            </h3>
+                            <div class="notice_top">
+                                <a href="javascript:;">
+                                    <span class="date"><strong>08</strong>2020. 04</span>
+                                    <dl>
+                                        <dt>2020년 8월말 퇴직교원 정부포상 안내</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. </dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt new">2020년 8월말 퇴직교원 정부포상 안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">학교 열화상카메라 공급 업체 선정 결과</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">[긴급] 코로나19예방을 위한 집단감염 예방 수칙</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">교육환경보호구역 해제고시</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="notice_more">공지사항 더보기</a>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="javascript:;">고시/공고</a>
+                            </h3>
+                            <div class="notice_top">
+                                <a href="javascript:;">
+                                    <span class="date"><strong>08</strong>2020. 04</span>
+                                    <dl>
+                                        <dt>2020년 8월말 퇴직교원 정부포상 안내</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. </dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt new">2020년 8월말 퇴직교원 정부포상 안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">학교 열화상카메라 공급 업체 선정 결과</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">[긴급] 코로나19예방을 위한 집단감염 예방 수칙</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">교육환경보호구역 해제고시</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="notice_more">고시/공고 더보기</a>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="javascript:;">채용공고</a>
+                            </h3>
+                            <div class="notice_top">
+                                <a href="javascript:;">
+                                    <span class="date"><strong>08</strong>2020. 04</span>
+                                    <dl>
+                                        <dt>2020년 8월말 퇴직교원 정부포상 안내</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. </dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt new">2020년 8월말 퇴직교원 정부포상 안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">학교 열화상카메라 공급 업체 선정 결과</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">[긴급] 코로나19예방을 위한 집단감염 예방 수칙</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">교육환경보호구역 해제고시</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="notice_more">채용공고 더보기</a>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="javascript:;">자료실</a>
+                            </h3>
+                            <div class="notice_top">
+                                <a href="javascript:;">
+                                    <span class="date"><strong>08</strong>2020. 04</span>
+                                    <dl>
+                                        <dt>2020년 8월말 퇴직교원 정부포상 안내</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다. </dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <ul class="list_box">
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt new">2020년 8월말 퇴직교원 정부포상 안내</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">학교 열화상카메라 공급 업체 선정 결과</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">[긴급] 코로나19예방을 위한 집단감염 예방 수칙</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">교육환경보호구역 해제고시</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <span class="date">2020. 05. 20</span>
+                                        <span class="txt">제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="notice_more">자료실 더보기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="custom_service">
+                    <div class="custom_service_tab">
+                        <div class="tab_inner">
+                            <h3>맞춤서비스</h3>
+                            <ul>
+                                <li>
+                                    <h4><a href="javascript:;">학생/학부모</a></h4>
+                                    <div class="custom_service_list">
+                                        <div class="item ico1_1">
+                                            <a href="javascript:;">학구도<br/>안내서비스</a>
+                                        </div>
+                                        <div class="item ico1_2">
+                                            <a href="javascript:;">학부모<br/>서비스</a>
+                                        </div>
+                                        <div class="item ico1_3">
+                                            <a href="javascript:;">학교알리미</a>
+                                        </div>
+                                        <div class="item ico1_4">
+                                            <a href="javascript:;">유치원<br/>알리미</a>
+                                        </div>
+                                        <div class="item ico1_5">
+                                            <a href="javascript:;">유치원입학<br/>관리시스템</a>
+                                        </div>
+                                        <div class="item ico1_6">
+                                            <a href="javascript:;">유아학비<br/>지원시스템</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="on">
+                                    <h4><a href="javascript:;">교직원</a></h4>
+                                    <div class="custom_service_list">
+                                        <div class="item ico2_1">
+                                            <a href="javascript:;">학구도<br/>안내서비스</a>
+                                        </div>
+                                        <div class="item ico2_2">
+                                            <a href="javascript:;">학부모<br/>서비스</a>
+                                        </div>
+                                        <div class="item ico2_3">
+                                            <a href="javascript:;">학교알리미</a>
+                                        </div>
+                                        <div class="item ico2_4">
+                                            <a href="javascript:;">유치원<br/>알리미</a>
+                                        </div>
+                                        <div class="item ico2_5">
+                                            <a href="javascript:;">유치원입학<br/>관리시스템</a>
+                                        </div>
+                                        <div class="item ico2_6">
+                                            <a href="javascript:;">유아학비<br/>지원시스템</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4><a href="javascript:;">일반인</a></h4>
+                                    <div class="custom_service_list">
+                                        <div class="item ico3_1">
+                                            <a href="javascript:;">학구도<br/>안내서비스</a>
+                                        </div>
+                                        <div class="item ico3_2">
+                                            <a href="javascript:;">학부모<br/>서비스</a>
+                                        </div>
+                                        <div class="item ico3_3">
+                                            <a href="javascript:;">학교알리미</a>
+                                        </div>
+                                        <div class="item ico3_4">
+                                            <a href="javascript:;">유치원<br/>알리미</a>
+                                        </div>
+                                        <div class="item ico3_5">
+                                            <a href="javascript:;">유치원입학<br/>관리시스템</a>
+                                        </div>
+                                        <div class="item ico3_6">
+                                            <a href="javascript:;">유아학비<br/>지원시스템</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="custom_link">
+                        <ul>
+                            <li class="custom_sel_bg">
+                                <h3>온라인 설문지</h3>
+                                <div class="custom_sel">
+                                    <a href="javascript:;">온라인설문 선택</a>
+                                    <ul class="custom_sel_list">
+                                        <li><a href="javascript:;">온라인설문1</a></li>
+                                        <li><a href="javascript:;">온라인설문2</a></li>
+                                        <li><a href="javascript:;">온라인설문3</a></li>
+                                        <li><a href="javascript:;">온라인설문4</a></li>
+                                    </ul>
+                                </div>
+                                <a href="javascript:;" class="custom_more">GO</a>
+                            </li>
+                            <li class="custom_ipt_bg">
+                                <h3>학교찾기</h3>
+                                <div class="custom_ipt">
+                                    <label for="school_search" class="hid"></label>
+                                    <input type="text" name="" id="school_search" placeholder="검색어 입력">
+                                    <button type="button">검색</button>
+                                </div>
+                                <a href="javascript:;" class="custom_more">GO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="m_cont03">
+                <div class="con_wrap">
+                    <div class="edu_news_wrap">
+                        <div class="edu_news_tit">
+                            <h3 class="tit">대전교육소식</h3>
+                            <span class="txt">대전교육시청 뉴스와 정보를<br/>안내해드립니다.</span>
+                            <div class="edu_news_control">
+                                <button type="button" class="prev">이전</button>
+                                <button type="button" class="stop">정지</button>
+                                <button type="button" class="prev">이전</button>
+                                <button type="button" class="more">더보기</button>
+                            </div>
+                        </div>
+                        <div class="edu_news_list">
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">
+                                    <img src="../resources/images/common/img_bottom_link01.png">
+                                    <dl>
+                                        <dt>코로나19로부터 안전한 등교개학</dt>
+                                        <dd>내용입니다. 내용입니다. 내용입니다. 내용입니다. 코로나19로부터 안전한 등교개학</dd>
+                                    </dl>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link_list_wrap">
+                        <div class="link_list_inner">
+                            <div class="link_list">
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link01.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link02.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link01.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link02.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link03.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link04.png" alt=""></a></div>
+                                <div class="item"><a href="javascript:;"><img src="../resources/images/common/img_bottom_link05.png" alt=""></a></div>
+                            </div>
+                            <div class="control_box">
+                                <h3>배너존</h3>
+                                <button type="button" class="prev">이전</button>
+                                <button type="button" class="stop">정지</button>
+                                <button type="button" class="next">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contents -->
+        <!-- footer -->
+        <div id="footer">
+            <div class="footer_link">
+                <ul class="footer_link_list">
+                    <li><a href="javascript:;"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="javascript:;">저작권정책</a></li>
+                    <li><a href="javascript:;">찾아오시는길</a></li>
+                    <li><a href="javascript:;">전화번호안내</a></li>
+                    <li><a href="javascript:;">뷰어프로그램</a></li>
+                    <li><a href="javascript:;">사이트맵</a></li>
+                </ul>
+            </div>
+            <div class="footer_bottom">
+                <span class="footer_logo"><img src="../resources/images/common/footer_logo.png" alt="대전광역시서부교육지원청"></span>
+                <span class="copyright">[35335] 대전광역시 서구 계백로 1419 대전광역시서부교육지원청.<br/>Tel. 042-530-1114 | Fax.042-530-1144.<br/>COPYRIGHT©2020 BY DAEJEON SEOBU OFFICE OF EDUCATION. ALLRIGHTS RESERVED.</span>
+                <ul class="link_sel">
+                    <li>
+                        <a href="javascript:;">시도교육청</a>
+                        <ul class="link_sel_list">
+                            <li><a href="javascript:;">시도교육청1</a></li>
+                            <li><a href="javascript:;">시도교육청2</a></li>
+                            <li><a href="javascript:;">시도교육청3</a></li>
+                            <li><a href="javascript:;">시도교육청4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">관내교육기관</a>
+                        <ul class="link_sel_list">
+                            <li><a href="javascript:;">관내교육기관1</a></li>
+                            <li><a href="javascript:;">관내교육기관2</a></li>
+                            <li><a href="javascript:;">관내교육기관3</a></li>
+                            <li><a href="javascript:;">관내교육기관4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- 전체메뉴 -->
+    <div class="dim"></div>
+    <!-- //전체메뉴 -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resources/js/slick.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.js"></script>
+    <script>
+    $(function(){
+    });
+    (function($){
+        $(window).on("load",function(){
+            $(".all_menu_wrap .all_menu_inner .all_menu_list").mCustomScrollbar();
+        });
+    })(jQuery);
+    </script>
+</body>
+</html>
