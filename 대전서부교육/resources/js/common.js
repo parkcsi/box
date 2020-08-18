@@ -39,7 +39,7 @@ $(function(){
 
 	/*gnb 2뎁스 높이*/
 	$(".gnb_depth1 > li > a").on("mouseenter focusin", function(){
-		var depth2_li = $(this).parent().find(".gnb_depth2 > ul > li");
+		var depth2_li = $(this).parent().find(".gnb_depth2_bg > ul > li");
 		var li_h1 = [];
 		var li_h2 = [];
 		for(var i = 0; i < depth2_li.length; i++){
@@ -100,7 +100,7 @@ $(function(){
 			arrows: false,
 			dots:true
 		});
-		$('.main_banner_btn .stop').click(function(){
+		$('.main_banner_btn .stop, .main_banner_btn .start').click(function(){
 			bnr_stop(main_bnr, $(this));
 		});
 		$('.main_banner_btn .prev, .m_main_arrow .prev').click(function(){
@@ -143,10 +143,11 @@ $(function(){
 		var link_group_bnr = $(".link_group_list");
 		link_group_bnr.slick({
 			infinite: true,
-			slidesToShow: 6,
-			slidesToScroll: 1,
+			slidesToShow: 1,
+			rows: 3,
+			slidesPerRow :2,
 			draggable: false,
-			responsive: [
+			/*responsive: [
 				{
 					breakpoint: 1200,
 					settings: {
@@ -178,7 +179,7 @@ $(function(){
 						draggable: false,
 					}
 				}
-			]
+			]*/
 		});
 	}
 	/*//링크그룹 슬라이드*/
@@ -405,9 +406,13 @@ function bnr_stop(bnr, btn){
 	if (btn.text() === '정지') {
 		bnr.slick('slickPause');
 		btn.text('시작');
+		btn.addClass('start');
+		btn.removeClass('stop');
 	} else {
 		bnr.slick('slickPlay');
 		btn.text('정지');
+		btn.addClass('stop');
+		btn.removeClass('start');
 	};
 };
 
