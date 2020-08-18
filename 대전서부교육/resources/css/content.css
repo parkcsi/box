@@ -189,7 +189,8 @@
 .favor_group .favor_group_list li a.ico06:before{background:url(../images/common/favor_ico06.png) no-repeat center center;}
 .favor_group .favor_group_list li a:hover span{padding-right:8px;padding-bottom:2px; color:#000000; background:url(../images/common/favor_arrow.png) no-repeat bottom right;}
 .favor_group .top_btn{background:#ffcc00;}
-.favor_group .top_btn a{display:block; line-height:40px; text-align:center;}
+.favor_group .top_btn a{display:block; font-size:16px; font-weight:500; color:#000000; line-height:40px; text-align:center;}
+.favor_group .top_btn a:before{content:""; display:inline-block; zoom:1; *display:inline !important; width:20px; height:40px; margin-right:10px; background:url(../images/common/favor_top_ico.png) no-repeat center center; vertical-align:top;}
 
 .m_cont02{position:relative; background:#ebeff2; padding-top:60px; padding-bottom:90px; overflow:hidden;}
 .m_cont02:before{content:""; position:absolute; display:block; top:100px; left:50%; width:185px; height:457px; margin-left:-880px; background:url(../images/common/cont03_bg_l.png) no-repeat;}

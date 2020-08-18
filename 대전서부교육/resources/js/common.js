@@ -112,32 +112,6 @@ $(function(){
 	}
 	/*//메인 슬라이드*/
 
-	/*배너존 슬라이드*/
-	if($('.banner_zone').length){
-		var banner_zone_bnr = $(".banner_zone_list");
-		banner_zone_bnr.on('init afterChange', function(event, slick, currentSlide, nextSlide){
-			if(event.type === 'init'){
-				$('.banner_zone_control .num').text(' / '+slick.slideCount);
-				$('.banner_zone_control .num').prepend('<strong>1</strong>')
-			} else if(event.type === 'afterChange'){
-				$('.banner_zone_control .num strong').text(currentSlide + 1);
-			}
-		});
-		banner_zone_bnr.slick({
-			infinite: true,
-			accessibility: true,
-			slidesToScroll: 1,
-			autoplay: true,
-			draggable: false,
-			prevArrow: $('.banner_zone_wrap .banner_zone_control .prev'),
-			nextArrow: $('.banner_zone_wrap .banner_zone_control .next')
-		});
-		$('.banner_zone_control .stop').click(function(){
-			bnr_stop(banner_zone_bnr, $(this));
-		});
-	}
-	/*//배너존 슬라이드*/
-
 	/*링크그룹 슬라이드*/
 	if($('.link_group').length){
 		var link_group_bnr = $(".link_group_list");
@@ -297,6 +271,14 @@ $(function(){
 		});
 	}
 	/*//배너모음 슬라이드*/
+
+	/*탑버튼*/
+	$(".top_btn").click(function(){
+		$('html, body').animate({
+			scrollTop : 0
+		}, 400);
+	})
+	/*//탑버튼*/
 
 	/*공지사항 탭*/
 	$('.notice_list > li > h3 > a').on('click', function(){
