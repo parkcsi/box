@@ -58,26 +58,6 @@ $(function(){
 	});
 	/*//gnb 2뎁스 높이*/
 
-	/*검색어 키워드 슬라이드*/
-	if($('.keyword_wrap').length){
-		var keyword_bnr = $(".keyword_list");
-		keyword_bnr.slick({
-			infinite: false,
-			slidesToScroll: 5,
-			variableWidth: true,
-			slidesToShow: 5,
-			rows: 1,
-			autoplay: true,
-			draggable: false,
-			prevArrow: $('.keyword_wrap .keyword_list_control .prev'),
-			nextArrow: $('.keyword_wrap .keyword_list_control .next')
-		});
-		$('.keyword_list_control .stop').click(function(){
-			bnr_stop(keyword_bnr, $(this));
-		});
-	}
-	/*//검색어 키워드 슬라이드*/
-
 	/*메인 슬라이드*/
 	if($('.main_banner').length){
 		var main_bnr = $(".main_banner_list");
@@ -199,6 +179,25 @@ $(function(){
 	/*//맞춤서비스 슬라이드*/
 
 	/*배너모음 슬라이드*/
+	if($('.edu_news_wrap').length){
+		var edu_news_bnr = $(".edu_news_list");
+		edu_news_bnr.slick({
+			infinite: true,
+			accessibility: true,
+			slidesToScroll: 1,
+			slidesToShow: 3,
+			autoplay: true,
+			draggable: false,
+			prevArrow: $('.edu_news_control .prev'),
+			nextArrow: $('.edu_news_control .next')
+		});
+		$('.edu_news_control .stop, .edu_news_control .start').click(function(){
+			bnr_stop(edu_news_bnr, $(this));
+		});
+	}
+	/*//배너모음 슬라이드*/
+
+	/*배너모음 슬라이드*/
 	if($('.link_list_wrap').length){
 		var link_list_bnr = $(".link_list");
 		link_list_bnr.slick({
@@ -206,7 +205,6 @@ $(function(){
 			accessibility: true,
 			slidesToScroll: 1,
 			slidesToShow: 5,
-			// variableWidth: true,
 			autoplay: true,
 			draggable: false,
 			prevArrow: $('.link_list_inner .control_box .prev'),
@@ -364,10 +362,8 @@ $(function(){
 		if($(window).width() >= 1200){
 			$(".search_wrap").removeAttr("style");
 			$(".search_btn.close a").click();
-			$(".all_menu_wrap").removeClass("m_all_menu").find("li").removeClass("on");
-			$(".all_menu_depth2, .all_menu_depth3").removeAttr("style");
 		} else if($(window).width() <= 1199){
-			$(".all_menu_wrap").addClass("m_all_menu");
+
 		}
 
 	});
