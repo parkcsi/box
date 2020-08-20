@@ -107,39 +107,27 @@ $(function(){
 			rows: 3,
 			slidesPerRow :2,
 			draggable: false,
-			/*responsive: [
+			responsive: [
 				{
-					breakpoint: 1200,
+					breakpoint: 1244,
 					settings: {
 						infinite: true,
 						slidesToShow: 1,
 						rows: 2,
 						slidesPerRow :3,
-						slidesToScroll: 1,
 						draggable: false,
 					}
-				},
-				{
-					breakpoint: 850,
+				},{
+					breakpoint: 550,
 					settings: {
 						infinite: true,
-						slidesToShow: 1,
-						rows: 2,
-						slidesPerRow :2,
-						slidesToScroll: 1,
-						draggable: false,
-					}
-				},
-				{
-					breakpoint: 650,
-					settings: {
-						infinite: true,
+						rows: 1,
+						slidesPerRow :1,
 						slidesToShow: 3,
-						slidesToScroll: 1,
 						draggable: false,
 					}
 				}
-			]*/
+			]
 		});
 	}
 	/*//링크그룹 슬라이드*/
@@ -153,10 +141,10 @@ $(function(){
 			draggable: false,
 			responsive: [
 				{
-					breakpoint: 480,
+					breakpoint: 1244,
 					settings: {
-						rows: 1,
-						slidesPerRow :3,
+						rows: 2,
+						slidesPerRow :2,
 						draggable: false,
 					}
 				}
@@ -172,10 +160,10 @@ $(function(){
 			draggable: false,
 			responsive: [
 				{
-					breakpoint: 480,
+					breakpoint: 1244,
 					settings: {
-						rows: 1,
-						slidesPerRow :3,
+						rows: 2,
+						slidesPerRow :2,
 						draggable: false,
 					}
 				}
@@ -195,7 +183,22 @@ $(function(){
 			autoplay: true,
 			draggable: false,
 			prevArrow: $('.edu_news_control .prev'),
-			nextArrow: $('.edu_news_control .next')
+			nextArrow: $('.edu_news_control .next'),
+			responsive: [
+				{
+					breakpoint: 550,
+					settings: {
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						slidesToShow: 2,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.edu_news_control .prev'),
+						nextArrow: $('.edu_news_control .next'),
+					}
+				}
+			]
 		});
 		$('.edu_news_control .stop, .edu_news_control .start').click(function(){
 			bnr_stop(edu_news_bnr, $(this));
@@ -219,32 +222,6 @@ $(function(){
 				{
 					breakpoint: 1244,
 					settings: {
-						slidesToShow: 4,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				},
-				{
-					breakpoint: 1000,
-					settings: {
-						slidesToShow: 3,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				},
-				{
-					breakpoint: 800,
-					settings: {
 						slidesToShow: 2,
 						infinite: true,
 						accessibility: true,
@@ -256,7 +233,7 @@ $(function(){
 					}
 				},
 				{
-					breakpoint: 600,
+					breakpoint: 550,
 					settings: {
 						slidesToShow: 1,
 						infinite: true,
@@ -367,11 +344,10 @@ $(function(){
 
 		if($(window).width() >= 1244){
 			$(".search_wrap").removeAttr("style");
-			$("#wrap").removeClass("all_menu");
 			$(".search_btn.close a").click();
-			$("html, body").css({"overflow":"auto", "height":"auto"});
 		} else if($(window).width() <= 1243){
-
+			$("#wrap").removeClass("all_menu");
+			$("html, body").css({"overflow":"auto", "height":"auto"});
 		}
 
 	});
