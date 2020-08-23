@@ -341,15 +341,25 @@ $(function(){
 			}
 		}
 	});
-	$(".all_menu_depth2 > ul > li > a").click(function(){
+	$(".m_gnb_wrap .gnb_depth2 > ul > li > a").click(function(){
 		if($(this).closest("li").hasClass("on")){
-			$(this).closest("li").removeClass("on").find(".all_menu_depth3").clearQueue().slideUp();
+			$(this).closest("li").removeClass("on").find(".gnb_depth3").clearQueue().slideUp();
 		}else{
-			$(this).closest("li").siblings("li").removeClass("on").find(".all_menu_depth3").clearQueue().slideUp();
-			$(this).closest("li").addClass("on").find(".all_menu_depth3").clearQueue().slideDown();
+			$(this).closest("li").siblings("li").removeClass("on").find(".gnb_depth3").clearQueue().slideUp();
+			$(this).closest("li").addClass("on").find(".gnb_depth3").clearQueue().slideDown();
 		}
 	});
 	/*//모바일 전체메뉴*/
+
+	/*lnb 오픈*/
+	$(".lnb_wrap > .active_menu").click(function(){
+		if($(this).siblings(".lnb_list").is(':visible')){
+			$(this).siblings(".lnb_list").slideUp();
+		}else{
+			$(this).siblings(".lnb_list").slideDown();
+		}
+	})
+	/*//lnb 오픈*/
 
 	$(window).resize(function(){
 
