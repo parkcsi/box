@@ -365,6 +365,7 @@ $(function(){
 
 		if($(window).width() >= 1244){
 			$(".search_wrap").removeAttr("style");
+			$(".m_gnb_close").click();
 		} else if($(window).width() <= 1243){
 			$("#wrap").removeClass("all_menu");
 			$("html, body").css({"overflow":"auto", "height":"auto"});
