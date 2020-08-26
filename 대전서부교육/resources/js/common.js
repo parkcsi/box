@@ -335,7 +335,7 @@ $(function(){
 	$(".m_gnb_wrap > .gnb_depth1 > li > a").click(function(){
 		if(!$(this).closest("li").hasClass("m_menu")){
 			if($(this).closest("li").hasClass("on")){
-				$(this).closest("li").removeClass("on");
+				// $(this).closest("li").removeClass("on");
 			}else{
 				$(this).closest("li").addClass("on").siblings("li").removeClass("on");
 			}
