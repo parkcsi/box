@@ -1,10 +1,14 @@
 $(function(){
 	/*gnb 오픈*/
-	$(".gnb_wrap > .gnb_depth1 > li > a").on("mouseenter focusin", function(){
-		$(this).parent("li").addClass("on").find(".gnb_depth2").clearQueue().slideDown().parent("li").siblings("li").removeClass("on").find(".gnb_depth2").clearQueue().hide();
+	$(".gnb_wrap > .gnb_depth1 > li").on("mouseenter", function(){
+		$(".header_inner").addClass("on");
+		$(".gnb_depth2").clearQueue().slideDown();
+		$(".gnb_wrap > .gnb_bg").clearQueue().slideDown();
 	});
 	$(".gnb_wrap > .gnb_depth1").on("mouseleave", function(){
-		$(".gnb_depth1 > li").removeClass("on").find(".gnb_depth2").clearQueue().hide();
+		$(".header_inner").removeClass("on");
+		$(".gnb_depth2").clearQueue().hide();
+		$(".gnb_wrap > .gnb_bg").clearQueue().hide();
 	});
 	/*//gnb 오픈*/
 
