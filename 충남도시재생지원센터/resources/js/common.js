@@ -80,14 +80,13 @@ $(function(){
 	/*메인 슬라이드*/
 	if($('.main_banner').length){
 		var main_bnr = $(".main_banner_list");
-		main_bnr.on('init reInit', function(){
-			var main_controler = '<div class="main_banner_btn">' +
-				'<button type="button" class="prev">이전</button>' +
-				'<button type="button" class="stop">정지</button>' +
-				'<button type="button" class="next">다음</button>' +
-			'</div>';
-			$('.main_banner_list .slick-dots').wrap('<div class="main_banner_control"><div class="main_banner_dot"></div></div>');
-			$('.main_banner_dot').append(main_controler);
+		main_bnr.on('init afterChange', function(event, slick, currentSlide, nextSlide){
+			if(event.type === 'init'){
+				$('.main_banner_control .num').text(' | ').append('<span>' + slick.slideCount + '</span>');
+				$('.main_banner_control .num').prepend('<strong>1</strong>')
+			} else if(event.type === 'afterChange'){
+				$('.main_banner_control .num strong').text(currentSlide + 1);
+			}
 		});
 		main_bnr.slick({
 			infinite: true,
@@ -96,8 +95,7 @@ $(function(){
 			autoplay: true,
 			autoplaySpeed:5000,
 			draggable: false,
-			arrows: false,
-			dots:true
+			arrows: false
 		});
 		$('.main_banner_btn .stop, .main_banner_btn .start').click(function(){
 			bnr_stop(main_bnr, $(this));
@@ -303,7 +301,7 @@ $(function(){
 	/*//온라인설문지 선택*/
 
 	/*푸터 셀렉트*/
-	$(document).on("click", ".link_sel > li > a", function(){
+	$(document).on("click", ".link_sel > a", function(){
 		if($(this).parent().hasClass("on")){
 			$(this).parent().removeClass("on");
 		}else{
