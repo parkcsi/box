@@ -14,68 +14,14 @@ $(function(){
 
 	/*전체메뉴*/
 	$(".all_menu_btn a").click(function(){
-		if($(window).width() >= 1244){
-			if($(this).parents("#wrap").hasClass("all_menu")){
-				$(this).parents("#wrap").removeClass("all_menu");
-				$("html, body").css({"overflow":"auto", "height":"auto"});
-			}else{
-				$(this).parents("#wrap").addClass("all_menu");
-				$("html, body").css({"overflow":"hidden", "height":"100%"});
-				var all_menu_line = $(".all_menu_depth1 > li");
-				var line_h = [];
-				for(var i = 0; i < all_menu_line.length; i++){
-					line_h.push(all_menu_line.eq(i).height());
-				};
-				for(var j = 0; j < line_h.length; j++){
-					all_menu_line.eq(j).height(Math.max.apply(null, line_h));
-				};
-			}
-		}else{
-			$(".m_gnb_wrap").show();
-			dim_open()
-		}
+		$(".all_menu_wrap").show();
+		dim_open();
 	});
-	$(".m_gnb_close").click(function(){
-		$(".m_gnb_wrap").hide();
-		dim_close()
+	$(".all_menu_close").click(function(){
+		$(".all_menu_wrap").hide();
+		dim_close();
 	})
 	/*//전체메뉴*/
-
-	$(document).focusin(function(e){
-		// gnb 포커스
-		var el01 = $(".gnb_wrap > .gnb_depth1");
-		if(el01.parents("#gnb").has(e.target).length === 0){
-			el01.find("li").removeClass("on").find(".gnb_depth2").hide();
-		}
-		// 전체메뉴 포커스
-		var el02 = $(".all_menu_wrap");
-		if($("#wrap").hasClass("all_menu")){
-			if(el02.parents("#header").has(e.target).length === 0){
-				$(".all_menu_btn a").focus();
-			}
-		}
-	});
-
-	/*gnb 2뎁스 높이*/
-	$(".gnb_wrap > .gnb_depth1 > li > a").on("mouseenter focusin", function(){
-		var depth2_li = $(this).parent().find(".gnb_depth2_bg > ul > li");
-		var li_h1 = [];
-		var li_h2 = [];
-		for(var i = 0; i < depth2_li.length; i++){
-			if(i <= 4){
-				li_h1.push(depth2_li.eq(i).height());
-			} else {
-				li_h2.push(depth2_li.eq(i).height());
-			}
-		};
-		for(var j = 0; j < li_h1.length; j++){
-			depth2_li.eq(j).height(Math.max.apply(null, li_h1));
-		};
-		for(var k = 0; k < li_h2.length; k++){
-			depth2_li.eq(k+5).height(Math.max.apply(null, li_h2));
-		};
-	});
-	/*//gnb 2뎁스 높이*/
 
 	/*메인 슬라이드*/
 	if($('.main_banner').length){
@@ -92,6 +38,7 @@ $(function(){
 			infinite: true,
 			accessibility: true,
 			slidesToScroll: 1,
+			slidesToShow: 1,
 			autoplay: true,
 			autoplaySpeed:5000,
 			draggable: false,
@@ -100,177 +47,72 @@ $(function(){
 		$('.main_banner_btn .stop, .main_banner_btn .start').click(function(){
 			bnr_stop(main_bnr, $(this));
 		});
-		$('.main_banner_btn .prev, .m_main_arrow .prev').click(function(){
+		$('.main_banner_btn .prev').click(function(){
 			main_bnr.slick('slickPrev');
 		})
-		$('.main_banner_btn .next, .m_main_arrow .next').click(function(){
+		$('.main_banner_btn .next').click(function(){
 			main_bnr.slick('slickNext');
 		})
 	}
 	/*//메인 슬라이드*/
 
-	/*링크그룹 슬라이드*/
-	if($('.link_group').length){
-		var link_group_bnr = $(".link_group_list");
-		link_group_bnr.slick({
+	/*하단 공지 슬라이드*/
+	if($('.notice_slide').length){
+		var notice_slide_bnr = $(".notice_slide");
+		notice_slide_bnr.slick({
 			infinite: true,
 			slidesToShow: 1,
-			rows: 3,
-			slidesPerRow :2,
+			autoplay: true,
+			vertical: true,
 			draggable: false,
-			responsive: [
-				{
-					breakpoint: 1244,
-					settings: {
-						infinite: true,
-						slidesToShow: 1,
-						rows: 2,
-						slidesPerRow :3,
-						draggable: false,
-					}
-				},{
-					breakpoint: 550,
-					settings: {
-						infinite: true,
-						rows: 1,
-						slidesPerRow :1,
-						slidesToShow: 3,
-						draggable: false,
-					}
-				}
-			]
 		});
 	}
-	/*//링크그룹 슬라이드*/
+	/*//하단 공지 슬라이드*/
 
-	/*맞춤서비스 슬라이드*/
-	if($('.custom_service').length){
-		var custom_bnr = $(".custom_service_list");
-		custom_bnr.slick({
-			rows: 2,
-			slidesPerRow :3,
-			draggable: false,
-			responsive: [
-				{
-					breakpoint: 1244,
-					settings: {
-						rows: 2,
-						slidesPerRow :2,
-						draggable: false,
-					}
-				},{
-					breakpoint: 650,
-					settings: {
-						rows: 1,
-						slidesPerRow :1,
-						slidesToShow: 3,
-						draggable: false,
-					}
-				}
-			]
+	/*교육과정안내*/
+	if($('.tab_slide').length){
+		var tab_slide_bnr = $(".tab_slide");
+		tab_slide_bnr.on('init', function(event, slick, currentSlide, nextSlide){
+			$(".on .tab_slide .slick-dots li").css("width", (100 / $(".on .tab_slide .slick-dots li").length)+"%");
 		});
-	}
-	$(document).on('click', '.custom_service_tab h4 a',function(){
-		$(this).closest('li').addClass('on').siblings('li').removeClass('on');
-		custom_bnr.slick('unslick');
-		custom_bnr.slick({
-			rows: 2,
-			slidesPerRow :3,
-			draggable: false,
-			responsive: [
-				{
-					breakpoint: 1244,
-					settings: {
-						rows: 2,
-						slidesPerRow :2,
-						draggable: false,
-					}
-				}
-			]
-		});
-	});
-	/*//맞춤서비스 슬라이드*/
-
-	/*대전교육소식 슬라이드*/
-	if($('.edu_news_wrap').length){
-		var edu_news_bnr = $(".edu_news_list");
-		edu_news_bnr.slick({
+		tab_slide_bnr.slick({
 			infinite: true,
-			accessibility: true,
-			slidesToScroll: 1,
-			slidesToShow: 3,
+			slidesToShow: 1,
 			autoplay: true,
 			draggable: false,
-			prevArrow: $('.edu_news_control .prev'),
-			nextArrow: $('.edu_news_control .next'),
-			responsive: [
-				{
-					breakpoint: 550,
-					settings: {
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						slidesToShow: 2,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.edu_news_control .prev'),
-						nextArrow: $('.edu_news_control .next'),
-					}
-				}
-			]
+			dots:true
 		});
-		$('.edu_news_control .stop, .edu_news_control .start').click(function(){
-			bnr_stop(edu_news_bnr, $(this));
+		$('.guide_tab_list > li > a').on('click', function(){
+			$(this).closest('li').addClass('on').siblings('li').removeClass('on');
+			$('.guide_tab_wrap > div').eq($(this).closest('li').index()).addClass('on').siblings().removeClass('on');
+			tab_slide_bnr.slick('unslick');
+			tab_slide_bnr.slick({
+				infinite: true,
+				slidesToShow: 1,
+				autoplay: true,
+				draggable: false,
+				dots:true
+			});
 		});
 	}
-	/*//대전교육소식 슬라이드*/
+	/*//교육과정안내*/
 
-	/*배너모음 슬라이드*/
-	if($('.link_list_wrap').length){
-		var link_list_bnr = $(".link_list");
-		link_list_bnr.slick({
-			infinite: true,
-			accessibility: true,
-			slidesToScroll: 1,
-			slidesToShow: 4,
-			autoplay: true,
-			draggable: false,
-			prevArrow: $('.link_list_inner .control_box .prev'),
-			nextArrow: $('.link_list_inner .control_box .next'),
-			responsive: [
-				{
-					breakpoint: 1244,
-					settings: {
-						slidesToShow: 2,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				},
-				{
-					breakpoint: 550,
-					settings: {
-						slidesToShow: 1,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				}
-			]
-		});
-		$('.control_box .stop').click(function(){
-			bnr_stop(link_list_bnr, $(this));
+	/*센터소식 달력*/
+	if($('.calendar_list').length){
+		var calendar_slide_bnr = $(".calendar_list");
+		calendar_slide_bnr.slick({
+			infinite: false,
+			slidesToShow: 1,
+			fade: true,
+			arrows: true,
+			speed: 0,
+			draggable: false
 		});
 	}
-	/*//배너모음 슬라이드*/
+	$(".calendar_table tbody tr td a").click(function(){
+		$(this).addClass("on").parent().siblings().find("a").removeClass("on").parents("tr").siblings().find("a").removeClass("on");
+	})
+	/*//센터소식 달력*/
 
 	/*탑버튼*/
 	$(".top_btn").click(function(){
@@ -279,26 +121,6 @@ $(function(){
 		}, 400);
 	})
 	/*//탑버튼*/
-
-	/*공지사항 탭*/
-	$('.notice_list > li > h3 > a').on('click', function(){
-		$(this).closest('li').addClass('on').siblings('li').removeClass('on');
-	});
-	/*//공지사항 탭*/
-
-	/*온라인설문지 선택*/
-	$(document).on("click", ".custom_sel > a", function(){
-		if($(this).parent().hasClass("on")){
-			$(this).parent().removeClass("on");
-		}else{
-			$(this).parent().addClass("on");
-		};
-	});
-	$(document).on("click", ".custom_sel_list li a", function(){
-		$(".custom_sel > a").text($(this).text());
-		$(".custom_sel").removeClass("on");
-	});
-	/*//온라인설문지 선택*/
 
 	/*푸터 셀렉트*/
 	$(document).on("click", ".link_sel > a", function(){
@@ -324,15 +146,6 @@ $(function(){
 	});
 	/*//셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
 
-	/*모바일 검색영역*/
-	$(".search_btn a").click(function(){
-		$(".search_wrap").show();
-	});
-	$(".search_close").click(function(){
-		$(".search_wrap").hide();
-	});
-	/*//모바일 검색영역*/
-
 	/*모바일 전체메뉴*/
 	$(".m_gnb_wrap > .gnb_depth1 > li > a").click(function(){
 		if(!$(this).closest("li").hasClass("m_menu")){
@@ -353,24 +166,14 @@ $(function(){
 	});
 	/*//모바일 전체메뉴*/
 
-	/*lnb 오픈*/
-	$(".lnb_wrap > .active_menu").click(function(){
-		if($(this).siblings(".lnb_list").is(':visible')){
-			$(this).siblings(".lnb_list").slideUp();
-		}else{
-			$(this).siblings(".lnb_list").slideDown();
-		}
-	})
-	/*//lnb 오픈*/
-
 	$(window).resize(function(){
 
-		if($(window).width() >= 1244){
+		if($(window).width() >= 1440){
 			$(".search_wrap").removeAttr("style");
 			$(".m_gnb_close").click();
-		} else if($(window).width() <= 1243){
+		} else if($(window).width() <= 1439){
 			$("#wrap").removeClass("all_menu");
-			$("html, body").css({"overflow":"auto", "height":"auto"});
+			$("html, body").css({"overflow":"", "height":""});
 		}
 
 	});
