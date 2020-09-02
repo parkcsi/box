@@ -168,10 +168,10 @@ $(function(){
 
 	$(window).resize(function(){
 
-		if($(window).width() >= 1440){
+		if($(window).width() >= 1280){
 			$(".search_wrap").removeAttr("style");
 			$(".m_gnb_close").click();
-		} else if($(window).width() <= 1439){
+		} else if($(window).width() <= 1279){
 			$("#wrap").removeClass("all_menu");
 			$("html, body").css({"overflow":"", "height":""});
 		}
@@ -186,7 +186,7 @@ function dim_open(){
 }
 function dim_close(){
 	$(".dim").hide();
-	$("html, body").css({"overflow":"auto", "height":"auto"});
+	$("html, body").css({"overflow":"", "height":""});
 }
 
 // 배너 정지버튼
