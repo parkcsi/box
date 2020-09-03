@@ -71,8 +71,12 @@ $(function(){
 
 	/*교육과정안내*/
 	if($('.tab_slide').length){
-		var tab_slide_bnr = $(".tab_slide");
-		tab_slide_bnr.on('init', function(event, slick, currentSlide, nextSlide){
+		var tab_slide_bnr = $(".tab_slide.type01");
+		var tab_slide_bnr2 = $(".tab_slide.type02, .tab_slide.type03");
+		tab_slide_bnr.on('init afterChange', function(event, slick, currentSlide, nextSlide){
+			$(".on .tab_slide .slick-dots li").css("width", (100 / $(".on .tab_slide .slick-dots li").length)+"%");
+		});
+		tab_slide_bnr2.on('init afterChange', function(event, slick, currentSlide, nextSlide){
 			$(".on .tab_slide .slick-dots li").css("width", (100 / $(".on .tab_slide .slick-dots li").length)+"%");
 		});
 		tab_slide_bnr.slick({
@@ -80,7 +84,44 @@ $(function(){
 			slidesToShow: 1,
 			autoplay: true,
 			draggable: false,
-			dots:true
+			dots:true,
+			adaptiveHeight: true,
+			responsive: [
+				{
+					breakpoint: 650,
+					settings: {
+						infinite: true,
+						slidesToShow: 1,
+						autoplay: true,
+						draggable: false,
+						arrows: false,
+						dots:true,
+						adaptiveHeight: true
+					}
+				}
+			]
+		});
+		tab_slide_bnr2.slick({
+			infinite: true,
+			slidesToScroll: 1,
+			slidesToShow: 2,
+			autoplay: true,
+			draggable: false,
+			dots:true,
+			responsive: [
+				{
+					breakpoint: 650,
+					settings: {
+						infinite: true,
+						slidesToScroll: 1,
+						slidesToShow: 1,
+						autoplay: true,
+						draggable: false,
+						arrows: false,
+						dots:true,
+					}
+				}
+			]
 		});
 		$('.guide_tab_list > li > a').on('click', function(){
 			$(this).closest('li').addClass('on').siblings('li').removeClass('on');
@@ -92,6 +133,29 @@ $(function(){
 				autoplay: true,
 				draggable: false,
 				dots:true
+			});
+			tab_slide_bnr2.slick('unslick');
+			tab_slide_bnr2.slick({
+				infinite: true,
+				slidesToScroll: 1,
+				slidesToShow: 2,
+				autoplay: true,
+				draggable: false,
+				dots:true,
+				responsive: [
+					{
+						breakpoint: 650,
+						settings: {
+							infinite: true,
+							slidesToScroll: 1,
+							slidesToShow: 1,
+							autoplay: true,
+							draggable: false,
+							arrows: false,
+							dots:true,
+						}
+					}
+				]
 			});
 		});
 	}
@@ -147,21 +211,19 @@ $(function(){
 	/*//셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
 
 	/*모바일 전체메뉴*/
-	$(".m_gnb_wrap > .gnb_depth1 > li > a").click(function(){
-		if(!$(this).closest("li").hasClass("m_menu")){
-			if($(this).closest("li").hasClass("on")){
-				$(this).closest("li").removeClass("on");
-			}else{
-				$(this).closest("li").addClass("on").siblings("li").removeClass("on");
-			}
+	$(document).on("click", ".m_type .all_menu_depth1 > li > a", function(){
+		if($(this).closest("li").hasClass("on")){
+			$(this).closest("li").removeClass("on").find(".all_menu_depth2").slideUp();
+		}else{
+			$(this).siblings(".all_menu_depth2").slideDown().closest("li").addClass("on").siblings("li").removeClass("on").find(".all_menu_depth2").slideUp();
 		}
 	});
-	$(".m_gnb_wrap .gnb_depth2 > ul > li > a").click(function(){
+	$(document).on("click", ".m_type .all_menu_depth2 > li > a", function(){
+		console.log("zz");
 		if($(this).closest("li").hasClass("on")){
-			$(this).closest("li").removeClass("on").find(".gnb_depth3").clearQueue().slideUp();
+			$(this).closest("li").removeClass("on").find(".all_menu_depth3").slideUp();
 		}else{
-			$(this).closest("li").siblings("li").removeClass("on").find(".gnb_depth3").clearQueue().slideUp();
-			$(this).closest("li").addClass("on").find(".gnb_depth3").clearQueue().slideDown();
+			$(this).siblings(".all_menu_depth3").slideDown().closest("li").addClass("on").siblings("li").removeClass("on").find(".all_menu_depth3").slideUp();
 		}
 	});
 	/*//모바일 전체메뉴*/
@@ -169,15 +231,25 @@ $(function(){
 	$(window).resize(function(){
 
 		if($(window).width() >= 1280){
-			$(".search_wrap").removeAttr("style");
-			$(".m_gnb_close").click();
+			$("#wrap").removeClass("m_type");
+			$(".all_menu_depth2").removeAttr("style");
+			$(".all_menu_depth3").removeAttr("style");
 		} else if($(window).width() <= 1279){
-			$("#wrap").removeClass("all_menu");
+			$("#wrap").addClass("m_type");
 			$("html, body").css({"overflow":"", "height":""});
 		}
 
 	});
 	$(window).resize();
+
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 0){
+			$(".m_type #header").addClass("header_fix");
+		}else{
+			$(".m_type #header").removeClass("header_fix");
+		}
+	});
+	$(window).scroll();
 
 });
 function dim_open(){
