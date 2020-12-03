@@ -1,12 +1,14 @@
 $(function(){
 	/*gnb 오픈*/
 	$(".gnb_wrap > .gnb_depth1 > li").on("mouseenter focusin", function(){
-		$(".header_inner").addClass("on");
+		$(".gnb_wrap").addClass("on");
+		$(this).addClass("on").siblings("li").removeClass("on");
 		$(".gnb_depth2").clearQueue().slideDown();
 		$(".gnb_wrap > .gnb_bg").clearQueue().slideDown();
 	});
 	$(".gnb_wrap > .gnb_depth1").on("mouseleave", function(){
-		$(".header_inner").removeClass("on");
+		$(".gnb_wrap").removeClass("on");
+		$(this).find("li").removeClass("on");
 		$(".gnb_depth2").clearQueue().hide();
 		$(".gnb_wrap > .gnb_bg").clearQueue().hide();
 	});
@@ -14,22 +16,13 @@ $(function(){
 		// gnb 포커스
 		var el01 = $(".gnb_wrap > .gnb_depth1");
 		if(el01.parents("#gnb").has(e.target).length === 0){
-			$(".header_inner").removeClass("on");
+			$(".gnb_wrap").removeClass("on");
+			$(".gnb_wrap > .gnb_depth1 > li").removeClass("on");
 			$(".gnb_depth2").clearQueue().hide();
 			$(".gnb_wrap > .gnb_bg").clearQueue().hide();
 		}
 	});
 	/*//gnb 오픈*/
-
-	/*언어 선택*/
-	$(document).on("click", ".h_lang > ul > li > a", function(){
-		if($(this).closest("ul").hasClass("on")){
-			$(this).closest("ul").removeClass("on");
-		}else{
-			$(this).closest("ul").addClass("on");
-		};
-	});
-	/*//언어 선택*/
 
 	/*푸터 셀렉트*/
 	$(document).on("click", ".link_sel > li > a", function(){
@@ -43,14 +36,10 @@ $(function(){
 
 	/*셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
 	$(document).mouseup(function(e){
-		var el01 = $(".h_lang > ul");
-		var el02 = $(".link_sel_list").parent();
+		var el01 = $(".link_sel_list").parent();
 
 		if(el01.has(e.target).length === 0){
 			el01.removeClass("on");
-		}
-		if(el02.has(e.target).length === 0){
-			el02.removeClass("on");
 		}
 	});
 	/*//셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
