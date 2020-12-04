@@ -24,8 +24,18 @@ $(function(){
 	});
 	/*//gnb 오픈*/
 
+	/*검색영역*/
+	$(".search_wrap .search_btn").click(function(){
+		if($(this).parent().hasClass("on")){
+			$(this).parent().removeClass("on")
+		}else{
+			$(this).parent().addClass("on")
+		}
+	});
+	/*//검색영역*/
+
 	/*푸터 셀렉트*/
-	$(document).on("click", ".link_sel > li > a", function(){
+	$(".link_sel > li > a").click(function(){
 		if($(this).parent().hasClass("on")){
 			$(this).parent().removeClass("on");
 		}else{
@@ -43,6 +53,7 @@ $(function(){
 		}
 	});
 	/*//셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
+
 
 
 
