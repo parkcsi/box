@@ -26,16 +26,15 @@ $(function(){
 
 	/*검색영역*/
 	$(".search_wrap .search_btn").click(function(){
-		if($(this).parent().hasClass("on")){
-			$(this).parent().removeClass("on")
-		}else{
-			$(this).parent().addClass("on")
-		}
+		$(this).parents(".search_wrap").addClass("on")
+	});
+	$(".search_close").click(function(){
+		$(this).parents(".search_wrap").removeClass("on")
 	});
 	/*//검색영역*/
 
 	/*푸터 셀렉트*/
-	$(".link_sel > li > a").click(function(){
+	$(".link_sel > a").click(function(){
 		if($(this).parent().hasClass("on")){
 			$(this).parent().removeClass("on");
 		}else{
@@ -54,6 +53,52 @@ $(function(){
 	});
 	/*//셀렉트 형식 팝업 다른 영역 클릭 시 닫기*/
 
+	/*하단 외부링크리스트 슬라이드*/
+	if($('.link_list_wrap').length){
+		var link_list_bnr = $(".link_list");
+		link_list_bnr.slick({
+			infinite: true,
+			accessibility: true,
+			slidesToScroll: 1,
+			slidesToShow: 6,
+			autoplay: true,
+			draggable: false,
+			prevArrow: $('.link_list_inner .control_box .prev'),
+			nextArrow: $('.link_list_inner .control_box .next'),
+			responsive: [
+				{
+					breakpoint: 1232,
+					settings: {
+						slidesToShow: 2,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				},
+				{
+					breakpoint: 550,
+					settings: {
+						slidesToShow: 1,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				}
+			]
+		});
+		$('.control_box .stop').click(function(){
+			bnr_stop(link_list_bnr, $(this));
+		});
+	}
+	/*//하단 외부링크리스트 슬라이드*/
 
 
 
@@ -277,53 +322,6 @@ $(function(){
 	}
 	/*//대전교육소식 슬라이드*/
 
-	/*배너모음 슬라이드*/
-	if($('.link_list_wrap').length){
-		var link_list_bnr = $(".link_list");
-		link_list_bnr.slick({
-			infinite: true,
-			accessibility: true,
-			slidesToScroll: 1,
-			slidesToShow: 4,
-			autoplay: true,
-			draggable: false,
-			prevArrow: $('.link_list_inner .control_box .prev'),
-			nextArrow: $('.link_list_inner .control_box .next'),
-			responsive: [
-				{
-					breakpoint: 1244,
-					settings: {
-						slidesToShow: 2,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				},
-				{
-					breakpoint: 550,
-					settings: {
-						slidesToShow: 1,
-						infinite: true,
-						accessibility: true,
-						slidesToScroll: 1,
-						autoplay: true,
-						draggable: false,
-						prevArrow: $('.link_list_inner .control_box .prev'),
-						nextArrow: $('.link_list_inner .control_box .next'),
-					}
-				}
-			]
-		});
-		$('.control_box .stop').click(function(){
-			bnr_stop(link_list_bnr, $(this));
-		});
-	}
-	/*//배너모음 슬라이드*/
-
 	/*탑버튼*/
 	$(".top_btn").click(function(){
 		$('html, body').animate({
@@ -337,15 +335,6 @@ $(function(){
 		$(this).closest('li').addClass('on').siblings('li').removeClass('on');
 	});
 	/*//공지사항 탭*/
-
-	/*모바일 검색영역*/
-	$(".search_btn a").click(function(){
-		$(".search_wrap").show();
-	});
-	$(".search_close").click(function(){
-		$(".search_wrap").hide();
-	});
-	/*//모바일 검색영역*/
 
 	/*모바일 전체메뉴*/
 	$(".m_gnb_wrap > .gnb_depth1 > li > a").click(function(){
