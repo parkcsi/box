@@ -32,28 +32,28 @@
 
     <div id="wrap">
         <!-- header -->
-        <div id="header">
+        <div id="header" class="p_type">
             <div class="header_inner">
                 <h1 class="main_logo">
                     <a href="javascript:;">
                         <img src="../resources/images/common/main_logo.png" alt="충남도시재생지원센터 로고">
                     </a>
                 </h1>
+            </div>
+            <nav class="gnb_wrap" id="gnb">
                 <div class="h_option">
                     <ul>
-                        <li>
+                        <li class="ico01">
                             <a href="javascript:;">HOME</a>
                         </li>
-                        <li>
+                        <li class="ico02">
                             <a href="javascript:;">산업DB</a>
                         </li>
-                        <li>
+                        <li class="ico03">
                             <a href="javascript:;">로케이션지원시스템</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <nav class="gnb_wrap" id="gnb">
                 <ul class="gnb_depth1">
                     <li>
                         <a href="javascript:;">사업결과물</a>
@@ -185,19 +185,24 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="search_wrap">
-                    <a href="javascript:;" class="search_btn">검색</a>
-                    <div class="search_inner">
-                        <div class="search_ipt">
-                            <span class="ico"></span>
-                            <label for="search_gnb">검색어 입력</label>
-                            <input type="text" id="search_gnb" placeholder="검색어를 입력해 주세요">
-                            <a href="javascript:;" class="search_close">검색</a>
-                        </div>
+                <div class="gnb_bg"></div>
+                <a href="javascript:;" class="m_gnb_close">닫기</a>
+            </nav>
+            <div class="search_wrap">
+                <a href="javascript:;" class="search_btn">검색</a>
+                <div class="search_inner">
+                    <div class="search_ipt">
+                        <span class="ico"></span>
+                        <label for="search_gnb">검색어 입력</label>
+                        <input type="text" id="search_gnb" placeholder="검색어를 입력해 주세요">
+                        <a href="javascript:;" class="search_close">검색</a>
                     </div>
                 </div>
-                <div class="gnb_bg"></div>
-            </nav>
+            </div>
+            <div class="m_gnb_open">
+                <a href="javascript:;" class="gnb_open_btn">전체메뉴 열기</a>
+            </div>
+            <div class="dim"></div>
         </div>
         <!-- //header -->
         <!-- contents -->
@@ -206,35 +211,45 @@
                 <div class="main_banner_wrap">
                     <div class="main_banner_for">
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner01.png);"></a>
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/main_banner01.png" alt="코로나 19를 이기는 새로운 일상 새로운 희망 아프면 3~4일 집에 머물기 두팔 간격 건강 거리 두기 30초 손씻기 기침은 옷소매 매일 2번 이상 환기 주기적 소독 거리는 멀어져도 마음은 가까이">
+                            </a>
                             <dl>
                                 <dt>코로나19를 이기는 새로운 일상 / 새로운 희망</dt>
                                 <dd>아프면 3~4일 집에 머물기<br>거리는 멀어져도 마음은 가까이</dd>
                             </dl>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner02.png);"></a>
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/main_banner02.png" alt="메인배너2 대체텍스트">
+                            </a>
                             <dl>
                                 <dt>메인배너 타이틀</dt>
                                 <dd>메인배너 텍스트<br>메인배너 텍스트</dd>
                             </dl>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner03.png);"></a>
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/main_banner03.png" alt="메인배너3 대체텍스트">
+                            </a>
                             <dl>
                                 <dt>코로나19를 이기는 새로운 일상 / 새로운 희망</dt>
                                 <dd>아프면 3~4일 집에 머물기<br>거리는 멀어져도 마음은 가까이</dd>
                             </dl>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner04.png);"></a>
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/main_banner04.png" alt="메인배너4 대체텍스트">
+                            </a>
                             <dl>
                                 <dt>메인배너 타이틀</dt>
                                 <dd>메인배너 텍스트<br>메인배너 텍스트</dd>
                             </dl>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner05.png);"></a>
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/main_banner05.png" alt="메인배너5 대체텍스트">
+                            </a>
                             <dl>
                                 <dt>메인배너 타이틀</dt>
                                 <dd>메인배너 텍스트<br>메인배너 텍스트</dd>
@@ -258,19 +273,34 @@
                         </div>
                         <div class="main_banner_nav">
                             <div class="item">
-                                <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner01.png);"></a>
+                                <a href="javascript:;">
+                                    <span class="img"><img src="../resources/images/common/main_banner01.png" alt="코로나 19를 이기는 새로운 일상 새로운 희망 아프면 3~4일 집에 머물기 두팔 간격 건강 거리 두기 30초 손씻기 기침은 옷소매 매일 2번 이상 환기 주기적 소독 거리는 멀어져도 마음은 가까이"></span>
+                                    <span class="tit">코로나19를 이기는<br>새로운 일상 / 새로운 희망</span>
+                                </a>
                             </div>
                             <div class="item">
-                                <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner02.png);"></a>
+                                <a href="javascript:;">
+                                    <span class="img"><img src="../resources/images/common/main_banner02.png" alt="메인배너2 대체텍스트"></span>
+                                    <span class="tit">2020 충남영상위원회<br>로케이션 제작지원</span>
+                                </a>
                             </div>
                             <div class="item">
-                                <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner03.png);"></a>
+                                <a href="javascript:;">
+                                    <span class="img"><img src="../resources/images/common/main_banner03.png" alt="메인배너3 대체텍스트"></span>
+                                    <span class="tit">부서별 전화번호 및<br>주소 안내</span>
+                                </a>
                             </div>
                             <div class="item">
-                                <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner04.png);"></a>
+                                <a href="javascript:;">
+                                    <span class="img"><img src="../resources/images/common/main_banner04.png" alt="메인배너4 대체텍스트"></span>
+                                    <span class="tit">20년 제4회 추가경정예산안<br>맞춤형 긴급재난지원 패키지</span>
+                                </a>
                             </div>
                             <div class="item">
-                                <a href="javascript:;" style="background-image:url(../resources/images/common/main_banner05.png);"></a>
+                                <a href="javascript:;">
+                                    <span class="img"><img src="../resources/images/common/main_banner05.png" alt="메인배너5 대체텍스트"></span>
+                                    <span class="tit">소상공인 중소기업<br>지원 패키지</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -431,23 +461,23 @@
                 <div class="banner_zone_wrap">
                     <div class="banner_zone_list">
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/banner_zone_img01.png);:">
-                                충청남도 적극행정 새소식
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/banner_zone_img01.png" alt="충청남도 적극행정 새소식">
                             </a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/banner_zone_img02.png);:">
-                                국민권익위원회 공공기관 채용비리를 신고해주세요! 특별신고기간 운영 11.1.~12.30. 신고 상담 국민콜 110 또는 1398
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/banner_zone_img02.png" alt="국민권익위원회 공공기관 채용비리를 신고해주세요! 특별신고기간 운영 11.1.~12.30. 신고 상담 국민콜 110 또는 1398">
                             </a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/banner_zone_img01.png);:">
-                                충청남도 적극행정 새소식
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/banner_zone_img01.png" alt="충청남도 적극행정 새소식">
                             </a>
                         </div>
                         <div class="item">
-                            <a href="javascript:;" style="background-image:url(../resources/images/common/banner_zone_img02.png);:">
-                                국민권익위원회 공공기관 채용비리를 신고해주세요! 특별신고기간 운영 11.1.~12.30. 신고 상담 국민콜 110 또는 1398
+                            <a href="javascript:;">
+                                <img src="../resources/images/common/banner_zone_img02.png" alt="국민권익위원회 공공기관 채용비리를 신고해주세요! 특별신고기간 운영 11.1.~12.30. 신고 상담 국민콜 110 또는 1398">
                             </a>
                         </div>
                     </div>
