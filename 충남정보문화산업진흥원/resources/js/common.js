@@ -215,6 +215,32 @@ $(function(){
 						prevArrow: $('.link_list_inner .control_box .prev'),
 						nextArrow: $('.link_list_inner .control_box .next'),
 					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
+				},
+				{
+					breakpoint: 550,
+					settings: {
+						slidesToShow: 1,
+						infinite: true,
+						accessibility: true,
+						slidesToScroll: 1,
+						autoplay: true,
+						draggable: false,
+						prevArrow: $('.link_list_inner .control_box .prev'),
+						nextArrow: $('.link_list_inner .control_box .next'),
+					}
 				}
 			]
 		});
