@@ -1,0 +1,500 @@
+@charset "utf-8";
+/* ====================================================== base.css ====================================================== */
+/* html 엘리먼트 속성 초기화 */
+h1, h2, h3, h4, h5, h6{font-size:1em; margin:0px;}
+p, ul, ol, li, dl, dt, dd, form, fieldset{margin:0px; padding:0px; font-size:100%;}
+ul, ol, li{list-style:none; font-size:100%;}
+table{border-collapse:collapse; font-size:100%;}
+legend{visibility:hidden;overflow:hidden;width:0;height:0;background-color:transparent;font-size:0;line-height:0;}
+caption{visibility:hidden;overflow:hidden;width:0;height:0;background-color:transparent;font-size:0;line-height:0;}
+
+img{border:0px none; font-size:0px; line-height:0px;}
+input, select, textarea{margin:0px; padding:0px;}
+
+/* 그외 초기화 */
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+header, hgroup, footer ,nav ,section ,article ,aside ,figure ,video ,audio{margin:0;padding:0;border:0 none;}
+em, address{font-style:normal}
+hr{display:none}
+
+select, textarea, input, label,img,button{vertical-align:top}
+table td{word-wrap:break-word;word-break:break-all;}
+button{cursor:pointer}
+*:first-child+html table td{word-wrap:normal;}
+/* input[type=text]::-ms-clear{display: none;} */
+/* common style */
+body,input,select,textarea,a,button{line-height:130%;font-family:'돋움',Dotum,Helvetica,AppleGothic,sans-serif;font-size:12px;color:#4b4e5a;}
+
+a{text-decoration:none;}
+a:hover,
+a.active{color:#666;text-decoration:none;}
+
+/* ====================================================== layout.css ====================================================== */
+/* IR 시리즈 속성 정의 */
+.ir {text-indent:-5000px !important; overflow:hidden !important; display:inline-block;}
+
+/* layout */
+#wrapper {min-width:980px;}
+#top_util {width:100%;background-color:#7e7e7e;}
+#header {width:950px;margin:22px auto 0 auto}
+#header #head {z-index:70;position:relative;height:121px;}
+#gnb {z-index:60;position:relative;margin-top:5px;}
+
+
+/* Top_util */
+#top_util div.inner {width:950px;overflow:hidden;margin:0 auto;background-color:#2d2d2d}
+#top_util div.inner ul {overflow:hidden;float:right;}
+#top_util div.inner ul li {float:left;margin-left:29px;}
+#top_util div.inner ul li a {display:block;}
+#top_util div.inner ul li.last {margin-left:16px}
+#top_util div.inner ul li.cart span.num {display:inline-block;position:relative;top:5px;left:2px;;font-size:12px;font-weight:bold;color:#ff7a09;}
+
+
+/* Header */
+#header #head #logo {position:absolute;top:32px;left:25px}
+#header #head #logo_20131127 {position:absolute;top:-22px;left:-70px}
+
+#header #head .search {z-index:99;display:block;;position:absolute;top:36px;left:310px;height:32px;border:3px solid #636363;}
+#header #head .search:after {display:block;clear:both;content:''}
+#header #head .search .search_key {float:left;width:56px;height:32px;line-height:32px;padding-left:16px;color:#7e7e7e}
+#header #head .search .search_arrow {float:left;display:inline-block;width:15px;height:32px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/search_arrow.gif) no-repeat 50% 50%;text-indent:-9999em}
+#header #head .search .search_txt {float:left;width:215px;height:32px;line-height:32px;}
+#header #head .search .search_btn {float:left;display:block;width:50px;height:32px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/search_btn.gif) no-repeat 50% 50%;text-indent:-9999em}
+#header #head .search ul.search_cate{z-index:99;display:none;width:140px;overflow:hidden; position:absolute;top:34px;left:-3px;padding:8px 0 6px 0;border:1px solid #636363; background:#fff;}
+#header #head .search ul.search_cate li {height:15px;padding:0 12px;font-size:11px;color:#444;} 
+#header #head .search ul.search_cate li + li {margin-top:3px}
+#header #head .search input {border:0}
+
+#header #head .head_spot {position:absolute;top:0;right:0}
+
+#header #head .choice_keyword {z-index:10;position:absolute;top:82px;left:310px;}
+#header #head .choice_keyword ul {overflow:hidden}
+#header #head .choice_keyword ul li {float:left}
+
+
+/* Gnb */
+#gnb {display:inline-block;width:950px;border-top:2px solid #da272a;border-bottom:1px solid #d8d8d8;background-color:#f9f9f9}
+#gnb:after {display:block;clear:both;content:''}
+#gnb ul.menu01 {display:inline-block;float:left;}
+#gnb ul.menu01:after {display:block;clear:both;content:''}
+#gnb ul.menu01 li {float:left;position:relative;padding:0 14px 0 1px;}
+#gnb ul.menu01 li a {display:block;padding:11px 9px}
+#gnb ul.menu01 li:first-child {padding-left:11px;}
+#gnb ul.menu01 li.line {border-right:1px solid #d8d8d8}
+#gnb ul.menu02 {display:inline-block;float:right;padding:0 9px 0 4px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/gnb_bg.gif)}
+#gnb ul.menu02:after {display:block;clear:both;content:''}
+#gnb ul.menu02 li {float:left;position:relative;}
+#gnb ul.menu02 li a {display:block;padding:11px 10px}
+#gnb .cate_detail {display:none;position:absolute;top:30px;left:0;width:350px;height:265px;padding-top:4px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/gnb_arrow.gif) no-repeat 37px 0px}
+#gnb .on .cate_detail { display:block; } 
+#gnb .cate_detail dl {overflow:hidden;padding-bottom:12px;border:1px solid #000;background-color:#fff}
+#gnb .cate_detail dl dt {padding:6px 0 7px;margin-bottom:12px;text-align:center;background:#f2f2f2 url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/dot_line.gif) repeat-x 0 100%}
+#gnb .cate_detail dl dd {float:left;width:50%;}
+#gnb .cate_detail dl dd a {margin-left:30px;padding:5px 10px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/bl_01.gif) no-repeat 0 10px;font-size:11px;color:#7e7e7e}
+#gnb .cate_detail dl.single { width:140px !important; }
+#gnb .cate_detail dl.single dd { width:100%; }
+#gnb ul.menu01 li.mcate02 .cate_detail {background-position:20px 0 !important}
+#gnb ul.menu01 li.mcate03 .cate_detail {background-position:20px 0 !important}
+#gnb ul.menu01 li.mcate04 .cate_detail {background-position:25px 0 !important}
+#gnb ul.menu01 li.mcate05 .cate_detail {background-position:20px 0 !important}
+#gnb ul.menu01 li.mcate06 .cate_detail {background-position:30px 0 !important}
+#gnb ul.menu01 li.mcate07 .cate_detail {background-position:20px 0 !important}
+#gnb ul.menu01 li.mcate08 .cate_detail {background-position:30px 0 !important}
+#gnb ul.menu01 li.mcate09 .cate_detail {background-position:25px 0 !important}
+#gnb ul.menu01 li.mcate10 .cate_detail {left:-62px;background-position:95px 0 !important}
+#gnb ul.menu01 li.mcate11 .cate_detail {left:-152px;background-position:170px 0 !important}
+
+#gnb ul.menu02 li.mcate12 .cate_detail {left:-227px;background-position:240px 0 !important;width:444px;height:254px;}
+#gnb ul.menu02 li.mcate12 .cate_detail dl {height:250px;width:220px;float:left;border-left:none;border-right:1px dotted #DADADA; }
+#gnb ul.menu02 li.mcate12 .cate_detail dl.first{ border-left:1px solid #000; }
+#gnb ul.menu02 li.mcate12 .cate_detail dl.last{ border-right:1px solid #000; }
+#gnb ul.menu02 li.mcate12 .cate_detail dl a { margin-left:15px; }
+
+#gnb ul.menu02 li.mcate13 .cate_detail {left:-482px;background-position:518px 0 !important;width:666px;height:199px;}
+#gnb ul.menu02 li.mcate13 .cate_detail dl {height:195px;width:220px;float:left;border-left:none;border-right:1px dotted #DADADA; }
+#gnb ul.menu02 li.mcate13 .cate_detail dl.first{ border-left:1px solid #000; }
+#gnb ul.menu02 li.mcate13 .cate_detail dl.last{ border-right:1px solid #000; }
+#gnb ul.menu02 li.mcate13 .cate_detail dl a { margin-left:15px; }
+
+
+/* Footer */
+#footer {overflow:hidden;margin:65px 0 10px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/foot_bg.gif) repeat-x;border-top:1px solid #d8d8d8}
+#footer .inner {width:950px;margin:0 auto;padding:30px 0 0 10px;}
+#footer .sec1 {float:left}
+#footer .sec1 .foot_logo {margin:5px 0 0 7px}
+#footer .sec1 select.foot_select{width:135px;height:20px;font-size:11px;vertical-align:middle;margin-top:10px;border:1px solid #ccc}
+#footer .sec2 {float:left;margin-left:14px;padding-left:14px;border-left:1px solid #d8d8d8;}
+#footer .sec2 ul.foot_service {overflow:hidden;}
+#footer .sec2 ul.foot_service li {float:left;}
+#footer .sec2 ul.foot_service li + li {margin-left:7px;}
+#footer .sec2 ul.cpoyright_info {margin-top:12px;}
+#footer .sec2 ul.cpoyright_info li {height:16px;}
+#footer .sec2 ul.cpoyright_info li + li {}
+
+#footer .sec3 {width:202px;float:right}
+#footer .sec3 dl.foot_lgu {}
+#footer .sec3 dl.foot_lgu dt {}
+#footer .sec3 dl.foot_lgu dt a {display:inline-block;margin-left:5px;}
+#footer .sec3 dl.foot_lgu dd{padding:8px 0 0 8px}
+
+/* 자동완성 검색창 */
+.at_search {width:718px; height:370px; position:absolute; top:88px; left:101px; z-index:30; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/main/at_search.gif") 0 0 no-repeat;}
+.at_search .box_left {width:200px; height:356px; position:absolute; top:7px; left:7px;}
+.at_search .box_left p.title {width:auto; height:15px; position:absolute; top:7px; left:10px;}
+.at_search .box_left div.sl {width:170px; height:300px; position:absolute; top:42px; left:18px; overflow:auto; overflow-x:hidden;scrollbar-face-color: #ffffff;scrollbar-arrow-color: #bababa;scrollbar-track-color: #ffffff;scrollbar-highlight-color: #ffffff;scrollbar-3dlight-color: #e4e4e4;scrollbar-shadow-color: #e4e4e4;scrollbar-darkshadow-color: #ffffff;scrollbar-track-color: #efefef;}
+.at_search .box_left ul {width:160px; height:300px;}
+.at_search .box_left ul li {width:auto; overflow:hidden; font-size:11px; padding-bottom:8px; padding-right:10px;} 
+.at_search .box_top {width:500px; height:232px; position:absolute; top:7px; left:211px;}
+.at_search .box_top p.title {width:480px; height:15px; position:absolute; top:7px; left:10px;}
+.at_search .box_top p.title span { position:absolute; top:2px; right:12px; font-size:11px; color:#898989;}
+.at_search .box_top div.sl {width:270px; height:176px; position:absolute; top:42px; left:18px; overflow:auto; overflow-x:hidden;scrollbar-face-color: #ffffff;scrollbar-arrow-color: #bababa;scrollbar-track-color: #ffffff;scrollbar-highlight-color: #ffffff;scrollbar-3dlight-color: #e4e4e4;scrollbar-shadow-color: #e4e4e4;scrollbar-darkshadow-color: #ffffff;scrollbar-track-color: #efefef;}
+.at_search .box_top ul {width:270px; height:176px;} 
+.at_search .box_top ul li {width:auto; overflow:hidden; font-size:11px; padding-bottom:8px; padding-right:10px;} 
+
+.at_search .box_top .box_right {width:180px; height:176px; position:absolute; top:44px; left:300px; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/main/at_search_line.gif") 0 0 no-repeat;}
+.at_search .box_top .box_right img {width:120px; height:120px; border:3px solid #ddd; position:absolute; top:1px; left:36px;}
+.at_search .box_top .box_right p.txt {width:130px; height:15px; position:absolute; top:135px; left:34px; font-size:11px;} 
+.at_search .box_top .box_right p.product-name  {width:130px; height:25px; overflow:hidden; position:absolute; top:135px; left:34px; font-size:11px;}
+.at_search .box_top .box_right p.product-name a {text-decoration:none;}
+.at_search .box_top .box_right .price {width:130px; height:15px; overflow:hidden; margin:0 auto; position:absolute; top:165px; left:34px; font-size:11px; color:#636363;}
+.at_search .box_top .box_right .price span { font-weight:bold; }
+
+.at_search .box_bottom {width:500px; height:119px; position:absolute; top:244px; left:211px;}
+.at_search .box_bottom p.title {width:auto; height:15px; position:absolute; top:7px; left:10px;}
+.at_search .box_bottom div.sl {width:470px; height:70px; position:absolute; top:42px; left:18px; overflow:auto; overflow-x:hidden; scrollbar-face-color: #ffffff;  scrollbar-arrow-color: #bababa; scrollbar-track-color: #ffffff; scrollbar-highlight-color: #ffffff; scrollbar-3dlight-color: #e4e4e4; scrollbar-shadow-color: #e4e4e4;scrollbar-darkshadow-color: #ffffff;scrollbar-track-color: #efefef;}
+.at_search .box_bottom ul {width:470px; height:70px;}  
+.at_search .box_bottom ul li {width:auto; height:18px; font-size:11px; padding-right:10px;} 
+
+/* MY HOTTRACKS */
+.myhot_box {width:103px; height:102px; position:absolute; left:50%; margin-left:153px; z-index:100;display:none;}
+.myhot_box .bu_list {padding:5px 6px 2px 6px; border:1px solid #da2128; border-top:0; background:#fff;} 
+.myhot_box .bu_list li {height:14px; font-size:11px; border-bottom:1px solid #e2e2e2; color:#2a2a2a; margin-top:4px;} 
+.myhot_box .bu_list li.last {height:14px; font-size:11px; border-bottom:0px solid #e2e2e2; color:#2a2a2a; margin-top:4px;}
+
+/* ====================================================== main.css ====================================================== */
+/* Main_slide */
+#main_spot {position:relative;width:950px;margin:13px auto 0 auto}
+#main_spot:after {display:block;clear:both;content:''}
+#main_spot .main_sec1 {overflow:hidden;float:left;width:780px;height:371px;position:relative;}
+#main_spot .main_sec1 ul { position:absolute;bottom:0;height:27px; }
+#main_spot .main_sec1 ul li { float:left;width:130px;text-align:center;background-color:#9b9b9b; }
+#main_spot .main_sec1 ul li .ht_tit a { display:block;padding:8px 0 4px 0;color:#fff; }
+#main_spot .main_sec1 ul li.on .ht_tit a {background-color:#000}
+#main_spot .main_sec1 ul li.on .ht_tit a:hover {text-decoration:none; }
+#main_spot .main_sec1 ul li div { position:absolute;top:-344px;left:0;width:780px; }
+/*
+#main_spot .main_sec1 .sliderkit-panels{position:absolute;left:0;width:780px;height:344px;overflow:hidden;}
+#main_spot .main_sec1 .sliderkit-panel{z-index:1;position:absolute;overflow:hidden;left:0;top:0;width:780px;height:380px;background:#fff;}
+#main_spot .main_sec1 .sliderkit-nav{z-index:10;position:absolute;bottom:0}
+#main_spot .main_sec1 ul.main_slide_btn {position:relative;left:0;top:0;overflow:hidden;background-color:#9b9b9b}
+#main_spot .main_sec1 ul.main_slide_btn li {float:left;width:130px;text-align:center}
+#main_spot .main_sec1 ul.main_slide_btn li a {display:block;padding:8px 0 6px 0;color:#fff}
+#main_spot .main_sec1 ul.main_slide_btn li.sliderkit-selected a {background-color:#000}
+#main_spot .main_sec1 ul.main_slide_btn li.sliderkit-selected a:hover {text-decoration:none; }
+*/
+
+/* Main_fix1 */
+#main_spot .main_sec2 {float:right;}
+#main_spot .main_sec2 ul {line-height:0}
+#main_spot .main_sec2 ul li + li {border-top:1px solid #e6e6e6}
+
+/* Main_fix2 */
+.main_side_banner { height: 360px;left: 968px;position: absolute;top: 0;width: 70px; }
+
+/* Banner_area1 */
+.banner_area1 {overflow:hidden;width:950px;margin:20px auto 0 auto;}
+.banner_area1 ul.banner_type1 {overflow:hidden;float:left;}
+.banner_area1 ul.banner_type1 li {float:left;}
+.banner_area1 ul.banner_type1 li.c1 {padding-right:14px;margin-right:14px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/l_line.gif) no-repeat 100% 50%}
+.banner_area1 ul.banner_type1 li.c2 {margin-right:21px;}
+.banner_area1 ul.banner_type1 li.c3 {padding-right:14px;;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/l_line.gif) no-repeat 100% 50%}
+
+/* Best_keyword */
+.banner_area1 dl.best_keyword {float:right;width:160px;}
+.banner_area1 dl.best_keyword dt {margin:6px 0 13px;text-align:center}
+.banner_area1 dl.best_keyword dd {position:relative;padding-left:23px;font-size:11px;color:#898989}
+.banner_area1 dl.best_keyword dd + dd {margin-top:7px;}
+.banner_area1 dl.best_keyword dd span {position:absolute;top:1px;left:0}
+.banner_area1 dl.best_keyword dd a {font-size:11px;color:#898989}
+.banner_area1 dl.best_keyword dd a:hover {text-decoration:underline}
+
+/* Banner_area2 */
+.banner_area2 {width:100%;margin-top:25px;background-color:#ccf3e5}
+.banner_area2 ul.banner_type2 {width:950px;margin:0 auto;overflow:hidden}
+.banner_area2 ul.banner_type2 li {float:left;padding-left:7px;margin-left:6px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/dot_line.gif) no-repeat 0 50%}
+.banner_area2 ul.banner_type2 li:first-child {margin:0;padding:0}
+.banner_area2 ul.banner_type2 li.first {margin:0;padding:0}
+
+/* Hit_item */
+.hit_item { overflow:hidden;position:relative;width:950px;height:276px;margin:30px auto 0 auto; }
+.hit_item h2 { border-bottom:1px dashed #E9A0A8;height:20px;width:960px; }
+.hit_item .hit_btn { position:relative;overflow:hidden;height:250px; }
+.hit_item .hit_btn .hit_btn_inner { position:absolute;right:60px;top:5px; }
+.hit_item .hit_btn .hit_item_tg { float:left;margin-top:7px;margin-left:3px; }
+.hit_item .hit_btn .hit_item_tg .slView { z-index:1;width:960px;height:250px;position:absolute;margin-top:10px;right:-60px; }
+.hit_item .hit_btn .hit_item_tg ul { margin:0;padding:0; }
+.hit_item .hit_btn .hit_item_tg li { float:left;padding:4px 5px;background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/l_line2.gif") no-repeat scroll 0 50% rgba(0, 0, 0, 0); }
+.hit_item .hit_btn .hit_item_tg li.first { margin-left:4px;background:none; }
+
+.hit_item .hit_item_tg .ht_tit { z-index:3;position:relative; }
+
+.hit_item .controller { top:30px;z-index:3; }
+
+/* Mds_choice */
+.mds_choice {width:950px;margin:0px auto 0 auto;}
+.mds_choice .mds_banner {overflow:hidden;margin-top:16px;}
+.mds_choice .mds_banner .sec01 {float:left;margin-top:6px}
+.mds_choice .mds_banner .sec02 {float:right;width:267px;}
+.mds_choice .mds_banner .sec02 ul {}
+.mds_choice .mds_banner .sec02 ul li + li{margin-top:4px;}
+
+/* Banner_area3 */
+.banner_area3 {width:100%;margin-top:40px;background-color:#f4f4f4}
+.banner_area3 ul.banner_type2 {overflow:hidden;width:950px;margin:0 auto;}
+.banner_area3 ul.banner_type2 li {float:left;}
+
+/* New_arrival */
+.new_banner {float:left;width:582px;}
+.new_banner ul {position:relative;margin-top:28px;}
+.new_banner ul li {float:left;}
+.new_banner ul li.first {position:relative;top:-9px;margin-right:11px}
+.new_banner ul li.line {padding-right:5px;margin:0 4px 0 7px;border-right:1px solid #d9d9d9}
+.new_banner ul li.last {margin-top:19px;}
+.new_banner ul li a {display:block;}
+.new_banner ul li a + a {margin-top:3px;}
+
+/* Best_review */
+.best_review {float:right;width:311px;}
+.best_review ul {overflow:hidden;margin-top:18px;}
+.best_review ul li {float:left;}
+.best_review ul li + li{float:right}
+.best_review ul li.last {margin-top:7px;}
+
+
+/* Best */
+#divMusicRanking .best {float:left;width:700px;height:8px;}
+
+#divMusicRanking .best_tab { position:absolute;top:10px;right:0;text-align:center;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/tab_bg.gif) no-repeat;}
+#divMusicRanking .best_tab li {float:left;height:17px;}
+#divMusicRanking .best_tab li.c1 {width:56px;padding-left:25px;}
+#divMusicRanking .best_tab li.c2 {width:72px;}
+#divMusicRanking .best_tab li.c3 {width:68px;}
+#divMusicRanking .best_tab li a {display:block;height:17px;line-height:18px;font-size:13px;font-weight:bold;color:#fff}
+#divMusicRanking .best_tab li.on a {color:#da2127}
+
+#divMusicRanking .best .best_cont { position:absolute;right:0;width:700px;height:297px;margin-top:20px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/best_bg.gif) no-repeat; }
+#divMusicRanking .best .best_cont ol {padding-top:27px;}
+#divMusicRanking .best .best_cont ol li {position:relative;float:left;width:116px;padding-top:54px;text-align:center;}
+#divMusicRanking .best .best_cont ol li:first-child {width:168px;padding:0 11px 0 43px;}
+#divMusicRanking .best .best_cont ol li:first-child span.num {position:absolute;top:168px;left:13px}
+#divMusicRanking .best .best_cont ol li a {display:inline-block;color:#fff;}
+#divMusicRanking .best .best_cont ol li span.num {position:absolute;top:30px;left:24px}
+#divMusicRanking .best .best_cont ol li span.img {display:inline-block;margin-bottom:20px;}
+#divMusicRanking .best .best_cont ol li span.img img{border:1px solid #c5c5c5}
+#divMusicRanking .best .best_cont ol li strong.title {display:block;}
+#divMusicRanking .best .best_cont ol li span.price {font-size:11px;color:#a0a0a0}
+
+#divMusicRanking .best .best_tab .c2 .best_cont ol li {position:relative;float:left;width:116px;padding-top:54px;text-align:center;height:150px;}
+#divMusicRanking .best .best_tab .c2 .best_cont ol li:first-child,
+#divMusicRanking .best .best_tab .c2 .best_cont ol li.first {width:168px;padding:0 11px 0 43px;height:250px;}
+#divMusicRanking .best .best_tab .c2 .best_cont ol li:first-child span.num,
+#divMusicRanking .best .best_tab .c2 .best_cont ol li.first span.num {position:absolute;top:168px;left:13px}
+#divMusicRanking .best .best_tab .c2 .best_cont ol li .title a { text-overflow:ellipsis;overflow:hidden;white-space:nowrap;width:93px; }
+#divMusicRanking .best .best_tab .c2 .best_cont ol li.first .title a { width:128px; }
+#divMusicRanking .best .best_tab .c2 .best_cont ol li .img { height:141px;width:93px; }
+#divMusicRanking .best .best_tab .c2 .best_cont ol li .img img { height:141px;width:93px; }
+#divMusicRanking .best .best_tab .c2 .best_cont ol li.first span.img { width:128px;height:194px; }
+#divMusicRanking .best .best_tab .c2 .best_cont ol li.first span.img img { width:128px;height:194px; }
+
+#divMusicRanking .best_tab .best_cont02 { width:700px;height:297px;margin-top:20px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/best_bg02.gif) no-repeat;position:absolute;right:0;}
+#divMusicRanking .best_tab .best_cont02 ol {overflow:hidden;width:688px;height:270px;padding:10px 0 0 10px;}
+#divMusicRanking .best_tab .best_cont02 ol li { position:relative;float:left;width:115px;height:97px;padding-right:10px;padding-left:102px;text-align:left}
+#divMusicRanking .best_tab .best_cont02 ol li.st1 { float: left;height: 150px;padding:0 10px 20px 150px;position: relative;text-align: left;width: 245px; }
+#divMusicRanking .best_tab .best_cont02 ol li.st2 {width:125px;height:150px;padding:0 145px 20px 10px;text-align:right}
+#divMusicRanking .best_tab .best_cont02 ol li strong.title a { display:block;color:#e2e2e2;text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+#divMusicRanking .best_tab .best_cont02 ol li strong.title02 a { text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+
+#divMusicRanking .best_tab .best_cont02 ol li span.img { position:absolute;top:0;left:0; }
+#divMusicRanking .best_tab .best_cont02 ol li span.img img { border:1px solid #c5c5c5; }
+#divMusicRanking .best_tab .best_cont02 ol li span.num { display:block;margin:40px 0 8px; }
+#divMusicRanking .best_tab .best_cont02 ol li strong.title a { display:block;color:#e2e2e2; }
+#divMusicRanking .best_tab .best_cont02 ol li span.price { font-size:11px;color:#b9b9b9; }
+
+#divMusicRanking .best_tab .best_cont02 ol li.st1 span.img img{ border:1px solid #c5c5c5; }
+#divMusicRanking .best_tab .best_cont02 ol li.st1 span.num {display:block;margin-bottom:12px;}
+#divMusicRanking .best_tab .best_cont02 ol li.st1 strong {display:block;}
+#divMusicRanking .best_tab .best_cont02 ol li.st1 strong.title a{margin-bottom:4px;color:#fff;}
+#divMusicRanking .best_tab .best_cont02 ol li.st1 strong.title02 a{;margin-bottom:7px;font-size:14px;color:#d1cbcb}
+#divMusicRanking .best_tab .best_cont02 ol li.st1 span.price {font-size:11px;color:#a0a0a0}
+
+#divMusicRanking .best_tab .best_cont02 ol li.st2 .img {position:absolute;top:0;right:0}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 span.img img{border:1px solid #c5c5c5}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 span.num {display:block;margin:32px 5px 32px}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 strong {display:block;}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 strong.title a{margin-bottom:4px;color:#fff;}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 strong.title02 a{;margin-bottom:7px;font-size:14px;color:#d1cbcb}
+#divMusicRanking .best_tab .best_cont02 ol li.st2 span.price {font-size:11px;color:#a0a0a0}
+
+/*Hot_event */
+
+.hot_banner {overflow:hidden;float:right;position:relative;width:225px;height:348px;}
+.hot_banner .main_tit_type2 {margin-bottom:20px;height:10px;}
+.hot_banner .main_tit_type2 .sliderkit-nav {float:right;}
+.hot_banner .hit_banner ul { position:relative;left:0;top:0; }
+.hot_banner .hit_banner ul li {float:left;height:225px;padding-left:5px;margin-left:4px;margin-top:10px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/l_line2.gif) no-repeat 0 50%}
+.hot_banner .hit_banner ul li:first-child {background:none}
+
+.main_tit_type2 ul.hot_banner_btn { float:right;margin:3px 0 0 10px;position:relative; }
+.main_tit_type2 ul.hot_banner_btn li { float:left;width:20px; }
+.main_tit_type2 ul.hot_banner_btn li .hit_tit a {display:block;width:20px;height:5px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_off.gif) no-repeat;text-indent:-9999em}
+.main_tit_type2 ul.hot_banner_btn li.on .hit_tit a {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_on.gif) no-repeat}
+.main_tit_type2 ul.hot_banner_btn li .cont { position:absolute;right:0;top:33px; }
+
+/* Cate_chhchon */
+.cate_chhchon {width:950px;height:490px;margin:40px auto 0 auto;overflow:hidden;position:relative;}
+.cate_chhchon ul.tab_list { position:relative;}
+.cate_chhchon ul.tab_list li {float:left}
+.cate_chhchon ul.tab_list li .hit_tit a {display:block;height:30px;text-indent:-9999em;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/gnb/chhchon_tab.jpg) 0 100%}
+.cate_chhchon ul.tab_list li a.c1 {width:158px;background-position:0 100%}
+.cate_chhchon ul.tab_list li.on a.c1 {background-position:0 0}
+.cate_chhchon ul.tab_list li a.c2 {width:159px;background-position:-158px 100%}
+.cate_chhchon ul.tab_list li.on a.c2 {background-position:-158px 0}
+.cate_chhchon ul.tab_list li a.c3 {width:158px;background-position:-317px 100%}
+.cate_chhchon ul.tab_list li.on a.c3 {background-position:-317px 0}
+.cate_chhchon ul.tab_list li a.c4 {width:158px;background-position:-475px 100%}
+.cate_chhchon ul.tab_list li.on a.c4 {background-position:-475px 0}
+.cate_chhchon ul.tab_list li a.c5 {width:159px;background-position:-633px 100%}
+.cate_chhchon ul.tab_list li.on a.c5 {background-position:-633px 0}
+.cate_chhchon ul.tab_list li a.c6 {width:158px;background-position:-792px 100%}
+.cate_chhchon ul.tab_list li.on a.c6 {background-position:-792px 0}
+.cate_chhchon ul.tab_list li .cont { position:absolute;right:0;margin-top:11px;width:950px; }
+.cate_chhchon ul.tab_list li .cont ul.sec1 {overflow:hidden;float:left;}
+.cate_chhchon ul.tab_list li .cont ul.sec1 li {float:left;width:180px;}
+.cate_chhchon ul.tab_list li .cont ul.sec1 li span {display:inline-block;}
+.cate_chhchon ul.tab_list li .cont ul.sec1 li span + span {margin-top:9px}
+.cate_chhchon ul.tab_list li .cont ul.sec1 li + li {margin-left:29px;}
+.cate_chhchon ul.tab_list li .cont ul.sec2 {float:right;width:327px;margin-top:30px;}
+.cate_chhchon ul.tab_list li .cont ul.sec2 li {width:95px;float:left;text-align:center;height:132px; }
+.cate_chhchon ul.tab_list li .cont ul.sec2 li + li {margin-left:21px;}
+.cate_chhchon ul.tab_list li .cont ul.sec2 li.devide {margin-left:0 !important}
+.cate_chhchon ul.tab_list li .cont ul.sec2 li span.img {display:inline-block;margin-bottom:5px;}
+.cate_chhchon ul.tab_list li .cont ul.sec2 li span.img img { width:95px;height:95px; }
+.cate_chhchon ul.tab_list li .cont ul.sec2 li span.prod { display:inline-block;text-align:center;;}
+.cate_chhchon ul.tab_list li .cont ul.sec2 li span.prod a {display:block;margin-bottom:14px;font-size:11px;color:#898989;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width:95px; }
+
+/* Customer_zone */
+.customer_area {overflow:hidden;width:950px;padding-top:32px;margin:0 auto 0 auto;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/dot_line4.gif) repeat-x}
+.customer_area .culture_zone {position:relative;overflow:hidden;width:210px;height:297px;margin-right:19px;float:left;}
+.customer_area .culture_zone h2 { margin-left:5px; }
+.customer_area .culture_zone ul.cuture_btn { position:absolute;right:0;top:5px; }
+.customer_area .culture_zone ul.cuture_btn li { float:left;width:20px; }
+.customer_area .culture_zone ul.cuture_btn li .hit_tit a {display:block;width:20px;height:5px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_off.gif) no-repeat;text-indent:-9999em}
+.customer_area .culture_zone ul.cuture_btn li.on .hit_tit a {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_on.gif) no-repeat}
+.customer_area .culture_zone ul.cuture_btn li .cont { position:absolute;right:0;top:15px; }
+.customer_area .culture_zone ul.cuture_btn li .cont p { margin-bottom:10px; }
+
+/* Customer_contents */
+.customer_area .customer_contents {float:left;}
+.customer_area .customer_contents ul.etc_banner {overflow:hidden;margin-top:24px;}
+.customer_area .customer_contents ul.etc_banner li {float:left;}
+.customer_area .customer_contents ul.etc_banner li + li {border-left:1px solid #e9e9e9}
+.customer_area .customer_contents ul.quick_service {overflow:hidden;margin-top:25px;}
+.customer_area .customer_contents ul.quick_service li {float:left;}
+.customer_area .customer_contents ul.sns_service {overflow:hidden;margin-top:33px;}
+.customer_area .customer_contents ul.sns_service li {float:left}
+.customer_area .customer_contents ul.sns_service li + li {margin-left:40px}
+
+/* Notice */
+.customer_area .notice { width:220px;float:right;position:relative;height:85px; }
+.customer_area .notice .tab_btn { position:relative;border-bottom: 1px solid #989898;height: 24px; }
+.customer_area .notice .tab_btn li { float:left; }
+.customer_area .notice .tab_btn li .hit_tit a {display:block;}
+
+.customer_area .notice .tab_btn li .more { position:absolute;bottom:7px;right:4px;display:none; }
+.customer_area .notice .tab_btn li.on .more { display:block; }
+
+.customer_area .notice .cont { position:absolute;left:0; }
+.customer_area .notice .cont p {width:200px;margin-top:4px;overflow:hidden;height:14px;line-height:14px;padding-left:10px;margin-bottom:3px;font-size:11px; color:#898989;text-overflow:ellipsis;white-space:nowrap;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/dot.gif) no-repeat 4px 5px; }
+.customer_area .notice .cont p a {font-size:11px;color:#898989}
+
+/* Membership */
+.customer_area .membership {float:right;width:220px;margin-top:18px;height:100px; }
+.customer_area .membership h2 {border-bottom:1px solid #dedede;padding:0 0 5px 6px; }
+.customer_area .membership .member_tab { position:relative; }
+.customer_area .membership .member_tab li { float:left;width:82px;height:12px;margin:10px 0 7px 0;text-align:center; }
+.customer_area .membership .member_tab li + li { border-left:1px solid #C1C1C1; }
+.customer_area .membership .member_tab .cont { text-align:center;position:absolute;left:0;top:30px; }
+
+.customer_area .customer_info {float:right;width:220px;margin-top:25px;}
+
+
+/* All_menu_list */
+.all_menu_list {width:950px;margin:25px auto 0 auto;border-top:1px solid #e5dad8}
+.all_menu_list .go_service{margin:27px 0 0 5px}
+.all_menu_list .menu_detail {overflow:hidden;padding:20px 0 20px 5px;margin-top:10px;border:1px solid #e5dad8}
+.all_menu_list .menu_detail dl {float:left;width:215px;min-height:320px;padding:0 10px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/dot_line3.gif) repeat-y 0 0}
+.all_menu_list .menu_detail dl:first-child {background:none}
+.all_menu_list .menu_detail dl dt {padding:0 0 7px 5px;margin-bottom:10px;border-bottom:1px solid #e5dad8}
+.all_menu_list .menu_detail dl dd ul li {padding-bottom:3px;}
+.all_menu_list .menu_detail dl dd ul li a {font-size:11px;color:#666}
+
+/* etc */
+.clear_area {width:950px;margin:50px auto 0 auto}
+.clear_area:after {display:block;clear:both;content:''}
+
+.clear_area2 {width:950px;margin:40px auto 0 auto}
+.clear_area2:after {display:block;clear:both;content:''}
+
+.main_tit_type1 {overflow:hidden;padding:10px 0;border-bottom:1px dashed #E9A0A8;}
+.main_tit_type1 ul.hit_btn {float:left;overflow:hidden;margin:3px 0 0 10px;}
+.main_tit_type1 ul.hit_btn li {float:left;width:20px;}
+.main_tit_type1 ul.hit_btn li + li {}
+.main_tit_type1 ul.hit_btn li a {display:block;width:20px;height:5px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_off.gif) no-repeat;text-indent:-9999em}
+.main_tit_type1 ul.hit_btn li.sliderkit-selected a {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/main/btn_on.gif) no-repeat}
+
+.main_tit_type2 { position:relative;padding:10px 0 9px 0;border-bottom:1px solid #dfdfdf; }
+.hot_banner .main_tit_type2 h2 {float:left;}
+
+.hidden_obj {display:none}
+
+#footer {width:100%; height:150px; position:relative; z-index:6; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/main/bg_footerbg.gif") center 0 repeat-x;} 
+#footer div {width:950px; height:150px; position:relative; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/main/bg_footer.gif") center 0 repeat-x; margin:0 auto;} 
+#footer div.new {width:950px; height:150px; position:relative; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/main/bg_footer_03.gif") center 0 repeat-x; margin:0 auto;} 
+#footer div a.logo {width:138px; height:27px; position:absolute; top:35px; left:3px;}
+#footer div select {width:135px; height:20px; position:absolute; top:73px; left:3px;} 
+#footer div a.coop_area01 {width:37px; height:11px; position:absolute; top:31px; left:171px;} 
+#footer div a.coop_area02 {width:37px; height:11px; position:absolute; top:31px; left:215px;} 
+#footer div a.coop_area03 {width:82px; height:11px; position:absolute; top:31px; left:259px;} 
+#footer div a.coop_area04 {width:72px; height:11px; position:absolute; top:31px; left:348px;} 
+#footer div a.coop_area05 {width:55px; height:11px; position:absolute; top:31px; left:427px;} 
+#footer div a.coop_area06 {width:55px; height:11px; position:absolute; top:31px; left:492px;} 
+#footer div a.coop_area07 {width:36px; height:11px; position:absolute; top:31px; left:557px;} 
+#footer div a.coop_area08 {width:37px; height:11px; position:absolute; top:31px; left:600px;} 
+#footer div a.coop_area09 {width:45px; height:11px; position:absolute; top:31px; left:647px;}  
+#footer div address {width:530px; height:20px; position:absolute; top:56px; left:171px; letter-spacing:-1px;} 
+#footer div a.coop_infor {width:62px; height:11px; position:absolute; top:71px; left:415px;} 
+
+#footer div span.lg {width:60px; height:15px; position:absolute; top:33px; right:160px;} 
+#footer div a.lg_btn {width:106px; height:19px; position:absolute; top:26px; right:47px;} 
+#footer div span.lgtxt {width:155px; height:20px; position:absolute; top:56px; right:70px; font-size:11px; line-height:12px; letter-spacing:-1px;} 
+#footer div .sound_mq {width:55px; height:55px; position:absolute; top:55px; right:5px;}
+
+/* s: 교보웹접근성이트라이브 추가 [2013-12-10] 추가 controller 실서버 반영시 이미지 경로 바꿔주세요. */
+.controller {overflow:hidden;position:absolute;right:0;bottom:0}
+.controller li {float:left}
+.controller li .pre,
+.controller li .next,
+.controller li .stop {display:block;overflow:hidden;width:17px;height:16px;text-indent:-9999em;background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/common/btn_controller.gif") no-repeat left top}
+.controller li .stop {background-position:0 0}
+.controller li .pre {background-position:-17px 0}
+.controller li .next {width:18px;background-position:-34px 0}
+.controller.red li .stop {background-position:0 -16px}
+.controller.red li .pre {background-position:-17px -16px}
+.controller.red li .next {width:18px;background-position:-34px -16px}
+.controller li .stop.pause {background-position:-51px top}
+.controller.red li .stop.pause {background-position:-51px -16px}

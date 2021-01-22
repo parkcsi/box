@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+html, body {
+	padding:0px;
+	margin:0px;	
+}
+
+img {border:0;}
+
+a {text-decoration:none;}
+a:hover {text-decoration:none;}
+a, img, input {selector-dummy: expression(this.hideFocus=true);}
+
+.track_list td {text-align:center; height:18px; font-family:Arial; font-size:11px; color:#383838;}
+.track_list .cd_no {text-align:center; height:18px; font-size:10px; font-family:Arial; color:#484848;}
+.track_list .title {text-align:left; height:18px; font-family:Arial; font-size:11px; color:#383838;}
+.track_list .current {text-align:left; height:18px; font-family:Arial; font-size:11px; font-weight:bold; color:#383838;}
+
+/*  scrollgeneric is used for corrective styling of elements, and should not be modified or removed */ 
+.scrollgeneric {line-height: 1px;font-size: 1px;position: absolute;top: 0; left: 0;}
+
+.vscrollerbar {width: 14px;height:43px;background: #e4e4e4 url(/images/musicPlayer/scrollbar.png) -14px 0px repeat-y;}
+.vscrollerbarbeg {height: 2px !important;width: 14px;background: url(/images/musicPlayer/scrollbar.png) -42px -41px no-repeat;}
+.vscrollerbarend {height: 2px;width: 14px;background: url(/images/musicPlayer/scrollbar.png) -42px 0px no-repeat;}
+.vscrollerbase {width: 14px;background: #D4F6F2 url(/images/musicPlayer/scrollbar.png) 0px 0px repeat-y;}
+.vscrollerbasebeg {width: 14px;height: 14px !important;background: url(/images/musicPlayer/scrollbar.png) -28px -29px no-repeat;}
+.vscrollerbaseend {height: 14px;width: 14px;background: url(/images/musicPlayer/scrollbar.png)  -28px 0px no-repeat;}
+.hscrollerbase {height: 16px; background-color: white;}
+.hscrollerbar {height: 16px; background-color: black;}
+.vscrollerbar, .hscrollerbar {padding: 14px;z-index: 2;}
+.scrollerjogbox {width: 14px;height: 16px;top: auto; left: auto;bottom: 0px; right: 0px;background: #37917A;}
+
+/* Scroll Bar Master Styling Ends Here */
+
+#mycustomscroll {
+width: 484px;
+height: 202px;
+overflow: auto;
+/* IE overflow fix, position must be relative or absolute*/
+position: relative;
+}

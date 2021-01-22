@@ -1,0 +1,74 @@
+
+@charset "utf-8";
+
+
+.music_magazine {height : 600px;width: 950px;display: block;}
+.music_magazine h2 {font-family: 'Noto Sans KR', AppleGothic, sans-serif; font-size: 24px;font-weight: 300;font-style: normal; font-stretch: normal; line-height: 2.29; letter-spacing: normal; text-align: left; color: black; display: inline-block; margin-bottom:18px;}
+.music_magazine .magazine_1 {width: 474px;border-right: 1px solid #eee;/* display: inline-block; *//* left: 0; */}
+.music_magazine .btn_more { right: 0; font-weight: bold; font-family: Tahoma; font-size: 13px; color: #adadad; float: right;top: 28px; position: relative;}
+.music_magazine .magazine_detail { display: inline-block; width: 218px; height: 218px;padding-right:16px;}
+.music_magazine .magazine_detail p.img { display: block;width: 218px;height: 218px;background-size: cover; }
+.music_magazine .magazine_detail .title { margin-top: 14px;height: 26px;font-family: Dotum;font-size: 12px;font-weight: 800;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: normal;text-align: left;color: black;margin-bottom: 7px;display: inline-block;word-wrap: break-word;display: -webkit-box !important;-webkit-line-clamp: 2;-webkit-box-orient: vertical;display: block;position: relative;overflow: hidden;text-overflow: ellipsis;}
+.music_magazine .magazine_detail .date { margin-top: 7px; width: 67px; height: 10px;font-family: Dotum; font-size: 11px;font-weight: normal;font-style: normal; font-stretch: normal; letter-spacing: normal;text-align: left;color: #888888;}
+.music_magazine .magazine_detail:nth-child(n+3)  { width:140px; height:140px; margin-top:20px; padding-right:14px;}
+.music_magazine .magazine_detail:nth-child(n+3) p.img { width:140px; height:140px; }
+
+.music_magazine .magazine_2 {position: relative;top: -507px;width: 456px;left: 474px;display: inline-block;padding-left: 19px;font-family: Dotum;}
+.music_magazine .magazine_2 .news_detail {height:11px;margin-bottom:21px;width: 100%;}
+.music_magazine .magazine_2 .news_detail:FIRST-CHILD { padding-top: 24px; }
+.music_magazine .magazine_2 .news_detail:nth-child(6) { border-bottom: 1px solid #eee; padding-bottom:21px;}
+.music_magazine .magazine_2 .news_detail .title {font-family: Dotum;font-size: 13px;font-weight: 800;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: left;color: black;word-wrap: break-word;display: -webkit-box !important;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;margin-bottom: 21px;position:relative;display: inline-block;width: 374px; height:12px;}
+
+
+.music_magazine .magazine_2 .news_content {height: 80px;display: inline-block; width: 456px; padding:3.5px 0;}
+.music_magazine .magazine_2 .news_content a{width:456px;}
+.music_magazine .magazine_2 .news_content p.img {position: relative;width: 80px;height: 80px;float: right;}
+.music_magazine .magazine_2 .news_content .title {width: 340px;display: inline-block;font-family: Dotum;font-size: 12px;font-weight: 800;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: normal;text-align: left;padding-top: 15px;word-wrap: break-word;display: -webkit-box !important;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden; max-height: 26px;}
+.music_magazine .magazine_2 .news_content .date{width: 317px;display: inline-block;margin-top: 8px;color: #888888;font-family: Dotum;font-size: 11px;font-weight: normal;font-style: normal;font-stretch: normal;/* line-height: 2.18; */letter-spacing: normal;text-align: left;}
+
+/* news page  */
+.content .music_wrap h1#music_magazine_title {margin-top: 82px;text-align: center; height: 44px;margin-bottom: 61px;}
+.content .music_wrap #magazine_title {text-align: center; margin-bottom: 32px;}
+.content .music_wrap #magazine_title p {width: 110px;display: inline-block;margin-right: 20px; border-top: 3px solid #b2b2b2;font-weight: bold;color: #b2b2b2;font-size: 12px;display: inline-block;}
+.content .music_wrap #magazine_title p a {width: 110px;height: 11px;font-family: Dotum;font-size: 12px;font-weight: bold;font-style: normal;font-stretch: normal;line-height: 3.58;letter-spacing: normal;text-align: center;color:#b2b2b2;}
+.content .music_wrap #magazine_title p.on {width: 110px;border-top: 3px solid black;color: #262626;background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/idol/title-tri.png) no-repeat 50% 0;}
+.content .music_wrap #magazine_title p.on a {width: 110px;height: 11px;font-family: Dotum;font-size: 12px;font-weight: bold;font-style: normal;font-stretch: normal;line-height: 3.58;letter-spacing: normal;text-align: center;color: black;}
+
+.content .music_wrap .news_list .music_news_div{width: 290px;height: 388px;}
+.content .music_wrap .news_list .music_news_div:nth-child(3n+2), .content .music_wrap .news_list .music_news_div:nth-child(3n+3){padding-left: 35px;}
+.content .music_wrap .news_list .music_news_div p.img{width: 290px;height: 290px;display: block;background-size: cover !important;}
+.content .music_wrap .news_list .music_news_div .title{display: block; margin-top: 13px; width: 270px; height: 26px;font-family: Dotum; font-size: 12px;font-weight: 800;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: normal; text-align: left; word-wrap: break-word;display: -webkit-box !important;-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; position:relative; }
+.content .music_wrap .news_list .music_news_div .date{display: inline-block;margin-top: 9px;height: 10px;font-family: Dotum;font-size: 11px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: 1.1 !important;letter-spacing: normal;text-align: left;}
+.content .music_wrap .musicmain .news_list {margin-top:32px;}
+
+.content span.content_after{ content : '...'; text-align : right; bottom : 0; right: 0; display: block; position: absolute;}
+
+@supports (-webkit-line-clamp: 1)
+{
+    .content span.content_after
+    {
+        display : none !important;
+    }
+}
+
+.content .music_wrap .idole_news hr {display: block; border: solid 1px #c2c2c2;margin-bottom:40px;}
+.content .music_wrap .idole_news .title{width: 100%;font-family: 'Noto Sans KR', AppleGothic, sans-serif;font-size: 34px;font-weight: bold;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: left;color: #333333;display: inline-block;}
+
+.content .music_wrap .idole_news .date{margin-top: 19px;font-family: 'Noto Sans KR', AppleGothic, sans-serif;font-size: 14px;font-weight: 300;font-style: normal;font-stretch: normal;line-height: 3.93;letter-spacing: normal;text-align: left;color: #777777;width: 100%;}
+.content .music_wrap .idole_news .detail{font-family: 'Noto Sans KR', AppleGothic, sans-serif;font-size: 16px;font-weight: 300;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;text-align: left;color: #333333;width:100%;height: auto;display:inline-block;margin-top: 40px;}
+.content .music_wrap .idole_news iframe{width:100%;}
+.content .music_wrap .idole_news .chart_logo{font-family: Dotum;font-size: 11px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: 1.64;letter-spacing: normal;text-align: left;color: #888888;display: inline-block;margin-top: 69px;border-top: 1px solid #e3e3e3;padding-top: 49px;width: 950px;overflow: hidden;}
+.content .music_wrap .idole_news #logo_ment{display: block;padding-left: 116px;padding-bottom: 36px;}
+.content .music_wrap .idole_news #logo_img {width: 950px;height: 74px;background-image: url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/idol/btn-outlink.png');display: inline-block;}
+.content .music_wrap .idole_news #logo_img img:FIRST-CHILD { width: 75px; height: 24px;}
+.content .music_wrap .idole_news #logo_img img:nth-child(2) {width: 6px; height: 10px; padding-left: 4px;}
+.content .music_wrap .idole_news #gotoNews {width: 100px;height: 32px;border: solid 1px #c2c2c2;background-color: #ffffff;display: inline-block;font-family: Dotum;font-size: 11px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: 3.18;letter-spacing: normal;text-align: center;position:relative;left:848px;margin-top: 44px;}
+.content .music_wrap .idole_news #gotoNews a {width:100%;height: 100%;}
+
+.content .music_wrap .idole_news #logo_img_event1 {width: 950px;height: 74px;background-image: url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/idol/btn-outlink-event1.jpg');display: inline-block;}
+.content .music_wrap .idole_news #logo_img_event1 img:FIRST-CHILD { width: 75px; height: 24px;}
+.content .music_wrap .idole_news #logo_img_event1 img:nth-child(2) {width: 6px; height: 10px; padding-left: 4px;}
+
+/* 연관 상품 */
+.content .music_wrap .news_detail .prod_box {margin-top:92px;}
+.content .music_wrap .news_detail .prod_box h1{height: 83px; font-family: 'Noto Sans KR', AppleGothic, sans-serif; font-size: 30px; font-weight: 300; font-style: normal; font-stretch: normal; line-height: 2.13; letter-spacing: normal; text-align: left; color: #333333; background: url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/idol/product_icon.png') no-repeat; width: 100%; padding-left: 92px; padding-top: 3px;margin-bottom: 27px;}

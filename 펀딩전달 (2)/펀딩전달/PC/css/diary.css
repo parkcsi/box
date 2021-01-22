@@ -1,0 +1,1499 @@
+@charset "utf-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+/* 영문/숫자 */
+@font-face {
+    font-family:font_gs; font-style:normal; font-weight:300;
+    src:url('../font/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family:font_gs; font-style:normal; font-weight:normal;
+    src:url('../font/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family:font_gs; font-style: normal; font-weight:bold;
+    src:url('../font/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.fontw100 {
+    font-weight: 100;
+}
+
+.nfont {
+    font-family: 'Titillium Web';
+}
+
+/* FONT SMOOTHING */
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 정렬 */
+.mta {
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.block img {
+    display: inline-block;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+/* 너비 */
+.wd100 {
+    width: 100%;
+}
+
+.mwd100 {
+    max-width: 100%;
+}
+
+.max-width{
+    display: block;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* diary css */
+#content.diary-page.content {
+    font-family: 'Noto Sans KR';
+    width: 100%;
+}
+
+.diary-page .diary-title{
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px 50px 35px;
+    box-sizing: border-box;
+}
+.diary-page .diary-title .title-wrap{
+    float: left;
+}
+.diary-page .diary-title .title-wrap p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 27px;
+    padding-bottom: 5px;
+    padding-left: 27px;
+}
+.diary-page .diary-title .title-wrap h2{
+    text-align: center;
+    font-family: font_gs;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    letter-spacing: 12.8px;
+    padding-left: 12.8px;
+}
+.diary-page .diary-title .spot-btn-wrap{
+    float: right;
+    position: relative;
+    font-size: 0;
+}
+.diary-page .diary-title .spot-btn-wrap span{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 42px;
+    font-weight: 900;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.diary-page .diary-title .spot-btn-wrap span:before{
+    content: '';
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background: url(../images/biz/diary/ic-realtime.png) no-repeat center/100%;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.diary-page .diary-title .spot-btn-wrap span+span:before{
+    content: '';
+    background: url(../images/biz/diary/ic-filter.png) no-repeat center/100%;
+}
+.diary-page .diary-title .spot-btn-wrap span+span:after{
+    content: '';
+    position: absolute;
+    left: 203px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 42px;
+    background: #000;
+    vertical-align: middle;
+}
+.diary-page .diary-title .spot-btn-wrap span+span:hover:after{
+    display: none;
+}
+.diary-page .diary-title .spot-btn-wrap span:hover:before{
+    background: url(../images/biz/diary/ic-realtime-w.png) no-repeat center/100%;
+}
+.diary-page .diary-title .spot-btn-wrap span:hover{
+    background: #000;
+    color: #fff;
+    border-radius: 38px 0 0 38px;
+}
+.diary-page .diary-title .spot-btn-wrap span+span:hover:before{
+    background: url(../images/biz/diary/ic-filter-w.png) no-repeat center/100%;
+}
+.diary-page .diary-title .spot-btn-wrap span+span:hover{
+    border-radius: 0 38px 38px 0;
+}
+
+/* 메인 슬라이드 */
+.diary-page .main_sec1 {
+    position: relative;
+}
+.diary-page .main_sec1 .bx-wrapper li a,
+.diary-page .main_sec1 .bx-wrapper li img{
+    display: block;
+    width: 100%;
+}
+.diary-page .main_sec1 .bx-wrapper li .text-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 950px;
+    padding-left: 77px;
+    box-sizing: border-box;
+}
+.diary-page .main_sec1 .bx-wrapper li .imgAlt{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 15px;
+    vertical-align: top;
+    background: #000;
+}
+.diary-page .main_sec1 .bx-wrapper li .bnrTitle{
+    font-size: 44px;
+    line-height: 58px;
+    font-weight: bold;
+    padding-top: 7px;
+    color: #000;
+}
+.diary-page .main_sec1 .bx-wrapper li .bnrSubTitle{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+.diary-page .main_sec1 .bx-controls{
+    width: 950px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.diary-page .main_sec1 .bx-controls .bx-controls-direction a{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(../images/biz/diary/slide-prev.png);
+}
+.diary-page .main_sec1 .bx-controls .bx-controls-direction a.bx-next{
+    right: 0;
+    background: url(../images/biz/diary/slide-next.png);
+}
+.diary-page .main_sec1 .bx-pager{
+    position: absolute;
+    left: 77px;
+    top: 60px;
+    overflow: hidden;
+    padding-top: 60px;
+}
+.diary-page .main_sec1 .bx-pager .bx-pager-item{
+    float: left;
+}
+.diary-page .main_sec1 .bx-pager .bx-pager-item a{
+    width: 30px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 0;
+}
+.diary-page .main_sec1 .bx-pager .bx-pager-item.active a{
+    background: #000;
+}
+
+/* 오늘만 1+1 증정 */
+.diary-page .plus-stuff{
+    display: block;
+    width: 786px;
+    margin: 0 auto;
+    padding: 75px 0 0px;
+}
+.diary-page .plus-stuff .plus-title-wrap{
+    padding-bottom: 40px;
+    text-align: left;
+}
+.diary-page .plus-stuff .plus-title-wrap strong{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 900;
+    letter-spacing: -0.72px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000;
+}
+.diary-page .plus-stuff .time-count-wrap b{
+    display: inline-block;
+    width: 70px;
+    font-family: font_gs;
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: 900;
+    letter-spacing: 2.8px;
+    color: #ff5d5d;
+}
+.diary-page .plus-stuff .time-count-wrap strong{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: 900;
+    color: #000;
+    margin-left: 20px;
+}
+.diary-page .plus-stuff .plus-info{
+    position: relative;
+    right: -110px;
+}
+.diary-page .plus-stuff .free-ship{
+    padding-top: 20px;
+}
+.diary-page .plus-stuff .free-ship img{
+    display: inline-block;
+    width: 32px;
+    vertical-align: middle;
+}
+.diary-page .plus-stuff .free-ship b{
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: -0.8px;
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+.diary-page .plus-stuff .plus-title{
+    width: 260px;
+    font-size: 16px;
+    line-height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 16px 0 0;
+}
+.diary-page .plus-stuff .plus-text b{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    color: #000;
+}
+.diary-page .plus-stuff .plus-text .discount-pay{
+    font-weight: 300;
+    color: #777;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.diary-page .plus-stuff .right{
+    width: 450px;
+}
+.diary-page .plus-stuff .img-wrap{
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.diary-page .plus-stuff .img-wrap img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+/* 사은품 이미지 배너 */
+.diary-page .cgift .gift-title-wrap{
+    max-width: 786px;
+    padding: 60px 0 20px;
+    margin: 0 auto;
+}
+.diary-page .cgift .gift-title-wrap strong{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 900;
+    letter-spacing: -0.72px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000;
+}
+.diary-page .cgift{
+    width: 950px;
+    margin: 0 auto;
+}
+.diary-page .cgift a,.diary-page .cgift img{
+    display: block;
+    width: 100%;
+    background: #e8e8e8;
+}
+.diary-page .diarycloud_a + .cgift{
+    width: 100%;
+}
+
+/* 오늘의 추천 */
+.diary-page .tit_today_box {
+    font-size: 40px;
+	line-height: 59px;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.diary-page .tit_today_box.active{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+}
+.diary-page .tit_today_box p{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    letter-spacing: -0.84px;
+    padding-top: 3px;
+}
+
+.diary-page .today_box{
+    padding: 68px 0 120px;
+}
+.diary-page .today_box .today_a {
+    text-align: center;
+    font-size: 0;
+    padding: 70px 0 36px;
+}
+
+.diary-page .today_box .today_a li {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.diary-page .today_box .today_a li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 92px;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+}
+.diary-page .today_box .today_a li:nth-child(2) {
+    margin: 0 110px;
+}
+.diary-page .today_box .prod_list_normal ul li:nth-child(n+13){
+    display: none;
+}
+
+.diary-page .today_box .today_a li img{
+    display: block;
+    width: 120px;
+    height: 92px;
+    margin: 0 auto;
+    border: 0;
+}
+
+.diary-page .today_box .today_a li p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top: 5px;
+}
+.diary-page .today_box .today_a li.on p {
+    color: #FF5D5D;
+}
+.diary-page .today_box .today_a li.on p:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255,93,93,0.18);
+}
+
+.diary-page .today_box .today_a .ic_today img{
+	background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-recommend.png") no-repeat center/contain;
+}
+.diary-page .today_box .today_a .ic_today.on img{
+	background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-recommend-on.png") no-repeat center/contain;
+}
+.diary-page .today_box .today_a .ic_cbest img{
+	background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-popular.png") no-repeat center/contain;
+}
+.diary-page .today_box .today_a .ic_cbest.on img{
+	background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-popular-on.png") no-repeat center/contain;
+}
+.diary-page .today_box .today_a .ic_cartbest img{
+	background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-cart-sort.png") no-repeat center/contain;
+}
+.diary-page .today_box .today_a .ic_cartbest.on img{
+	background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-cart-sort-on.png") no-repeat center/contain;
+}
+.diary-page .today_box .prod_list_normal .pannel1 ul li span.img.mt31 {
+	margin-top:31px;
+}
+
+.diary-page .prod_list_normal ul li {
+    float: left;
+    position: relative;
+    width: 230px;
+    margin-bottom: 60px;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.diary-page .prod_list_normal ul li:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.diary-page .prod_list_normal ul li a{
+    display: block;
+    width: 100%;
+}
+.diary-page .prod_list_normal ul li .img+a{
+    display: block;
+    box-sizing: border-box;
+}
+.diary-page .prod_list_normal ul li .img+a.wd100{
+    padding: 0;
+}
+
+.diary-page .prod_list_normal ul li a span.make {
+    display: block;
+    margin: 12px 0 3px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #777;
+    font-family: 'Titillium Web', 'Noto Sans KR';
+}
+
+.diary-page .prod_list_normal ul li span.img img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.diary-page .prod_list_normal ul li a span.make + .name {
+    margin: 0;
+}
+
+.diary-page .prod_list_normal ul li a span.name {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 19px;
+}
+
+.diary-page .prod_list_normal ul li a span.price {
+    display: inline-block;
+    color: #000;
+    overflow: hidden;
+}
+
+.diary-page .prod_list_normal ul li a span.price > span{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 19px;
+    line-height: 34px;
+    font-weight: 900;
+    vertical-align: top;
+}
+
+.diary-page .prod_list_normal ul li a span.price .pc {
+    margin-left: 14px;
+    color: #DA2128;
+}
+
+.diary-page .prod_list_normal ul li a span.icon {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.diary-page .prod_list_normal ul li a span.icon .ico_review {
+    float: left;
+    text-indent: 0;
+    padding-left: 25px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_review.png) no-repeat left 0;
+    font-family: font_gs;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    background-size: contain;
+}
+
+.diary-page .prod_list_normal ul li a span.icon .ico_like {
+    float: left;
+    text-indent: 0;
+    padding-left: 25px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_off.png) no-repeat left 0;
+    font-family: font_gs;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    margin-left: 20px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+.diary-page .prod_list_normal ul li a span.icon .ico_like.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_on.png) no-repeat left 0;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.diary-page .btn_more_a {
+    position: relative;
+    clear: both;
+}
+
+.diary-page .btn_more_a a {
+    display: block;
+    width: 337px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 24px 64px;
+    margin: 0 auto;
+    transition: all 0.2s;
+}
+.diary-page .btn_more_a a:before{
+    content: 'SEE MORE';
+    float: left;
+    font-family: font_gs;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+.diary-page .btn_more_a a:after{
+    content: '';
+    float: right;
+    width: 28px;
+    height: 20px;
+    background: url(../images/biz/diary/arrow.png) no-repeat center/100%;
+    vertical-align: top;
+    transition: all 0.2s;
+    margin-left: 9px;
+}
+.diary-page .btn_more_a.active a:before{
+    content: 'CLOSE';
+}
+.diary-page .btn_more_a.active a:after{
+    transform: rotate(180deg);
+}  
+.diary-page .btn_more_a a:hover{
+    background: #000;
+    color: #fff;
+}
+.diary-page .btn_more_a a:hover:after{
+    background: url(../images/biz/diary/arrow-w.png) no-repeat center/100%;
+}
+
+/* 베스트 이벤트 */
+.diary-page .bestevent_a .bestevent {
+    position: relative;
+    padding-bottom: 80px;
+}
+.diary-page .bestevent_a .bestevent .tit_today_box {
+    padding-bottom: 32px;
+}
+
+.diary-page .bestevent_a .bestevent .event-text-deco{
+    width: auto;
+    position: absolute;
+    top: 80px;
+    left: -550px;
+    transform: translateY(110%) rotate(90deg);
+}
+.diary-page .bestevent_a .bestevent .event-text-deco:before{
+    content: '';
+    display: block;
+    width: 300px;
+    height: 20px;
+    background: #000;
+    margin-bottom: 70px;
+}
+.diary-page .bestevent_a .bestevent .event-text-deco .popular-text{
+    width: 110%;
+    font-family: font_gs;
+    font-size: 94px;
+    line-height: 99px;
+    font-weight: 900;
+    letter-spacing: -0.47px;
+    color: #000;
+    margin-left: 300px;
+}
+.diary-page .bestevent_a .bestevent .event_list:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -280px;
+    width: 92px;
+    height: calc(100% - 1030px);
+    background: #000;
+}
+.diary-page .bestevent_a .bestevent .event-text-deco .stroke-text {
+    font-family: font_gs;
+    font-size: 94px;
+    line-height: 99px;
+    font-weight: 900;
+    letter-spacing: -0.47px;
+    color: #fff;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.diary-page .bestevent_a .event_list_a .event_list {
+    overflow: visible;
+}
+.diary-page .bestevent_a .event_list_a .list {
+    display: block;
+    text-align: center;
+    font-size: 0;
+    margin: 0;
+}
+.diary-page .bestevent_a .event_list_a li {
+    display: inline-block;
+    float: none;
+    width: 425px;
+    height: auto;
+    padding: 0;
+    margin-bottom: 57px;
+    position: relative;
+    z-index: 1;
+}
+.diary-page .bestevent_a .event_list_a li:nth-child(even){
+    margin-right: 36px;
+}
+.diary-page .bestevent_a .event_list_a li:nth-child(n+8){
+    display: none;
+}
+
+.diary-page .bestevent_a .event_list_a li a {
+    display: block;
+}
+.diary-page .bestevent_a .event_list_a li .img-wrap img{
+    display: block;
+    width: 100%;
+}
+.diary-page .bestevent_a .event_list_a li .title-text{
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 16px;
+}
+.diary-page .bestevent_a .event_list_a li .description-text{
+    display: block;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    text-align: left;
+}
+.diary-page .bestevent_a .event_list_a li .during-date{
+    display: none;
+}
+.diary-page .bestevent_a .event_list_a li:first-child{
+    display: block;
+    position: relative;
+    right: -120px;
+    z-index: 0;
+    width: 915px;
+    background: #000;
+    color: #fff;
+    margin: 0 auto -120px;
+    padding: 20px 135px 230px;
+    box-sizing: border-box;
+}
+.diary-page .bestevent_a .event_list_a li:first-child:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    transform: translateX(50%);
+    width: 208px;
+    height: 208px;
+    background: url(../images/biz/diary/best-event-icon.png) no-repeat center/100%;
+}
+.diary-page .bestevent_a .event_list_a li:first-child a {
+    display: block;
+    width: 650px;
+    color: #fff;
+}
+.diary-page .bestevent_a .event_list_a li:first-child .title-text{
+    font-size: 24px;
+    line-height: 32px;
+}
+.diary-page .bestevent_a .event_list_a li:first-child .description-text{
+    font-size: 16px;
+}
+.diary-page .bestevent_a .event_list_a li:first-child .during-date{
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    transform: translateX(-50%) rotate(90deg);
+    color: #fff;
+}
+.diary-page .bestevent_a .event_list_a li:first-child .during-date b{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+    vertical-align: middle;
+    letter-spacing: 2px;
+}
+.diary-page .bestevent_a .event_list_a li:first-child .during-date b:first-child:after{
+    content: '';
+    display: inline-block;
+    width: 92px;
+    height: 1px;
+    background: #fff;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+/* 다이어리 클라우드 */
+.diary-page .diarycloud_a {
+    position: relative;
+    z-index: 1;
+    background: #f8f8f8;
+    padding-top: 110px;
+}
+
+.diary-page .diarycloud_a .diarycloud_tab {
+    text-align: center;
+    font-size: 0;
+    padding: 60px 0 53px;
+}
+
+.diary-page .diarycloud_a .diarycloud_tab li {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+}
+.diary-page .diarycloud_a .diarycloud_tab li:first-child:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+.diary-page .diarycloud_a .diarycloud_tab li + li{
+    margin-left: 8px;
+}
+.diary-page .diarycloud_a .diarycloud_tab li.on img {
+    border-radius: 50%;
+}
+
+.diary-page .diarycloud_a .diarycloud_tab li.on img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+}
+.diary-page .diarycloud_a .diarycloud_tab li span {
+    font-family: font_gs;
+    font-size: 28px;
+    line-height: 100px;
+    font-weight: 900;
+}
+.diary-page .diarycloud_a .diarycloud_tab li p {
+    margin-top: 10px;
+    color: #333;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.diary-page .diarycloud_a .diarycloud_tab li.on p {
+    font-weight: 700;
+}
+.diary-page .diarycloud_a .diarycloud_tab li.on p:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: rgba(255,255,255,0.3) url(../images/biz/diary/dakku-filter-check.png) no-repeat center/30px auto;
+    border-radius: 50%;
+    border: 8px solid #000;
+    box-sizing: border-box;
+}
+
+.diary-page .diarycloud_a .snb_a {
+    text-align: center;
+    font-size: 0;
+    padding: 40px 0 70px;
+    margin-bottom: -128px;
+}
+
+.diary-page .diarycloud_a .snb_a li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 30px 0 26px;
+    position: relative;
+}
+.diary-page .diarycloud_a .snb_a li:before{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #DBDBDB;
+    vertical-align: middle;
+}
+
+.diary-page .diarycloud_a .snb_a li.on:before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 15px;
+    background: url(../images/biz/diary/dakku-cheek.png) no-repeat center/100%;
+    vertical-align: middle;
+}
+
+.diary-page .diarycloud_a .snb_a li p {
+    color: #000;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+.diary-page .diarycloud_a .snb_a li.on p:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    width: 100%;
+    height: 6px;
+    background: #FF5D5D;
+    opacity: 0.3;
+}
+.diary-page .diarycloud_a .snb_a li.on p {
+    position: relative;
+    font-weight: 900;
+    color: #000;
+}
+
+
+.diary-page .diarycloud .prod_list_normal {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 128px 0 80px;
+    background-color: #fff;
+}
+
+.diary-page .diarycloud .prod_list_normal ul.tlist_a {
+    margin: 0 auto;
+    width: 950px;
+    overflow: visible;
+}
+
+.diary-page .diarycloud .prod_list_normal ul.top3 li {
+    width: 300px;
+    margin: 30px 0 60px;
+}
+.diary-page .diarycloud .prod_list_normal ul li {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.diary-page .diarycloud .prod_list_normal ul.top3 li .icon {
+    margin-top: 20px;
+}
+
+.diary-page .diarycloud .prod_list_normal ul.top3.active li:first-child .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb1.png) no-repeat center/100% auto;
+    width: 78px;
+    height: 80px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 0;
+    z-index: 1;
+}
+.diary-page .diarycloud .prod_list_normal ul.top3.active li .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-bg.png) no-repeat center/100% 100%;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    font-family: font_gs;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    line-height: 2.3;
+}
+.diary-page .diarycloud .prod_list_normal ul.top3 li .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-sort.png) no-repeat center/100% 100%;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    font-family: font_gs;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    line-height: 2.3;
+}
+.diary-page .diarycloud .prod_list_normal ul.tlist_a .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-sort.png) no-repeat center/100% 100%;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    font-family: font_gs;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    text-align: center;
+    line-height: 2.3;
+}
+
+.diary-page .diarycloud .prod_list_normal ul.top3 li + li {
+    margin-left: 25px;
+}
+
+.diary-page .diarycloud .prod_list_normal ul + ul {
+    margin: 0 auto;
+    border-top: none;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.make {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #777;
+    margin: 12px 0 3px;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.make + .name {
+    margin: 0;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.name {
+    display: block;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.price {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Titillium Web';
+    margin-top: 15px;
+    display: inline-block;
+    color: #000;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.price .pc {
+    letter-spacing: 1px;
+    margin-left: 10px;
+    color: #DA2128;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.icon .ico_review {
+    float: left;
+    text-indent: 0;
+    padding-left: 30px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/ic_review.png) no-repeat left 0;
+    color: #777;
+    font-size: 16px;
+    font-family: 'Titillium Web';
+    background-size: contain;
+}
+
+.diary-page .diarycloud .prod_list_normal ul li a span.icon .ico_like {
+    float: left;
+    text-indent: 0;
+    padding-left: 25px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/ic_heart_on.png) no-repeat left 0;
+    color: #777;
+    font-size: 16px;
+    font-family: 'Titillium Web';
+    margin-left: 20px;
+}
+
+.diary-page .diarycloud .btn {
+	cursor:pointer;
+}
+
+
+/* 다꾸존 */
+.diary-page .diarydeco_a {
+    padding-top: 99px;
+}
+
+.diary-page .decolist_p:before{
+    content: '';
+    position: absolute;
+    top: 360px;
+    left: -150px;
+    width: 177px;
+    height: 177px;
+    background: url(../images/biz/diary/dakku-icon2.png) no-repeat center / 100%;
+}
+.diary-page .decolist_p:after{
+    content: '';
+    position: absolute;
+    top: 460px;
+    right: -200px;
+    width: 270px;
+    height: 340px;
+    background: url(../images/biz/diary/dakku-icon.png) no-repeat center / 100%;
+}
+
+.diary-page .diarydeco .decolist_p {
+    position: relative;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 0;
+    padding: 60px 0 73px;
+    margin: 0 auto;
+}
+.diary-page .diarydeco .decolist_p > div {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+/* deco 1 pencil part */
+.diary-page .diarydeco .deco_p01{
+    margin-right: 110px;
+}
+.diary-page .diarydeco .deco_p01 .deco-bg{
+    display: block;
+    width: 533px;
+}
+.diary-page .diarydeco .deco_p01 .deco-item{
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 110%;
+}
+/* deco 2 memo part */
+.diary-page .diarydeco .deco_p02 .deco-bg{
+    display: block;
+    width: 323px;
+}
+.diary-page .diarydeco .deco_p02 .deco-bg2{
+    display: block;
+    width: 186px;
+    margin-top: -40px;
+    margin-left: -80px;
+}
+.diary-page .diarydeco .deco_p02 .deco-item{
+    display: block;
+    width: 393px;
+    margin: -60px auto 0;
+}
+/* deco 3 case part */
+.diary-page .diarydeco .deco_p03 .deco-bg{
+    display: block;
+    width: 541px;
+}
+.diary-page .diarydeco .deco_p03 .deco-bg2{
+    position: absolute;
+    left: 85px;
+    bottom: 85px;
+    width: 182px;
+}
+.diary-page .diarydeco .deco_p03 .deco-item{
+    display: block;
+    width: 383px;
+    margin-left: 250px;
+    margin-top: -100px;
+}
+/* deco 4 tape part */
+.diary-page .diarydeco .deco_p04{
+    margin-top: 59px;
+}
+.diary-page .diarydeco .deco_p04 .deco-bg{
+    display: block;
+    width: 539px;
+}
+.diary-page .diarydeco .deco_p04 .deco-item{
+    display: block;
+    width: 66%;
+    margin-top: -65%;
+    margin-left: 20px;
+}
+
+/* 다이어리 이벤트 */
+.diary-page .diaryevent_a {
+    width: 100%;
+    background-color: #f8f8f8;
+}
+.diary-page .diaryevent_a .diaryevent {
+    width: 950px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+.diary-page .diaryevent_a .event_list .list{
+    width: 950px;
+    padding-top: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.diary-page .diaryevent_a .event_list li{
+    float: left;
+    width: 310px;
+    min-height: auto;
+    margin-bottom: 60px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+.diary-page .diaryevent_a .event_list li:not(:nth-child(3n)){
+    margin-right: 10px;
+}
+.diary-page .diaryevent_a .event_list .img-wrap{
+    width: 100%;
+    height: auto;
+    position: static;
+    border-radius: 0;
+}
+.diary-page .diaryevent_a .event_list li a{
+    width: 100%;
+}
+.diary-page .diaryevent_a .event_list img{
+    width: 100%;
+}
+.diary-page .diaryevent_a .event_list .text-wrap{
+    padding-top: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+}
+.diary-page .diaryevent_a .event_list .discount{
+    display: block;
+    color: #DA2128;
+    font-family:font_gs, sans-serif;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+}
+.diary-page .diaryevent_a .event_list .discount:before{
+    content: '~';
+    display: inline-block;
+    vertical-align: top;
+}
+.diary-page .diaryevent_a .event_list .item-title{
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.diary-page .diaryevent .event_list .description{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.diary-page .diaryevent_a .event_list .during-date{
+    display: block;
+    font-family:font_gs, sans-serif;
+    font-size: 12px;
+    color: #aaa;
+}
+.diary-page .diaryevent_a .paging{
+    padding-bottom: 70px;
+}
+
+/* paging */
+.diary-page .paging .first{
+    display: none;
+}
+.diary-page .paging{
+    height: auto;
+    margin-top: 0;
+}
+.diary-page .paging > a,
+.diary-page .paging ul{
+    display: inline-block;
+    vertical-align: middle;
+}
+.diary-page .paging ul li {
+    display: inline-block;
+    float: none!important;
+    width: auto!important;
+    height: auto!important;
+    vertical-align: middle;
+    margin: 0!important;
+}
+
+.diary-page .paging ul li a {
+    display: block;
+    width: 48px!important;
+    height: 48px;
+    line-height: 51px;
+    border: none;
+    font-family: font_gs;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    background: none;
+}
+.diary-page .paging ul li.active a:hover,
+.diary-page .paging ul li.active a:focus,
+.diary-page .paging ul li.active a{
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+}
+.diary-page .paging ul li a:hover,
+.diary-page .paging ul li a:focus{
+    border: none;
+    background: none;
+    color: #333;
+}
+
+.diary-page .paging .prev02 {
+    display: inline-block;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/btn_prev.png) no-repeat 0 0;
+    width: 15px;
+    height: 29px;
+    border: none;
+    vertical-align: middle;
+    margin-right: 80px;
+}
+
+.diary-page .paging .next02 {
+    display: inline-block;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/btn_next.png) no-repeat 0 0;
+    width: 15px;
+    height: 29px;
+    border: none;
+    vertical-align: middle;
+    margin-left: 80px;
+}
+
+/* 로딩바 */
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.lds-spinner {
+  position: relative;
+}
+.lds-spinner div {
+  left: 50px;
+  top: 20px;
+  position: absolute;
+  -webkit-animation: lds-spinner linear 1s infinite;
+  animation: lds-spinner linear 1s infinite;
+  background: #ff5d5d;
+  width: 12px;
+  height: 24px;
+  border-radius: 40%;
+  -webkit-transform-origin: 6px 52px;
+  transform-origin: 6px 52px;
+}
+.lds-spinner div:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-animation-delay: -0.916666666666667s;
+  animation-delay: -0.916666666666667s;
+}
+.lds-spinner div:nth-child(2) {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-animation-delay: -0.833333333333333s;
+  animation-delay: -0.833333333333333s;
+}
+.lds-spinner div:nth-child(3) {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-animation-delay: -0.75s;
+  animation-delay: -0.75s;
+}
+.lds-spinner div:nth-child(4) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation-delay: -0.666666666666667s;
+  animation-delay: -0.666666666666667s;
+}
+.lds-spinner div:nth-child(5) {
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  -webkit-animation-delay: -0.583333333333333s;
+  animation-delay: -0.583333333333333s;
+}
+.lds-spinner div:nth-child(6) {
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(7) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-animation-delay: -0.416666666666667s;
+  animation-delay: -0.416666666666667s;
+}
+.lds-spinner div:nth-child(8) {
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+  -webkit-animation-delay: -0.333333333333333s;
+  animation-delay: -0.333333333333333s;
+}
+.lds-spinner div:nth-child(9) {
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+  -webkit-animation-delay: -0.25s;
+  animation-delay: -0.25s;
+}
+.lds-spinner div:nth-child(10) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-animation-delay: -0.166666666666667s;
+  animation-delay: -0.166666666666667s;
+}
+.lds-spinner div:nth-child(11) {
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+  -webkit-animation-delay: -0.083333333333333s;
+  animation-delay: -0.083333333333333s;
+}
+.lds-spinner div:nth-child(12) {
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg);
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.lds-spinner {
+  width: 100px !important;
+  height: 100px !important;
+  -webkit-transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+  transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+}

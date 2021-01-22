@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+.music_wrap .visual02 .box_tit { display: inline;font-family: 'Malgun Gothic', 'Apple Gothic', 'Droid Sans','돋움','Dotum',sans-serif;}
+.music_wrap .visual02 {position:relative;padding-bottom: 10px;font-family: font_ns, AppleGothic, sans-serif;}
+.music_wrap .visual02 .swiper-container { overflow:hidden;margin:10px auto 7px;padding-right:10px;}
+.music_wrap .visual02 .swiper-wrapper { display:-webkit-box;height:auto !important;padding:0 10px;font-size:0; }
+.music_wrap .visual02 .swiper-slide { display:-webkit-inline-box;width:100%;text-align:center;height:auto !important;font-size:12px; }
+.music_wrap .visual02 .swiper-slide a { width:100%;text-align:left; }
+.music_wrap .visual02 .pic { width:calc(100% - 10px); }
+.music_wrap .visual02 .div_bnr { width: 111px; background-color: white;display:block;padding:16px 5px;margin-right:10px; }
+.music_wrap .visual02 .title{ display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;font-size:13px;font-weight: 500;line-height: 1.31;color:#333; font-family: font_ns, AppleGothic, sans-serif;}
+.music_wrap .visual02 .date { display:-webkit-box;font-size:11px;font-weight: 300;color: #777;margin-top:8px; font-family: font_ns, AppleGothic, sans-serif;}
+.music_wrap .visual02 #more { position: relative; top: 5px; float: right; margin-right: 11px;}
+.music_wrap .visual02 #more img {width: 14px; height: 14px; }
+
+.music_wrap .visual02 ul.swiper-wrapper li {width : 121px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width : 121px; height: 121px;}
+
+@media only screen and (min-width : 320px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 100px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width : 100px; height: 100px;}
+.music_wrap .visual02 .div_bnr { width: 92px;  height:57px;}
+}
+
+@media only screen and (min-width : 360px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 115px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width : 115px; height: 115px;}
+.music_wrap .visual02 .div_bnr { width: 105px;  height:57px;}
+}
+
+@media only screen and (min-width: 375px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 120px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width: 120px;height: 120px;}
+.music_wrap .visual02 .div_bnr {width: 110px;height:57px;}
+}
+
+@media only screen and (min-width: 401px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 135px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width: 135px;height: 135px;}
+.music_wrap .visual02 .div_bnr {width: 125px;height:57px;}
+}
+
+@media only screen and (min-width: 766px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 264px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width: 264px;height: 264px;}
+.music_wrap .visual02 .div_bnr {width: 253px;height:57px;}
+}
+
+@media only screen and (min-width: 800px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 275px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width: 275px;height: 275px;}
+.music_wrap .visual02 .div_bnr {width: 265px;height:57px;}
+}
+
+
+@media only screen and (min-width : 1024px) {
+.music_wrap .visual02 ul.swiper-wrapper li {width : 304px;}
+.music_wrap .visual02 ul.swiper-wrapper li p.img {width: 351px;height: 351px;}
+.music_wrap .visual02 .div_bnr {width: 341px;height:57px;}
+}
+
+
+.music_wrap .music_news {margin: 0 10px;border-radius: 2px;box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.11);background: white;}
+.music_wrap .music_news .music_new1 { display: table-cell;vertical-align: middle;}
+
+.music_wrap .music_news .music_news1 li {overflow: hidden;border-radius: 1px;background: #fff;margin: 0 17px;border-bottom:1px solid #eee;padding: 10px 0;}
+.music_wrap .music_news .music_news1 li:FIRST-CHILD {padding-top:19px;}
+.music_wrap .music_news .music_news1 a {width: 100%; height:80px;}
+.music_wrap .music_news .music_news1 .music_news_div { display: inline-block; width: 100%;}
+.music_wrap .music_news .music_news1 .music_news_detail {width: 68%;display: inline-block;font-size: 14px;font-family: font_ns, AppleGothic, sans-serif;font-weight: 500;font-style: normal;font-stretch: normal;line-height: 1.31;letter-spacing: normal;text-align: left;color: #333333;padding-top:15px;}
+.music_wrap .music_news .music_news1 .music_news_detail .title{display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden; font-family: font_ns, AppleGothic, sans-serif;}
+.music_wrap .music_news .music_news1 .music_news_detail .date {width: 100%;height: 20px;font-family: font_ns, AppleGothic, sans-serif;font-size: 11px;font-weight: 300;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: left;color: #777; padding-top:4px; }
+.music_wrap .music_news .music_news1 .music_news_pic {width:32%; float:right;}
+.music_wrap .music_news .music_news1 p.img { position: relative;top: 0px;width: 80px; height: 80px; z-index: 88;float: right; background-size: cover !important;}
+
+
+.music_wrap .music_news2 li { overflow: hidden; border-radius: 1px; background: #fff; margin: 0 17px; padding-top: 20px; }
+.music_wrap .music_news2 li:nth-child(5) {padding-bottom: 30px; }
+.music_wrap .music_news2 li .title {font-size: 14px;font-family: font_ns, AppleGothic, sans-serif;font-weight: 500;font-style: normal;font-stretch: normal;line-height: 1.31;letter-spacing: normal;text-align: left;color: #333333;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}
+
+.music_wrap .idole_news {background-color: white;}
+.music_wrap .idole_news #news {font-family: font_ns, AppleGothic, sans-serif;font-size: 20px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.13;letter-spacing: normal;text-align: center;color: #e3e3e3;text-align: center;flex-grow: 6;display: inline-block;margin-top: 4px;border-bottom: 1px solid #e3e3e3;}
+
+.music_wrap .idole_news .on a { color: #000;}
+.music_wrap .idole_news #news.on {font-family: font_ns, AppleGothic, sans-serif;font-size: 24px;font-weight: 600;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: center;color: black;text-align: center;flex-grow: 5;display: inline-block;padding-bottom: 16.5px;line-height: 1.13;border-bottom: 2px solid black;}
+.music_wrap .idole_news #speical {font-family: font_ns, AppleGothic, sans-serif;font-size: 20px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.13;letter-spacing: normal;text-align: center;color: #e3e3e3;flex-grow: 4;border-bottom: 1px solid #e3e3e3;margin-top: 8px !important;}
+.music_wrap .idole_news #speical a, .music_wrap .idole_news #news a {color:#e3e3e3}
+.music_wrap .idole_news #speical.on {font-family: font_ns, AppleGothic, sans-serif;font-size: 24px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.13;letter-spacing: normal;text-align: center;color: black;flex-grow: 3;border-bottom: 2px solid black;padding-bottom: 12px;padding-bottom: 13.5px;margin-top: 0 !important;}
+.music_wrap .idole_news #speical.on a, .music_wrap .idole_news #news.on a {color:black;}
+.music_wrap .idole_news .news_detail { padding: 23px 20px 20px 20px;}
+.music_wrap .idole_news .news_detail .title{width: 100%;height: 24.5px;font-family: font_ns, AppleGothic, sans-serif;font-size: 24px;font-weight: 500;font-style: normal;font-stretch: normal;line-height: 1.33;letter-spacing: normal;text-align: left;color: #333333;display: inline;}
+.music_wrap .idole_news .news_detail .date{ width: 100%; height: 11px; font-family: font_ns, AppleGothic, sans-serif; font-size: 12px; font-weight: 300; font-style: normal; font-stretch: normal;letter-spacing: normal; text-align: left; color: #777; display: inline-block; margin-bottom: 23px; margin-top: 16px;}
+.music_wrap .idole_news .news_detail .detail{ width: 100%; font-family: font_ns, AppleGothic, sans-serif; font-size: 16px; font-weight: 300; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: normal; text-align: left; color: #333333;}
+.music_wrap .idole_news .news_detail .detail img {width:100%; height: auto;}
+.music_wrap .chart_logo a {float: right;}
+/*.music_wrap #gotoNews{color: black;border: 1px solid #c2c2c2;width: 77px;height: 18px;border-radius: 3px;text-align: center;padding: 10px 0;font-size: 14px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: normal;letter-spacing: normal;text-align: center;float: right; margin-top:25px;}*/
+
+.music_wrap #gotoNews {display: none;}
+.music_wrap #gotoNews a {display: none;}
+.music_wrap .idole_news .detail_input {display: none;}
+
+.music_wrap .idole_news .news_list {padding: 20px 20px;display:block;}
+.music_wrap .idole_news .news_list a.music_news_div{position: relative;display: inline-block;width: calc(50% - 17px);padding: 0px 7px 0 7px;margin: 0;clear: both;height: 100%; }
+.music_wrap .idole_news .news_list a.music_news_div span.pic{display: block; text-align: center;}
+.music_wrap .idole_news .news_list a.music_news_div span.title {margin-top: 16px;font-family: font_ns, AppleGothic, sans-serif;font-size: 13px;font-weight: 500;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: left;color: #333333;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;height: 38px;}
+.music_wrap .idole_news .news_list a.music_news_div span.date {font-family: font_ns, AppleGothic, sans-serif;font-size: 11px;font-weight: 300;font-style: normal;font-stretch: normal;letter-spacing: normal;text-align: left;color: #777;margin-top: 8px;margin-bottom: 20px;}
+.music_wrap .idole_news .news_list a.music_news_div p.img {width: 100%;height: 0;padding-top: 100%;display: block;background-size: cover !important;background-position: center center;background-repeat: no-repeat;}
+.music_wrap .idole_news .news_detail iframe{width :100% !important; height:100% !important;}
+.music_wrap .idole_news .news_detail span.detail{width :100% !important;height:100% !important;font-size: 16px !important;font-weight: 400;}
+
+
+.music_wrap .special_detail {padding: 23px 20px;}
+.music_wrap .special_detail .detail iframe{width :100% !important; height:100% !important;}
+.music_wrap .special_detail .detail img{max-width :100% !important; height:auto !important;}
+.music_wrap .special_detail .detail div{width :100% !important;height:100% !important;font-weight: 400;font-size: 16px;}
+
+.music_wrap .special_detail .title{ width: 100%;height: 24.5px; font-family: font_ns, AppleGothic, sans-serif;font-size: 24px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 1.33;letter-spacing: normal; text-align: left; color: #333333; display: inline;}
+.music_wrap .special_detail .date{ width: 100%; height: 11px; font-family: font_ns, AppleGothic, sans-serif; font-size: 12px; font-weight: 300; font-style: normal; font-stretch: normal;letter-spacing: normal; text-align: left; color: #777; display: inline-block; margin-bottom: 23px; margin-top: 16px;}
+.music_wrap .special_detail .detail{ width: 100%; font-family: font_ns, AppleGothic, sans-serif; font-size: 16px; font-weight: 300; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: normal; text-align: left; color: #333333;}
+.music_wrap .special_detail .detail img {width:100%; height: auto;}
+
+.music_wrap span.chart_logo {margin-top: 23px;width: 100%;display: inline-block;}
+.music_wrap span.chart_logo a {width:100%;}
+.music_wrap span.chart_logo span#logo_ment {font-family: font_ns, AppleGothic, sans-serif;font-size: 11px;font-weight: 300;font-style: normal;font-stretch: normal;line-height: 1.36;letter-spacing: normal;text-align: center;color: #afafaf;display: inline-block;padding: 20px 0 21.5px 0;border-top: 1px solid #eee;width: 100%;}
+.music_wrap span.chart_logo a#logo_img {width: 100%; position: relative;}
+.music_wrap span.chart_logo a#logo_img span {width: 100%;font-family: font_ns, AppleGothic, sans-serif;font-size: 16px;font-weight: 300;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;text-align: left;color: #ffffff;text-align: center;margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);}
+.music_wrap span.chart_logo a#logo_img img#logo_bg {width: 100%;}
+.music_wrap span.chart_logo a#logo_img img#logo_circle{width:14.5px;height:14.5px;position: relative;top: 7px;left: 5px;}
+
+/* 
+.music_wrap span.chart_logo span#logo_img img:FIRST-CHILD {object-fit: contain; width: 64.5px;}
+.music_wrap span.chart_logo span#logo_img img:nth-child(2) {width: 5px;top: 5px;position: relative;left: 2px;}
+ */
+/* 연관상품 */
+.music_wrap .idole_news .prod_box { display: block; padding:30px 0 0 0; font-size: 0;}
+.music_wrap .idole_news .prod_box h1 {width: 100%; height: 49px;font-family: font_ns, AppleGothic, sans-serif;font-size: 16.5px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 2.6;letter-spacing: -1px;text-align: left;width: 100%;}
+.music_wrap .idole_news .prod_box h1 img {width:49px; height:49px; margin-right:4px;}
+.prod_box a:nth-child(1),
+.prod_box a:nth-child(3) { border-top:none; }
+
+.music_wrap .btn_back { position: absolute; background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/btn_back03.png) no-repeat center 0; background-size: contain; width: 45px; height: 45px; left: 10px; top: -88px; overflow: hidden; text-indent: -999px;}
+.music_wrap .btn_top { position:absolute;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/content/btn_top01.png') no-repeat center 0;background-size:40px 40px;width:40px;height:40px;right:10px;top:-91px;overflow:hidden;text-indent:-999px; }
+
+.music_wrap .prod_box a { padding: 13.5px 7px;}
+

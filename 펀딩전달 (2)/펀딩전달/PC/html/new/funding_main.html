@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=950">
+<title>HOTTRACKS - 생활 속 감성충전소</title>
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/layout.css">
+<link rel="stylesheet" type="text/css" href="../../css/contents.css">
+<link rel="stylesheet" type="text/css" href="../../css/biz/common_v2.css">
+<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css">
+<!-- 210119 작업부분 -->
+<link rel="stylesheet" type="text/css" href="../../css/new/orderandpay.css">
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../../js/m_contents.js"></script>
+<script type="text/javascript" src="../../js/biz/common_v2.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/TweenMax.min.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/swiper.min.js"></script>
+<script>
+	$(function(){
+		// 210119 작업부분
+		// 펀딩
+        $('.tab_list').on('click', 'a', function(){
+        	var $tab = $(this);
+            var i = $tab.parent('li').index();
+            var $contents = $tab.parent('li').closest('.tab_wrap');
+            var $Layers = $contents.find('.tab_layer');
+
+            // 누르면 실행
+            if(!$tab.hasClass('on')){
+
+                $tab.parent('li').siblings('li').children('a').removeClass('on');
+                $tab.addClass('on');
+                $Layers.removeClass('on');
+                $($Layers[i]).addClass('on');
+            }
+        });
+	})
+</script>
+</head>
+
+<body>
+	<div class="top_banner" style="background-color:#7e68ff;">
+		<div class="inner">
+			<!-- 영역 -->
+            <style>
+            /* 좌에서 우로 컬러 #코드 모두 수정 필수 */
+            .top_banner {
+            background: -webkit-linear-gradient(left,  #2b44c3 0%,#2b44c3 50%,#febf3c 50%,#febf3c 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  #2b44c3 0%,#2b44c3 50%,#febf3c 50%,#febf3c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+            </style>
+            <div class="top_banner_a type2">
+	            <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/resources/img/common/img_top_banner02.jpg" usemap="#top_map">
+        	    <map name="top_map">
+            	    <area shape="rect" coords="2,3,610,77" href="/ht/hot/eventDetail?eventId=66901" onfocus="this.blur()">
+            	    <area shape="rect" coords="651,2,1246,78" href="/ht/hot/eventDetail?eventId=66843" onfocus="this.blur()">
+	            </map>
+	            <!-- 화이트 버튼 white로 / 블랙 버튼 black로 클래스 추가 -->
+	            <a href="#none" class="btn_close black">닫기</a>
+            </div>				
+		</div>
+	</div>
+
+	<div id="wrap" class="content_new">
+		<!-- header -->
+		<div id="header">
+			<!-- util menu -->
+			<div class="util_menu">
+				<ul>
+					<li><a href="#">로그인</a></li>
+					<li><a href="#">회원가입</a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">매장안내</a></li>
+					<li><a href="#">팬사인회</a></li>
+				</ul>
+			</div>
+			<!--// util menu -->
+			<!-- gnb -->
+	        <nav id="gnb">
+				<div class="header_wrap">
+					<h1 class="g_logo"><a href="../biz/main.html">HOTTRACKS</a></h1>
+					<div class="g_search">
+						<div class="form_select">
+							<select>
+								<option>문구/기프트</option>
+								<option>option2</option>
+								<option>option3</option>
+							</select>
+						</div>
+						<div class="form_search">
+							<input type="text" placeholder="샤오미를 쓰는 이유">
+							<a href="../biz/search.html" class="btn_search"></a>
+						</div>
+						<div class="keyword_wrap">
+							<a href="#">
+								<em class="font_t">12</em>
+								<p>에어팟케이스</p>
+								<!-- ▲ up , ▼ down : class 추가 -->
+								<span class="num up">99+</span>
+							</a>
+						</div>
+					</div>
+					<div class="g_menu">
+						<ul>
+							<li class="icon_my">
+								<a href="#">
+									<img src="../../images/biz/common/icon_my.png" alt="">
+								</a>
+							</li>
+							<li class="icon_today">
+								<a href="#">
+									<img src="../../images/biz/common/icon_today.png" alt="">
+									<em>오늘,<strong>혜택</strong></em>
+								</a>
+							</li>
+							<li class="icon_cart">
+								<a href="#">
+									<img src="../../images/biz/common/icon_cart.png" alt="">
+									<em class="font_t">5</em>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnb_wrap">
+					<div class="inner">
+						<div class="category_wrap">
+							<div class="btn_category">
+								<a href="#">카테고리</a>
+							</div>
+							<div class="category_cont">
+								<ul>
+									<li>
+										<a href="#none" class="dp1">디자인문구</a>
+										<div class="dp2">
+											<ul>
+												<li>
+													<a href="../biz/category_list.html" class="all">전체보기</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="../biz/category_list.html" class="all">전체보기</a></li>
+															<li><a href="#">2020 날짜형 다이어리</a></li>
+															<li><a href="#">만년 다이어리</a></li>
+															<li><a href="#">2020 날짜형 스케쥴러</a></li>
+															<li><a href="#">위클리 스케쥴러</a></li>
+															<li><a href="#">먼슬리 스케쥴러</a></li>
+															<li><a href="#">캐쉬북</a></li>
+															<li><a href="#">프로젝트플래너</a></li>
+															<li><a href="#">스터디플래너</a></li>
+															<li><a href="#">여행플래너</a></li>
+															<li><a href="#">다이어트플래너</a></li>
+															<li><a href="#">임신 다이어리</a></li>
+															<li><a href="#">리필속지</a></li>
+															<li><a href="#">커버/액세서리</a></li>
+															<li><a href="#" class="more">ㄹ</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">다이어리/스케쥴러</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">비즈니스플래너/노트</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">2020 캘린더/만년</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">필기구</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">필통/파우치</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">노트/메모</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">포토앨범/스크랩북</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">스티커/스탬프</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">데코/디자인 테이프</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">포장/데코용품</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">편지/카드/봉투</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">컬러링/캘리/문구세트</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">화방용품</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">BOOK</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#none" class="dp1">디지털</a>
+										<div class="dp2">
+											<ul>
+												<li>
+													<a href="#" class="all">전체보기</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+															<li><a href="#">2020 날짜형 다이어리</a></li>
+															<li><a href="#">만년 다이어리</a></li>
+															<li><a href="#">2020 날짜형 스케쥴러</a></li>
+															<li><a href="#">위클리 스케쥴러</a></li>
+															<li><a href="#">먼슬리 스케쥴러</a></li>
+															<li><a href="#">캐쉬북</a></li>
+															<li><a href="#">프로젝트플래너</a></li>
+															<li><a href="#">스터디플래너</a></li>
+															<li><a href="#">여행플래너</a></li>
+															<li><a href="#">다이어트플래너</a></li>
+															<li><a href="#">임신 다이어리</a></li>
+															<li><a href="#">리필속지</a></li>
+															<li><a href="#">커버/액세서리</a></li>
+															<li><a href="#" class="more">더보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">다이어리/스케쥴러</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">비즈니스플래너/노트</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">2020 캘린더/만년</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">필기구</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">필통/파우치</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">노트/메모</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">포토앨범/스크랩북</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">스티커/스탬프</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">데코/디자인 테이프</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">포장/데코용품</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">편지/카드/봉투</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">컬러링/캘리/문구세트</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">화방용품</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="#">BOOK</a>
+													<div class="dp3">
+														<ul>
+															<li><a href="#" class="all">전체보기</a></li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#none" class="dp1">고급필기구</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">오피스</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">리빙/생활가전</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">키친/푸드</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">가구/수납</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">패션잡화</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">뷰티/헬스</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">여행/자동차</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">취미/펫</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">유아동</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">직수입/PB</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">CD/LP</a>
+									</li>
+									<li>
+										<a href="#none" class="dp1">DVD/BLU-RAY</a>
+									</li>
+								</ul>
+								<div class="banner">
+									<a href="#"><img src="" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<ul class="gnb_menu">
+							<li><a href="#">다이어리<em></em></a></li>
+							<li><a href="#">음반<em></em></a></li>
+							<li><a href="#">베스트</a></li>
+							<li><a href="#">무료배송</a></li>
+							<li><a href="#">신상품</a></li>
+							<li><a href="#">세일</a></li>
+							<li><a href="#">이벤트</a></li>
+						</ul>
+						<ul class="sub_menu">
+							<li><a href="#">개인의취향</a></li>
+							<li><a href="#">이럴 때,</a></li>
+							<li><a href="#">아지트</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!--// header -->
+
+		<!-- 210119 S : 작업부분 id="container" 에 class="orderandpay" 넣어주세요  -->
+		<!-- Container -->
+		<div id="container" class="orderandpay">
+
+			<!-- 컨텐츠 -->
+			<div class="content" id="content">
+				<!-- 210119 S : 작업부분 -->
+                <div class="funding_main_wrap">
+                	<!-- logo -->
+                	<div class="funding_main_logo_wrap">
+                		<div class="funding_text_wrap">
+                			<h3 class="funding_title">
+	                			<div class="text">핫트랙스와 펀딩이 함께 하는</div>
+	                			<div class="text_icon only_english">핫트딜</div>
+	                		</h3>
+	                		<div class="funding_desc_texts mgt20">
+	                			<p class="text">핫트딜 펀딩 참여 후 목표가 달성되면 상품이 최종 구매 완료 됩니다.</p>
+	                			<p class="text mgt10">펀딩(딜)이 성공적으로 종료되면 결제가 완료됩니다.</p>
+	                		</div>	
+                		</div>
+                		<div class="funding_process_wrap">
+                			<ul class="funding_process_list">
+                				<li class="items step1">
+                					<div class="text_wrap">
+                						<div class="unit_text">핫트딜 오픈</div>
+                					</div>
+                				</li>
+                				<li class="items step2">
+                					<div class="text_wrap">
+                						<div class="unit_text">핫트딜 참여</div>
+                					</div>
+                				</li>
+                				<li class="items step3">
+                					<div class="text_wrap">
+                						<div class="unit_text">핫트딜 마감</div>
+                					</div>
+                				</li>
+                				<li class="items step4">
+                					<div class="text_wrap">
+                						<div class="unit_text">배송 시작</div>
+                					</div>
+                				</li>
+                			</ul>
+                		</div>
+                	</div>
+                	<!-- swiper -->
+                	<div></div>
+
+                	<!-- tab -->
+                	<div class="tab1 tab_wrap mgt80">
+                        <ul class="tab_list"> 
+                            <li class="items"><a href="javascript:;" class="on"><span>핫트딜ING</span></a></li>
+                            <li class="items"><a href="javascript:;"><span>배송준비 및 출발</span></a></li> 
+                            <li class="items"><a href="javascript:;" ><span>앵콜요청</span></a></li> 
+                        </ul>
+					    <div class="tab_layer_wrap">
+					        <div class="tab_layer on">
+					        	<h3 class="title_icon1">핫트딜ING</h3>
+					        	<ul class="title_texts_list mgt10">
+						        	<li class="items">가장 핫한 상품들을 핫트딜 하세요!</li>
+					        		<li class="items">현재 진행중인 핫트딜 상품들을 만나보세요!</li>
+					        	</ul>
+					        	<div class="tab_wrap sort_order">
+					        		<ul class="tab_list"> 
+			                            <li class="items"><a href="javascript:;" class="on"><span>최신순</span></a></li>
+			                            <li class="items"><a href="javascript:;"><span>마감임박순</span></a></li> 
+			                            <li class="items"><a href="javascript:;" ><span>인기순</span></a></li> 
+			                        </ul>
+			                        <div class="tab_layer_wrap">
+			                        	<div class="tab_layer on">
+			                        		as
+			                        	</div>
+			                        	<div class="tab_layer">
+			                        		sf
+			                        	</div>
+			                        	<div class="tab_layer">
+			                        		sdf
+			                        	</div>
+			                        </div>
+					        	</div>
+					        </div>
+					        <div class="tab_layer">
+					        	sdff
+					        </div>
+					        <div class="tab_layer">
+					        	sdffs
+					        </div>
+					    </div>
+                    </div>
+                </div>
+				<!--// 210119 E : 작업부분 -->
+            </div>
+            <!-- // 컨텐츠 -->
+            
+		</div>
+		<!--// Container -->
+
+		<!-- footer -->
+		<div id="footer">
+			<div class="util">
+				<div class="util_cont">
+					<ul>
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">채용정보</a></li>
+						<li><a href="#">핫트합니다</a></li>
+						<li><a href="#">매장안내</a></li>
+						<li><a href="#">제휴/광고안내</a></li>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+						<li><a href="#">이메일수집거부</a></li>
+					</ul>
+					<div class="family_site">
+						<p>패밀리 사이트</p>
+						<ul>
+							<li><a href="#" target="_blank">패밀리 사이트</a></li>
+							<li><a href="#" target="_blank">패밀리 사이트</a></li>
+							<li><a href="#" target="_blank">패밀리 사이트</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="cont left">
+					<div class="cs_center">
+						<strong class="font_t">1661-1112</strong>
+						<span>평일 09:00 ~ 18:00 점심시간 12:00 ~ 13:00</span>
+						<dl>
+							<dt><a href="#"><span>SOS 상담</span></a></dt>
+							<dd>24시간 접수 가능<br/>고객센터 운영시간에 순차적으로 답변해드리겠습니다.</dd>
+						</dl>
+					</div>
+					<h2>교보핫트랙스㈜</h2>
+					<span>대표이사 박영규</span>
+					<span>사업자등록번호 : 102-81-29258 <a href="#">사업자정보확인 &gt;</a></span>
+					<span>통신판매업신고번호 : 제 2012-경기파주-3911호</span>
+					<span>주소 : 경기도 파주시 회동길 78 (출판단지내)</span>
+					<span>개인정보보호책임자 : 김재식  PRIVACY@HOTTRACKS.CO.KR</span>
+				</div>
+				<div class="cont right">
+					<ul class="sns">
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/icon_instagram.png" alt="instagram"></a></li>
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/icon_facebook.png" alt="facebook"></a></li>
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/icon_youtube.png" alt="youtube"></a></li>
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/icon_twitter.png" alt="twitter"></a></li>
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/icon_blog.png" alt="blog"></a></li>
+					</ul>
+	                <div class="mobile">
+	                    <a href="#" target="_blank" class="font_t ios">APP STORE</a>
+						<a href="#" target="_blank" class="font_t and">PLAY STORE</a>
+	                </div>
+					<ul class="copyright">
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/img_award.png" alt="소셜아이어워드 2019"></a></li>
+						<li><a href="#" target="_blank"><img src="../../images/biz/common/img_copyright.png" alt="저작권마크"></a></li>
+					</ul>
+					<span class="payment"><em class="font_t">LGU+</em><a href="#" target="_blank">서비스 가입사실 확인 &gt;</a></span>
+					<span class="txt">고객님은 안전거래를 위해 현금 등으로 5만원 이상 결제 시 저희 쇼핑몰에서<br/>가입한 LG데이콤의 구매 안전서비스를 이용하실 수 있습니다.</span>
+				</div>
+			</div>
+		</div>
+		<!--// footer -->
+	</div>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		gnb();//gnb
+		nav();//nav
+		eventFn();//event
+		if($('.header_wrap').length >0){
+			bodyScroll();//body scroll
+		}
+	})
+	</script>
+</body>
+</html>

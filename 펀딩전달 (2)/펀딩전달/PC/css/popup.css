@@ -1,0 +1,304 @@
+@charset "utf-8";
+#popup { width: 100%; }
+div.pop-head_blue { padding: 7px 0 0; height: 53px; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/blue/popup_head_bg.gif") repeat-x 0 0; }
+div.pop-head_blue h1 { padding: 0 20px 8px 0; text-align: right; }
+div.pop-head_blue h2 { padding: 0 0 13px 21px; text-align: left; }
+
+div.pop-head { padding: 7px 0 0; height: 53px; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/popup/popup_head_bg.gif") repeat-x 0 0; }
+div.pop-head h1 { padding: 0 20px 8px 0; text-align: right; }
+div.pop-head h2 { padding: 0 0 13px 21px; text-align: left; }
+div.pop-body { padding: 0 20px 0; font-size: 0.9em; }
+div.destination { width: 360px; }
+div.destination p { text-align: center; }
+div.destination p.prize-comment { padding: 24px 0 10px; }
+div.destination p.notice { padding: 0 0 17px; color: #eb6d20; border-bottom: 1px solid #eaeaea; }
+div.destination p.notice-comment { padding: 16px 0 18px; }
+div.export-form dl { float: left; padding: 0 0 16px; border-bottom: 1px solid #eaeaea; }
+div.export-form dl dt, div.export-form dl dd { float: left; }
+div.export-form dl dt { padding: 3px 9px 0 0; width: 63px; line-height: 21px; text-align: right; }
+div.export-form dl dd { padding: 0 0 4px; width: 288px; vertical-align: top; }
+div.export-form dl dd input { padding: 1px; height: 18px; border: 1px solid #d2d2d2; vertical-align: top; }
+div.export-form dl dd input.addr-num { margin: 0 6px 0 0; width: 57px; }
+div.export-form dl dd input.addr { width: 270px; }
+div.btn01-con { clear: both; padding: 11px 0 21px; text-align: center; }
+
+div.popup-foot {padding: 9px 0 8px 0; width: 100%; background: #ebebeb; text-align:right; position:absolute; left:0; bottom:0;}
+div.popup-foot button { margin: 0 20px 0 0; }
+div.entreat-head { height: 60px; border-bottom: 1px solid #e5e5e5; }
+div.entreat-head h1 { padding: 27px 0 0 31px; }
+div.entreat-comment { float: lleft; width: 460px; }
+div.entreat-comment p.descript { float:left; border: 1px solid #000; }
+div.entreat-comment dl { float: left; padding: 20px 44px 20px; width: 372px; }
+div.entreat-comment dl dt { float: left; padding: 0 21px 0 0; }
+div.entreat-comment dl dt img { width: 121px; height: 121px; }
+div.entreat-comment dl dd { float: left; padding: 20px 0 0; width: 228px; }
+div.entreat-conetents { clear: both; } 
+div.entreat-comment dl dd p { line-height: 15px; }
+div.entreat-comment dl dd p.product-name { font-weight: bold; color: #363636; }
+div.entreat-comment dl dd p.price { font-weight: bold; }
+div.entreat-content { clear: both; padding: 20px 20px 13px 23px; min-height: 201px; border: 1px solid #e5e5e5; border-left: 0; border-right: 0; }
+div.entreat-content p.receiver, div.entreat-content p.sender { font-weight: bold; color: #363636; }
+div.entreat-content p.sender { padding: 93px 20px 0 0; text-align: right; }
+div.entreat-content p.word-area { padding: 20px 0 0; line-height: 14px; }
+div.btn02-con { clear: both; padding: 38px 0 26px; text-align: center; }
+div.letter-guide p.heading-comment { padding: 30px 0 22px; text-align: center; }
+div.notice-box { margin: 0 0 15px; padding: 17px 18px 15px 28px; width: 612px; font-size: 12px; border: 1px solid #eaeaea; }
+div.notice-box strong { color: #555555; letter-spacing: -0.5px; }
+div.notice-box dl dt { line-height: 21px; } 
+div.notice-box dl dd ul li { padding: 0 0 0 13px; line-height: 21px; text-indent: -13px; }
+div.pop-body fieldset legend { width: 0; height: 0; line-height: 0; font-size: 0; visibility: hidden; }
+div.letter-request-form { float: left; width: 658px; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.letter-request-form dl dt, div.letter-request-form dl dd { float: left; }
+div.letter-request-form dl dt { padding: 23px 0 25px 63px; width: 50px; }
+div.letter-request-form dl dd { padding: 17px 0 0; width: 545px; }
+div.letter-request-form dl dd input { padding: 1px; height: 16px; vertical-align: top; border: 1px solid #d2d2d2; }
+div.letter-request-form dl dd input.mails { width: 145px; }
+div.letter-request-form dl dd select { width: 132px; }
+div.letter-request-form dl dd select option { height: 16px; color: #555555; }
+div.btn03-con { clear: both; padding: 27px 0 38px; text-align: center; }
+/* 100자 상품평 쓰기 */ 
+div.comment-write { padding: 20px 0; width: 460px; }
+div.comment-write div.comment-write-input { padding: 0 0 34px; }
+div.comment-write div.comment-write-input textarea { width: 458px; height: 60px; border: 1px solid #ececec; overflow: hidden; }
+div.comment-write div.comment-write-input p.info { padding: 7px 0 0; height: 15px; }
+div.comment-write div.comment-write-input p.num { margin: -15px 0 0; height: 15px; text-align: right; }
+div.comment-write div.comment-write-input p.num strong { color: #a31112; }
+div.comment-write p.subject { margin: 15px 0 0; padding: 0 0 7px 9px; color: #363636; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/popup/icon_arrow.gif") no-repeat 1px 3px; }
+div.comment-write div.customer-satisfaction { padding: 20px 20px 3px; border: 1px solid #eaeaea; }
+div.comment-write div.customer-satisfaction p { padding: 0 0 15px; }
+div.comment-write div.customer-satisfaction span { display: inline-block; width: 60px; }
+div.comment-write div.customer-satisfaction img { margin: 0 10px 0 0; vertical-align: middle; }
+div.comment-write div.open-yn { padding: 10px 20px; border: 1px solid #eaeaea; }
+div.comment-write div.open-yn label { margin: 0 40px 0 0; }
+div.comment-write div.photo-attach { padding: 7px 16px; border: 1px solid #eaeaea; }
+div.comment-write div.photo-attach input { padding: 2px 0 0 2px; width: 398px; height: 18px; border: 1px solid #d2d2d2; background: #fff; }
+div.comment-write ul.text-info { padding: 15px 10px 0 9px; }
+div.comment-write ul.text-info li { padding: 0 0 2px 9px; text-indent: -9px; line-height: 1.3em; }
+div.pop-body div.button { clear: both; padding: 20px 0 0; text-align: center; }
+div.pop-body div.button img { vertical-align: middle; }
+div.qna-write { padding: 20px 0; }
+div.qna-write p.info { padding: 0 0 12px 10px; line-height: 1.5em; }
+div.qna-write p.info a { font-weight: bold; }
+div.qna-write dl.qna-write { float: left; width: 460px; border-bottom: 1px solid #eaeaea; }
+div.qna-write dl.qna-write dt { float: left; padding: 10px 0 0 14px; width: 60px; border-top: 1px solid #eaeaea; }
+div.qna-write dl.qna-write dd { float: left; padding: 7px 0; width: 386px; border-top: 1px solid #eaeaea; }
+div.qna-write dl.qna-write dd input { padding: 2px 0 0 2px; height: 16px; border: 1px solid #d2d2d2; }
+div.qna-write dl.qna-write dd.product { }
+div.qna-write dl.qna-write dd.product p.photo { float: left; width: 103px; }
+div.qna-write dl.qna-write dd.product p.photo img { width: 85px; height: 85px; border: 1px solid #d2d2d2; }
+div.qna-write dl.qna-write dd.product p.brand { float: left; padding: 5px 0 0; width: 283px; }
+div.qna-write dl.qna-write dd.product p.product-name { float: left; padding: 4px 0 0; width: 283px; }
+div.qna-write dl.qna-write dd.product p.price { float: left; padding: 4px 0 0; width: 283px; font-weight: bold; color: #555; }
+div.qna-write dl.qna-write dd.subject input, div.qna-write dl.qna-write dd.writer input, div.qna-write dl.qna-write dd.email input { width: 290px; }
+div.qna-write dl.qna-write dd.question textarea { padding: 2px 0 0 2px; width: 373px; height: 107px; border: 1px solid #d2d2d2; overflow: hidden; }
+div.popup-detail div.product-info fieldset legend { width: 0; height: 0; line-height: 0; font-size: 0; visibility: hidden; }
+div.popup-detail { float: left; padding: 20px 0; width: 760px; }
+div.popup-detail div.product-image { float: left; padding: 0 0 5px; width: 400px; }
+div.popup-detail div.product-image p.photo img { width: 400px; height: 400px; vertical-align: top; }
+div.popup-detail div.product-image ul { padding: 9px 0 0; text-align: center; }
+div.popup-detail div.product-image ul li { display: inline; }
+div.popup-detail div.product-image ul li img { width: 50px; height: 50px; border: 3px solid #fff; vertical-align: top; }
+div.popup-detail div.product-image ul li.selected img { border: 3px solid #d12324; }
+div.popup-detail div.product-info { float: left; padding: 0 0 0 26px; width: 326px; }
+div.popup-detail div.product-info p.location { padding: 5px 0 0 3px; height: 52px; }
+div.popup-detail div.product-info p.product-name { padding: 0 0 8px 7px; font-size: 1.3em; font-weight: bold; color: #363636; }
+div.popup-detail div.product-info p.subject-option { padding: 0 0 0 65px; }
+div.popup-detail div.product-info p.brand { padding: 0 0 14px 7px; }
+div.popup-detail div.product-info dl { float: left; padding: 13px 0 0; width: 326px; border-bottom: 1px solid #eaeaea; }
+div.popup-detail div.product-info dl dt { float: left; padding: 0 0 0 16px; width: 67px; }
+div.popup-detail div.product-info dl dd { float: left; padding: 0 0 10px; width: 243px; }
+div.popup-detail div.product-info dl.price dd.discount-price strong span { font-size: 1.3em; color: #f7051d; }
+div.popup-detail div.product-info dl.brand dd.brand a img { vertical-align: middle; }
+div.popup-detail div.product-info dl.option dd.option select { margin: 0 0 4px; width: 180px; height: 19px; }
+div.popup-detail div.product-info dl.option dd.quantity input { padding: 2px 2px 0 0; width: 26px; height: 13px; text-align: right; border: 1px solid #dedede; }
+div.popup-detail div.product-info p.button { clear: both; padding: 30px 0 0 7px; text-align: center; }
+div.popup-detail div.product-info p.stop { opacity : 0.30; /* firefox, opera, safari, chrome */ -ms-filter : "progid:DXImageTransform.Microsoft.Alpha(opacity=30)"; /* IE 8 */ filter : alpha ( opacity = 30 ); /* IE 4, 5, 6 and 7 */ zoom : 1 /* so the element "hasLayout" */ }
+div.popup-detail div.product-info p.product-icon { padding: 10px 0 0 7px; }
+div.popup-detail div.product-info p.delivery { padding: 5px 0 0 7px; }
+/* 조르기 */
+div.pester-write { padding: 20px 0; width: 460px; }
+div.pester-write p.info { padding: 0 0 20px; }
+div.pester-write div.product-info { float: left; padding: 0 0 20px; width: 460px; }
+div.pester-write div.product-info p.photo { float: left; padding: 0 0 0 44px; width: 142px; }
+div.pester-write div.product-info p.brand { float: left; padding: 20px 0 0; width: 274px; }
+div.pester-write div.product-info p.product-name { float: left; padding: 3px 0 0; width: 274px; color: #363636; font-size: 1.4em; font-weight: bold; }
+div.pester-write div.product-info p.price { float: left; padding: 5px 0 0; width: 274px; color: #707070; font-size: 1.2em; font-weight: bold; }
+div.pester-write dl.mail-form { float: left; border-bottom: 1px solid #eaeaea; }
+div.pester-write dl.mail-form dt { float: left; padding: 10px 0 0 12px; width: 80px; border-top: 1px solid #eaeaea; }
+div.pester-write dl.mail-form dd { float: left; padding: 7px 0; width: 368px; border-top: 1px solid #eaeaea; }
+div.pester-write dl.mail-form dd input { padding: 2px 0 0 2px; height: 16px; border: 1px solid #d2d2d2; }
+div.pester-write dl.mail-form dd.mail-subject input { width: 340px; }
+div.pester-write dl.mail-form dd input.name { width: 80px; }
+div.pester-write dl.mail-form dd input.mail { margin: 0 0 0 2px; width: 250px; }
+div.pester-write dl.mail-form dd.message textarea { padding: 2px 0 0 2px; width: 340px; height: 67px; border: 1px solid #d2d2d2; }
+div.pester-write div.word-input { float: left; padding: 10px 0; width: 460px; border-bottom: 1px solid #eaeaea; }
+div.pester-write div.word-input p.word-pic { float: left; padding: 0 0 0 17px; width: 230px; }
+div.pester-write div.word-input p.word-input { float: left; line-height: 2.2em; }
+div.pester-write div.word-input p.word-input input { padding: 2px 0 0 2px; width: 198px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-zipcode { padding: 0 0 25px; width: 360px; }
+div.popup-zipcode p.zipcode-info-text { padding: 24px 0 0; height: 26px; text-align: center; }
+div.popup-zipcode p.exercise { height: 29px; text-align: center; }
+div.popup-zipcode div.region-name { padding: 15px 0; text-align: center; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.popup-zipcode div.region-name label { margin: 0 5px 0 0; }
+div.popup-zipcode div.region-name input.textbox { padding: 2px 0 0 2px; width: 150px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-zipcode div.zipcode-list { margin: 25px 0 0; height: 99px; overflow: auto; }
+div.popup-zipcode div.zipcode-list table { width: 100%; border-top: 2px solid #a31112; border-bottom: 1px solid #eaeaea; }
+div.popup-zipcode div.zipcode-list table caption { height: 0; font-size: 0; line-height: 0; visibility: hidden; }
+div.popup-zipcode div.zipcode-list table thead tr th { padding: 6px 0; font-weight: normal; }
+div.popup-zipcode div.zipcode-list table tbody tr td { padding: 6px 0; border-top: 1px solid #eaeaea; }
+div.popup-zipcode div.zipcode-list table tbody tr td.zipcode { width: 94px; text-align: center; }
+div.popup-pick { padding: 0 0 42px; width: 360px; }
+div.popup-pick strong { color: #464646; }
+div.popup-pick p.pick-info-text { padding: 24px 0 10px; min-height: 33px; height: auto !important; height: 33px; text-align: center; word-spacing: -1px; font-size: 18px; font-family: "맑은 고딕", "Malgun Gothic", sans-serif; font-weight: bold; color: #464646; }
+div.popup-pick p.pick-word { padding: 0 0 10px; font-size: 18px; font-family: "맑은 고딕", "Malgun Gothic", sans-serif; font-weight: bold; word-spacing: -1px; border-bottom: 1px solid #eaeaea; color: #464646; text-align: center; }
+div.popup-pick p.pick-info-text span { vertical-align: top; }
+div.popup-pick p.pick-explanation { padding: 15px 0 20px 30px; line-height: 1.5em; font-size: 1.2em; }
+div.popup-pick div.pick-list { padding: 15px 35px 10px 18px; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.popup-pick div.pick-list ul li { padding: 0 0 5px 11px; text-align: right; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/popup/dot.gif") no-repeat 0 7px; }
+div.popup-pick div.pick-list ul li span.location { float: left; line-height: 1.8em; }
+div.popup-pick div.pick-list ul li span.location a { font-size: 1.2em; }
+div.popup-delivery { padding: 0 0 36px; width: 360px; }
+div.popup-delivery p.delivery-text { padding: 24px 0 0; height: 27px; text-align: center; }
+div.popup-delivery p.delivery-info { height: 27px; text-align: center; color: #eb6d20; border-bottom: 1px solid #eaeaea; }
+div.popup-delivery div.delivery-address { padding: 15px 0 0; }
+div.popup-delivery div.delivery-address p.address-info { padding: 0 0 0 30px; height: 28px; }
+div.popup-delivery div.delivery-address p.zipcode { padding: 0 0 5px 27px; }
+div.popup-delivery div.delivery-address p.zipcode img { vertical-align: middle; }
+div.popup-delivery div.delivery-address p.zipcode label { display: inline-block; width: 41px; }
+div.popup-delivery div.delivery-address p.zipcode input { margin: 0 6px 0 0; padding: 2px 0 0 2px; width: 57px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-delivery div.delivery-address p.address { padding: 0 0 5px 27px; }
+div.popup-delivery div.delivery-address p.address img { vertical-align: middle; }
+div.popup-delivery div.delivery-address p.address label { display: inline-block; width: 41px; }
+div.popup-delivery div.delivery-address p.address input { padding: 2px 0 0 2px; width: 270px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-delivery div.delivery-address p.detail-address { padding: 0 0 0 27px; }
+div.popup-delivery div.delivery-address p.detail-address img { vertical-align: middle; }
+div.popup-delivery div.delivery-address p.detail-address label { display: inline-block; width: 41px; }
+div.popup-delivery div.delivery-address p.detail-address input { padding: 2px 0 0 2px; width: 270px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner { padding: 0 0 36px; width: 360px; }
+div.popup-prizewinner p.prizewinner-text { padding: 24px 0 0; height: 27px; text-align: center; }
+div.popup-prizewinner p.basics-text { padding: 24px 0 10px; height: 35px; text-align: center; }
+div.popup-prizewinner p.basics-info { padding: 0 0 0 53px; height: 27px; text-align: left; color: #eb6d20; border-bottom: 1px solid #eaeaea; }
+div.popup-prizewinner p.prizewinner-info { height: 27px; text-align: center; color: #eb6d20; border-bottom: 1px solid #eaeaea; }
+div.popup-prizewinner div.personal-information { padding: 7px 0 3px; border-bottom: 1px solid #eaeaea; }
+div.popup-prizewinner div.personal-information p.username { float: left; padding: 0 0 5px 27px; width: 142px; }
+div.popup-prizewinner div.personal-information p.username img { vertical-align: middle; }
+div.popup-prizewinner div.personal-information p.username label { display: inline-block; padding: 0 5px 0 0; width: 36px; text-align: right; }
+div.popup-prizewinner div.personal-information p.username input { margin: 0 6px 0 0; padding: 2px 0 0 2px; width: 77px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner div.personal-information p.mobile { float: left; padding: 0 0 5px 0; width: 191px; }
+div.popup-prizewinner div.personal-information p.mobile img { vertical-align: middle; }
+div.popup-prizewinner div.personal-information p.mobile label { display: inline-block; width: 41px; text-align: right; }
+div.popup-prizewinner div.personal-information p.mobile input { margin: 0 6px 0 0; padding: 2px 0 0 2px; width: 124px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner div.personal-information p.email { clear: both; padding: 0 0 5px 27px; }
+div.popup-prizewinner div.personal-information p.email img { vertical-align: middle; }
+div.popup-prizewinner div.personal-information p.email label { display: inline-block; padding: 0 5px 0 0; width: 36px; text-align: right; }
+div.popup-prizewinner div.personal-information p.email input { margin: 0 6px 0 0; padding: 2px 0 0 2px; width: 266px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner div.prizewinner-address { padding: 15px 0 15px; border-bottom: 1px solid #eaeaea; }
+div.popup-prizewinner div.prizewinner-address p.address-info { padding: 0 0 0 30px; height: 36px; }
+div.popup-prizewinner div.prizewinner-address p.zipcode { padding: 0 0 5px 27px; }
+div.popup-prizewinner div.prizewinner-address p.zipcode img { vertical-align: middle; }
+div.popup-prizewinner div.prizewinner-address p.zipcode label { display: inline-block; width: 41px; }
+div.popup-prizewinner div.prizewinner-address p.zipcode input { margin: 0 6px 0 0; padding: 2px 0 0 2px; width: 57px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner div.prizewinner-address p.address { padding: 0 0 5px 27px; }
+div.popup-prizewinner div.prizewinner-address p.address img { vertical-align: middle; }
+div.popup-prizewinner div.prizewinner-address p.address label { display: inline-block; width: 41px; }
+div.popup-prizewinner div.prizewinner-address p.address input { padding: 2px 0 0 2px; width: 270px; height: 16px; border: 1px solid #d2d2d2; }
+div.popup-prizewinner div.prizewinner-address p.detail-address { padding: 0 0 0 27px; }
+div.popup-prizewinner div.prizewinner-address p.detail-address img { vertical-align: middle; }
+div.popup-prizewinner div.prizewinner-address p.detail-address label { display: inline-block; width: 41px; }
+div.popup-prizewinner div.prizewinner-address p.detail-address input { padding: 2px 0 0 2px; width: 270px; height: 16px; border: 1px solid #d2d2d2; }
+/*popup-head01*/
+div.popup-head01 { height: 56px; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/popup/popup_ecard_head_bg.gif") repeat-x 0 0; }
+div.popup-head01 h1 { float: left; padding: 26px 0 0 20px; height: 33px; }
+div.popup-head01 p.site-logo { float: right; padding: 34px 20px 0 0; }
+div.e-card-body { padding: 25px 0 0 20px; width: 700px; }
+div.card-view-form { width: 698px; }
+div.card-view { padding: 24px 49px 16px; width: 600px; border: 1px solid #eaeaea; border-bottom: 0; }
+div.card-view p.logo { padding: 0 0 10px 4px; }
+div.card-view p.card-zone { width: 600px; }
+div.card-view p.card-zone img { width: 600px; }
+div.card-write { padding: 0 49px 27px; width: 600px; border: 1px solid #eaeaea; border-top: 0; }
+div.card-write table { width: 100%; }
+div.card-write table caption { width: 0; height: 0; line-height: 0; font-size: 0; visibility: hidden; }
+div.card-write table tbody th, div.card-write table tbody td { text-align: left; vertical-align: top; border-top: 1px solid #ebebeb; }
+div.card-write table tbody th { padding: 9px 0 0 22px; background: #f9f9f9; }
+div.card-write table tbody td { padding: 5px 0 4px 9px; }
+div.card-write table tbody td input { padding: 1px; width: 156px; height: 16px; border: 1px solid #d2d2d2; }
+div.card-write table tbody td input.subject { width: 471px; }
+div.card-write table tbody td input.sender, div.card-write table tbody td input.receiver { background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/ecard/text_name.gif") no-repeat 3px center; }
+div.card-write table tbody td input.sender-email, div.card-write table tbody td input.receiver-email { background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/ecard/text_email.gif") no-repeat 3px center; }
+div.card-write table tbody td input.bg-none { background: none; }
+div.card-write table tbody td textarea { padding: 1px; width: 470px; height: 100px; }
+div.card-write table tbody td p.captcha { float: left; padding: 20px 0 0 30px; width: 200px; height: 50px; }
+div.card-write table tbody td p.captcha { border: 1px solid #eaeaea; }
+div.card-write table tbody td p.confirmation { float: left; padding: 15px 0 0 10px; }
+div.card-write table tbody td input.button { margin: 5px 0 0; width: auto; height: auto; border: 0; }
+div.card-con { padding: 14px 0 28px; text-align: center; }
+div.view-area { width: 600px; border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; }
+div.view-area p { padding: 8px 0 8px 17px; font-size: 0.9em; font-weight: bold; color: #363636; }
+div.view-area p.receiver { margin: -4px 0 0; padding: 8px 11px 8px 0; text-align: right; }
+div.card-contents { padding: 5px 11px 0 17px; min-height: 110px; height: auto !important; height: 110px; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/popup/card_contents_bg.gif") repeat-y 0 0; line-height: 27px; font-size: 0.9em; }
+/* 오늘만 특가 알림신청 */
+div.popup-special-price { width: 360px; }
+div.popup-special-price p.special-price-info { padding: 25px 0 10px; text-align: center; }
+div.popup-special-price div.mobile-number { padding: 19px 0; text-align: center; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.popup-special-price div.mobile-number img { margin: 0 10px 0 0; vertical-align: middle; }
+div.popup-special-price div.mobile-number input { padding: 2px 0 0 2px; width: 38px; height: 16px; background: #fff; border: 1px solid #d2d2d2; }
+div.popup-special-price p.info-text { padding: 10px 0 0; text-align: center; }
+div.popup-special-price div.button { padding: 18px 0 14px; }
+/* 이미지 등록 */
+div.popup-image-register { width: 360px; }
+div.popup-image-register p.image-register-info { padding: 25px 0 10px; }
+div.popup-image-register div.attached-file { padding: 19px 0; text-align: center; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.popup-image-register div.attached-file img { margin: 0 10px 0 0; vertical-align: middle; }
+div.popup-image-register div.attached-file input { padding: 2px 0 0 2px; width: 255px; height: 20px; background: #fff; border: 1px solid #d2d2d2; }
+div.popup-image-register p.info-text { padding: 10px 0 0; text-align: center; }
+div.popup-image-register div.button { padding: 18px 0 30px; }
+/* 알림 서비스 신청 */
+div.popup-notice-service { width: 360px; }
+div.popup-notice-service p.notice-service-info { padding: 25px 0 10px 15px; text-indent: -15px; line-height: 1.5em; }
+div.popup-notice-service div.notice-service-register { padding: 19px 0 10px; text-align: center; border: 1px solid #eaeaea; background: #f8f8f8; }
+div.popup-notice-service div.notice-service-register img { margin: 0 10px 10px 0; vertical-align: middle; }
+div.popup-notice-service div.notice-service-register input#userid { margin: 0 20px 10px 0; padding: 2px 0 0 2px; width: 88px; height: 16px; background: #fff; border: 1px solid #d2d2d2; }
+div.popup-notice-service div.notice-service-register input#mobile { margin: 0 0 10px 0; padding: 2px 0 0 2px; width: 137px; height: 16px; background: #fff; border: 1px solid #d2d2d2; }
+div.popup-notice-service div.notice-service-register select#message-notice { margin: 0 0 12px 0; width: 132px; height: 18px; vertical-align: middle; border: 1px solid #7f9db9; }
+div.popup-notice-service p.info-text { padding: 10px 0 0; text-align: center; }
+div.popup-notice-service div.button { padding: 18px 0 30px; }
+div.search-body { padding: 20px 20px 0; }
+div.main-text-search { padding: 20px 0 7px 41px; border: 2px solid #eaeaea; background: #f9f9f9; }
+div.main-text-search h4 { height:17px; }
+div.main-text-search ul { height: 35px; }
+div.main-text-search ul li { display: inline; padding: 0 1px 0 0; }
+div.main-text-search ul li img { vertical-align: top; border: 2px solid #9b9b9b; }
+div.main-text-search ul li.selected img { border: 2px solid #d12324; }
+div.main-menu-sort { clear: both; padding: 40px 0 0; }
+div.main-menu-sort ul { height: 19px; border-bottom: 1px solid #e7e7e7; }
+div.main-menu-sort ul li { display: inline; padding: 0 5px 0 4px; }
+div.main-text-search-result { padding: 16px 0 0; }
+div.main-text-search-result p.text { float: left; padding: 3px 0 0 17px; width: 57px; }
+div.main-text-search-result ul { margin: 0 0 20px; float: left; width: 681px; overflow: hidden; background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/main_text_search_result_line.gif") repeat 0 0; }
+div.main-text-search-result ul li { float: left; padding: 5px 2px 0 8px; width: 160px; height: 17px; }
+div.main-text-search-result ul li a { font-size: 0.9em; }
+div.main-text-search-result ul li img { margin: -2px 0 0; vertical-align: middle; }
+div.close-in-day { padding: 5px 20px 5px 0; text-align: right; background: #e2e2e2; }
+div.close-in-day input { margin: 0 0 0 5px; vertical-align: middle; }
+div.close-pre { padding: 8px 20px 15px 0; text-align: right; background: #ebebeb; }
+div.request-form { padding: 20px 0; width: 780px; }
+div.request-form table { width: 100%; border-top: 2px solid #a31112; }
+div.request-form table caption { width: 0; height: 0; line-height: 0; visibility: hidden; }
+div.request-form table tbody th { padding: 0 0 0 20px; text-align: left; background: #fafafa; }
+div.request-form table tbody td { padding: 7px 0 6px 20px; border-left: 1px solid #eaeaea; }
+div.request-form table tbody td.items { padding-left: 13px; }
+div.request-form table tbody th.items { padding-left: 25px; border-left: 1px solid #eaeaea; }
+div.request-form table tbody td, div.request-form table tbody th { border-bottom: 1px solid #eaeaea; }
+div.request-form table tbody td input { padding: 1px; height: 16px; width: 164px; border: 1px solid #d2d2d2; }
+div.request-form table tbody td input.crop { width: 143px; }
+div.request-form table tbody td input.crop-addr { width: 560px; }
+div.request-form table tbody td input.nums { width: 35px; }
+div.request-form table tbody td input.mails, div.request-form table tbody td input.url { width: 200px; }
+div.request-form table tbody td input.sales-num { width: 48px; }
+div.request-form table tbody td input.rd-btn { width: auto; vertical-align: middle; border: 0; }
+div.request-form table tbody td label.rd-btn { padding: 0 54px 0 15px; font-size: 12px; color: #555555; }
+div.request-form table tbody td textarea { margin: 0 0 8px; width: 617px; height: 111px; border: 1px solid #d2d2d2; }
+div.request-form p.form-btn { padding: 13px 0 0; text-align: center; }
+
+ 

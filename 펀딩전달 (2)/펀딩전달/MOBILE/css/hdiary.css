@@ -1,0 +1,1834 @@
+@charset "utf-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+/* 영문/숫자 */
+@font-face {
+    font-family:font_gs; font-style:normal; font-weight:300;
+    src:url('../font/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family:font_gs; font-style:normal; font-weight:normal;
+    src:url('../font/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family:font_gs; font-style: normal; font-weight:bold;
+    src:url('../font/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.fontw100 {
+    font-weight: 100;
+}
+
+.nfont {
+    font-family: 'Titillium Web';
+}
+
+/* FONT SMOOTHING */
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* 정렬 */
+.mta {
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.block img {
+    display: inline-block;
+}
+
+/* 너비*/
+.wd100 {
+    width: 100%;
+}
+
+.mwd100 {
+    max-width: 100%;
+}
+
+/* 공통 css */
+h2 {
+    font-size: 2.3em;
+    color: #333;
+    font-weight: 700;
+}
+.clear {
+    clear: both;
+}
+
+.diary_wrap {
+	font-size:14px;overflow:hidden;
+	-webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans KR';
+    margin-top: 61px;
+}
+
+.diary_wrap .diary-title {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.diary_wrap .diary-title p{
+    font-size: 12px;
+    letter-spacing: 12px;
+    padding: 22px 0 5px;
+}
+.diary_wrap .diary-title h2{
+    font-family: font_gs;
+    font-size: 25px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    padding-bottom: 19px;
+}
+.diary_wrap .diary-title:after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 34px;
+    background: #000;
+}
+.diary_wrap .diary-title span{
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 800;
+    text-align: right;
+    padding: 0 17px;
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+.diary_wrap .diary-title span+span{
+    text-align: left;
+}
+.diary_wrap .diary-title span img{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.diary_wrap .visual {position:relative;padding-bottom:5px;}
+.diary_wrap .visual.swipe-main {margin-bottom: 56px;}
+.diary_wrap .visual .swiper-container {overflow:hidden;margin:0 auto;}
+.diary_wrap .visual .swiper-container .swiper-wrapper { height:auto !important; }
+/* .diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide {position:relative;float:left;width:100%;text-align:center;height:auto !important; left:30px;} */
+/* .diary_wrap .visual .swiper-container .swiper-wrapper li:first-child.swiper-slide-duplicate {position:relative; left:0;}
+.diary_wrap .visual .swiper-container .swiper-wrapper li:first-child.swiper-slide-duplicate + li.swiper-slide-active {position:relative; left:0;} */
+/* .diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide-active {position:relative;float:left;width:100%;text-align:center;height:auto !important; left:0px} */
+/* .diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide-active + li {position:relative; left: -30px; }
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide-duplicate {position:relative; left: 30px; } 
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide-duplicate + li.swiper-slide {position:relative; left: 30px; } */
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide-duplicate.swiper-slide-active  {position:relative; left: 0; }
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide a { display: block; width:90%; text-align:left; margin: 0 auto;}
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide img {width:100%;}
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide .tit {padding-top:12px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:14px;color:#010101}
+.diary_wrap .visual .swiper-container .swiper-wrapper .swiper-slide .txt {padding-top:6px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:12px;color:#6a6a6a;height:14px;}
+.diary_wrap .visual.swipe-main .pagination {
+	position: absolute;
+    bottom: 0;
+    width: 90%;
+    text-align: center;
+    padding: 0 5%;
+}
+.diary_wrap .visual.swipe-main .pagination .swiper-pagination-switch {
+	width: calc(100%/7);
+    background-color: rgba(0,0,0,0.1);
+    height: 3px;
+}
+.diary_wrap .visual.swipe-main .pagination .swiper-active-switch {
+	width: calc(100%/7);
+    padding: 0;
+    margin: 0;
+    height: 3px;
+    background-color: #000;
+}
+.diary_wrap .visual.swipe-main div.div_bnr {width: 100%; display: inline-block; margin-top: 15px;overflow: hidden;}
+.diary_wrap .visual.swipe-main .bnrTitle{ font-size: 24px; font-family: 'Noto Sans KR', AppleGothic, sans-serif; font-weight: bold; color: #333; padding:0 10px; line-height: 1.3;}
+.diary_wrap .visual.swipe-main .bnrTitle .bnrSubTitle{
+    position: absolute;
+    top: 0;
+    left: 19px; 
+    font-family: font_gs, 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: bold;
+    padding: 8px 10px;
+    background: #000;
+    color: #fff;
+}
+.diary_wrap .visual.swipe-main div.bnrImgAlt{ font-size: 12px; font-family: 'Noto Sans KR', AppleGothic, sans-serif; color: #000; margin: 5px 10px 40px 10px; line-height:18px; display:inline-block; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.diary_wrap .visual.swipe-main .swiper-scrollbar-drag{
+    background: #000;
+}
+.diary_wrap .visual.swipe-main .swiper-scrollbar{
+    opacity: 1!important;
+    width: calc(100% - 40px);
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 오늘만 1+1증정 */
+.diary_wrap .plus-stuff{
+    position: relative;
+    padding: 0 21px 58px 30px;
+}
+.diary_wrap .plus-title strong{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: -1.28px;
+    padding-bottom: 3px;
+    border-bottom: 4px solid #000;
+}
+.diary_wrap .img-wrap{
+    position: absolute;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.diary_wrap .img-wrap img{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+.diary_wrap .time-count-wrap{
+    padding: 20px 0 10px;
+}
+.diary_wrap .time-count-wrap b{
+    display: inline-block;
+    width: 50px;
+    font-family: font_gs;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 3.6px;
+    color: #FF5D5D;
+    margin-right: 6px;
+}
+.diary_wrap .time-count-wrap strong{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 8px;
+}
+.diary_wrap .free-ship img{
+    width: 24px;
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+.diary_wrap .free-ship b{
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: -1.1px;
+    vertical-align: middle;
+}
+.diary_wrap .plus-text{
+    padding-top: 33px;
+}
+.diary_wrap .plus-text .plus-title{
+    width: 50%;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -1.4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.diary_wrap .plus-text b{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1.68px;
+    margin-right: 8px;
+}
+.diary_wrap .plus-text .discount-pay{
+    font-weight: 300;
+    text-decoration: line-through;
+    color: #777;
+}
+.plus-more{
+    float: right;
+    margin-top: -3px;
+}
+.plus-more:before{
+    content: 'SEE MORE';
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 900;
+    letter-spacing: -1.12px;
+    vertical-align: middle;
+}
+.plus-more:after{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    margin-left: 9px;
+    margin-top: -3px;
+    background: url(../images/biz/diary/arrow-r.png) no-repeat center/100%;
+    vertical-align: middle;
+}
+
+.diary_wrap .tit_today_box {
+    font-size: 29px;
+    line-height: 43px;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    letter-spacing: -1.74px;
+    padding: 0 30px;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.diary_wrap .tit_today_box.on{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+}
+.diary_wrap .tit_today_box p{
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -0.84px;
+    padding-top: 1px;
+}
+
+/* 많이 보고 있는 이벤트 */
+.diary_wrap .bestevent_a {position:relative; padding: 52px 0; background: #F5F5F5;}
+.diary_wrap .bestevent_a .swiper-container { overflow:hidden; margin:0 auto; width: calc(100% - 30px); margin-left: 30px; margin-top: 32px;}
+.diary_wrap .bestevent_a .swiper-container .swiper-wrapper { height:auto !important; }
+.diary_wrap .bestevent_a .swiper-container .swiper-wrapper .swiper-slide a { display: block; width: calc(100% - 10px); text-align:left;}
+.diary_wrap .bestevent_a .swiper-container .swiper-wrapper .swiper-slide img {width:100%;}
+.diary_wrap .bestevent_a .swiper-container .swiper-wrapper .swiper-slide .tit {padding-top:12px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:14px;color:#010101}
+.diary_wrap .bestevent_a .swiper-container .swiper-wrapper .swiper-slide .txt {padding-top:6px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:12px;color:#6a6a6a;height:14px;}
+.diary_wrap .bestevent_a div.div_bnr {width: 100%; display: inline-block; margin-top: 15px;overflow: hidden;}
+.diary_wrap .bestevent_a .bnrTitle{ font-size: 24px; font-family: 'Noto Sans KR', AppleGothic, sans-serif; font-weight: bold; color: #333; line-height: 1.3;}
+.diary_wrap .bestevent_a .bnrTitle .bnrSubTitle{
+    position: absolute;
+    top: 0;
+    left: 0; 
+	font-size: 24px;
+    font-family: 'Noto Sans KR', AppleGothic, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+}
+.diary_wrap .bestevent_a div.bnrImgAlt{ font-size: 12px; font-family: 'Noto Sans KR', AppleGothic, sans-serif; color: #000; margin: 5px 0 25px; line-height:20px; display:inline-block; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.diary_wrap .bestevent_a .swiper-scrollbar-drag{
+    background: #000;
+}
+.diary_wrap .bestevent_a .swiper-scrollbar{
+    opacity: 1!important;
+    width: 100%;
+    height: 3px;
+    left: 0;
+}
+
+/* 기프트 이벤트 배너 */
+.cgift {
+    padding: 40px 0 40px 30px;
+    background: #F5F5F5;
+}
+.cgift .gift-title strong{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1.12px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #000;
+}
+.cgift a {
+    background: #E8E8E8;
+}
+.cgift img {
+    width: 100%;
+    max-width: 730px;
+}
+
+/* 오늘의 추천 */
+.today_box {
+    padding-top: 50px;
+}
+.today_box .today_a {
+    text-align: center;
+    font-size: 0;
+    padding: 23px 0 19px;
+}
+
+.today_box .today_a li {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+.today_box .today_a li:nth-child(2) {
+    margin: 0 42px;
+}
+
+.today_box .today_a li img{
+    display: block;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.today_box .today_a li p {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    margin-top: 5px;
+}
+.today_box .today_a li.on p {
+    color: #FF5D5D;
+}
+.today_box .today_a li.on p:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255,93,93,0.18);
+
+}
+
+.today_box .today_a .ic_today img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-recommend.png");
+}
+.today_box .today_a .ic_today.on img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-recommend-on.png");
+}
+.today_box .today_a .ic_cbest img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-popular.png");
+}
+.today_box .today_a .ic_cbest.on img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-popular-on.png");
+}
+.today_box .today_a .ic_cartbest img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-cart-sort.png");
+}
+.today_box .today_a .ic_cartbest.on img{
+	content:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/2020Diary/ic-cart-sort-on.png");
+}
+
+.prod_list_normal {
+    width: 100%;
+    height: auto;
+}
+
+.prod_list_normal .pannel2 .tlist_a dl {
+    font-size: 16px;
+    text-align: left;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/btn_catearrow_off.png)no-repeat;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 3px;
+    width: 200px;
+    height: 60px;
+    background-size: 100%;
+    background-position-x: -30px;
+}
+
+.prod_list_normal .pannel2 .tlist_a dl a {
+    padding: 18px 0 18px 12px;
+    width: 178px;
+    color: #999;
+}
+
+.prod_list_normal .pannel2 .tlist_a dl:last-child {
+    margin: 0px;
+}
+
+.prod_list_normal .pannel2 .tlist_a dl.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/btn_catearrow_on.png)no-repeat;
+    background-size: 100%;
+    background-position-x: -30px;
+}
+
+.prod_list_normal .pannel2 .tlist_a dl.on a {
+    font-weight: 500;
+    color: #000;
+}
+
+.prod_list_normal ul.tlist_a {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.prod_list_normal ul.tlist_a .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-bg.png) no-repeat center/100% 100%;
+    width: 45px;
+    height: 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Titillium Web';
+    text-align: center;
+    line-height: 2.2;
+}
+.prod_list_normal ul.tlist_a li:nth-child(n+3) .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-sort.png) no-repeat center/100% 100%;
+}
+
+.prod_list_normal ul li {
+    float: left;
+    position: relative;
+    margin-bottom: 30px;
+    width: calc(50% - 3px);
+}
+
+.prod_list_normal ul li + li {
+    margin-left: 3px;
+}
+
+.prod_list_normal ul li:nth-child(2n) + li {
+    margin-left: 0px !important;
+    clear:both;
+}
+.today_box .prod_list_normal ul li:nth-child(n+11){
+    display: none;
+}
+.diarycloud .prod_list_normal ul li:nth-child(n+9){
+    display: none;
+}
+
+.prod_list_normal ul + ul {
+    margin: 0 auto;
+    padding: 0 0 60px 0 !important;
+    border-top: none;
+}
+
+.prod_list_normal ul li a{
+    display: block;
+    width: 100%;
+}
+.prod_list_normal ul li .img+a{
+    display: block;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.prod_list_normal ul li .img+a.wd100{
+    padding: 0;
+}
+
+.prod_list_normal ul li a span.make {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    text-decoration: none;
+    font-family: 'Titillium Web', 'Noto Sans KR';
+    height: 18px;
+}
+
+.prod_list_normal ul li span.img img {
+    width: 100%;
+    height: auto;
+}
+
+.prod_list_normal ul li a span.make + .name {
+    margin: 0;
+}
+
+.prod_list_normal ul li a span.name {
+    display: block;
+    width: 100%;
+    line-height: 1.3;
+    margin: 15px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.prod_list_normal ul li a span.price {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 9px;
+    color: #000;
+    overflow: hidden;
+}
+
+.prod_list_normal ul li a span.price > span{
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    vertical-align: top;
+}
+
+.prod_list_normal ul li a span.price .pc {
+    float: left;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    color: #DA2128;
+}
+
+.prod_list_normal ul li a span.icon {
+    display: block;
+    width: 100%;
+    line-height: 18px;
+    margin-top: 24px;
+}
+
+.prod_list_normal ul li a span.icon .ico_review {
+    float: left;
+    text-indent: 0;
+    padding-left: 20px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_review.png) no-repeat left 0;
+    color: #000;
+    font-size: 11px;
+    line-height: 12px;
+    font-family: font_gs;
+    background-size: contain;
+}
+
+.prod_list_normal ul li a span.icon .ico_like {
+    float: left;
+    text-indent: 0;
+    padding-left: 17px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_off.png) no-repeat left 0;
+    color: #000;
+    font-size: 11px;
+    line-height: 12px;
+    font-family: font_gs;
+    margin-left: 20px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+.prod_list_normal ul li a span.icon .ico_like.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_on.png) no-repeat left 0;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btn_more_a {
+    width: 100%;
+    padding-bottom: 55px;
+    position: relative;
+    clear: both;
+}
+
+.btn_more_a a {
+    display: block;
+    text-align: center;
+    font-size: 0;
+}
+.btn_more_a a:before{
+    content: 'SEE MORE';
+    display: inline-block;
+    font-family: font_gs;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    letter-spacing: -1.12px;
+    color: #000;
+}
+.btn_more_a a:after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    margin-left: 9px;
+    background: url(../images/biz/diary/ic-seemore.png) no-repeat center/100%;
+}
+.btn_more_a.active a:before{
+    content: 'CLOSE';
+}
+.btn_more_a.active a:after{
+    transform: rotate(180deg);
+}  
+
+/* 베스트 이벤트 */
+.bestevent_a {
+    width: 100%;
+    background-color: #fff;
+}
+
+.bestevent_a .bestevent {
+	width:100%;
+	height:auto;
+}
+
+.bestevent_a .bestevent .txt_eventday {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Titillium Web';
+    letter-spacing: 5px;
+    margin-left: -263px;
+    margin-top: -263px;
+    color: #333;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.bestevent_a .bestevent .event_list_a h2 img {
+    width: 100%;
+    max-width: 750px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list {
+    width: 100%;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list .best {
+    width: 100%;
+    height: 440px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list .best a .img {
+    width: 100%;
+    height: auto;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list .best a .tit {
+    display: inline-block;
+    padding: 30px 10px;
+    color: #333;
+    font-size: 24px;
+    line-height: 45px;
+    width: 477px;
+    height: 122px;
+    margin-top: -40px;
+    background: white;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list .best a .tit strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #333;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list .best a .tit em {
+    font-size: 24px;
+    color: #333;
+    padding: 5px 0;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li {
+    width: 100%;
+    min-height: 100%;
+    padding-left: 40px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a {
+    display: block;
+    cursor: pointer;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .img img {
+    width: 100%;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .tit {
+    display: block;
+    margin-top: 12px;
+    padding: 0 10px;
+    color: #989898;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .tit strong {
+    display: block;
+    margin: 0px;
+    color: #333;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .tit em {
+    display: block;
+    margin-bottom: 2px;
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.bestevent_a .bestevent .event_list_a .event_list .list li a .date {
+    display: block;
+    margin-top: 23px;
+    padding: 0 10px;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Titillium Web';
+    letter-spacing: 1.6px;
+}
+
+/* 다이어리 클라우드 */
+.diarycloud_a {
+    padding: 32px 0 0px;
+}
+
+.diarycloud_a .diarycloud_tab_a {
+	width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+    float: left;
+}
+
+.diarycloud_a .diarycloud_tab {
+    margin: 0 auto;
+    padding: 17px 0 20px 0;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.diarycloud_a .diarycloud_tab.fix span{
+    font-family: font_gs;
+    font-size: 19px;
+    line-height: 70px;
+    font-weight: 900;
+}
+.diarycloud_a .diarycloud_tab.fix {
+	position: absolute;
+    width: 89px;
+    height: 100px;
+    overflow: hidden;
+    z-index: 97;
+    background: #fff;
+}
+
+.diarycloud_a .diarycloud_tab li {
+    display: inline-block;
+    width: 88px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+
+.diarycloud_a .diarycloud_tab.fix li.diaryc00 {
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	height: inherit;
+    border-radius:0%;
+    background: #fff;
+}
+
+.diarycloud_a .diarycloud_tab .diaryc00 img {
+    width: 60%;
+    padding: 8px 0;
+}
+
+.diarycloud_a .diarycloud_tab.fix li.diaryc00.on a img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 60%;
+    padding: 8px 0;
+    border: none;
+}
+
+.diarycloud_a .diarycloud_tab .diaryc00 p {
+	margin-left: 8px;
+}
+
+.diarycloud_a .diarycloud_tab li a{
+    display: block;
+}
+.diarycloud_a .diarycloud_tab li a img{
+	width: 80%;
+}
+
+.diarycloud_a .diarycloud_tab li.on img+p {
+    color: #000;
+    font-weight: 900;
+}
+
+.diarycloud_a .diarycloud_tab li.on a img {
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+}
+.diarycloud_a .diarycloud_tab li.on a p:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 19px;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: url(../images/biz/diary/dakku-filter-check.png) no-repeat center/100%;
+    margin-top: 8px;
+}
+
+.diarycloud_a .diarycloud_tab li p {
+    color: #333;
+    margin-top: 3px;
+}
+
+.diarycloud_a .diarycloud_tab li.diaryc01 {
+    margin-left: 98px;  
+}
+
+.diarycloud_a .snb_a {
+    padding: 30px 25px 0 30px;
+}
+
+.diarycloud_a .snb_a li {
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+.diarycloud_a .snb_a li:before{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #DBDBDB;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.diarycloud_a .snb_a li a{
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 10px 0 18px;
+    line-height: initial;
+}
+.diarycloud_a .snb_a li.on:before{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 8px;
+    background: url(../images/biz/diary/dakku-cheek.png) no-repeat center/100%; 
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.diarycloud_a .snb_a li.on{
+    margin: 0px;
+}
+
+.diarycloud_a .snb_a li.on p:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 5px;
+    background: #FF5D5D;
+    opacity: 0.6;
+}
+.diarycloud_a .snb_a li.on p {
+    position: relative;
+    font-weight: 900;
+    color: #000;
+}
+
+.diarycloud_a .snb_a li p {
+    margin-top: 10px;
+}
+
+
+.diarycloud .prod_list_normal {
+	width: 100%;
+    height: auto;
+}
+
+.diarycloud .prod_list_normal .pannel2 .tlist_a dl a {
+    padding: 22px 0 22px 22px;
+    width: 178px;
+}
+
+.diarycloud .prod_list_normal .pannel2 .tlist_a dl:last-child {
+    margin: 0px;
+}
+
+.diarycloud .prod_list_normal .pannel2 .tlist_a dl.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/btn_catearrow_on.png)no-repeat;
+}
+
+.diarycloud .prod_list_normal .pannel2 .tlist_a dl.on a {
+    font-weight: 700;
+}
+
+.diarycloud .prod_list_normal ul.tlist_a {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.diarycloud .prod_list_normal .top1_a {
+    width:100%;
+    height:auto;
+}
+
+.diarycloud .prod_list_normal .top1_a li .txt_rotate{
+    display: block;
+    color: #000;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px 0 7px;
+}
+
+.diarycloud .prod_list_normal ul.top1 {
+    padding: 0 25px 0 30px;
+    width: initial;
+}
+
+.diarycloud .prod_list_normal ul.top1 li {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.diarycloud .prod_list_normal ul.top1 li .icon {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.diarycloud .prod_list_normal ul.tlist_a.top1 .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb1.png) no-repeat center/100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 71px;
+    height: 72px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Titillium Web';
+    text-align: center;
+    line-height: 2.2;
+    margin-bottom: -45px;
+}
+.diarycloud .prod_list_normal ul.tlist_a .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-bg.png) no-repeat center/100% 100%;
+    width: 45px;
+    height: 25px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Titillium Web';
+    text-align: center;
+    line-height: 2.2;
+}
+.diarycloud .prod_list_normal ul.tlist_a li:nth-child(n+3) .ic_tagnum {
+    background: url(../images/biz/diary/ic-numb-sort.png) no-repeat center/100% 100%;
+}
+
+.diarycloud .prod_list_normal ul.top1 li + li {
+    margin-left: 25px;
+}
+
+.diarycloud .prod_list_normal ul li {
+    float: left;
+    position: relative;
+    margin-bottom: 30px;
+    width: calc(50% - 3px);
+}
+
+.diarycloud .prod_list_normal ul li + li {
+    margin-left: 3px;
+}
+
+.diarycloud .prod_list_normal ul + ul {
+    margin: 0 auto;
+    padding: 0 0 60px 0 !important;
+    border-top: none;
+}
+
+.diarycloud .prod_list_normal ul li a span.make {
+    display: block;
+    margin: 10px 0 3px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #999;
+    text-decoration: none;
+    font-family: 'Titillium Web', 'Noto Sans KR';
+}
+
+.diarycloud .prod_list_normal ul.top1 li a span.name {
+    display: inline-block;
+    height: auto;
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 4px;
+    margin: 0px;
+}
+
+
+.diarycloud .prod_list_normal ul.top1 li a span.price {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Titillium Web';
+    display: block;
+    color: #000;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.diarycloud .prod_list_normal ul.top1 li a span.price .pc {
+    float: left;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: #DA2128;
+    margin-left: 0;
+}
+
+.diarycloud .prod_list_normal ul.top1 li a span.icon .icon_line {
+    float: left;
+    width: 59px;
+    padding-top: 10px;
+}
+
+.diarycloud .prod_list_normal ul.top1 li .icon {
+    width: 100%;
+    padding: 0px;
+}
+
+.diarycloud .prod_list_normal ul.top1 li a span.price .pc::before {
+	content:"~";
+}
+
+.diarycloud .prod_list_normal ul.top1 li a span.icon .ico_review {
+    float: inherit;
+    text-indent: 0;
+    padding-left: 30px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_review.png) no-repeat left 0;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Titillium Web';
+    background-size: contain;
+}
+
+.diarycloud .prod_list_normal ul.top1 li span.icon .ico_like {
+    float: inherit;
+    text-indent: 0;
+    padding-left: 25px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_off.png) no-repeat left 0;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Titillium Web';
+    margin-left: 0px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+.diarycloud .prod_list_normal ul.top1 li span.icon .ico_like.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_on.png) no-repeat left 0;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.diarycloud .prod_list_normal ul li a span.name {
+    display: block;
+    height: auto;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #000;
+    padding: 0 0px 9px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.diarycloud .prod_list_normal ul li a span.price {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    font-family: 'Titillium Web';
+    margin-top: 0px;
+    color: #000;
+}
+
+.diarycloud .prod_list_normal ul li a span.price .pc {
+    letter-spacing: 1px;
+    color: #DA2128;
+}
+
+.diarycloud .prod_list_normal ul li a span.icon .ico_review {
+    float: left;
+    text-indent: 0;
+    padding-left: 20px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_review.png) no-repeat left 0;
+    color: #000;
+    font-size: 11px;
+    line-height: 12px;
+    font-family: font_gs;
+    background-size: contain;
+}
+
+.diarycloud .prod_list_normal ul li span.icon .ico_like {
+    float: left;
+    text-indent: 0;
+    padding-left: 17px;
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_off.png) no-repeat left 0;
+    color: #000;
+    font-size: 11px;
+    line-height: 12px;
+    font-family: font_gs;
+    margin-left: 20px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.diarycloud .prod_list_normal ul li span.icon .ico_like.on {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/diary/2019/m/ic_heart_on.png) no-repeat left 0;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* .diarycloud_a .paging {
+    width: 100%;
+    height: 24px;
+    margin: 50px 0 100px 0;
+    text-align: center;
+}
+
+.diarycloud_a .pagination-wrap{
+    padding: 28px 0 40px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+}
+.diarycloud_a .pagination-wrap .prev-pagination,
+.diarycloud_a .pagination-wrap .next-pagination{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: url(../images/biz/diary/arrow-l.png) no-repeat center/auto 100%;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+.diarycloud_a .pagination-wrap .next-pagination{
+    background: url(../images/biz/diary/arrow-r.png) no-repeat center/auto 100%;
+}
+.diarycloud_a .pagination-wrap ul{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.diarycloud_a .pagination-wrap li{
+    display: inline-block;
+    width: auto!important;
+    float: none!important;
+    margin: 0!important;
+    margin-right: 7px!important;
+    vertical-align: 1px;
+}
+.diarycloud_a .pagination-wrap li:last-child{
+    margin-right: 0;
+}
+.diarycloud_a .pagination-wrap li a{
+    font-family: font_gs;
+    font-size: 14px;
+}
+.diarycloud_a .pagination-wrap li.active a{
+    width: 25px;
+    height: 25px;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background: #000;
+} */
+/* 스티커 배너 영역 */
+.sticker-banner-wrap a{
+    display: block;
+    position: relative;
+}
+.sticker-banner-wrap a img{
+    display: block;
+    width: 100%;
+}
+.sticker-banner-wrap .see-more-btn{
+    position: absolute;
+    bottom: 29px;
+    right: 34px;
+    width: 65px;
+    height: 21px;
+    background: url(../images/biz/diary/sticker-banner-more.png) no-repeat center/auto 100%;
+}
+
+/* 다꾸존 */
+.diarydeco_a {
+    padding: 50px 0;
+}
+
+.diarydeco_a .tit_diarydeco {
+	text-align: center;
+}
+
+.diarydeco_a .tit_diarydeco img {
+	width:100%;
+	max-width: 750px;
+}
+
+.diarydeco .decolist_p {
+    margin: 0 auto;
+    position: relative;
+}
+
+.diarydeco .decolist_p a {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+/* deco 1 pencil part */
+.diarydeco .deco_p01 .deco-bg{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.diarydeco .deco_p01 .deco-item{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.diarydeco .deco_p01 .see-more-btn{
+    position: absolute;
+    right: 28px;
+    bottom: 15px;
+    width: 65px;
+    height: 21px;
+    background: url(../images/biz/diary/dakku-more.png) no-repeat center/auto 100%;
+}
+/* deco 2 memo part */
+.diarydeco .deco_p02 .deco-bg{
+    display: block;
+    width: 212px;
+}
+.diarydeco .deco_p02 .deco-bg2{
+    display: block;
+    width: 140px;
+    margin-top: -30px;
+}
+.diarydeco .deco_p02 .deco-item{
+    display: block;
+    width: 272px;
+    margin: -70px auto 0;
+}
+.diarydeco .deco_p02 .see-more-btn{
+    position: absolute;
+    left: 150px;
+    bottom: 40px;
+    width: 65px;
+    height: 21px;
+    background: url(../images/biz/diary/dakku-more.png) no-repeat center/auto 100%;
+}
+/* deco 3 case part */
+.diarydeco .deco_p03 .deco-bg{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.diarydeco .deco_p03 .deco-bg2{
+    position: absolute;
+    right: 15px;
+    bottom: 35px;
+    width: 123px;
+}
+.diarydeco .deco_p03 .deco-item{
+    display: block;
+    width: 265px;
+    margin: -62px auto 0;
+}
+.diarydeco .deco_p03 .see-more-btn{
+    display: block;
+    width: 65px;
+    height: 21px;
+    background: url(../images/biz/diary/dakku-more.png) no-repeat center/auto 100%;
+    margin: -30px auto 0;
+}
+/* deco 4 tape part */
+.diarydeco .deco_p04 .deco-bg{
+    display: block;
+    max-width: 110%;
+}
+.diarydeco .deco_p04 .deco-item{
+    display: block;
+    max-width: 75%;
+    margin-top: -73%;
+}
+.diarydeco .deco_p04 .see-more-btn{
+    position: absolute;
+    right: 28px;
+    bottom: 15px;
+    width: 65px;
+    height: 21px;
+    background: url(../images/biz/diary/dakku-more.png) no-repeat center/auto 100%;
+}
+
+/* 다이어리 이벤트 */
+.diaryevent_a {
+    width: 100%;
+    background-color: #fff;
+}
+
+.diaryevent_a .diaryevent {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.diaryevent_a .tit_diaryevent {
+	padding:70px 0 0 0;
+	text-align: center;
+}
+
+.diaryevent_a .tit_diaryevent img {
+	width:100%;
+	max-width: 750px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list {
+    width: 100%;
+    margin: 0px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li {
+    width: 100%;
+    min-height: 290px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a {
+    display: block;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .img {
+    display: block;
+    width: 100%;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .img img {
+    width: 100%;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .tit {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .tit strong {
+    display: block;
+    margin: 0px;
+    color: #333;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .tit em {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.diaryevent_a .diaryevent .event_list_a .event_list .list li a .date {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-size: 12px;
+    font-family: 'Titillium Web';
+    letter-spacing: 1px;
+}
+
+.diaryevent_a .event_list li{
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.diaryevent_a .event_list li:nth-child(n+6){
+    display: none;
+}
+.diaryevent_a.active .event_list li:nth-child(n+6){
+    display: block;
+}
+.diaryevent_a .event_list .img-wrap{
+    width: 100%;
+    height: auto;
+    position: static;
+    border-radius: 0;
+}
+.diaryevent_a .event_list li a{
+    width: 100%;
+}
+.diaryevent_a .event_list img{
+    width: 100%;
+}
+.diaryevent_a .event_list .text-wrap{
+    padding-top: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+}
+.diaryevent_a .event_list .discount{
+    display: block;
+    color: #DA2128;
+    font-family:font_gs, sans-serif;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: bold;
+    position: absolute;
+    left: -10px;
+    top: 13px;
+}
+.diaryevent_a .event_list .discount:before{
+    content: '~';
+    display: inline-block;
+    vertical-align: top;
+}
+.diaryevent_a .event_list .item-title{
+    display: block;
+    font-family:font_ns, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.diaryevent .event_list .description{
+    font-family:font_ns, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.diaryevent_a .event_list .during-date{
+    display: block;
+    font-family:font_gs, sans-serif;
+    font-size: 12px;
+    color: #aaa;
+}
+.diary_wrap .spot-wrap{
+    width: calc(100% - 50px);
+    height: 60px;
+    transition: all 0.5s;
+    margin-left: 50px;
+    position: fixed;
+    right:0;
+    top: -60px;
+    z-index: 99;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+    font-size: 0;
+    transition: all 0.2s;
+}
+.diary_wrap .spot-wrap.active{
+    top: 0;
+}
+.diary_wrap .spot-wrap span{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: 800;
+    box-sizing: border-box;
+    text-align: right;
+    color: #000;
+    vertical-align: top;
+}
+.diary_wrap .spot-wrap span + span{
+    text-align: left;
+    margin-right: 30px;
+}
+.diary_wrap .spot-wrap span + span:before{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 34px;
+    margin: 13px 15px 0;
+    background: #000;
+    vertical-align: top;
+}
+.diary_wrap .spot-wrap span img{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* 디바이스 최적화 */
+@media only screen and (max-width : 320px){
+	.today_box .tit_today_box {
+		padding: 0 7%;
+	}
+
+	.prod_list_normal .pannel2 .tlist_a dl {
+		background-position-x: -45px;
+		background-size: 95%;
+		font-size: 14px;
+		margin-bottom: 0px;
+	}
+
+	.prod_list_normal .pannel2 .tlist_a dl.on {
+	    background-position-x: -45px;
+	    background-size: 95%;
+	}
+	.prod_list_normal .pannel2 .tlist_a dl a {
+		padding: 18px 0 18px 5px;
+	}
+	.diarycloud_a .snb_a {
+		width: 300px;
+	}
+	.diarycloud_a .snb_a li a {
+		padding: 0 7px 0 16px;
+        line-height: initial;
+	}
+	.diarycloud_a .snb_a li.on a {
+		padding: 0 7px 0 16px;
+	}
+}
+
+/* iPhone 6+, 7+, 8+ Portrait / landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+    .prod_list_normal .pannel2 .tlist_a dl {
+		background-position-x: 0px;
+		margin-bottom: 7px;
+	}
+	.prod_list_normal .pannel2 .tlist_a dl.on {
+		background-position-x: 0px;
+	}
+	.prod_list_normal .pannel2 .tlist_a dl a {
+		padding: 17px 0 18px 20px;
+	}
+	.diarycloud_a .snb_a {
+		width: 350px;
+	}
+	.diarycloud_a .snb_a li a {
+		padding: 0 17px 0 18px;
+        line-height: initial;
+	}
+	.diarycloud_a .snb_a li.on a {
+		padding: 0 17px 0 18px;
+	}
+}
+
+/* iPad (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){   
+	.today_box .tit_today_box {
+		text-align: center;
+	}
+	.prod_list_normal ul li + li {
+		margin-left: 5%;
+	}
+	.prod_list_normal ul li {
+		width: 30%;
+	}
+	
+	.prod_list_normal ul li span.img {
+		width: 100%;
+	}
+	
+	.prod_list_normal ul li span.img a:first-child {
+		width: 100%;
+	}
+	
+	.prod_list_normal ul li:nth-child(2n) + li {
+		margin-left: 5% !important;
+		clear: inherit;
+	}
+	.prod_list_normal ul li:nth-child(3n) + li {
+		margin-left: 0px !important;
+    	clear: both;
+	}
+	.prod_list_normal .pannel2 .tlist_a dl {
+		background-position-x: 0px;
+		margin-bottom: 14px;
+	}
+	.prod_list_normal .pannel2 .tlist_a dl.on {
+		background-position-x: 0px;
+	}
+	
+	.diarycloud_a .diarycloud_tab.fix {
+		left:20px;
+	}
+	
+	.diarycloud .prod_list_normal ul.top1 {
+		padding: 7% 25%;
+	}
+	
+	.diarycloud_a .snb_a {
+		width: 420px;
+	}
+	.diarycloud_a .snb_a li a {
+		padding: 0 35px 0 18px;
+        line-height: initial;
+	}
+	.diarycloud_a .snb_a li.on a {
+		padding: 0 35px 0 18px;
+	}
+	
+	.diarycloud .prod_list_normal ul li + li {
+		margin-left: 5%;
+	}
+	.diarycloud .prod_list_normal ul li {
+		width: 30%;
+	}
+	.diarycloud .prod_list_normal ul li span.img {
+		width: 100%;
+	}
+	
+	.diarycloud .prod_list_normal ul li span.img a:first-child {
+		width: 100%;
+	}
+	
+	.diarycloud .prod_list_normal ul li:nth-child(2n) + li {
+		margin-left: 5% !important;
+		clear: inherit;
+	}
+	.diarycloud .prod_list_normal ul li:nth-child(3n) + li {
+		margin-left: 0px !important;
+    	clear: both;
+	}
+	.diarycloud .prod_list_normal .pannel2 .tlist_a dl {
+		background-position-x: 0px;
+		margin-bottom: 14px;
+	}
+	.diarycloud .prod_list_normal .pannel2 .tlist_a dl.on {
+		background-position-x: 0px;
+	}
+	.diaryevent_a .diaryevent .event_list_a .event_list .list li a .date {
+		margin: 16px 0 30px 0;
+	}
+}
+
+/* iPad Pro (portrait) */
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : portrait){
+	.diarycloud_a .diarycloud_tab.fix {
+		left: 145px;
+	}
+}

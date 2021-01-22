@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+
+#contents {
+	_overflow: hidden;
+}
+#contents div.brand-main h3 {
+	padding: 12px 0 0 1px;
+}
+#contents div.brand-main ul.best-new-menu {
+	float: right;
+	margin: -51px 0 0;
+	padding: 6px 2px 0 0;
+	height: 45px;
+	text-align: right;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/best_new_link_line.gif") no-repeat 180px 0;
+}
+#contents div.brand-main ul.best-new-menu li {
+	display: inline;
+	padding: 0 28px;
+}
+#contents div.brand-main div.main-best-brand {
+	padding: 22px 0 0;
+	height: 261px;
+	overflow: hidden;
+}
+#contents div.brand-main div.main-best-brand h4 {
+	padding: 0 0 0 8px;
+	height: 18px;
+}
+#contents div.brand-main div.main-best-brand ul.menu {
+	margin: -18px 0 0 127px;
+	height: 18px;
+}
+#contents div.brand-main div.main-best-brand ul.menu li {
+	display: inline;
+	padding: 0 2px 0 0;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content {
+	float: left;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content p.more {
+	margin: -25px 0 0;
+	height: 25px;
+	width: 750px;
+	text-align: right;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content p.brand-image {
+	float: left;
+	width: 512px;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content p.brand-image img {
+	border: 1px solid #eaeaea;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content ul {
+	float: left;
+	width: 242px;
+	overflow: hidden;
+	border-right: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content ul li {
+	float: left;
+	border-left: 1px solid #eaeaea;
+	border-top: 1px solid #eaeaea;
+}
+#contents div.brand-main div.main-best-brand div.main-best-brand-content ul li img {
+	width: 120px;
+	height: 120px;
+	vertical-align: top;
+}
+#contents div.brand-main div.main-new-brand {
+	clear: both;
+	padding: 35px 0 0;
+	height: 145px;
+	border-bottom: 1px solid #e6e5e5;
+	overflow: hidden;
+}
+#contents div.brand-main div.main-new-brand h4 {
+	padding: 0 0 0 8px;
+	height: 17px;
+	border-bottom: 1px solid #e6e5e5;
+}
+#contents div.brand-main div.main-new-brand ul.menu {
+	margin: -18px 0 0 127px;
+	height: 18px;
+}
+#contents div.brand-main div.main-new-brand ul.menu li {
+	display: inline;
+	padding: 0 2px 0 0;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content {
+	float: left;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content p.more {
+	margin: -25px 0 0;
+	height: 25px;
+	width: 750px;
+	text-align: right;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content p.brand-image {
+	float: left;
+	padding: 13px 0;
+	width: 314px;
+	text-align: center;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content ul {
+	float: left;
+	padding: 13px 0;
+	width: 441px;
+	overflow: hidden;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content ul li {
+	float: left;
+	padding: 0 5px;
+}
+#contents div.brand-main div.main-new-brand div.main-new-brand-content ul li img {
+	width: 100px;
+	height: 100px;
+}
+
+#contents div.brand-main div.main-brand-event {
+	float: left;
+	padding: 43px 0 0;
+	height: 150px;
+	border-bottom: 1px solid #e6e5e5;
+	overflow: hidden;
+}
+#contents div.brand-main div.main-brand-event h4 {
+	padding: 0 0 0 6px;
+	width: 755px;
+	height: 17px;
+	border-bottom: 1px solid #e6e5e5;
+}
+#contents div.brand-main div.main-brand-event ul.menu {
+	margin: -18px 0 0 137px;
+	height: 18px;
+}
+#contents div.brand-main div.main-brand-event ul.menu li {
+	display: inline;
+	padding: 0 2px 0 0;
+}
+#contents div.brand-main div.main-brand-event div.main-brand-event-content ul {
+	float: left;
+	padding: 11px 0;
+	width: 780px;
+}
+#contents div.brand-main div.main-brand-event div.main-brand-event-content ul li {
+	float: left;
+	padding: 0 4px;
+}
+#contents div.brand-main div.main-brand-event div.main-brand-event-content ul li img {
+	width: 245px;
+	height: 110px;
+}
+
+#contents div.main-brand-search {
+	clear: both;
+	padding: 50px 0 17px;
+}
+#contents div.main-brand-search h4 {
+	height: 22px;
+	text-align: center;
+}
+#contents div.main-brand-search fieldset {
+	position: relative;
+}
+#contents div.main-brand-search fieldset legend {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+#contents div.main-brand-search fieldset label {
+	float: left;
+	padding: 12px 13px 0 104px;
+}
+#contents div.main-brand-search fieldset div.brand-search-form {
+	float: left;
+	margin: 0 0 10px;
+	width: 338px;
+	height: 26px;
+	overflow: hidden;
+	text-align: right;
+	border: 4px solid #b11111;
+}
+#contents div.main-brand-search fieldset div.brand-search-form input.textbox {
+	margin: 0 -4px 0 0;
+	padding: 5px 3px 0 3px;
+	width: 274px;
+	height: 21px;
+	border: 0;
+}
+#contents div.main-brand-search fieldset div.brand-search-form input {
+	vertical-align: top;
+}
+#contents div.main-brand-search fieldset div.auto-complete {
+	display: none;
+	position: absolute;
+	left: 204px;
+	top: 34px;
+	width: 344px;
+	height: 150px;
+	border: 1px solid #b11111;
+	border-top: 0;
+	background: #fff;
+	overflow: auto;
+}
+#contents div.main-brand-search fieldset div.auto-complete ul {
+	padding: 10px 0;
+}
+#contents div.main-brand-search fieldset div.auto-complete ul li {
+	padding: 4px 10px;
+	cursor: pointer;
+}
+#contents div.main-text-search {
+	padding: 20px 0 7px 41px;
+	border: 2px solid #eaeaea;
+	background: #f9f9f9;
+}
+#contents div.main-text-search h4 {
+	height:17px;
+}
+#contents div.main-text-search ul {
+	height: 35px;
+}
+#contents div.main-text-search ul li {
+	display: inline;
+	padding: 0 1px 0 0;
+}
+#contents div.main-text-search ul li img {
+	vertical-align: top;
+	border: 2px solid #9b9b9b;
+}
+#contents div.main-text-search ul li.selected img {
+	border: 2px solid #d12324;
+}
+#contents div.main-menu-sort {
+	clear: both;
+	padding: 40px 0 0;
+}
+#contents div.main-menu-sort ul {
+	height: 19px;
+	border-bottom: 1px solid #e7e7e7;
+}
+#contents div.main-menu-sort ul li { display: inline;padding: 0 11px; }
+#contents div.main-text-search-result {
+	padding: 16px 0 0;
+}
+#contents div.main-text-search-result p.text {
+	float: left;
+	padding: 3px 5px 0 4px;
+	width: 63px;
+}
+#contents div.main-text-search-result ul {
+	float: left;
+	width: 680px;
+	overflow: hidden;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/main_text_search_result_line.gif") repeat 0 0;
+}
+#contents div.main-text-search-result ul li {
+	float: left;
+	padding: 5px 2px 0 8px;
+	width: 160px;
+	height: 17px;
+}
+#contents div.main-text-search-result ul li img {
+	margin: -2px 0 0;
+	vertical-align: middle;
+}
+
+#contents div.best-brand h3 {
+	padding: 12px 0 0 1px;
+}
+#contents div.best-brand ul.best-new-menu {
+	position: relative;
+	z-index: 2;
+	float: right;
+	margin: -51px 0 0;
+	padding: 6px 2px 0 0;
+	height: 45px;
+	text-align: right;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/best_new_link_line.gif") no-repeat 180px 0;
+}
+#contents div.best-brand ul.best-new-menu li {
+	display: inline;
+	padding: 0 28px;
+}
+#contents div.best-brand div.best-brand-list {
+	position: relative;
+	margin: 40px 0 0 0;
+}
+#contents div.best-brand div.best-brand-list ul li {
+	position: relative;
+	padding: 5px 0 20px;
+	border-top: 1px solid #e6e5e5;
+}
+#contents div.best-brand div.best-brand-list ul li p.ranking {
+	position: absolute;
+	left: 18px;
+	top: -3px;
+}
+#contents div.best-brand div.best-brand-list ul li p.brand-image {
+	padding: 15px 0 0;
+	width: 314px;
+	text-align: center;
+}
+#contents div.best-brand div.best-brand-list ul li p.brand-name {
+	display: none;
+	padding: 10px 0 20px 90px;
+	font-weight: bold;
+	color: #555;
+}
+#contents div.best-brand div.best-brand-list ul li p.brand-name span {
+	font-weight: normal;
+	color: #b7b7b7;
+}
+#contents div.best-brand div.best-brand-list ul li ul {
+	position: absolute;
+	left: 314px;
+	top: 0;
+	padding: 13px 0;
+	width: 441px;
+	overflow: hidden;
+}
+#contents div.best-brand div.best-brand-list ul li ul li {
+	clear: none;
+	float: left;
+	padding: 0 5px;
+	height: auto;
+	border: 0;
+}
+#contents div.best-brand div.best-brand-list ul li ul li img {
+	width: 100px;
+	height: 100px;
+}
+#contents div.new-brand h3 {
+	padding: 12px 0 0 1px;
+}
+#contents div.new-brand ul.best-new-menu {
+	float: right;
+	margin: -51px 0 0;
+	padding: 6px 2px 0 0;
+	height: 45px;
+	text-align: right;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/best_new_link_line.gif") no-repeat 180px 0;
+}
+#contents div.new-brand ul.best-new-menu li {
+	display: inline;
+	padding: 0 28px;
+}
+#contents div.new-brand div.new-brand-list {
+	position: relative;
+	margin: 40px 0 0 0;
+}
+#contents div.new-brand div.new-brand-list ul li {
+	position: relative;
+	padding: 10px 0 20px;
+	border-top: 1px solid #e6e5e5;
+}
+#contents div.new-brand div.new-brand-list ul li p.brand-image {
+	padding: 15px 0 0 24px;
+	width: 290px;
+}
+#contents div.new-brand div.new-brand-list ul li p.brand-name {
+	display: none;
+	padding: 10px 0 20px 32px;
+	font-weight: bold;
+	color: #555;
+}
+#contents div.new-brand div.new-brand-list ul li p.brand-name span {
+	font-weight: normal;
+	color: #b7b7b7;
+}
+#contents div.new-brand div.new-brand-list ul li ul {
+	position: absolute;
+	left: 314px;
+	top: 0;
+	padding: 13px 0;
+	width: 441px;
+	overflow: hidden;
+}
+#contents div.new-brand div.new-brand-list ul li ul li {
+	clear: none;
+	float: left;
+	padding: 0 5px;
+	height: auto;
+	border: 0;
+}
+#contents div.new-brand div.new-brand-list ul li ul li img {
+	width: 100px;
+	height: 100px;
+}
+#contents div.brand-list p.brand-pick {
+	clear: both;
+	padding: 0 0 0 4px;
+	height: 25px;
+}
+#contents div.brand-list p.brand-all-view {
+	margin: -25px 0 0;
+	padding: 0 4px 0 0;
+	width: 746px;
+	height: 25px;
+	text-align: right;
+}
+#contents div.brand-list div.brand-info {
+	position: relative;
+	float: left;
+	width: 477px;
+	height: 150px;
+	background: #f4f4f4;
+	overflow: hidden;
+}
+#contents div.brand-list div.brand-info p.new-best {
+	position: absolute;
+	left: 229px;
+	top: -1px;
+}
+#contents div.brand-list div.brand-info p.brand-image {
+	float: left;
+	padding: 23px 0 13px 13px;
+	width: 214px;
+	text-align: center;
+}
+#contents div.brand-list div.brand-info p.brand-name {
+	float: left;
+	padding: 40px 0 10px;
+	width: 250px;
+}
+#contents div.brand-list div.brand-info p.brand-name span.en {
+	color: #9c7a62;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+#contents div.brand-list div.brand-info p.brand-name span.ko {
+	color: #4d4d4d;
+	font-weight: bold;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+#contents div.brand-list div.brand-info p.brand-description {
+	float: left;
+	padding: 0 10px 0 0;
+	width: 240px;
+	line-height: 1.3em;
+}
+#contents div.brand-list div.brand-notice {
+	float: left;
+	padding: 0 23px 0 22px;
+	width: 233px;
+	height: 150px;
+	background: #f4f4f4 url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/brand_notice_line.gif") no-repeat 0 26px;
+	overflow: hidden;
+}
+#contents div.brand-list div.brand-notice h3 {
+	padding: 34px 0 0;
+	height: 14px;
+	border-bottom: 1px solid #e0e0e0;
+}
+#contents div.brand-list div.brand-notice p.more {
+	margin: -14px 0 0;
+	height: 14px;
+	text-align: right;
+}
+#contents div.brand-list div.brand-notice ul {
+	padding: 10px 0 0;
+}
+#contents div.brand-list div.brand-notice ul li {
+	padding: 0 0 10px 10px;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/common/dot.gif") no-repeat 2px 5px;
+}
+#contents div.brand-list div.brand-rank {
+	float: left;
+	margin: 20px 0 0;
+	width: 753px;
+	border: 1px solid #eaeaea;
+}
+#contents div.brand-list div.brand-rank ul {
+	float: left;
+	padding: 0 0 25px 9px;
+}
+#contents div.brand-list div.brand-rank ul li {
+	float: left;
+	padding: 0 23px;
+	width: 200px;
+}
+#contents div.brand-list div.brand-rank ul li p.ranking {
+	position: relative;
+	top: -4px;
+}
+#contents div.brand-list div.brand-rank ul li p.photo img {
+	width: 200px;
+	height: 200px;
+}
+#contents div.brand-list div.brand-rank ul li p.product-name {
+	padding: 17px 0 3px;
+	text-align: center;
+}
+#contents div.brand-list div.brand-rank ul li p.price {
+	font-weight: bold;
+	text-align: center;
+}
+#contents div.brand-list div.brand-event {
+	clear: both;
+	padding: 30px 0 35px;
+	width: 755px;
+	background: url("http://simage.kyobobook.co.kr/newimages/giftshop_new/common/images/brand/brand_event_line.gif") no-repeat 249px 31px;
+	overflow: hidden;
+}
+#contents div.brand-list div.brand-event ul {
+	width: 762px;
+}
+#contents div.brand-list div.brand-event ul li {
+	display: inline;
+	padding: 0 5px 0 0;
+}
+#contents div.brand-list div.brand-event ul li img {
+		width: 245px;
+		height: 110px;
+}
+#contents div.product-list div.brand-category {
+	float: left;
+	margin: 0 0 -13px;
+	width: 755px;
+	min-height: 28px;
+	height: auto !important;
+	height: 28px;
+	border: 1px solid #eaeaea;
+	background: #f6f6f6;
+}
+#contents div.product-list div.brand-category ul {
+	padding: 0 0 0 4px;
+}
+#contents div.product-list div.brand-category ul li {
+	float: left;
+	padding: 0 15px 0;
+	white-space: nowrap;
+}
+#contents div.product-list div.brand-category ul li img {
+	width: 245px !important;
+	height; 110px !important;
+}
+#contents div.product-list div.brand-category ul li.first-child,
+#contents div.product-list div.brand-category ul li:first-child {
+	background: none;
+}
+#contents div.product-list div.brand-category ul li a {
+	color: #555;
+	width: 100px;
+	line-height: 28px !important;
+}
+#contents div.product-list div.brand-category ul li.selected a {
+	color: #d12324;
+	font-weight: bold;
+}
+#contents div.product-list div.brand-category ul li a span {
+	color: #d12324;
+	font-weight: bold;
+}
+#contents div.product-list div.list-sort {
+	padding: 24px 0 0 !important;
+	background: none !important;
+}

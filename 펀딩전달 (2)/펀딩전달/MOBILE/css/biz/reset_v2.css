@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* ie */
+/*
+html {scrollbar-3dLight-Color: #efefef; scrollbar-arrow-color: #dfdfdf; scrollbar-base-color: #efefef; scrollbar-Face-Color: #dfdfdf; scrollbar-Track-Color: #efefef; scrollbar-DarkShadow-Color: #efefef; scrollbar-Highlight-Color: #efefef; scrollbar-Shadow-Color: #efefef}
+*/
+
+/* Chrome, Safari용 스크롤 바 */
+/*
+::-webkit-scrollbar {width: 8px; height: 8px; border: 3px solid #fff; }
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background: url('./images/bg.png') #efefef}
+::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+*/
+
+/* reset */
+html, body {width:100%;height:100% }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+em {font-style:normal;font-weight:normal;}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {font-size:100%;vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+table {border-collapse:collapse;border-spacing:0}
+body {-webkit-text-size-adjust:none} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+img{display:inline-block;vertical-align:top;}
+legend {position:absolute;overflow:hidden;width:0;height:0;padding:0;margin:0;font-size:0;line-height:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block;}
+audio,canvas,progress,video {display:inline-block;vertical-align:baseline;}
+span {display:inline-block;}
+input[type="text"],input[type='password'],input[type='submit'],input[type='search'],input[type='number'],input[type='tel'],input[type='email'] {-webkit-appearance:none; border-radius:0}
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox}
+input[type='radio'],input[type='checkbox'] {border:none;}
+input[type='radio'][disabled]{opacity:0.5;}
+input[type='checkbox'][disabled]{opacity:0.5;}
+button[disabled]{opacity:0.5;}
+button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+/*input[placeholder], [placeholder], *[placeholder] {color:red !important;}*/
+:-moz-placeholder { color:#8c8c8c}
+::-webkit-input-placeholder {color:#8c8c8c;text-align:left;font-size:14px;}
+.input_disc {-webkit-text-security:disc;}
+body {overflow:auto;word-break:break-all;word-wrap:break-word;font-size:12px;font-family:'Malgun Gothic', 'Apple Gothic', 'Droid Sans','돋움','Dotum',sans-serif;/*-webkit-user-select:none;*/-webkit-text-size-adjust:none;}
+th,td,input,select,textarea,button {font-size:14px;font-family:'Malgun Gothic', 'Apple Gothic', 'Droid Sans','돋움','Dotum',sans-serif;color:#222} /* color값은 디자인가이드에 맞게사용 */
+select {-webkit-appearance:none;padding:6px 30px 6px 6px;text-align:center;font-size:14px;border:1px solid #ccc;border-radius:3px;background:#fff url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/bg_select.png) no-repeat 93% 50%;background-size:5px 4px}
+
+a {display:inline-block;color:#333;text-decoration:none;vertical-align:middle;}
+a:active, a:hover {text-decoration:none}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+caption {visibility:hidden;overflow:hidden;width:0;height:0;background-color:transparent;font-size:0;line-height:0;text-indent: -9999em;}
+
+
+input.i_input[type="text"],
+input.i_input[type="number"],
+input.i_input[type="email"],
+input.i_input[type="url"],
+input.i_input[type="password"],
+input.i_input[type="tel"] {padding:6px 12px 6px 6px;text-align:left;font-size:14px;border:1px solid #ccc;border-radius:3px;background:#fff}
+input.i_passwd[type="number"] {-webkit-text-security:disc;}
+
+.foot_btn { position:fixed;bottom:65px;padding-bottom:env(safe-area-inset-bottom);z-index:997;display:block;text-align:left;width:44px;height:44px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-indent:-999px;display:none; }
+.foot_btn.btn_back { left:15px;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/btn_back05.png') no-repeat;background-size:44px; }
+.foot_btn.btn_down { right:15px;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/btn_down05.png') no-repeat;background-size:44px; }
+.foot_btn.btn_top { right:15px;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/btn_top05.png') no-repeat;background-size:44px; }

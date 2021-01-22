@@ -1,0 +1,1314 @@
+@charset "utf-8"; 
+
+#Skip { display:none; }
+
+html,body { font-family:"Malgun Gothic"; }
+a,a:active,a:hover { font-family:"Malgun Gothic"; }
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*
+ * jQuery UI CSS Framework 1.8.13
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Helvetica,%20Arial,%20sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=2px&bgColorHeader=dddddd&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=50&borderColorHeader=dddddd&fcHeader=444444&iconColorHeader=0073ea&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=dddddd&fcContent=444444&iconColorContent=ff0084&bgColorDefault=f6f6f6&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=100&borderColorDefault=dddddd&fcDefault=0073ea&iconColorDefault=666666&bgColorHover=0073ea&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=25&borderColorHover=0073ea&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=dddddd&fcActive=ff0084&iconColorActive=454545&bgColorHighlight=ffffff&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=cccccc&fcHighlight=444444&iconColorHighlight=0073ea&bgColorError=ffffff&bgTextureError=01_flat.png&bgImgOpacityError=55&borderColorError=ff0084&fcError=222222&iconColorError=ff0084&bgColorOverlay=eeeeee&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px
+ */
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Helvetica, Arial, sans-serif; font-size: 1.1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Helvetica, Arial, sans-serif; font-size: 1em; }
+.ui-widget-content { border: 1px solid #dddddd; background: #ffffff url(http://image.hottracks.co.kr/info/date/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #444444; }
+.ui-widget-content a { color: #444444; }
+.ui-widget-header { border: 1px solid #dddddd; background: #dddddd url(http://image.hottracks.co.kr/info/date/ui-bg_highlight-soft_50_dddddd_1x100.png) 50% 50% repeat-x; color: #444444; font-weight: bold; }
+.ui-widget-header a { color: #444444; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #dddddd; background: #f6f6f6 url(http://image.hottracks.co.kr/info/date/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #0073ea; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #0073ea; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #0073ea; background: #0073ea url(http://image.hottracks.co.kr/info/date/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x; font-weight: bold; color: #ffffff; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #ffffff; text-decoration: none; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #dddddd; background: #ffffff url(http://image.hottracks.co.kr/info/date/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #ff0084; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #ff0084; text-decoration: none; }
+.ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #cccccc; background: #ffffff url(http://image.hottracks.co.kr/info/date/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x; color: #444444; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #444444; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #ff0084; background: #ffffff url(http://image.hottracks.co.kr/info/date/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #222222; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #222222; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_ff0084_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_ff0084_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_0073ea_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_666666_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_ffffff_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_454545_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_0073ea_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(http://image.hottracks.co.kr/info/date/ui-icons_ff0084_256x240.png); }
+
+/* positioning */
+.ui-icon-carat-1-n { background-position: 0 0; }
+.ui-icon-carat-1-ne { background-position: -16px 0; }
+.ui-icon-carat-1-e { background-position: -32px 0; }
+.ui-icon-carat-1-se { background-position: -48px 0; }
+.ui-icon-carat-1-s { background-position: -64px 0; }
+.ui-icon-carat-1-sw { background-position: -80px 0; }
+.ui-icon-carat-1-w { background-position: -96px 0; }
+.ui-icon-carat-1-nw { background-position: -112px 0; }
+.ui-icon-carat-2-n-s { background-position: -128px 0; }
+.ui-icon-carat-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -64px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-off { background-position: -96px -144px; }
+.ui-icon-radio-on { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; }
+.ui-corner-tr { -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-left-radius: 2px; border-bottom-left-radius: 2px; }
+.ui-corner-br { -moz-border-radius-bottomright: 2px; -webkit-border-bottom-right-radius: 2px; border-bottom-right-radius: 2px; }
+.ui-corner-top { -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-left-radius: 2px; border-bottom-left-radius: 2px; -moz-border-radius-bottomright: 2px; -webkit-border-bottom-right-radius: 2px; border-bottom-right-radius: 2px; }
+.ui-corner-right {  -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; -moz-border-radius-bottomright: 2px; -webkit-border-bottom-right-radius: 2px; border-bottom-right-radius: 2px; }
+.ui-corner-left { -moz-border-radius-topleft: 2px; -webkit-border-top-left-radius: 2px; border-top-left-radius: 2px; -moz-border-radius-bottomleft: 2px; -webkit-border-bottom-left-radius: 2px; border-bottom-left-radius: 2px; }
+.ui-corner-all { -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #eeeeee url(http://image.hottracks.co.kr/info/date/ui-bg_flat_0_eeeeee_40x100.png) 50% 50% repeat-x; opacity: .80;filter:Alpha(Opacity=80); }
+.ui-widget-shadow { margin: -4px 0 0 -4px; padding: 4px; background: #aaaaaa url(http://image.hottracks.co.kr/info/date/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }/*
+ * jQuery UI Resizable 1.8.13
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;
+    /* http://bugs.jqueryui.com/ticket/7233
+     - Resizable: resizable handles fail to work in IE if transparent and content overlaps
+    */
+    background-image:url(data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=);
+}
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}/*
+ * jQuery UI Selectable 1.8.13
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
+.ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
+/*
+ * jQuery UI Datepicker 1.8.13
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker { width: 180px; padding: .2px .2px 0; display: none; }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2px 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 20px; height: 20px; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.ui-datepicker .ui-datepicker-prev { left:2px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.ui-datepicker td { border: 0; padding: 1px; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: 2px; text-align: right; text-decoration: none; }
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+
+/*=================================================================================
+ Layout- Css 
+=================================================================================*/
+
+#wrapper{width:100%; background: url('http://image.hottracks.co.kr/info/layout/top_bg.png') repeat-x left top; }
+
+/*Header*/
+#header { height: 88px; position: relative; hidden; z-index: 300;border-bottom:2px solid #dc2e33; }
+#header #header_detail { width: 980px; height:88px;margin: 0 auto;  }
+#header h1.logo {float:left;margin-top:22px;}
+#header h1.logo a {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/logo_over.gif) no-repeat;display: block;height: 54px;overflow: hidden;text-indent: -999px;width: 200px; }
+
+#header .gnb-menu { margin: 45px 0 0 40px; float: left;position:relative;}
+#header .gnb-menu .gnb-item.logo { width:210px; }
+#header .gnb-menu .gnb-item { float:left;line-height:18px;width:175px;text-align:center;position:relative; }
+#header .gnb-menu .gnb-item a * { display:block; }
+#header .gnb-menu .gnb-item a strong { font-size:17px; font-weight:bold;color:#6a6a6a;letter-spacing:-2px; }
+#header .gnb-menu .gnb-item a span { color: #9e9e9e;font-family: Arial;font-size: 10px; }
+#header .gnb-menu .gnb-item .snb-menu { display:none;position:absolute;left:20px;width:150px; }
+#header .gnb-menu .gnb-item .snb-menu:first-child { display:block; }
+#header .gnb-menu .gnb-item .snb-menu ol { background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/company/bg_10x10.png');float:left;padding:10px 0 10px 10px;margin-top:5px; }
+#header .gnb-menu .gnb-item .snb-menu li { float:left;padding:3px 5px;width:120px;text-align:left;border-left:2px solid #3a3a3a;margin-left:4px; }
+#header .gnb-menu .gnb-item .snb-menu.snb-twice { width:270px; }
+#header .gnb-menu .gnb-item .snb-menu.snb-twice li { width:110px; }
+#header .gnb-menu .gnb-item .snb-menu li a { letter-spacing:-1px;color:#f1f2f3;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/company/ic_mark.gif') no-repeat left center;padding-left:10px; }
+#header .gnb-menu .gnb-item .snb-menu li a:hover { color:#ff6600; }
+#header .gnb-menu .gnb-item .snb-menu li img { vertical-align:middle; }
+/*
+#header .gnb-menu #gnb-item03 .snb-menu { width:630px;right:0; }
+#header .gnb-menu #gnb-item04 .snb-menu { width:250px; }
+#header .gnb-menu #gnb-item05 .snb-menu { width:400px;right:0; }
+*/
+
+#header .gnb-menu .gnb-item.on .snb-menu { display:block; }
+#header .gnb-menu .gnb-item.on a strong { color:#dc2e33; }
+
+/*Sub Page SNB*/
+#snb {float: left; width: 208px; height:100%; overflow:visible; margin-top:-16px; background: url('http://image.hottracks.co.kr/info/layout/bg_snb.png') repeat-y left top; }
+#snb h2{height:auto; }
+#snb ul {width:172px; _width:132px; margin-left:18px; border-top:1px solid #e8e8e8; }
+#snb ul li{width:172px; _width:132px; height:auto; display:block; border-bottom:1px solid #e8e8e8; }
+#sub_title_image {margin-bottom: 17px; z-index:3; }
+
+/* Contents */
+#contents {width: 980px; overflow: hidden; margin: 0 auto; position: relative; min-height:540px; }
+
+#main_spot {position:relative;width:950px;margin-top:13px auto 0 auto;height:344px;}
+#main_spot:after {display:block;clear:both;content:''}
+#main_spot .main_sec1 {overflow:hidden;float:left;width:948px;height:344px;position:relative;margin-top:25px; }
+#main_spot .main_sec1 .main_slide_btn { position:absolute;top:0;left:0;clear:both;z-index:0;width:672px; }
+#main_spot .main_sec1 .main_slide_btn .main_slide_img { float:left; }
+#main_spot .main_sec1 .main_slide_btn .main_slide_img img { width:948px;height:344px; }
+
+#main_spot .main_sec1 .main_slide_navi { position:absolute;left:50%;margin-left: -20px;bottom:10px;z-index:1;display:block; }
+#main_spot .main_sec1 .main_slide_navi li { background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ic_navi_dot02_off.png") no-repeat scroll 0 0;color: #252525;display: inline-block;font-weight: bold;height: 13px;width: 13px;text-indent: -999px;}
+#main_spot .main_sec1 .main_slide_navi li + li { margin-left:5px; }
+#main_spot .main_sec1 .main_slide_navi li.active {color:#252525; font-weight:normal; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ic_navi_dot02_on.png") 0 0 no-repeat; }
+
+#main_spot .main_sec2 {overflow:hidden;float:left;width:700px;height:344px;position:relative; }
+#main_spot .main_sec2 .main_slide_btn { position:absolute;top:0;left:0;clear:both;z-index:0;width:672px; }
+#main_spot .main_sec2 .main_slide_btn .slide_view {width : 400px;}
+#main_spot .main_sec2 .main_slide_btn .main_slide_img { float:left; }
+#main_spot .main_sec2 .main_slide_btn .main_slide_img img { width:700px;height:344px; }
+
+#main_spot .main_sec2 .main_slide_navi { position:absolute;left:50%;margin-left: -20px;bottom:10px;z-index:1;display:block; }
+#main_spot .main_sec2 .main_slide_navi li { background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ic_navi_dot02_off.png") no-repeat scroll 0 0;color: #252525;display: inline-block;font-weight: bold;height: 13px;width: 13px;text-indent: -999px;}
+#main_spot .main_sec2 .main_slide_navi li + li { margin-left:5px; }
+#main_spot .main_sec2 .main_slide_navi li.active {color:#252525; font-weight:normal; background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ic_navi_dot02_on.png") 0 0 no-repeat; }
+
+/*
+#main_spot .main_sec1 .main_slide_navi { position:absolute;bottom:0;left:0;clear:both;z-index:1;width:948px;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/common/bg_number.png') repeat-x; }
+#main_spot .main_sec1 .main_slide_navi li { float:left;margin-left:20px;margin-top:2px !important;text-align:center; }
+#main_spot .main_sec1 .main_slide_navi li + li { margin-left:10px; }
+#main_spot .main_sec1 .main_slide_navi li.active { background-color:#FF7803; }
+#main_spot .main_sec1 .main_slide_navi .slide_ctrl .stop { display:block;overflow:hidden;width:23px;height:21px;text-indent:-9999em;background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/common/ic_navi_pause.png") no-repeat; }
+#main_spot .main_sec1 .main_slide_navi .slide_ctrl .stop.pause { background:url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/common/ic_navi_play.png") no-repeat; }
+*/
+
+#contents #main-top-banner { width:948px;height:344px;margin-top:20px;position:relative; }
+#contents #main-top-banner .main-top { position:absolute;right:0;width:200px;height:344px; }
+#contents #main-top-banner .main-top .banner-img { position:absolute;top:0;right:0;display:none; }
+#contents #main-top-banner .main-top .on .banner-img { display:block; }
+
+#contents #main-bottom-banner { margin-top:40px; }
+#contents #main-bottom-banner .main-bottom-item { float:left;width:165px;height:160px;padding:5px;position:relative; }
+#contents #main-bottom-banner .main-bottom-item + .main-bottom-item { margin-left:20px; }
+#contents #main-bottom-banner .main-bottom-item h3 { margin-bottom:10px;border-bottom:1px solid #c8c8c8; }
+#contents #main-bottom-banner .main-bottom-item h3 a { color:#dc2e33;font-size:14px;letter-spacing:-1px;line-height:17px;margin-bottom:4px; }
+#contents #main-bottom-banner .main-bottom-item li a { font-size:11px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:18px;width:154px; }
+#contents #main-bottom-banner .main-bottom-item li + li { margin-top:7px; }
+#contents #main-bottom-banner .main-bottom-item .main_banner img { width:164px;height:138px; }
+#contents #main-bottom-banner .main-bottom-item .more { position:absolute;right:3px;top:12px; }
+
+#contents #main_left {width: 211px; float: left;position:relative;margin-top:49px;}
+#contents #main_center {width:558px; float: left; text-align: center;position:relative;margin-top:49px; }
+#contents #main_right {width: 211px; float: left; overflow: hidden;position:relative;margin-top:49px; }
+
+#container {clear:both; width:980px; height:100%; overflow: hidden; margin: 0 auto; z-index: 10; zoom: 1; position: relative; background: url('http://image.hottracks.co.kr/info/layout/bg_snb.png') repeat-y left top; }
+#contabgno { background: none; }
+#container #contents_area {float: left; padding-left:20px; _padding-left:20px; width:745px; }
+
+#location {width:100%; height: 35px; margin:17px 0; background: url('http://image.hottracks.co.kr/info/layout/bg_location.png') repeat-x left bottom; overflow: hidden; position: relative;}
+#location h2 { border-bottom: 2px solid #dc2e33;float: left;font-size: 20px;height: 33px;letter-spacing: -1px;padding: 0 20px 0 10px;}
+#location h2 img{padding-top:21px; }
+#location em {display: block; width: 400px; float: right; font:11px 굴림,"Gulim", sans-serif; text-align: right; margin: 12px 0 0;}
+#location em img {vertical-align: middle !important; }
+#location em>strong{font:11px 굴림,"Gulim", sans-serif; font-weight:bold; }
+
+
+/*Main Left*/
+.title_more_style { overflow: hidden;position:relative; }
+.title_more_style h3 { margin-bottom: 2px; }
+.title_more_style .more { position:absolute;right:0;top:5px; }
+
+.list_dot_gray {margin-bottom: 10px; }
+.list_dot_gray li {padding-left: 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_gray_dot.png') no-repeat left 3px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+.list_dot_gray li a {font-size: 11px; }
+.list_dot_gray li a:hover {text-decoration: underline; }
+
+.list_dot_red { margin-bottom: 10px;}
+.list_dot_red li { padding-left: 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_red_dot.png') no-repeat left 3px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+.list_dot_red li a { font-size: 11px;}
+.list_dot_red li a:hover { text-decoration: underline;}
+
+/*Main Right*/
+#rolling_banner { width: 100%;position:relative; }
+#rolling_banner .banner_btn { position:absolute; right:0;top:0; }
+#rolling_banner .banner_btn li { display: inline;padding:0 1px; }
+#rolling_banner .banner_btn { margin-bottom: 6px;}
+#rolling_banner .banner_img { position:absolute;right:0; top:17px; background:url(http://image.hottracks.co.kr/info/common/banner_imgbg.gif) no-repeat 0 100%; height:228px;}
+#rolling_banner .banner_img li img{ width:209px; height:159px;}
+
+.main_notice { margin-top: 12px;}
+.only_hottracks { margin-top: 12px;}
+.only_hottracks * { display: block; zoom: 1;}
+
+.main_sns { margin-top: 20px;}
+.main_sns li { float:left;margin-right:20px; }
+
+/*Footer*/
+#footer { clear:both;position:relative;width:100%;border-top:2px solid #dc2e33;overflow:hidden;margin:40px 0 10px;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/main2/global/foot_bg.gif) repeat-x; }
+#footer_wrap { z-index:996;position:relative;width:100%;border-bottom:1px solid #ddd;background-color:#f5f6f1; }
+#footer_wrap:after {content:'';display:block;clear:both;}
+#footer_wrap > .policy {z-index:5;position:relative;width:950px;margin:0 auto;}
+#footer_wrap > .policy li {float:left;padding:11px 44px 9px 0; }
+#footer_wrap > .policy li + li {margin-left:9px;}
+#footer_wrap > .policy li a {font-size:11px;color:#989898}
+#footer_wrap > .policy li a:hover {color:#ff7800; }
+#footer > .inner {z-index:10;overflow:hidden;position:relative;width:950px;margin:0 auto;padding:20px 0}
+
+#footer .inner {width:950px;margin:0 auto;padding:20px 0 0 10px;}
+#footer .sec1 {float:left}
+#footer .sec1 .foot_logo {margin:5px 0 0 7px}
+#footer .sec1 select.foot_select{width:135px;height:20px;font-size:11px;vertical-align:middle;margin-top:10px;border:1px solid #ccc}
+#footer .sec2 {float:left;margin-left:14px;padding-left:14px;border-left:1px solid #d8d8d8;}
+#footer .sec2 ul.foot_service {overflow:hidden;}
+#footer .sec2 ul.foot_service li {float:left;}
+#footer .sec2 ul.foot_service li + li {margin-left:7px;}
+#footer .sec2 ul.cpoyright_info {margin-top:12px;}
+#footer .sec2 ul.cpoyright_info li {height:16px;}
+#footer .sec2 ul.cpoyright_info li + li {}
+
+#footer .sec3 {width:202px;float:right}
+#footer .sec3 dl.foot_lgu {}
+#footer .sec3 dl.foot_lgu dt {}
+#footer .sec3 dl.foot_lgu dt a {display:inline-block;margin-left:5px;}
+#footer .sec3 dl.foot_lgu dd{padding:8px 0 0 8px}
+
+/* 사이트정보*/
+.company_info {position:relative;float:left;margin-top:10px; }
+.company_info .share {overflow:hidden;padding-bottom:40px;}
+.company_info .share span.logo_footer {float:left;margin-right:25px;}
+.company_info .share a.sns_twiter {float:left;margin:11px 15px 0 0;}
+.company_info .share a.sns_facebook {float:left;margin:11px 0 0 0}
+.company_info .foot_txt {font-size:11px;color:#999;}
+.company_info .foot_txt + .foot_txt {margin-top:10px;}
+.company_info .foot_txt a.more_info {padding:0 15px 0 5px;color:#fefefe;background:#b9b9b9 url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_more.gif) no-repeat 88px 50%}
+.company_info .foot_txt a.more_info span {display:inline-block;height:19px;line-height:16px;}
+.company_info .copyright {margin:10px 0 0 165px;font-family:arial;font-size:10px;}
+.company_info .go_select {position:relative;left:0;top:30px;width:155px;}
+.company_info .go_select a.fm_open {display:block;padding-left:8px;height:18px;line-height:18px;border:1px solid #868686;background:#fff url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/arr_shortcut.png) no-repeat 100% 0}
+.company_info .go_select a.fm_open.on {background:#fff url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/arr_shortcut.png) no-repeat 100% -20px}
+.company_info .go_select .fm_list {display:none;position:absolute;bottom:19px;left:0;width:153px;padding:4px 0;border:1px solid #868686;background-color:#fff;height:180px;overflow-y:auto;}
+.company_info .go_select .fm_list li a {display:block;padding:3px 8px}
+.company_info .go_select .fm_list li a:hover {background-color:#f5f5f1}
+
+.used_guide {float:right;width:485px}
+.used_guide .enter_payment {font-size:11px}
+.used_guide .enter_payment img { vertical-align:text-bottom;margin-right:10px; }
+.used_guide .enter_payment a.more_info {margin:13px 0;padding:0 15px 0 5px;color:#fefefe;background:#b9b9b9 url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_more.gif) no-repeat 119px 50%}
+.used_guide .enter_payment a.more_info span {display:inline-block;height:19px;line-height:16px;}
+.used_guide .foot_txt {font-size:11px;margin-top:10px;color:#999;}
+.used_guide .foot_txt + .foot_txt {margin-top:10px;}
+
+/* 출력게시판 */
+.used_guide .footer_board {position:relative;float:left;width:215px;margin-right:30px;font-size:11px;}
+.used_guide .footer_board .foot_tab {width:100%;margin-bottom:10px;border-bottom:1px solid #494949;}
+.used_guide .footer_board .foot_tab:after {content:'';display:block;clear:both}
+.used_guide .footer_board .foot_tab li {float:left;height:26px;overflow:hidden;margin-bottom:-1px;}
+.used_guide .footer_board .foot_tab li a.tab_tit {padding:7px}
+.used_guide .footer_board .foot_tab li a.view_more {display:none;position:absolute;top:10px;right:0;padding-right:10px;font-family:airal;font-size:10px;color:#969696;font-weight:bold;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_more02.gif) no-repeat 100% 50%}
+.used_guide .footer_board .foot_tab li.on a.tab_tit {border:1px solid #494949;border-bottom:1px solid #2e2e2e;background-color:#2e2e2e}
+.used_guide .footer_board .foot_tab li.on a.view_more {display:block;}
+
+
+/* 고객센터 */
+.used_guide .footer_customer { float:left;width:240px; }
+.used_guide .footer_customer .tit {display:block;padding:6px 0 7px;border-bottom:1px solid #494949}
+
+.used_guide .footer_mobile { float:left;margin-left:13px; }
+.used_guide .footer_mobile .qrcode { float:left;margin-top:15px; }
+.used_guide .footer_mobile .tit {display:block;padding:6px 0 7px;border-bottom:1px solid #494949}
+.used_guide .footer_mobile .foot_txt { margin-left:70px; }
+
+/* 20110628(변경) */
+
+/*채용정보bg*/
+#container .cont_topBg_recruit{clear:both; width:980px; height:124px; z-index:1; }
+#container .cont_topBg{clear:both; width:980px; height:124px; z-index:1; }
+
+/*Sub Page SNB*/
+#snb {float: left; width: 208px; height:100%; overflow:hidden; margin-top:-16px; z-index:50; background: url('http://image.hottracks.co.kr/info/layout/bg_snb.png') repeat-y left top; }
+#snb h2{height:auto; }
+#snb ul {width:172px; _width:132px; margin-left:18px; border-top:1px solid #e8e8e8; }
+#snb ul > li { width:172px;line-height:30px; display:block; border-bottom:1px solid #e8e8e8; }
+#snb ul > li.tit_loc { display:block; line-height:30px;padding-left:12px;font-weight:bold;font-size:13px;letter-spacing: -1px;background:url('http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_dot03.gif') no-repeat 5px 15px; }
+#snb ul > li a.snb_tit { display:block; line-height:27px;padding-left:13px;font-size:13px;letter-spacing: -1px; }
+#sub_title_image {margin-bottom: 17px; z-index:3; }
+#snb ul > li ol {display:none;width:150px; border:none; margin:4px 0 4px 18px;padding-bottom:5px; }
+#snb ul > li ol li {width:150px; border:none; height:20px; }
+#snb ul > li ol li a { display: block;font-size: 11px;padding-left: 4px;letter-spacing: -1px;color:#7a7a7a; }
+#snb ul > li ol li.active a { color:#db3035; }
+#snb ul > li.active a.snb_tit { display:block; background-color:#db3035;color:#fff; }
+#snb ul > li.active ol { display:block; }
+
+#snb .banner{margin:10px 0 0 18px; border:none; }
+#snb .banner li{display:block; border:none;padding:0 0 6px; font-size:0; line-height:0;}
+
+/* 메인사인회배너(추가) */
+.signBanner{ margin:0 0 8px; }
+#main_left h2{padding:4px 0; }
+
+
+.clear { clear: both;}
+.text_input { width: 150px; border: 1px solid #5e5e5e;}
+
+/*Pointer*/
+.attend { cursor:pointer;}
+
+/*Align*/
+.Tleft { text-align: left !important; padding-left: 8px !important;}
+.Tcenter { text-align: center !important;}
+
+/*Margin Padding*/
+.mb24 { margin-bottom: 24px;}
+.mt20 { margin-top: 20px;}
+.mt13 { margin-top: 13px;}
+.ml5 { margin-left: 5px;}
+.pr8 { padding-right: 8px;}
+
+/*Color*/
+.gray { color: #ccc9c6 !important;}
+.bold { font-weight: bold !important;}
+.boldSB { font-weight: bold; font-size: 10px !important;}
+.red { color: #d40707 !important;}
+.redB { color: #d40707 !important; font-weight: bold;}
+.orangeB { font-weight: bold; color: #d97703 !important;}
+
+/*TEXT*/
+.under_line a { text-decoration: underline;}
+.under_lineB a { display: block; width: 100%;}
+.under_lineB a:hover { font-weight: bold; text-decoration: underline !important;}
+.under_line a:hover { text-decoration: underline !important;}
+.text_type1 { margin: 21px 0 8px 0;}
+
+/*BTN Style*/
+.right_btn { width: 100%; overflow: hidden; margin: 11px 0 0; }
+.right_btn span { display: block; text-align: right;}
+.btn_online { float: right;}
+.center_btnView { width: 713px; text-align: center;}/*view*/
+.center_btn { width: 615px; text-align: center;}
+.center_btn span { margin-right: 6px;}
+.center_btn span.last { margin-right: 0;}
+
+/* Market Infomation */
+.shop_info_box { width: 736px; height: 196px; padding: 16px 0 0 17px;    position: relative; background: url('http://image.hottracks.co.kr/info/icon/icon_shop_info_01_bg.png') no-repeat left top;}
+.shop_info_box ul  li { width: 100%; overflow: hidden; position: relative; margin-bottom: 1px;}
+.shop_info_box ul * { vertical-align: bottom !important; font-size: 11px; letter-spacing: -1px; line-height: 16px;}
+.shop_info_box ul .col2 { float: left; width: 350px; height: 20px; }
+.shop_info_box ul .col2 em { display: block; float: left; width: 67px;margin-top: 3px;}
+.shop_info_box ul .col2 span { display: block; float: left;}
+.shop_info_box .map { position: absolute; left: 290px; margin-top: -2px; z-index: 3;}
+.location_info { height:  94px !important; width: 553px; margin-top: 3px;}
+.location_info span { display: block; margin-bottom: 6px;}
+.location_info p { margin-bottom: 0px; width: 100%; overflow: hidden;}
+.location_info p em { display: block; height: 39px; width: 67px; float: left; text-align: center;}
+.location_info p span { float: left; display: block;}
+.location_info p.last { margin-bottom: 0 !important;}
+.parking { margin-top: 0px;}
+.parking span { display: block; float: left; width: 67px; margin-top: 3px;}
+.parking p { float: left; width: 553px;}
+
+
+/*Event Roll*/
+.event_roll { margin-top: 28px;}
+.event_roll .title { width: 721px; overflow: hidden; padding: 0 9px 15px 12px;}
+.event_roll .title span { display: block; float: left;}
+.event_roll .title em { display: block; float: right; margin: 5px 0 0;}
+.event_roll .event_roll_box { width: 721px; padding: 0 9px 0 12px;}
+.event_roll .event_roll_box li { float: left; width: 219px; padding: 0 0 10px 32px; background: url('http://image.hottracks.co.kr/info/icon/icon_roll_bar.png') repeat-y 16px; top}
+.event_roll .event_roll_box .frist { float: left; width: 219px; padding: 0px; background: none;}
+.event_roll .event_roll_box span { display: block;}
+.event_roll .border { border: 5px solid #ededed;}
+
+.event_roll_type2 { margin-top: 28px;}
+.event_roll_type2 .event_roll_box { width: 698px; padding: 18px; border: 5px solid #ededed; overflow: hidden;}
+.event_roll_type2 .event_roll_box li { float: left; width: 219px; padding: 0 0 0px 20px; background: url('http://image.hottracks.co.kr/info/icon/icon_roll_bar.png') repeat-y 7px; top}
+.event_roll_type2 .event_roll_box .frist { float: left; width: 219px; padding: 0px; background: none;}
+.event_roll_type2 .event_roll_box span { display: block;}
+.event_info_list { margin: 10px 0 0;}
+.event_info_list li { padding: 0 !important; background-image: none !important;}
+.event_info_list li a { padding-left: 14px; background: url('http://image.hottracks.co.kr/info/icon/icon_notice_dot.png') no-repeat left 1px;}
+.event_info_list li a:hover { text-decoration: underline !important;}
+.event_info_list * { text-align: left;}
+
+/*shop notification*/
+.notification { width: 722px; overflow: hidden; padding: 12px 9px 15px 12px;}
+.notification .left { width: 396px;  float: left;}
+.notification .left .title { margin: 0 0 7px;}
+.notification .left .item_list { height: 304px; width: 396px; overflow: hidden; padding: 1px 0 0 0px; background: url('http://image.hottracks.co.kr/info/icon/item_bg.png') no-repeat left top;}
+.notification .left .item_list li { float: left; padding-left: 20px; margin-bottom: 10px;}
+.notification .left .item_list a { display: block;}
+.notification .left .item_list a span { display: block;}
+.notification .left .item_list a em { display: block; width: 159px; text-align: center;}
+.notification .left .item_list a em:hover { text-decoration: underline;}
+
+.notification .right { width: 326px; float: left;}
+.notification .right .notice { }
+.notification .right .notice .title { width: 100%; overflow: hidden; margin-bottom: 26px;}
+.notification .right .notice .title span { float: left; display: block;}
+.notification .right .notice .title em { float: right; display: block;}
+
+.notification .right .notice ul li { width: 100%; overflow: hidden;}
+.notification .right .notice ul li em { display: block; float: right; color: #7e7e7e;}
+.notification .right .notice ul li a { display: block; float: left; padding: 0 0 0 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_notice_red_dot.png') no-repeat left 2px;}
+.notification .right .notice ul li a:hover  { text-decoration: underline;}
+.notification .right .shop_storys .title { width: 100%; overflow: hidden; margin: 38px 0 26px;}
+.notification .right .shop_storys span { float: left; display: block;}
+.notification .right .shop_storys em { float: right; display: block;}
+.notification .right .shop_storys ul li { width: 100%; overflow: hidden;}
+.notification .right .shop_storys ul li em { display: block; float: right; color: #7e7e7e;}
+.notification .right .shop_storys ul li a { display: block; float: left; padding: 0 0 0 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_notice_red_dot.png') no-repeat left 2px;}
+.notification .right .shop_storys ul li a b { padding: 1px 0 0;}
+.notification .right .shop_storys ul li a:hover  { text-decoration: underline;}
+
+/*List View*/
+.list_view { width: 100%; margin-top: 34px;}
+.list_view .top_title { width: 100%; overflow: hidden; margin: 0 0 6px;}
+.list_view .top_title em { display: block; float: left; font-size: 11px; color: #3e3e3e;}
+.list_view .top_title em u { text-decoration: none; color: #777777 !important;}
+.list_view .top_title em b { font-weight: normal;}
+.list_view .top_title span { display: block; float: right;}
+.list_view .top_title span select { width: 80px;}
+.list_view .top_title span input { width: 175px; height: 16px; border: 1px solid #acacac;}
+.list_view .top_title span .btn_search { width: 46px; height: 20px; border: 0; margin: -2px 0 0 0;}
+
+.list_view table th {height:33px; text-align: center; font-weight: bold; color: #333; background: url('http://image.hottracks.co.kr/info/layout/bg_noticeList.png') repeat-x left top;}
+.list_view table td { text-align: center; padding: 5px 0; border-bottom: 1px solid #e2e2e2;}
+.list_view table td a.new { padding-right: 13px; background: url('http://image.hottracks.co.kr/info/icon/icon_new.png') no-repeat right 1px;}
+.list_view table td a:hover { color: #f58220;}
+
+.table_list2 { width: 731px; border: 1px solid #e2e2e2; overflow: hidden;}
+.table_list2 th { background: #ededed; font-weight: bold;  border-right: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;color: #333; padding: 11px 0 8px; line-height: 12px;}
+.table_list2 th.last { border-right: 0;}
+.table_list2 td { text-align: center; padding: 5px 0;  border-right: 1px solid #e2e2e2;}
+.table_list2 td.last { border-right: 0;}
+.table_list2 td.del { border-right: 0; text-align:left; width:20px; }
+
+.table_list3 { width: 731px; overflow: hidden;}
+.table_list3 .table_list_left { width: 359px; border: 1px solid #e2e2e2; border-bottom:none; float: left;}
+.table_list3 th { background: #ededed; font-weight: bold;  border-right: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;color: #333; padding: 11px 0 8px; line-height: 12px;}
+.table_list3 th.last { border-right: 0;}
+.table_list3 td.del { border-right: 0; text-align:left; width:20px; }
+.table_list3 td { text-align: center; padding: 5px 0;  border-right: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;}
+.table_list3 td input { width: 163px; border: 1px solid #c8c8c8; height: 17px; margin-left:6px; background:#f9f9f9; margin-right:2px;}
+.table_list3 td.last { border-right: 0;}
+.table_list3 .table_list_right { width: 359px; border: 1px solid #e2e2e2;  border-bottom:none; float: right;}
+
+/* View */
+.table_view {width:100%; margin-top:5px; }
+.table_view table { border-bottom: 1px solid #e2e2e2;border-top: 1px solid #e2e2e2;}
+.table_view table th { background: #ededed; padding: 5px 0; text-align: center; font-weight: bold; color: #333; border-bottom: 1px solid #e2e2e2;line-height:15px; }
+.table_view table td { border-bottom: 1px solid #e2e2e2; padding: 5px 20px;line-height:15px;}
+.table_view table td.view_area { padding: 26px 0 26px 0; border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view table td.view_area img { max-width:100%; }
+.table_view table td.view_area_re { padding: 9px 0 9px 0; border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view table td.view_area_left { padding:20px 20px 50px; border-bottom: 1px solid #e2e2e2; text-align: left !important;}
+.table_view table td.view_area_left table{ border-top:0px; border-bottom:0px;}
+.table_view table td input { border: 1px solid #c8c8c8; height: 16px; background:#f9f9f9; }
+.table_view table td span.bar { padding-left: 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_input_bar.png') no-repeat 0px 6px;}
+.table_view table td input.name { width: 140px; margin-right: 5px;}
+.table_view table td input.phone { width: 50px;}
+.table_view table td input.mail { width: 120px; margin-right: 4px;}
+.table_view table td .mail_select { width: 100px;}
+.table_view table td .phone_select { width: 60px;}
+
+.table_view2 {float: left; width:615px; }
+.table_view2 table {width: 614px; border-top: 1px solid #e2e2e2; table-layout:fixed; background:#fff; }
+.table_view2 table th {height:30px; padding-left:15px; background: #ededed; text-align: left; font:11px 굴림, "Gulim", sans-serif; font-weight: bold; color: #333; border-bottom: 1px solid #e2e2e2; }
+.table_view2 table th.red { background: url('http://image.hottracks.co.kr/info/icon/icon_red_star.png') no-repeat 7px center #ededed; color: #333 !important;}
+.table_view2 table td {height:30px; padding-left:10px; border-bottom: 1px solid #e2e2e2; font-family:굴림, "Gulim", sans-serif; }
+.table_view2 table td.view_area {border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view2 table td.view_area_re {border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view2 table td input { border: 1px solid #c8c8c8; height: 17px; background:#f9f9f9; margin-right:2px;}
+.table_view2 table td input.text_intype1 { width: 90%; }
+.table_view2 table td input.text_intype2 { width: 98%; }
+.table_view2 table td input.text_intype3 { width: 90%; }
+.table_view2 table td span.bar { padding-left: 8px; background: url('http://image.hottracks.co.kr/info/icon/icon_input_bar.png') no-repeat 0px 6px; }
+.table_view2 table td span.bar input { width: 50px; }
+
+.table_view3 {float: left; width:815px; }
+.table_view3 table {width: 814px; border-top: 1px solid #e2e2e2; table-layout:fixed; background:#fff; }
+.table_view3 table th {height:30px; padding-left:15px; background: #ededed; text-align: left; font:11px 굴림, "Gulim", sans-serif; font-weight: bold; color: #333; border-bottom: 1px solid #e2e2e2; }
+.table_view3 table th.red { background: url('http://image.hottracks.co.kr/info/icon/icon_red_star.png') no-repeat 7px center #ededed; color: #333 !important;}
+.table_view3 table td {height:30px; padding-left:10px; border-bottom: 1px solid #e2e2e2; font-family:굴림, "Gulim", sans-serif; }
+.table_view3 table td.view_area {border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view3 table td.view_area_re {border-bottom: 1px solid #e2e2e2; text-align: center !important;}
+.table_view3 table td input { border: 1px solid #c8c8c8; height: 17px; background:#f9f9f9; margin-right:2px;}
+.table_view3 table td input.text_intype1 { width: 90%; }
+.table_view3 table td input.text_intype2 { width: 98%; }
+.table_view3 table td input.text_intype3 { width: 90%; }
+.table_view3 table td span.bar { padding-left: 8px; background: url('http://image.hottracks.co.kr/info/icon/icon_input_bar.png') no-repeat 0px 6px; }
+.table_view3 table td span.bar input { width: 50px; }
+
+
+/*
+-----------------------------------------
+website : http://minuya.com
+File Name : setup.css
+Maker : minuya | amoo (hyorin2mo@nate.com)
+Date : 2011 / June
+Version : css 2.0
+explanation : 공통
+Modify Date: 2011 / 06 / 24
+-------------------------------------------
+*/
+
+@charset "UTF-8";
+
+/*================================
+
+    인재채용_(20110624)_MOD
+
+=================================*/
+
+/*Step1~Step4*/
+.step1 {clear:both; width:743px; overflow: hidden; }
+.pic_box { width: 122px; float: left; text-align: center; padding-right:5px; }
+.pic_box div.tit{ text-align:left; padding:0 0 5px; }
+.pic_box span { display: block; font-size: 11px; color: #c99256; line-height: 14px; margin-top: 10px;}
+.pic_box p { width: 112px; height: 138px; background: url('http://image.hottracks.co.kr/info/icon/icon_pic_bg.png') no-repeat left top; padding: 5px; margin:0;}
+.con_title { margin-bottom: 8px; text-align: right; color: #c99256; font-size: 11px; }
+.con_title strong.red{padding-left:10px; font-weight: normal; color:#c99256 !important; font-size:11px; background: url('http://image.hottracks.co.kr/info/icon/icon_red_star.png') no-repeat left center #fff; }
+.con_title2 { margin-top: 13px; width: 100%; overflow: hidden; position: relative;}
+.con_title2 span { display: block; float: left;}
+.con_title2 em { display: block; float: right; font-size: 11px; color: #c99256;}
+.file_upload li { margin-bottom: 6px;}
+.file_upload li input.file{width: 500px;  height:17px; border:1px solid #c8c8c8; }
+
+/*Mail Sand Box*/
+.mail_send {width:100%; overflow: hidden; border-bottom: 1px dotted #b1b1b1; border-top: 1px dotted #b1b1b1; padding: 12px 0; margin:50px 0 80px 0; }
+.mail_send em { display: block; float: left; padding: 3px;}
+.mail_send span { display: block; float: left;}
+.mail_send span a { text-decoration: underline;}
+
+/*Recruit Text*/
+.recruit_text { width: 100%; overflow: hidden;}
+.recruit_text img { display: block;} 
+.recruit_text a { text-align: right;display: block; float: right; margin-top: 10px;}
+.re_not_to { display: block; margin-bottom: 17px; margin-top: 10px;}
+
+/* text_area_info */
+.agreeInfo { width: 713px; padding:20px 10px; background: #f3f3f3; text-align: center; margin-bottom: 24px;}
+.agreeInfo p{margin-top:10px; }
+.agreeInfo p input { margin: -3px 3px 0 0;}
+.agreeInfo p span.last { margin-left: 30px;}
+.agreeInfo .agreeInfoContents { border:1px solid #c8c8c8; background:#fff; height: 230px; color:#929292; font:11px/1.4em 굴림, "Gulim", sans-serif;text-align:left;overflow-y:scroll; }
+.agreeInfo iframe { background: #fff none repeat scroll 0 0; border: 1px solid #c8c8c8; color: #929292; font: 11px/1.4em 굴림,"Gulim",sans-serif; height: 230px; width: 692px; }
+
+/*TEXT Wizard*/
+.text_wizard { width: 715px; height: 273px; padding: 8px; background: #f3f3f3;}
+.text_wizard textarea{border:1px solid #c8c8c8; background:#fff; width: 670px; height: 230px; padding:20px; overflow:hidden; overflow-y:scroll; color:#929292; font:11px/1.4em 굴림, "Gulim", sans-serif; }
+
+td input {border:1px solid #c8c8c8; height: 17px; background:#f9f9f9; margin-right:4px; padding-left:0; }
+td input.txt25{ width:20px; text-align:center; margin-left:6px; }
+td input.txt35{ width:30px; text-align:center; margin-left:6px; }
+td input.txt55{ width:50px; text-align:center; margin-left:6px; }
+td input.txt65{ width:60px; text-align:center; margin-left:6px; }
+td input.txt85{ width:80px; text-align:center; margin-left:6px; }
+td input.txt105{ width:100px; margin-left:6px; }     
+td input.txt115{ width:110px; text-align:center; margin-left:6px; }
+td input.txt125{ width:120px; text-align:center; margin-left:6px; }
+td input.txt145{ width:150px; margin-left:6px; }
+td input.txt165{ width:160px; margin-left:6px; }
+td input.txt265{ width:260px; margin-left:6px; }
+
+.table_view2 table td select{width:85px; height:19px; margin:2px; border: 1px solid #c8c8c8; }
+.table_view2 table td select.sel50{width:50px; }
+.table_view2 table td select.sel150{width:150px; }
+
+.table_view2 table td input.txt45{ width:50px; text-align:center; }
+.table_view2 table td input.txt150{ width:150px; }
+
+input.fileUp {width: 637px; height: 19px; border:1px solid #c8c8c8; padding:0; }
+input.fileUpImg {width:0; height:0; border:0 none; padding:0; color:#fff; background:#fff; }
+
+.centerBtnView {clear:both; width: 100%; text-align: center; margin:20px 0; }
+.centerBtnView1 {clear:both; width: 100%; text-align: center; margin:10px 0; }
+.centerBtnView ul, .centerBtnView1 ul{width:auto; }
+.centerBtnView ul li, .centerBtnView1 ul li{display:left; display:inline; } 
+
+.reinfo{color:#c99256; text-align:center; margin:10px 0 0; font-size:11px;}
+
+
+/*================================
+
+    영업점_(20110628)_MOD/New
+
+=================================*/
+
+.clear{clear:both; }/*공통*/
+.hidden{position:absolute; visibility:hidden; overflow:hidden; height:0; width:0; margin:0; padding:0; font:0/0 Arial;}
+
+/* Market Infomation */
+.shop_info_box { width: 736px; height: 196px; padding:16px 0 0 17px; position: relative; background: url('http://image.hottracks.co.kr/info/icon/icon_shop_info_01_bg.png') no-repeat left top;}
+.shop_info_box ul  li { width: 100%; overflow: hidden; position: relative; margin-bottom: 1px;}
+.shop_info_box ul * { vertical-align: bottom !important; font-size: 11px; letter-spacing: -1px; line-height: 16px;}
+.shop_info_box ul .col2 { float: left; width: 350px; height: 20px; }
+.shop_info_box ul .col2 em { display: block; float: left; width: 67px;margin-top: 3px;}
+.shop_info_box ul .col2 span { display: block; float: left;}
+.shop_info_box .map { position: absolute; left: 290px; margin-top: -2px; z-index: 3;}
+.location_info { height:  94px !important; width: 553px; margin-top: 3px;}
+.location_info span { display: block; margin-bottom: 6px;}
+.location_info p { margin-bottom: 0px; width: 100%; overflow: hidden;}
+.location_info p em { display: block; height: 39px; width: 67px; float: left; text-align: center;}
+.location_info p span { float: left; display: block;}
+.location_info p.last { margin-bottom: 0 !important;}
+.parking { margin-top: 0px;}
+.parking span { display: block; float: left; width: 67px; margin-top: 3px;}
+.parking p { float: left; width: 553px;}
+
+.storeInfoWrap {clear:both; width:710px;border:1px solid #d3d6d9; }
+.storeInfoWrap .guide{position:relative; z-index:500; width:100%; }
+.storeInfoWrap .guide .TL{position:absolute; left:-1px; top:-1px; z-index:50; width:5px; height:5px; background:url('http://image.hottracks.co.kr/info/common/bg_TL.png') no-repeat left top; }
+.storeInfoWrap .guide .TR{position:absolute; right:-1px; top:-1px; z-index:50; width:5px; height:5px; background:url('http://image.hottracks.co.kr/info/common/bg_TR.png') no-repeat right top; }
+.storeInfoWrap .guide .BL{position:absolute; left:-1px; bottom:-1px; z-index:50; width:5px; height:5px; background:url('http://image.hottracks.co.kr/info/common/bg_BL.png') no-repeat left bottom; }
+.storeInfoWrap .guide .BR{position:absolute; right:-1px; bottom:-1px; z-index:50; width:5px; height:5px; background:url('http://image.hottracks.co.kr/info/common/bg_BR.png') no-repeat right bottom; }
+.storeInfoWrap .storeInfo{clear:both; height:auto; background-color:#f4f4f4; border:1px solid #fff;padding:10px 0; }
+
+.storeInfo dl{clear:both; width:730px; margin:8px 14px 10px;}
+.storeInfo dl dt{float:left; width:70px; line-height:12px; padding:6px 0 4px; }
+.storeInfo dl dd {float:left; width:350px; position:relative;line-height:19px;padding:3px 0 4px; }
+.storeInfo dl dd #layerMap { background-color: #DADADA;border: 1px solid #CCCCCC;display: none;left: 0;padding: 10px;position: absolute;top: 20px;z-index: 1; }
+.storeInfo dl dd span a{ margin:0 0 0 4px; }
+.storeInfo dl dd span a img{ margin:-2px 0 0 0; vertical-align:middle; padding:2px 0; }
+.storeInfo dl dd.w240{width:200px; }
+.storeInfo dl dt.w600{clear:both; }
+.storeInfo dl dd.w600{width:630px; padding-bottom:6px; }
+.storeInfo dl dd.w600 ul{margin-top:4px; }
+.storeInfo dl dd.w600 li{line-height:1.6em; }
+
+
+/* 영업점_메인이벤트 */
+
+#contents_area h3{height:20px; padding:22px 0 0 8px; }
+
+.eventInfoWrap{clear:both; position:relative; border-top:1px solid #eaeaea; margin:0 8px; padding:12px 0 0 0; }
+.eventInfoWrap .bannerList{height:150px; }
+.eventInfoWrap .bannerList li{float:left; display:inline; width:226px; height:150px; border:none; padding-left:5px; border-left:1px dashed #cacaca; }
+.eventInfoWrap .bannerList li.firstChild{border:none; }
+.eventInfoWrap .bannerImg{position:relative; width:209px; height:77px; border:5px solid #dfdfdf; }
+.eventInfoWrap .bannerIcon{position:absolute; top:0; right:0; }
+.eventInfoWrap .bannerTxt{clear:both; margin:8px 0 0 0; }
+.eventInfoWrap .bannerTxt li {line-height:18px;display:block; width:200px; height:18px; padding:0 0 0 14px; color:#666; border:none; background:url('http://image.hottracks.co.kr/info/icon/icon_notice_dot.png') no-repeat left center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+
+.eventMore{position:absolute; top:-23px; right:5px; z-index:500; }
+
+/* 영업점_메인하단공통 */
+
+.notification {clear:both; width: 673px;  height:345px;margin-bottom:80px; position:relative; }
+
+/* 영업점_메인추천상품 */
+.recommendWrap {float: left; width:372px; margin-top:5px; border-top:1px solid #dbdbdb; border-left:1px solid #dbdbdb; margin-left:10px; }
+.recommendWrap ol{margin: 0 0 7px;}
+.recommendWrap ol li{float:left; display:block; width:185px; height:145px; font-size:1.1em; border-bottom:1px solid #dbdbdb; border-right:1px solid #dbdbdb; }
+.recommendWrap ol li a{font-size:1.1em; }
+.otherImg{margin:15px 0 5px 0; text-align:center; }
+/*.otherImg img{width:150px; height:150px; }*/
+.otherTxt{text-align:center; font-size:10px; }
+
+/* 영업점_메인bbs */
+.bbsPrev { margin-top:30px; width:320px; float: left; }
+.bbsPrev + .bbsPrev { margin-left:30px; }
+.bbsPrev h4{height:20px; border-bottom:1px solid #eaeaea; }
+.bbsPrev .bbsTxt {float: left; width:240px;line-height:15px;display:block; }
+.bbsPrev .bbsTxt a { display:block;width:230px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden; }
+.bbsPrev .bbsTxt img{margin-left:2px; }
+.bbsPrev .bbsDate {float: right; color: #7e7e7e;line-height:15px; padding-right:4px; }
+
+.bbsPrev .noticePrev, .bbsPrev .storyPrev{position:relative; }
+.bbsPrev .noticePrev ul{margin:16px 0 30px 0; }
+.bbsPrev .noticePrev ul li { width: 100%; height:20px; overflow: hidden; letter-spacing:-0.01em; }
+.bbsPrev .noticePrev ul li a { padding: 0 0 0 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_notice_red_dot.png') no-repeat left 2px;}
+.bbsPrev .noticePrev ul li a:hover  { text-decoration: underline;}
+
+.bbsPrev .storyPrev ul{margin:16px 0 30px 0; }
+.bbsPrev .storyPrev ul li { width: 100%; height:20px; overflow: hidden; }
+.bbsPrev .storyPrev ul li a { padding: 0 0 0 10px; background: url('http://image.hottracks.co.kr/info/icon/icon_notice_red_dot.png') no-repeat left 2px;}
+.bbsPrev .storyPrev ul li a:hover  { text-decoration: underline;}
+
+.bbsMore{position:absolute; top:-40px; right:5px; z-index:500; }
+
+/* 영업점_행사안내 */
+.eventWrap{clear:both; margin-top:25px; border:5px solid #eaeaea; }
+.eventWrap .bannerList{height:195px; }
+.eventWrap .bannerList li{float:left; display:inline; width:227px; height:177px; border:none; padding:18px 0 0 16px; border-left:1px solid #eaeaea; }
+.eventWrap .bannerList li.firstChild{border:none; }
+.eventWrap .bannerImg{position:relative; width:209px; height:77px; }
+.eventWrap .bannerIcon{position:absolute; top:0; right:0; }
+.eventWrap .bannerTxt{clear:both; margin:20px 0 0 0; }
+.eventWrap .bannerTxt li{ line-height:18px;display:block; width:200px; height:18px; padding:0 0 4px 14px; color:#666; border:none; background:url('http://image.hottracks.co.kr/info/icon/icon_notice_dot.png') no-repeat left center ;text-overflow:ellipsis;overflow:hidden;white-space:nowrap; }
+
+/* List View(영업점 외 리스트공통) */
+.ListViewWrap {clear:both; width: 100%; height:auto; margin-top: 10px; }
+.ListViewWrap table{clear:both; width: 100%; border-bottom: 1px solid #ccc; background: url('http://image.hottracks.co.kr/info/common/bg_list.png') repeat-x left top; }
+.ListViewWrap table th, .ListViewWrap table td, .ListViewWrap table td a{color:#666; }
+.ListViewWrap table th{height:33px; text-align:center; font-weight:bold; background: url('http://image.hottracks.co.kr/info/common/bg_listBar.png') no-repeat left center; }
+.ListViewWrap table th.firstChild, .ListViewWrap table th.first{background:none; }
+.ListViewWrap table td { text-align: center; padding: 7px 0 5px 0; background:none; border-bottom: 1px solid #e2e2e2;line-height:15px; }
+.ListViewWrap table td a.new { padding-right: 13px; background: url('http://image.hottracks.co.kr/info/icon/icon_new.png') no-repeat right 1px;}
+.ListViewWrap table td a:hover { color: #f58220;}
+.ListViewWrap table td img{margin-left:3px; }
+.ListViewWrap .btn img{vertical-align:middle; margin-top:-2px; }
+.ListViewWrap .ing{color:#db3035; }
+.ListViewWrap table td.alnL{text-align:left; padding:20px 20px 50px; }
+
+
+/* 페이지추가 */
+.paging {width:100%;height:24px;margin-top: 28px;text-align:center;}
+.paging ul {display:inline;}
+.paging ul li {display:inline;}
+.paging ul li a {display:inline-block;width:22px;height:22px;border:1px solid #eaeaea;text-align:center;color:#868686;line-height:22px;}
+.paging ul li.active a, .paging ul li a:hover, .paging ul li a:focus {border:1px solid #4f4f4f;background:#4f4f4f;color:#fff;}
+.paging > a {display:inline-block;width:24px;height:24px;overflow:hidden;vertical-align:top;font-size:0;}
+.paging .prev {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_prev.gif) no-repeat 8px 8px;}
+.paging .next {background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_next.gif) no-repeat 8px 8px;}
+.paging .prev02 {width:22px;height:22px;border:1px solid #eaeaea;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_prev02.gif) no-repeat 8px 8px;}
+.paging .next02 {width:22px;height:22px;border:1px solid #eaeaea;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_next02.gif) no-repeat 8px 8px;}
+.paging .first {width:22px;height:22px;border:1px solid #eaeaea;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_first.gif) no-repeat 8px 8px;}
+.paging .last {width:22px;height:22px;border:1px solid #eaeaea;background:url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/renewal/common/ico_last.gif) no-repeat 8px 8px;}
+
+.reply .paging{text-align: center; margin:0 auto; }
+
+/* Reply(수정) */
+.reply {clear:both; height:auto; margin: 5px 0; margin-bottom: 20px; padding-bottom:12px; background: #f7f7f7; position:relative; }
+.reply .alim{position:absolute; top:-25px; right:5px; z-index:500; font-size: 11px; color: #c99256;}
+.reply ul.replyView {padding:8px 17px;}
+.reply ul.replyView li { border-bottom: 1px dotted #b1b1b1; width: 700px; padding:4px 0; display:inline-block; }
+.reply ul.replyView li * { font-size: 11px;}
+.reply ul.replyView li strong { font-weight: bold; width: 80px; padding-left:4px; display: block; float: left;}
+.reply ul.replyView li span { display: block; float: left; width:545px; }
+.reply ul.replyView li em { font-weight: normal; color: #999; margin-left:12px; }
+.reply ul.replyView li a{margin-left:2px; }
+
+/* 영업점별 행사안내(reply 작성) */
+.contReplyWrite {clear: both; width: 708px; height: 50px; padding: 12px 17px; }
+.contReplyWrite textarea {float: left;width: 610px; height: 45px; margin-right: 6px; overflow: hidden; color: #777; background:#fff url("http://image.hottracks.co.kr/info/common/txt_replyInfo.png") no-repeat center center; border: 1px solid #c6c6c6; }
+.contReplyWrite .write {float: left; color: #898989; }
+.contReplyWrite .write p {margin-top: 8px; text-align:center; }
+.contReplyWrite .write p span{font-weight: bold; }
+
+/* story 추가(2011.06.28) */
+
+.eventListWrap{clear:both; margin-top:-12px; }
+.eventList li{width:auto; height:150px; display:block; padding:20px 0; border-bottom:1px solid #eaeaea; }
+.eventList .bannerList{height:150px; }
+.eventList .bannerList li{float:left; display:inline; width:233px; height:150px; padding:0 0 0 12px; border:none; border-left:1px dashed #cacaca; }
+.eventList .bannerList li.firstChild{border:none; }
+.eventList .bannerImg{position:relative; width:209px; height:77px; border:5px solid #dfdfdf; }
+.eventList .bannerIcon{position:absolute; top:0; right:0; }
+.eventList .bannerTxt{clear:both; margin-top:8px; }
+.eventList .bannerTxt li {display:block; width:200px; height:18px; padding:0 0 0 14px; color:#666; border:none; background:url('http://image.hottracks.co.kr/info/icon/icon_notice_dot.png') no-repeat left center ;overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+
+/* 검색창 */
+.searchWrap{clear:both; width: 100%; height:auto; margin: 20px auto; text-align:center; }
+.searchWrap select { width: 80px; height:19px; margin:2px; border: 1px solid #acacac; }
+.searchWrap input { width: 150px; height: 17px; border: 1px solid #acacac; }
+.searchWrap .btn_search { width: 46px; height: 20px; border: 0; margin: -2px 0 0 0;}
+
+
+/* 검색만(우측) */
+.searchWrap p.floatR{float:right; height:30px; }
+.searchWrap p.floatR select { width: 80px; height:19px; margin:2px; border: 1px solid #acacac; }
+.searchWrap p.floatR input { width: 175px; height: 17px; border: 1px solid #acacac; }
+.searchWrap p.floatR .btn_search { width: 46px; height: 20px; border: 0; margin: -2px 0 0 0; }
+
+/* 검색(우측)+정보(좌측) */
+.searchWrap ul{clear:both; height:auto; }
+.searchWrap li.floatL{float:left; height:20px; font:11px "굴림", "Gulim", sans-serif; }
+.searchWrap li.floatL p{margin-top:5px; }
+.searchWrap li.floatL span{color: #888; padding:0 3px; font:11px "굴림", "Gulim", sans-serif; }
+.searchWrap li.floatL strong{color:#ff0600; font:11px "굴림", "Gulim", sans-serif; }
+.searchWrap li.floatR{float:right; height:30px; }
+
+/* 채용(추가)_20110707 */
+#contents_area .recruitWrap h3{height:20px; padding:0 0 0 8px; }
+.recruitWrap{clear:both; width: 100%; height:auto; min-height:450px; margin:25px auto 80px; text-align:left; }
+.recruitWrap .img{margin-bottom:50px; }
+.recruitAlim{padding-bottom:4px; text-align:right;}
+tr.passInfo td{height:auto; padding:100px 80px 100px 200px; background: url('http://image.hottracks.co.kr/info/recruit/bg_passInfo.png') no-repeat left top;}
+tr.passInfo td em{color:#f58220; font-weight:bold; }
+tr.passInfo td strong{color:#db3035; font-weight:bold; }
+.rightBtnView {clear:both; width: 750px; text-align: right; margin:10px 0 20px 0; }
+.recruitWrap .imgTxt{margin:4px 0 7px 15px; }
+.recruitWrap .careerTxt{margin:7px 15px 23px;line-height:15px; }
+.alnC{text-align:center; }
+
+/* FAQ */
+.recruitWrap .faq {clear:both; width:750px; margin-left:20px; height:auto; text-align:left; }
+.recruitWrap .faq dl{display:block; margin-top:7px; }
+.recruitWrap .faq dt{height:20px; padding:0 0 0 22px; color:#666; background: url('http://image.hottracks.co.kr/info/recruit/ico_Q.png') no-repeat left top; }
+.recruitWrap .faq dd{height:auto; margin-bottom:25px; padding:14px 0 15px 50px; color:#666; line-height:1.5em; background:#fafafa url('http://image.hottracks.co.kr/info/recruit/ico_A.png') no-repeat 15px 15px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; }
+
+/* iframe(약관外) */
+
+#bgNone{background:none; }
+.info900{width:650px; padding:20px 10px; height:auto; }
+.info900 h3{margin:4px; font-size:14px; }
+.info900 p{margin:12px; line-height:1.4em; }
+.info900 h4{margin:12px 4px 4px 12px; font-size:12px; }
+.info900 ul{padding-bottom:4px; }
+.info900 ul li{margin:12px; }
+.info900 ul li ul li{line-height:1.4em; }
+
+.info900 ol{margin:12px 36px; padding-bottom:4px; }
+.info900 ol li{margin-bottom:8px; list-style-type:decimal; line-height:1.4em; }
+.info900 ol li ul li{list-style-type:none; margin:12px 0px; }
+.info900 p a{color:#f11111; text-decoration:underline; }
+
+/* 회사소개 */
+.coopWrap{float:right; margin-bottom:50px; background:#fff; }
+.lang{float:right; width:112px; height:27px; margin:9px 0 18px; text-align:right; background: url('http://image.hottracks.co.kr/info/company/bg_lang.png') no-repeat left top; }
+.lang li{float:left; width:37px; }
+.lang li a{display:block; padding:8px 7px 7px; }
+.lang1{float:right; width:77px; height:27px; margin:9px 0 18px; text-align:right; background: url('http://image.hottracks.co.kr/info/company/bg_lang1.png') no-repeat left top; }
+.lang1 li{float:left; width:37px; }
+.lang1 li a{display:block; padding:8px 7px 7px; }
+
+.coopList{clear:both; width:auto;height:auto; text-align:left; }
+.coopList li{float:left; width:370px; height:220px; text-align:center; }
+.coopList li.borL{border-left:1px solid #eaeaea; }
+.coopList li .txt{margin:35px auto; }
+
+.tradeWrap{float:right; width:744px; height:auto; margin-bottom:50px; overflow:hidden; background:#fff;line-height:18px; }
+.tradeWrap .tab{float:right; width:737px; height:21px; margin:0 0 6px 0; padding-right:7px; text-align:right; border-bottom:1px solid #dad7d4; }
+.tradeWrap .tab li{display:inline; width:auto; }
+.tradeWrap h3{clear:both; width:auto; height:20px; padding:12px 0 0 8px; }
+.tradeWrap .titleArea{background: url('http://image.hottracks.co.kr/info/company/pic_ceo.jpg') no-repeat 435px 35px; }
+.tradeWrap .titleArea p{width:380px; }
+.tradeWrap .img{padding:37px 20px 26px; }
+.tradeWrap .txt{padding:10px 25px; color:#666; }
+.tradeWrap .txt strong{font-weight:bold; }
+.tradeWrap .fairMore{margin:25px; }
+.tradeWrap .fairMore li{display:block; padding:0 0 17px 25px; }
+.tradeWrap .sign{text-align:right; }     
+.tradeWrap .titleArea2{height:230px; background:#fff url('http://image.hottracks.co.kr/info/company/pic_oath.jpg') no-repeat 435px 35px; }
+.tradeWrap .titleArea2 p{width:380px; }
+
+.biWrap{float:right; width:744px; height:auto; margin-bottom:50px; overflow:hidden; background:#fff;}
+.biWrap p.alim{clear:both; padding:18px 0 20px 0; }
+.biWrap .tab{float:right; width:737px; height:21px; margin:0 0 6px 0; padding-right:7px; text-align:right; border-bottom:1px solid #dad7d4; }
+.biWrap .tab li{display:inline; width:auto; }
+#contents_area .biWrap h3{clear:both; width:auto; height:20px; padding:12px 0 0 0; }
+.biWrap .img{padding:10px 20px 26px 16px; }
+.biWrap .txt{padding:8px 25px 0 16px; color:#666;line-height:18px; }
+
+.pointR{color:#f11111; font-weight:bold; padding:0 2px; }
+.txtH4{clear:both; height:50px; }
+.txtH4 span {color:#c99256;;padding:3px 0 0; display:inline-block;}
+
+.comtabmn1{border-bottom:1px solid #dad7d4; text-align:right; padding:0 9px 0 0;}
+.comtabmn1 a{border-bottom:1px solid #dad7d4;}
+
+/* s: 교보웹접근성이트라이브 2013/12/02 추가 */
+.access_tab {position:relative;padding-top:17px;border:0}
+.access_tab ul {width:744px;border:0}
+.access_tab li {display:inline}
+.access_tab li a {border:0}
+.access_tab li a.tablist01 {position:absolute;right:83px;top:0}
+.access_tab li a.tablist02 {position:absolute;right:9px;top:0}
+.access_tab li .bx_tab_con {margin:0 0 0 0;padding:3px 0 0 0;text-align:left;display:none;}
+.access_tab li.on .bx_tab_con { display:block; }
+.access_tab li .bx_tab_con h3 {padding-top:0;border-top:1px solid #dad7d4}
+
+/* BI */
+.biWrap.access_tab p.alim {border-top:1px solid #dad7d4}
+.biWrap.access_tab .tab {float:none;height:auto;width:744px;border:0}
+.biWrap.access_tab .tab li a.tablist01 {position:absolute;right:175px;top:0}
+.biWrap.access_tab .tab li a.tablist02 {position:absolute;right:101px;top:0}
+.biWrap.access_tab .tab li a.tablist03 {position:absolute;right:7px;top:0}
+
+/* Fair */
+.tradeWrap.access_tab .tab {float:none;height:auto;width:744px;border:0}
+.tradeWrap.access_tab .tab li a.tablist01 {position:absolute;right:330px;top:0}
+.tradeWrap.access_tab .tab li a.tablist02 {position:absolute;right:226px;top:0}
+.tradeWrap.access_tab .tab li a.tablist03 {position:absolute;right:142px;top:0}
+.tradeWrap.access_tab .tab li a.tablist04 {position:absolute;right:7px;top:0}
+
+
+/* e: 교보웹접근성이트라이브 2013/12/02 추가 */
+
+
+.clle{clear:left;}
+
+@charset "utf-8";
+/* diary css */
+
+.b2b { min-height:700px;width:740px; } 
+
+.b2b .b2b_gnb { padding-bottom:20px }
+.b2b .b2b_gnb a:hover { text-decoration:none; }
+
+.b2b .b2b_gnb .b2b_menu li { float:left;text-align:center;padding-top:7px;cursor:pointer;font-weight:bold;font-size:1.2em;}
+
+.b2b .b2b_nopage  { height: 43px;margin:0 10px;padding: 10px 0 5px;position: relative;z-index: 2; }
+.b2b .b2b_page { background: url("http://image.hottracks.co.kr/info/gnb/page_location_bg.gif") repeat-x scroll 0 bottom transparent;height: 43px;margin:0 10px;padding: 10px 0 5px;position: relative;z-index: 2; }
+.b2b .b2b_page .title { width:120px;float:left; }
+.b2b .b2b_page .page_loc ul { padding-top:27px; }
+.b2b .b2b_page .page_loc ul li { float:left; }
+
+.b2b .b2b_intro { background: url("http://image.hottracks.co.kr/info/b2b/intro_bg.gif") no-repeat; }
+.b2b .b2b_merit { background: url("http://image.hottracks.co.kr/info/b2b/merit_bg.gif") no-repeat; }
+.b2b .b2b_member { background: url("http://image.hottracks.co.kr/info/b2b/member_bg.gif") no-repeat; }
+
+.b2b_main { width:auto;padding-top:20px;font-size:11px;min-height:600px; }
+.b2b_main h3 {  padding:18px 0 0 10px;text-decoration:none;font-size:1.8em;font-weight:bold; }
+.b2b_main h3 strong { font-size:1.4em;color:#eb6e20; }
+.b2b_main p { padding:18px 0 0 10px;line-height:2.0em;font-size:1.2em;color:#636363; }
+.b2b_main p.stitle { font-size:18px;font-weight:bold;color:#228b22; }
+.b2b_main p.scont { padding:10px 25px; }
+.b2b_main p strong { font-size:1.2em; }
+.b2b_main .title { padding:10px 0;height:206px; }
+.b2b_main .title p { float:left;padding:0; }
+.b2b_main .title .t_image { float: left;text-align: center;width: 300px; }
+.b2b_main .title .t_ment { padding:60px 20px 0 0;font-size:22px;line-height:1.3em; }
+.b2b_main .b2b_quest { padding:10px 0;border-bottom: 1px solid #F0F0F0;margin-bottom: 13px; }
+.b2b_main .b2b_quest p { padding-top:5px;font-size:12px; }
+.b2b_main .b2b_quest .quest { background: url("http://image.hottracks.co.kr/info/b2b/icon_q.gif") no-repeat scroll left top transparent;color: #888888;font-weight: bold;height: 20px;line-height: 1.3em;padding: 0 0 5px 22px;margin-left:15px; }
+.b2b_main .b2b_quest .answer { background: url("http://image.hottracks.co.kr/info/b2b/icon_a.gif") no-repeat scroll left top transparent;color: #4D4D4D;height: auto;line-height: 1.5em;padding: 0 0 10px 22px;margin-left:35px; }
+
+.b2b_main div.form { position: relative;text-align: center; }
+.b2b_main div.form form { width:561px;height:191px;display: inline-block;background:url('http://image.hottracks.co.kr/info/b2b/sub05_img_02.jpg') no-repeat; } 
+/* 교보웹접근성이트라이브 수정 */
+.b2b_main div.form form table {width:360px;margin:47px 46px; }
+.b2b_main div.form form .btn {position:absolute;right:151px;top:55px}
+/* 교보웹접근성이트라이브 수정 */
+
+.b2b_main div.form form table th { width:100px; }
+.b2b_main div.form form table th span { display:none; }
+.b2b_main div.form form table td { padding:5px 0 4px 0; font-size:11px; line-height:18px; text-align:center; }
+.b2b_main div.form form table td input[type=text] { font-size:11px; color:#555; padding-left:6px; height:18px; border:1px solid #CCCCCC;width:59px; }
+.b2b_main div.form form table td input.input { width:220px; }
+
+.b2b_main div.table { padding:30px 10px 30px 0;width:360px;float:left; }
+.b2b_main div.table h4 { text-align:left;font-weight:bold;font-size:1.3em;padding:5px 5px; }
+.b2b_main div.table table { width:100%;border-top:2px solid #ff5e17; }
+.b2b_main div.table table thead th { padding:5px 10px;background:#f5f5f5;font-weight:bold;font-size:11px;border-bottom:1px solid #ccc; }
+.b2b_main div.table table tbody { padding-left:20px; }
+.b2b_main div.table table tbody tr { border-bottom:1px solid #ccc; }
+.b2b_main div.table table tbody td { padding:5px 10px;font-size:11px;font-weight:normal;text-align: center; }
+
+/* 404 에러 페이지 */
+.error{width:637px; margin:100px auto 140px;}
+.error p.ertxt{margin:0; font-size:0;}
+.error p.erbtn{margin:16px 0 0; text-align:center;}
+.error p.erbtn a{margin:0 10px;}
+
+<!--[if IE]>
+
+.png24 {tmp:expression(setPng24(this)); }
+
+body, body iframe, body textarea{
+    scrollbar-face-color:#dedede ; 
+    scrollbar-shadow-color:#fff; 
+    scrollbar-highlight-color:#fff; 
+    scrollbar-3dlight-color:#dedede; 
+    scrollbar-darkshadow-color:#dedede; 
+    scrollbar-track-color:#fff;
+    scrollbar-arrow-color:#8f8f8f; 
+    }
+
+
+<![endif]-->
+
+
+/* 교보웹접근성이트라이브 [2013/12/02 추가] */
+.clfix{*zoom:1}
+.clfix:before,.clfix:after{display:table;line-height:0;content:""}
+.clfix:after{clear:both}
+.hide_text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;height:0;left:-5000px;line-height:0;overflow:hidden;position:absolute;visibility:hidden;width:0}
+
+/* 20131030 웹접근성 css 추가 */
+.combo_box { border: 1px solid #B4B4B4;border-radius: 2px;display: inline-block;list-style-type: none;margin: 0 !important;overflow: hidden;padding: 0 !important;vertical-align: middle; }
+.combo_box a { background-color: #F8F8F8;border-left: 1px solid #B4B4B4;color: #626262 !important;display: inline-block;float: left;font: 11px/16px dotum;height: 16px;letter-spacing: -1px;min-width: 24px;padding: 2px 4px 0 !important;text-align: center;text-decoration: none; }
+.combo_box a.first,
+.combo_box a.first-child{ border-left: medium none; }
+.combo_box a.on { background: url("http://image.kyobobook.co.kr/ink/images/common/btn_small2_on.gif") repeat-x scroll 0 0 #F3F3F3;box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;color: #626262 !important; }
+
+.btn_select { background-color: #F8F8F8;border: 1px solid #B4B4B4;border-radius: 2px;color: #626262 !important;display: inline-block;font: 11px/16px dotum;height: 16px;letter-spacing: -1px;min-width: 20px;padding: 2px 6px 0;text-align: center;text-decoration: none;vertical-align: middle; }
+.btn_select:hover { text-decoration:none;vertical-align: middle;cursor:pointer; }

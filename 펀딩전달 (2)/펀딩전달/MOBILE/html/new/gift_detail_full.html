@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no, address=no, email=no" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<title>[NEW ME 핫트랙스] 짱구는못말려 메모지 세트</title>
+<META http-equiv="Expires" content="-1"> 
+<META http-equiv="Pragma" content="no-cache"> 
+<META http-equiv="Cache-Control" content="No-Cache"> 
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-itunes-app" content="app-id=1129743143">
+<meta name="google-play-app" content="app-id=kr.co.hottracks.m.and">
+<link rel="apple-touch-icon-precomposed" href="/images/content/ico_app.png" />
+<link rel="apple-touch-startup-image" href="/images/content/ico_app.png">
+
+<link href="/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700|Titillium+Web:400,600&display=swap&subset=korean">
+<link rel="stylesheet" type="text/css" href="../../css/layout.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="../../css/common_v2.css">
+<link rel="stylesheet" type="text/css" href="../../css/swiper-5.1.0.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/front.common.1.1.0.js"></script>
+<script type="text/javascript" src="../../js/front.common.ui.1.0.0.js"></script>
+<script type="text/javascript" src="/scripts/common"></script>
+<script type="text/javascript" src="/scripts/device"></script>
+<script type="text/javascript" src="../../js/biz/common_v2.js"></script>
+<script type="text/javascript" src="../../js/biz/m_hott.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="../../js/biz/jquery/TweenMax.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.form.js2017061611435"></script>
+<script type="text/javascript" src="../../js/ht.product.detail.1.0.0.js20190328"></script>
+<script type="text/javascript" src="../../js/swiper-5.1.0.min.js"></script>
+
+<script type="text/javascript">
+jQuery(function($){
+    $(document).ready(function(){
+        $("#wrap").addClass("content_new");
+        $("#likeLayer").show();
+        _init("2310040337508");
+        
+        $("select[name='specPrdtBcode']").find("option:first").attr('selected','selected');
+
+        var userAgent = navigator.userAgent.toUpperCase();
+        var prdtName = "짱구는못말려 메모지 세트 ";
+        prdtName = prdtName.replace(/&/g, ' and ');
+                
+        $("#prodDesc").load("/m/gift/detail/desc/2310040337508", function(){ $("#prodDesc *").css("max-width", "100%"); });
+        
+        $(".detail_product_img *").css("max-width", "100%");
+        
+        // nav
+        var nav = new Swiper('.location_nav_wrap .swiper-container',{
+            watchOverflow: true,
+        });
+        
+        // 상세이미지
+        var detailImage = new Swiper('.detail_image .swiper-container',{
+            speed: 1000,
+            watchOverflow: true,
+            pagination: {
+            el: '.detail_image .swiper-pagination',
+            type: 'fraction',
+            }
+        });
+        
+        // 이 상품과 같이 본 상품
+        var cateBest = new Swiper('.detail_recobell .swiper-container',{
+            slidesPerView: 'auto',
+            speed: 1000,
+            freeMode: true,
+            draggable: true,
+            scrollbar: {
+            el: '.detail_recobell .swiper-scrollbar',
+            hide: true,
+          }
+        });
+        
+        // 함께 구매하기 좋은상품
+        var cateNew = new Swiper('.detail_recobell2 .swiper-container',{
+        	slidesPerView: 'auto',
+            speed: 1000,
+            freeMode: true,
+            draggable: true,
+            scrollbar: {
+            el: '.detail_recobell2 .swiper-scrollbar',
+            hide: true,
+          }
+        });
+
+        // 브랜드 연관상품
+        var cateNew = new Swiper('.detail_recobell3 .swiper-container',{
+        	slidesPerView: 'auto',
+            speed: 1000,
+            freeMode: true,
+            draggable: true,
+            scrollbar: {
+            el: '.detail_recobell3 .swiper-scrollbar',
+            hide: true,
+          }
+        });
+        
+    });
+    
+    $("#btnDetailMore").click(function(){
+        var detail = $(document).find(".product-detail");
+        if(detail.hasClass("active")){
+            detail.removeClass("active");
+            $(this).find("span").text("상세 이미지 더보기");
+        }else{
+            detail.addClass("active");
+            $(this).find("span").text("상세 이미지 접기");
+        }
+    });
+    
+    $('.accordion_q > li > a').click(function(){
+        if($(this).hasClass("on")){
+            $(this).removeClass('on');
+        }else{
+            $('.accordion_q > li a').removeClass('on');
+            $(this).addClass('on');
+        }
+    });
+    
+    $("input[name=engracode]").click(function() {
+        var engracode = $(this).val();
+        var info = engracode.split("|") || [];
+        var price = info[1];
+        
+        if(info.length >= 3) {
+            var lastDiscountPrice = "3800";
+            if(!isNaN(lastDiscountPrice) && lastDiscountPrice >= 20000 && info.length == 4) {
+                price = 0;
+            }
+
+            $("#carving-face").val(info[0]);
+            $("#price").val(price);
+            $("#carving-contents").focus();
+        }
+    });
+
+    /* 탭메뉴:sub */
+    $(".ctab_cont:not("+$(".ctab_btn a.on").attr("href")+")").hide();
+    $(".ctab_btn li a").click(function(){
+        $(".ctab_btn li a").removeClass("on");
+        $(this).addClass("on");
+        $(".ctab_cont").hide();
+        $($(this).attr("href")).show();
+        return false;
+    });
+
+    /* 탭메뉴:sub */
+    $(".ftab_cont:not("+$(".ftab_btn a.on").attr("href")+")").hide();
+    $(".ftab_btn li a").click(function(){
+        $(".ftab_btn li a").removeClass("on");
+        $(this).addClass("on");
+        $(".ftab_cont").hide();
+        $($(this).attr("href")).show();
+        return false;
+    });
+    
+    
+    
+    if("" == "detail_tab02"){
+    	$("#detail_tab01").removeClass();
+    	$("#detail_tab02").addClass("on");
+    	$("#detail_tab01").removeClass();
+    	$("#detail_cont01").css("display","none");
+        $("#detail_cont02").css("display","block");
+    	
+        var scrollPosition = $("#detail_tab02").offset().top;
+        
+        moveScroll(scrollPosition-65);
+        
+    }
+    
+});
+
+function calDist(touches){
+    var x1 = touches[0].screenX;
+    var y1 = touches[0].screenY;
+    var x2 = touches[1].screenX;
+    var y2 = touches[1].screenY;
+    return Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+}
+
+function toggleInput(){
+    if($(".detail_input").hasClass("active")){
+        $(".detail_input").removeClass("active");
+        $("body").removeClass("fixed");
+    }else{
+        $(".detail_input").addClass("active");
+        $("body").addClass("fixed");
+    }
+}
+
+function setParentWindowCarvedSealInfo() {
+    if($("#carving-contents").val() == "") {
+        alert("각인 내용을 입력해 주세요.");
+        return false;
+    } else {
+        var str = $("#carving-contents").val();
+        var len = 0;
+        for(var i=0; i<str.length; i++) {
+            len += str.charCodeAt(i) < 128? 1 : 2;
+        }
+        
+        if(len > 20) {
+            alert("한글 10자, 영문 20자까지 가능합니다.");
+            return false;
+        }
+    }
+
+    if($("input[name=engracode]:checked").length == 0) {
+        alert("각인 서체를 선택해 주세요.");
+        return false;
+    }
+    
+    var engracode = $("input[name=engracode]:checked").val();
+    var carvedSealInfoArr = engracode.split("|") || [];
+    
+    setCarvedSealInfo(carvedSealInfoArr, $("#carving-contents").val());
+    toggleCvsl();
+}
+
+function setCarvedSealInfo(info, cvslCont) {
+    var addPrice = 5000;
+    if(info.length >= 3) {
+        var payYn = true;
+        if($product && $product.lastDcPrice >= 20000 && info.length == 4) {
+            payYn = false;
+            addPrice = 0;
+        }
+        
+        var cvslBcode = payYn?info[2]:"2300000032307";
+        
+        $cart.cvsl = { cvslBcode:cvslBcode, cvslCont:cvslCont, cvslFont:info[0] };
+    }else{
+        $cart.cvsl = null;
+    }
+    
+    var obj = document.getElementById("cvslOrder");
+    _removeChild(obj);
+    
+    if($cart.cvsl){
+        var dl01 = _createSimpleElement("dl");
+        dl01.appendChild(_createSimpleElement("dt", "각인서체"));
+        dl01.appendChild(_createSimpleElement("dd", $cart.cvsl.cvslFont));
+        obj.appendChild(dl01);
+        
+        var dl02 = _createSimpleElement("dl");
+        dl02.appendChild(_createSimpleElement("dt", "각인내용"));
+        dl02.appendChild(_createSimpleElement("dd", $cart.cvsl.cvslCont));
+        obj.appendChild(dl02);
+        
+        var dl03 = _createSimpleElement("dl", null, "mb10");
+        dl03.appendChild(_createSimpleElement("dt", "추가금액"));
+        dl03.appendChild(_createSimpleElement("dd", price_format(addPrice), "col_red"));
+        obj.appendChild(dl03);
+    }
+}
+
+function toggleShareBox(){
+    if($(".share_box").is(":visible")){
+        $(".share_box").slideUp();
+    }else{
+        $(".share_box").slideDown();
+    }
+}
+
+function checkOrderMakeCont(obj){
+    var orderMakeCont = obj.value;
+    var re1 = '\r\n';  //개행문자를 나타내는 정규표현식
+    var re2 = '\n';    //개행문자를 나타내는 정규표현식
+    var re3 = "'";     //아포스트로피 체크
+    
+    var errMsg;
+    if(orderMakeCont.indexOf(re3) > -1){
+        errMsg = "제작문구에 아포스트로피(')를 사용할수 없습니다.";
+        orderMakeCont = orderMakeCont.split(re3).join(" ");
+    }else if(orderMakeCont.indexOf(re1) > -1){
+        errMsg = "제작문구에 줄바꿈을 사용할수 없습니다.";
+        orderMakeCont = orderMakeCont.split(re1).join(" ");
+    }else if(orderMakeCont.indexOf(re2) > -1){
+        errMsg = "제작문구에 줄바꿈을 사용할수 없습니다.";
+        orderMakeCont = orderMakeCont.split(re2).join(" ");
+    }
+    
+    var chk = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_0123456789\~!@#$%^&*()_+| ";
+    var length = 0;
+    var lastIdx = 0;
+    for(var i=0; i < orderMakeCont.length; i++){
+        if(chk.indexOf(orderMakeCont.charAt(i)) >= 0 )   length++;
+        else                                             length+=2;
+        if(length < 202) lastIdx = i;
+    }
+    if(length > 200){
+        errMsg = "제작문구는 200Byte(한글 100자, 영문 200자)이상 작성할 수 없습니다.";
+        orderMakeCont.substring(0, lastIdx);
+    }
+    
+    if(errMsg){
+        alert(errMsg);
+        obj.value = orderMakeCont;
+    }
+    
+    $cart.orderMakeCont = orderMakeCont;
+}
+$(window).load(function() {
+	$('iframe').css('height', '233px');
+});
+</script>
+<style>
+.like_cnt{ outline:none;}
+#btnBack {display:none !important;}
+#btnTop {display:none !important;}
+.gift_box_a {
+    background-color: #f1f1f1;
+    height: 70px;
+    padding-right: 20px;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    overflow-x: hidden;
+}
+.gift_box_a .gift_tag_a {
+    float: left;
+    background-color: #da2128;
+    height: 100%;
+    color: #fff;
+    width: 60px;
+}
+.gift_box_a .gift_tag_a strong {
+    display: block;
+    padding: 24px 10px 20px;
+    font-size: 16px;
+}
+.gift_box_a a {
+    display: flex;
+    cursor: pointer;
+}   
+.gift_box_a a .gift_txt {
+    float: left;
+    padding: 5px 0px 6px 15px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100%;
+}
+.gift_box_a a .gift_txt strong {
+    font-size: 14px;
+}
+.gift_box_a a .gift_txt p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.gift_box_a a .gift_txt .date {
+    margin-top: 3px;
+}
+.gift_box_a a .gift_click {
+    background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/mobile/common/btn_right02.png)no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 12px;
+    height: 70px;
+    width: 20px;
+    float: right;
+}    
+@keyframes txt_move {
+    0%,60% {top:0;}
+	30% {top:-0.1em;}
+}
+@-webkit-keyframes txt_move {
+    0%,60% {top:0;}
+	30% {top:-0.1em;}
+}
+.gift_box_a .gift_tag_a.txt_move strong i {
+    position:relative; display:inline-block; animation:txt_move 1s infinite; font-style:normal; 
+}
+.gift_box_a .gift_tag_a.txt_move strong i:nth-child(1){animation-delay:0.1s;}
+.gift_box_a .gift_tag_a.txt_move strong i:nth-child(2){animation-delay:0.2s;}
+.gift_box_a .gift_tag_a.txt_move strong i:nth-child(3){animation-delay:0.3s;}
+.gift_box_a .gift_tag_a.txt_move strong i:nth-child(4){animation-delay:0.4s;}
+.gift_box_a .gift_tag_a.txt_move strong i:nth-child(5){animation-delay:0.5s;}
+#footer {padding: 0 0 160px 40px;}
+</style>
+</head>
+<body>
+
+<div id="wrap" class="mini">
+  <!-- #header -->
+  <div id="header">
+    <div class="inner"> <a href="#n" class="btn_home" _onclick="location.href='http://devm.hottracks.co.kr/';return false;">홈버튼</a>       
+      <!-- 서브 -->
+      <div class="sub_wrap"> <a href="#n" _onclick="locBack();return false;" class="btn_back">뒤로가기</a> <a href="#n" class="btn_category" _onclick="bizOpenGnbMenu();return false;">카테고리 보기</a> <a href="#n" class="btn_search" _onclick="gnbSrchFrm();return false;">검색</a>
+        <h2 id="subTitle">상품상세</h2>
+      </div>
+      <!--// 서브 --> 
+    </div>
+  </div>
+  <!-- //#header -->
+
+<!-- #content -->
+<div id="content">
+        
+<!-- .nav -->
+<div class="nav_v2">
+	<div class="location_nav_wrap pd10_0">
+	    <div class="ichome_a">
+	        <a href="#n"><div class="ichome">HOME</div></a>
+	    </div>
+	    
+	    <div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        
+		            <div class="swiper-slide"><a href="#n">디자인문구</a></div>
+		        
+		            <div class="swiper-slide"><a href="#n">노트/메모</a></div>
+		        
+		        <div class="swiper-slide active"><a href="#n">메모지/수첩</a></div>
+		    </div>
+	    </div>
+	</div>
+</div>
+<!-- //.nav -->
+
+<!-- 사은품 안내 영역 -->
+<div class="gift_box_a">
+    <div class="gift_tag_a txt_move">
+        <strong><i>G</i><i>I</i><i>F</i><i>T</i></strong>
+    </div>
+    <a href="#n">
+        <div class="gift_txt">
+           <strong>2020 별별일상 다이어리 1+1</strong>
+           <p>오늘만 선착순 100명 결제완료 대상 1개 랜덤증정</p>
+           <p class="date">2019.09.24 ~ 09.25</p>
+        </div>
+        <div class="gift_click"></div>
+    </a>
+</div>
+
+<!-- 상세 -->
+<div class="detail_wrap">
+    <!-- swiper -->
+    <div class="detail_image">
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1234/hot1554717817356.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img kakao-img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1423/hot1554717827224.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1084/hot1554717838636.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1054/hot1554717847207.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1210/hot1554717854412.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+                
+                    <li class="swiper-slide">
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1313/hot1554717863042.jpg" alt="짱구는못말려 메모지 세트 " class="prdt-photo sns_img" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                    </li>
+            </ul>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- //swiper -->
+    
+    <!-- 상품 정보 -->
+    <div class="detail_info">
+        <div class="top_tit">
+            <div class="badge">
+                
+                <span class="badge03">일시품절</span><span class="badge01">쿠폰</span><span class="badge02">각인</span><span class="badge02">주문제작</span><span class="badge02">사은품</span><span class="badge02">한정</span>
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            <a href="#n" class="brand"><span>Flying Whales</span></a>
+            <h2>짱구는못말려 메모지 세트 </h2>
+            
+            <a href="#n"><span class="event">메모지 세트 구매 시 필기류 증정</span></a>
+            
+        </div>
+        <dl class="info">
+            <!-- 최종판매가 -->
+            <dt class="lastPrice"><span>최종판매가</span></dt>
+            <dd class="lastPrice"><strong>3,800</strong>원</dd>
+            <!-- #최종판매가 -->
+            
+            
+                    <dt>판매가</dt>
+                    <dd>3,800원</dd>
+            <dt>배송비</dt>
+            <dd class="t_r">
+                
+                        2,000원
+                        <p class="mb5">20,000원 이상 구매 시 무료</p>
+                    
+                <!-- 묶음배송 제외 -->
+                
+                    <p class="mt5 mb5">
+                    	<a href="#n" class="bt_sbrg1">묶음배송 상품보기</a>
+                    <p>
+                
+            </dd>
+            
+                <dt>통합포인트</dt>
+                <dd>38원</dd>
+            
+            <dt>카드혜택</dt>
+            <dd>
+                <a href="javascript:toggleLayer('#layerCard');" class="btn_tooltip bt_sbgr">신용카드 할인안내</a>
+                    <div id="layerCard" class="toggle-layer">
+                    <div id="ly_header">
+                        <h1>신용카드 할인안내</h1>
+                    </div>
+                    
+                    <div id="ly_content">
+                            <div class="rating_star">
+                                <p class="mt10">
+                                    <strong>신한카드</strong>
+                                    <p>2~6개월, 12개월(부분) 무이자</p>
+                                </p>
+                                <p class="mt10">
+                                    <strong>하나카드</strong>
+                                    <p>2~3개월 무이자</p>
+                                </p>
+                                <p class="mt10">
+                                    <strong>국민카드</strong>
+                                    <p>2~5개월 무이자</p>
+                                </p>
+                                <p class="mt10">
+                                    <strong>비씨, NH농협, 현대, 삼성카드</strong>
+                                    <p>2~6개월 무이자</p>
+                                </p>
+                                <p class="mt10">
+                                    <strong>유의사항</strong>
+                                    <p>법인,체크,선불,기프트,하이브리드 제외</p>
+                                    <p>무이자 적용 최소결제 금액 등 상세 내용은<br/>결제 팝업창에서 확인 요망</p>
+                                </p>
+                            </div>
+                            <div class="rating_star mt20">
+                                <P class="mt10"><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/order/txt_m_smile.png" alt="스마일페이" /></p>
+                                <p class="mt10">
+                                    <strong>Smile Pay 결제 시 2천원 적립</strong>
+                                    <p>이벤트 기간 : 2019.08.01 ~ 2019.12.31</p>
+                                    <p>스마일페이로 3만원 이상 첫 결제 시 2천원 스마일캐시 적립</p>
+                                </p>
+                            </div>
+                        <a href="javascript:toggleLayer('#layerCard');" class="btn_cls">닫기</a>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        
+        <div class="btn_area box_flex pd0_20 mb20">
+                <a href="../../couponList4Prdt.html" class="bt_mbgb">쿠폰받기</a>
+            </div>
+        
+        
+        <div class="sns">
+            
+                <!--<a href="#n" class="heart">핫트뿅뿅</a>
+                
+                <a href="#n" class="story f14 col_black">보이는이야기</a>-->
+            
+            <!-- 내가 클릭한 경우가 있으면 -->
+                <a href="#n" _onclick="removeWishProduct('2310040337508', '짱구는못말려 메모지 세트 ');return false;" class="like_full"  title="좋아요 추천수"><input class="like_cnt"  onfocus="this.blur();" value="10" readonly="readonly" size="3";/></a>
+            
+            
+            <a href="#n" onclick="toggleShareBox();return false;" class="share">공유하기</a>
+            <div class="share_box">
+                <a href="#n" _onclick="goTwitter('짱구는못말려 메모지 세트 ', 'http://m.hottracks.co.kr/p/2310040337508');return false;" class="twitter"><span class="mlm2">트위터</span></a>
+                <a href="#n" _onclick="goFaceBook('짱구는못말려 메모지 세트 ', 'http://m.hottracks.co.kr/p/2310040337508');return false;" class="facebook"><span>페이스북<span></span></a>
+                <a href="#n" _onclick="sendKakao('[핫트랙스] 짱구는못말려 메모지 세트 ', 'http://m.hottracks.co.kr/p/2310040337508');return false;" class="kakao"><span>카카오톡</span></a>
+                <a href="#n" _onclick="goPinterest('짱구는못말려 메모지 세트 ', 'http://m.hottracks.co.kr/p/2310040337508');return false;" class="pinterest"><span class="mlm3">핀터레스트</span></a>
+                 <!--<a href="#n" _onclick="urlClipCopy('http://m.hottracks.co.kr/p/2310040337508');return false;" class="copy"><span>상품복사</span></a>-->
+                <a href="#n" class="sms"><span class="mlm3">문자보내기</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- //상품 정보 -->
+    <div class="giftStockedInfoRequest"></div>
+    <!-- 주문 정보 -->
+    <div class="detail_input">
+        <a href="#n" onclick="toggleInput();return false;" class="btn_toggle">토글버튼</a>
+        <a href="../../desc.html" class="btn_detail">확대보기</a>
+        <a href="#n" _onclick="openRecent();return false;" class="btn_recent">
+            <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/150/1374/S1488272253404.jpg" width="150" height="150" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>        
+        </a>
+        <a href="#n" onclick="moveTop();return false;" class="btn_top">위로</a>
+        <div class="order_input">
+            <div id="listOption" class="pd10" style="display:none;"></div>
+
+            <div id="divOrderMakeCont" class="textarea_wrap pd0_10" style="display:none;"></div>
+            
+                <div class="ord_price" id="ord2310040337508">
+                           
+                    <input type="hidden" id="stat2310040337508" value="0"/>
+                    <div class="count ml10">
+                    	<button type="button" title="1개씩 감소" class="down">감소</button>
+                        <input type="number" name="prdtCnt" id="prdtCnt" number="prdtCnt" class="prdtCnt" min="0" max="0" value="1" title="주문수량 입력" maxlength="5" style="width: 100%;height: 30px;border: 1px solid #ccc; text-align: center;font-size: 16px;color: #000;"/>
+                        <button type="button" title="1개씩 증가" class="up">증가</button>
+                    </div>
+                    <span class="amount mr10">3,800<span>원</span></span>
+                </div>
+                <div id="cartList" class="pd0_10"></div>
+            
+            <div id="cvslOrder" class="cvsl_cont"></div>
+            <dl class="amount_price">
+                <dt>총금액</dt>
+                <dd id="cartSum">3,800<span>원</span></dd>
+            </dl>
+        </div>
+        <div class="detail_order">
+           
+                    <div class="btn_area box_flex bg_eeeeee">
+                        <a href="#n" _onclick="goCartProudct();return false;" class="bt_mbrb">장바구니</a>
+                        <a href="#n" _onclick="goBuyProudct();return false;" class="bt_mbgb ml10">바로구매</a>
+                    </div>
+                
+        </div>
+    </div>
+    <!-- //주문 정보 -->
+    
+    <!-- 레코벨 추천상품으로 변경 start -->
+	<!-- a002 -->
+	<!-- banner -->
+		
+		 <div class="recobell_list">
+			<h2>이 상품과 같이 본 상품</h2>
+			<div class="category detail_recobell">
+			    <div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            
+			                <div class="swiper-slide" id="slide0">
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1566/hot1522299774086.jpg" alt="짱구는못말려 메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">짱구는못말려 메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">10%</span>
+			                                    3,800
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1316/hot1517908958201.jpg" alt="비온뒤 오지선다 답체크 메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">비온뒤 오지선다 답체크 메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">20%</span>
+			                                    2,300
+			                                </p>
+			                                </div>
+			                            </a>
+			                   
+			                </div>
+			            
+			                <div class="swiper-slide" id="slide2">
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1452/S1553050257986.jpg" alt="[tobe]A4수학노트패드" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">[tobe]A4수학노트패드</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">15%</span>
+			                                    4,000
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1759/hot1570014753880.png" alt="N 핸디노트" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">N 핸디노트</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">20%</span>
+			                                    14,000
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                </div>
+			            
+			                <div class="swiper-slide" id="slide4">
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1555/hot1554258717055.jpg" alt="바른생활 사계절 메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">바른생활 사계절 메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">10%</span>
+			                                    2,500
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1420/hot1522111942187.jpg" alt="1000펑키슈가 컬러 메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">1000펑키슈가 컬러 메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">20%</span>
+			                                    1,000
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                </div>
+			            
+			                <div class="swiper-slide" id="slide6">
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1185/hot1553664450440.jpg" alt="라이프패드 Lifepad-Mini" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">라이프패드 Lifepad-Mini</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">15%</span>
+			                                    2,400
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1785/hot1569322620058.jpg" alt="밍키트 코튼캔디 떡메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">밍키트 코튼캔디 떡메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">30%</span>
+			                                    2,000
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                </div>
+			            
+			                <div class="swiper-slide" id="slide8">
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1201/hot1560753959782.jpg" alt="인스타그램 메모지" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">인스타그램 메모지</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">20%</span>
+			                                    2,300
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                            <a href="#n">
+			                                <div class="thum">
+			                                 	
+			                                 	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1221/hot1562500486914.jpg" alt="밍키트 하늘 떡메모지 믹스" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+			                                 </div>
+			                                <div class="desc">
+			                                <p class="txt">밍키트 하늘 떡메모지 믹스</p>
+			                                <p class="price font_t">
+			                                    <span class="percent">10%</span>
+			                                    4,000
+			                                </p>
+			                                </div>
+			                            </a>
+			                    
+			                </div>
+			            
+			        </div>
+			        <!-- 스크롤바 -->
+                    <div class="swiper-scrollbar">
+                    </div>
+			    </div>
+			</div>
+		</div>
+		
+	<!-- 레코벨 추천상품으로 변경 end -->
+
+    <!-- 상세 탭메뉴 -->
+    <div class="detail_tab">
+        <ul class="tab_btn">
+            <li><a href="#detail_cont01" id="detail_tab01" class="on">상품설명</a></li>
+            <li><a href="#detail_cont02" id="detail_tab02">상품후기<span class="font_t col_salmon ml5">(999)</span></a></li>
+            <li><a href="#detail_cont03" id="detail_tab03">상품Q&amp;A<span class="font_t col_salmon ml5">(999)</span></a></li>
+        </ul>
+    </div>
+    <!-- //상세 탭메뉴 -->
+    
+    <div class="tab_pannels">
+        <!-- 상품설명 -->
+        <div class="tab_cont" id="detail_cont01">
+            <h2 class="hid_obj">상품설명</h2>
+            
+                
+
+
+
+
+
+<ul class="txt_list">
+    <li><strong>상품군 : </strong>기타</li>
+    <li><strong>제조사 : </strong>Flying Whales</li>
+    <li><strong>제조국 : </strong> 한국</li>
+    <li><strong>품명 및 모델명 : </strong>짱구는못말려 메모지 세트</li>
+    <li><strong>수입여부 : </strong>국산</li>
+    
+    <li><strong>A/S 및 소비자상담 : </strong>핫트랙스 / 1661-1112</li>
+</ul>
+            
+            
+            <ul class="accordion">
+                <li>
+                    <a href="javascript://">배송안내</a>
+                    <div class="cont">
+                        <p>
+                            - 핫트랙스 배송 : 2만원 이상 구매 시 무료배송/ 2만원 미만 구매 시 배송비 2,000원<br/>
+                            - 브랜드별 배송 : 브랜드 정책에 따라 무료배 혹은 배송비 부과 (상품상세정보에서 배송비 기준 확인가능)<br/>
+                            <br/>
+                            * 배송비<br/>
+                            - 도서, 산간, 오지, 일부지역, 설치배송 상품 등은 배송비가 추가될 수 있습니다.<br/>
+                            - 무료배송 상품과 함께 구입 시, 기준금액 미만으로 구입하시더라도 해당 브랜드 상품은 무료배송 됩니다.<br/>
+                            - 핫트랙스 배송과 브랜드 개별 배송비는 별도로 부과 됩니다.<br/>
+                            <br/>
+                            * 배송기간 및 방법<br/>
+                            - 결제 완료 후, 1~5일 이내에 배송 됩니다. (단, 상품의 재고 상황이나 배송 상황, 지역특성에 따라 배송이 지연될 수 있습니다.)<br/>
+                            - 주문제작 상품 및 가구와 같은 업체 직배송 상품은 제작기간과 배송시기를 별도 확인하시기 바랍니다.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript://">반품교환</a>
+                    <div class="cont">
+                        <p>
+                            -상품 설명에 반품/교환 관련 안내가 있는 경우 그 내용을 우선으로 합니다. (업체 사정에 따라 변경 될 수 있습니다.)<br/>
+                            -브랜드별 배송 : 브랜드 정책에 따라 무료배송 혹은 배송비 부과 (상품상세정보에서 배송비 기준 확인가능)<br/>
+                            <br/>
+                            * 반품/교환 방법<br/>
+                            -MY HOTTRACKS > 주문정보 > 반품/교환신청<br/>
+                            -고객센터 > SOS상담<br/>
+                            -고객센터 (1661-1112)<br/>
+                            <br/>
+                            * 반품/교환가능 기간<br/>
+                            -변심반품의 경우 수령 후 7일 이내, 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내<br/>
+                            -상품불량 및 오배송 등의 이유로 반품/교환을 하실 경우 반품/교환비는 무료 입니다.<br/>
+                            (단, 판매자가 반품된 상품 확인 후 상품불량이 아닌 것으로 확인 될 시 반송비를 고객님께 부과할 수 있습니다.)<br/>
+                            -고객변심으로 인한 교환/반품의 배송비는 고객님 부담 입니다.<br/>
+                            -고객변심으로 인한 교환/반품 시 주문에 사용된 할인쿠폰은 반환되지 않습니다.<br/>
+                            <br/>
+                            * 반품/교환 불가사유<br/>
+                            -반품/교환 가능 기간을 초과한 경우<br/>
+                            -소비자의 책임 있는 사유로 상품 등이 손실 또는 훼손된 경우 (단지 확인을 위한 포장 훼손은 제외)<br/>
+                            -소비자의 사용, 포장 개봉에 의해 상품 등의 가치가 현저히 감소한 경우 (예: 밀봉상품, 제품 수선, 세탁, 기타 사용/분리/훼손)<br/>
+                            -설치상품의 경우 설치가 완료되어 상품의 가치가 훼손된 경우 (예: 설치가전, 가구, 식품 등)<br/>
+                            -소비자의 요청에 따라 개별적으로 주문 제작되는 상품의 경우<br/>
+                            -시간의 경과에 의해 재판매가 곤란한 정도로 가치가 현저히 감소한 경우<br/>
+                            -전자상거래 등에서의 소비자보호에 관한 법률이 정하는 소비자 청약철회 제한 내용에 해당되는 경우<br/>
+                            -복제가 가능한 상품 등의 포장을 훼손한 경우 (예: 음반/DVD/비디오, 소프트웨어, 영상화보집)<br/>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript://">기타사항</a>
+                    <div class="cont">
+                        <p>
+                            -상품의 불량에 의한 교환, A/S, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자분쟁해결 기준 (공정거래위원회 고시)에 준하여 처리됨<br/>
+                            -대금 환불 및 환불지연에 따른 배상금 지급 조건, 절차 등은 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 처리함<br/>
+                            -구매자가 미성년자인 경우에는 상품 구입 시 법정대리인이 동의 하지 아니하면 미성년자 본인 또는 법정대리인이 구매취소 할 수 있습니다.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!-- 
+            
+             -->
+            <div class="prod_scroll_box" style="width:100%;overflow:hidden;">
+                <div class="prod_scroll_info">
+                    
+                        
+                            <p style="text-align:center;margin:20px 0;">
+                                 
+                                    <a href="#n"><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/1744/1569399853998_MO상품_상세페이지_가로배너_750_250.jpg" style="width:100%;"/></a>
+                                
+                                
+                                </p>
+                        
+                    
+                    
+                    <!-- //상품설명 --> 
+                
+                    <!--  배송 업체 정보 -->
+                    <div class="detail_product_img">
+                            
+                            
+                    </div>
+                    <!--  //배송 업체 정보 -->
+                    <div id="prodDesc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 상품후기 -->
+        <script type="text/javascript">
+        /* 아코디언 */
+        $('.accordion_r > li > a').click(function(){
+            if($(this).hasClass("on")){
+                $(this).removeClass('on');
+            }else{
+                $('.accordion_r > li a').removeClass('on');
+                $(this).addClass('on');
+            }
+        });
+        </script>
+        <div class="tab_cont" id="detail_cont02">
+        <h2 class="hid_obj">상품후기</h2>
+        <div class="btn_area box_flex pd0_20">
+        <!-- 체험단이면서 체험상품이 아니거나, 체험단이 아닌경우 -->
+
+                    <a href="#n" class="bt_mbgb"><span class="review_write">상세 후기 쓰기</span></a>
+
+        </div>
+        <ul class="accordion review accordion_r">
+
+
+                <li>
+                    <a href="javascript://;" class="">
+                        <span class="tit" style="border:0;">친구에게 추천하고 싶어요.</span>
+                        <span class="writer">
+                            2019.10.01 / adaisylo**
+                        </span>
+                    </a>
+                    <div class="cont">
+                        <div class="grade_star">
+                            <span class="st_on" style="width:100.0%;"></span>
+                        </div>
+
+                        <p>
+
+                            친구에게 추천하고 싶어요.<br>
+                        </p>
+                    </div>
+                </li>
+
+        </ul>
+
+        <!-- paging -->
+        <div class="paging">
+
+
+
+
+
+
+            <ul>
+
+
+
+                        <li><a href="#n" class="active">1</a></li>
+
+
+            </ul>
+
+
+        </div>
+        <!-- //paging -->
+        
+        </div>
+        <!-- //상품후기 -->
+
+        <!-- QnA -->
+        <div class="tab_cont" id="detail_cont03">
+        <h2 class="hid_obj">Q&amp;A</h2>
+        <div class="btn_area box_flex pd0_20">
+
+
+            <a href="#n" class="bt_mbgb"><span class="review_write">상품 Q&amp;A 쓰기</span></a>
+
+        </div>
+        <ul class="accordion review accordion_q">
+            <li class="pd10 t_c"><span class="f14">해당 상품 Q&amp;A가 존재하지 않습니다.</span></li>
+
+        </ul>
+
+        <!-- paging -->
+        <div class="paging">
+
+
+
+
+
+        </div>
+        <!-- //paging -->
+        </div>
+        <!-- //QnA -->
+    </div>
+
+    <div class="recobell_list_a">
+        <!-- category best -->
+        
+        <!-- //new item -->
+        
+        <!-- 레코벨 추천상품으로 변경 start -->
+        <!-- a003 -->
+		
+	        <div class="recobell_list">
+	        <h2>함께 구매하기 좋은 상품</h2>
+	        <div class="category detail_recobell2">
+	            <div class="swiper-container">
+	                <div class="swiper-wrapper">
+	                    
+	                        <div class="swiper-slide" id="slide0">
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1749/hot1553663363435.jpg" alt="[메이크-어-메모] 메모패드 24종 (택1)" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">[메이크-어-메모] 메모패드 24종 (택1)</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">10%</span>
+	                                            2,400
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1433/hot1497855315968.jpg" alt="[메모렛] 소프티 64G 플래티넘 실리콘 USB메모리" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">[메모렛] 소프티 64G 플래티넘 실리콘 USB메모리</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">20%</span>
+	                                            13,800
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide2">
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1374/S1488272253404.jpg" alt="라인드노트07라임(포켓)WSN-1074 (폼텍)327176" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">라인드노트07라임(포켓)WSN-1074 (폼텍)327176</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">30%</span>
+	                                            15,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1047/hot1532499024095.jpg" alt="짱구는못말려 투명스티커" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 투명스티커</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">40%</span>
+	                                            1,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide4">
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1843/hot1473143975685.jpg" alt="[무료 이니셜각인]웍스 노트 라인드 19 블랙 맥시" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">[무료 이니셜각인]웍스 노트 라인드 19 블랙 맥시</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">20%</span>
+	                                            18,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1397/hot1569205097739.jpg" alt="짱구는못말려 2020 데스크캘린더 " onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 2020 데스크캘린더 </p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">10%</span>
+	                                            7,500
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide6">
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1267/hot1557710587779.jpg" alt="짱구는못말려 씰스티커 " onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 씰스티커 </p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">20%</span>
+	                                            4,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/music/midi/7515/2515729.jpg" alt="PRESENT: YOU &amp; ME EDITION [정규 3집] [리패키지]" style="height:138px" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        	
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">PRESENT: YOU & ME EDITION [정규 3집] [리패키지]</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">19%</span>
+	                                            17,800
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide8">
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/music/midi/5425/2524587.jpg" alt="더 킹 [얼티밋 컬렉터스 박스 한정판]" style="height:138px" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        	
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">더 킹 [얼티밋 컬렉터스 박스 한정판]</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">30%</span>
+	                                            53,900
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                            	
+	                                    <a href="#n">
+	                                        <div class="thum">
+	                                        	
+	                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1604/hot1569386911140.jpg" alt="토닥토닥 로그북 8종 (만년형)" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                                        </div>
+	                                        <div class="desc">
+	                                        <p class="txt">토닥토닥 로그북 8종 (만년형)</p>
+	                                        <p class="price font_t">
+	                                        	<span class="percent">10%</span>
+	                                            8,550
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                </div>
+	                <!-- 스크롤바 -->
+                    <div class="swiper-scrollbar">
+	            </div>
+
+	        </div>
+	    	</div>
+</div>
+
+
+	        <div class="recobell_list">
+	        <h2>브랜드 연관상품</h2>
+	        <div class="category detail_recobell3">
+	            <div class="swiper-container">
+	                <div class="swiper-wrapper">
+	                    
+	                        <div class="swiper-slide" id="slide0">
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1397/hot1569205097739.jpg" alt="짱구는못말려 2020 데스크캘린더 " onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 2020 데스크캘린더 </p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">10%</span>
+	                                            7,500
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1213/hot1569547278155.jpg" alt="2020 빨강머리앤 감성다이어리 (날짜형)" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">2020 빨강머리앤 감성다이어리 (날짜형)</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">20%</span>
+	                                            10,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide2">
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1616/hot1545960482145.jpg" alt="빨강머리앤 포켓씰스티커" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">빨강머리앤 포켓씰스티커</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">10%</span>
+	                                            2,800
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1238/hot1539251871101.jpg" alt="짱구는못말려 먼슬리플래너패드" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 먼슬리플래너패드</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">20%</span>
+	                                            7,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide4">
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1451/hot1517911803663.jpg" alt="짱구는못말려 컨셉스티커" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 컨셉스티커</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">10%</span>
+	                                            1,500
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1572/hot1568853464745.jpg" alt="빨강머리앤 포스트카드 캘린더" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">빨강머리앤 포스트카드 캘린더</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">20%</span>
+	                                            6,500
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide6">
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1011/hot1569480746520.jpg" alt="2020 빨강머리앤 심플데코다이어리(날짜형)" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">2020 빨강머리앤 심플데코다이어리(날짜형)</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">10%</span>
+	                                            14,500
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1827/hot1569563454337.jpg" alt="빨강머리앤 샤인다이어리M" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">빨강머리앤 샤인다이어리M</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">20%</span>
+	                                            15,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                        <div class="swiper-slide" id="slide8">
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1047/hot1532499024095.jpg" alt="짱구는못말려 투명스티커" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">짱구는못말려 투명스티커</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">10%</span>
+	                                            1,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                            
+	                                    <a href="#n">
+	                                        <div class="thum">
+		                                        	
+		                                        	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1078/hot1539131960787.jpg" alt="빨강머리앤 먼슬리플래너패드" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>	                                        
+		                                    </div>
+	                                        <div class="desc">
+	                                        <p class="txt">빨강머리앤 먼슬리플래너패드</p>
+	                                        <p class="price font_t">
+	                                            <span class="percent">20%</span>
+	                                            7,000
+	                                        </p>
+	                                        </div>
+	                                    </a>
+	                        </div>
+	                    
+	                </div>
+	                <!-- 스크롤바 -->
+                    <div class="swiper-scrollbar">
+	            </div>
+
+	        </div>
+	        </div>
+        <!-- 레코벨 추천상품으로 변경 end -->
+    </div>
+    
+<!-- //상세 -->
+</div>
+</div>
+    
+</div>    
+    
+<script>
+$(document).ready(function() {
+    footerFn(); //footer
+});
+function footerFn(){//footer
+	$('#footer .btn_cont').on('click', function(){
+		if($("#footer .txt").hasClass('on')){
+ 		   $("#footer .txt").removeClass('on');
+ 		   $("#footer .inner .btn_cont").removeClass('open');
+	   	}else{
+ 		   $("#footer .txt").addClass('on');
+           $("#footer .inner .btn_cont").addClass('open');
+	   	}
+    })
+}
+</script>
+  <!-- footer -->
+	<div id="footer">
+		<div class="inner">
+			<p>고객센터 <em class="font_t">1661-1112</em></p>
+			<div class="util_menu">
+		        <ul>
+		            <li><a href="#n" _traget="_blank" _onclick="winOpen('http://www.hottracks.co.kr/heart/');return false;">핫트합니다</a></li>
+		            <li><a href="#n" _traget="_blank" _onclick="winOpen('http://www.hottracks.co.kr/ht/welcomeMain/viewRule');return false;">이용약관</a></li>
+		            <li><a href="#n" _traget="_blank" _onclick="winOpen('http://www.hottracks.co.kr/ht/welcomeMain/privacy');return false;"><strong>개인정보취급방침</strong></a></li>
+		        </ul>
+		    </div>
+			<div class="cont">
+				<a href="#n" _traget="_blank" _onclick="winOpen('http://www.hottracks.co.kr/heart/');return false;">
+					<img src="/images/biz/common/img_award.png" alt="소셜아이어워드 2019">
+				</a>
+				<ul class="sns_wrap">
+		            <li class="ig"><a href="#n" _traget="_blank" _onclick="linkToInstagram('home');return false;">instagram</a></li>
+		            <li class="fb"><a href="#n" _traget="_blank" _onclick="winOpen('https://www.facebook.com/HOTTRACKSFRIEND/');return false;">facebook</a></li>
+		            <li class="tt"><a href="#n" _traget="_blank" _onclick="goTwitter('모바일핫트랙스', 'http://m.hottracks.co.kr/');return false;">twitter</a></li>
+		            <li class="bg"><a href="#n" _traget="_blank" _onclick="winOpen('https://hottracks91.blog.me/');return false;">blog</a></li>
+		            <li class="yt"><a href="#n" _traget="_blank" _onclick="winOpen('https://www.youtube.com/channel/UCqQkoRX4rN-RCbBqVPUv3Hg');return false;">youtube</a></li>
+		        </ul>
+			</div>
+			<a href="javascript://;" class="btn_cont">교보핫트랙스(주)</a>
+			<div class="txt">
+				<span>대표이사 박영규</span>
+				<span>사업자등록번호 : 102-81-29258</span>
+				<span>통신판매업신고번호 : 제 2012-경기파주-3911호</span>
+				<span>주소 : 경기도 파주시 회동길 78 (출판단지내)</span>
+				<span>개인정보보호책임자 : 김재식</span>
+				<span>이메일 : PRIVACY@HOTTRACKS.CO.KR</span>
+				<span class="copyright">ⓒ Kyobo Hottracks inc.</span>
+			</div>
+		</div>
+	</div>
+	<!--// footer -->
+</div>
+</body>
+</html>

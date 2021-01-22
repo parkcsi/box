@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+#contents div.main-ranking {
+	clear: both;
+	width: 755px;
+}
+#contents div.main-ranking h3 {
+	padding: 5px 0 29px 1px;
+}
+#contents div.main-ranking p.title-info {
+	padding: 0 0 43px 3px;
+}
+#contents div.main-ranking div.menu-link {
+	height: 48px;
+}
+#contents div.main-ranking div.menu-link ul li {
+	float: left;
+}
+#contents div.main-ranking div.menu-sort {
+	height: 35px;
+}
+#contents div.main-ranking div.menu-sort ul li { display: inline;padding: 0 11px;background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/ranking/menu_sort_bar.gif") no-repeat 0 0; }
+#contents div.main-ranking div.menu-sort ul li.first-child,
+#contents div.main-ranking div.menu-sort ul li:first-child { background: none; }
+#contents div.main-ranking div.ranking-list {
+	float: left;
+	width: 755px;
+	background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/ranking/ranking_bg.gif") no-repeat 0 7px;
+}
+#contents div.main-ranking div.ranking-list ul li {
+	position: relative;
+	float: left;
+	width: 188px;
+	height: 310px;
+}
+#contents div.main-ranking div.ranking-list ul li p.ranking {
+	position: absolute;
+	left: 22px;
+	top: 2px;
+}
+#contents div.main-ranking div.ranking-list ul li p.up-down {
+	position: absolute;
+	left: 55px;
+	top: 8px;
+	font-weight: bold;
+}
+#contents div.main-ranking div.ranking-list ul li p.up-down span.up {
+	color: #d12324;
+}
+#contents div.main-ranking div.ranking-list ul li p.photo {
+	padding: 27px 0 0 23px;
+	width: 146px;
+}
+#contents div.main-ranking div.ranking-list ul li p.photo img {
+	width: 120px;
+	height: 120px;
+	border: 13px solid #f6f6f6;
+}
+#contents div.main-ranking div.ranking-list ul li p.brand-name {
+	padding: 10px 0 0 23px;
+	width: 146px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li p.product-name {
+	padding: 3px 0 0 23px;
+	width: 146px;
+	text-align: center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#contents div.main-ranking div.ranking-list ul li p.product-name a {
+	line-height: 1.3em !important;
+}
+#contents div.main-ranking div.ranking-list ul li p.price {
+	padding: 5px 0 0 23px;
+	width: 146px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li p.product-icon {
+	padding: 5px 0 0 23px;
+	width: 146px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li p.delivery {
+	padding: 5px 0 0 23px;
+	width: 146px;
+	height: 17px;
+	text-align: center;
+}
+
+#contents div.main-ranking div.ranking-list ul li p.origin-price {
+	font-weight: bold;
+	text-align: center;
+
+}
+#contents div.main-ranking div.ranking-list ul li p.price {
+	font-weight: bold;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 {
+	float: left;
+	width: 378px;
+	height: 454px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.ranking {
+	position: static;
+	float: left;
+	padding: 6px 0 0 34px;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.up-down {
+	position: static;
+	float: left;
+	padding: 15px 0 0 20px;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.photo {
+	clear: both;
+	padding: 0 0 0 63px;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.photo img {
+	width: 200px;
+	height: 200px;
+	border: 20px solid #fff;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.brand-name {
+	padding: 11px 0 2px 89px;
+	width: 200px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.product-name {
+	padding: 0 0 0px 89px;
+	width: 200px;
+	text-align: center;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+#contents div.main-ranking div.ranking-list ul li.type1 p.price {
+	padding: 0 0 3px 89px;
+	width: 200px;
+	font-weight: bold;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.product-icon {
+	padding: 0 0 3px 89px;
+	width: 200px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type1 p.delivery {
+	padding: 0 0 3px 89px;
+	width: 200px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 {
+	float: left;
+	width: 377px;
+	height: 222px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.ranking {
+	position: absolute;
+	left: 300px;
+	top: 42px;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.up-down {
+	position: absolute;
+	left: 270px;
+	top: 45px;
+}
+
+#contents div.main-ranking div.ranking-list ul li.type2 p.photo {
+	float: left;
+	padding: 30px 0 0 44px;
+	width: 190px;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.photo img {
+	width: 150px;
+	height: 150px;
+	border: 10px solid #f3f3f3;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.brand-name {
+	float: left;
+	padding: 112px 0 0;
+	width: 110px;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.product-name {
+	float: left;
+	padding: 3px 0 0;
+	width: 110px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.origin-price {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	font-weight: bold;
+	text-decoration: line-through;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.price {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	font-weight: bold;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.product-icon {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+}
+#contents div.main-ranking div.ranking-list ul li.type2 p.delivery {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 {
+	float: left;
+	width: 377px;
+	height: 232px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.ranking {
+	position: absolute;
+	left: 300px;
+	top: 4px;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.up-down {
+	position: absolute;
+	left: 270px;
+	top: 7px;
+}
+
+#contents div.main-ranking div.ranking-list ul li.type3 p.photo {
+	float: left;
+	padding: 0 0 0 44px;
+	width: 190px;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.photo img {
+	width: 150px;
+	height: 150px;
+	border: 10px solid #f3f3f3;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.brand-name {
+	float: left;
+	padding: 70px 0 0;
+	width: 110px;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.product-name {
+	float: left;
+	padding: 3px 0 0;
+	width: 110px;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.origin-price {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	font-weight: bold;
+	text-decoration: line-through;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.price {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	font-weight: bold;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.product-icon {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+}
+#contents div.main-ranking div.ranking-list ul li.type3 p.delivery {
+	float: left;
+	padding: 5px 0 0;
+	width: 110px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 {
+	float: left;
+	width: 251px;
+	height: 386px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type5 {
+	float: left;
+	width: 252px;
+	height: 386px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type6 {
+	float: left;
+	width: 252px;
+	height: 386px;
+	overflow: hidden;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.ranking,
+#contents div.main-ranking div.ranking-list ul li.type5 p.ranking,
+#contents div.main-ranking div.ranking-list ul li.type6 p.ranking {
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.up-down,
+#contents div.main-ranking div.ranking-list ul li.type5 p.up-down,
+#contents div.main-ranking div.ranking-list ul li.type6 p.up-down {
+	position: absolute;
+	left: 77px;
+	top: 27px;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.photo,
+#contents div.main-ranking div.ranking-list ul li.type5 p.photo,
+#contents div.main-ranking div.ranking-list ul li.type6 p.photo {
+	padding: 40px 0 0 37px;
+	width: 180px;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.photo img,
+#contents div.main-ranking div.ranking-list ul li.type5 p.photo img,
+#contents div.main-ranking div.ranking-list ul li.type6 p.photo img {
+	width: 150px;
+	height: 150px;
+	border: 15px solid #f6f6f6;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.brand-name,
+#contents div.main-ranking div.ranking-list ul li.type5 p.brand-name,
+#contents div.main-ranking div.ranking-list ul li.type6 p.brand-name {
+	padding: 10px 0 0 37px;
+	width: 180px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.product-name,
+#contents div.main-ranking div.ranking-list ul li.type5 p.product-name,
+#contents div.main-ranking div.ranking-list ul li.type6 p.product-name {
+	padding: 3px 0 0 37px;
+	width: 180px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.origin-price,
+#contents div.main-ranking div.ranking-list ul li.type5 p.origin-price,
+#contents div.main-ranking div.ranking-list ul li.type6 p.origin-price {
+	padding: 5px 0 0 37px;
+	width: 180px;
+	font-weight: bold;
+	text-align: center;
+	
+}
+#contents div.main-ranking div.ranking-list ul li p.origin-price span {
+    text-decoration: line-through;  
+}
+#contents div.main-ranking div.ranking-list ul li p.origin-price strong {
+     color:#da2128; 
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.price,
+#contents div.main-ranking div.ranking-list ul li.type5 p.price,
+#contents div.main-ranking div.ranking-list ul li.type6 p.price {
+	padding: 5px 0 0 37px;
+	width: 180px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.product-icon,
+#contents div.main-ranking div.ranking-list ul li.type5 p.product-icon,
+#contents div.main-ranking div.ranking-list ul li.type6 p.product-icon {
+	padding: 3px 0 0 37px;
+	width: 180px;
+	text-align: center;
+}
+#contents div.main-ranking div.ranking-list ul li.type4 p.delivery,
+#contents div.main-ranking div.ranking-list ul li.type5 p.delivery,
+#contents div.main-ranking div.ranking-list ul li.type6 p.delivery {
+	padding: 5px 0 0 37px;
+	width: 180px;
+	text-align: center;
+}

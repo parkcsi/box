@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+html, body {
+	padding:0px;
+	margin:0px;	
+	background:url('/images/musicPlayer/mp_bg.jpg') no-repeat top left;	
+	font-family:돋움;
+}
+
+img {border:0;}
+
+a {text-decoration:none;}
+a:hover {text-decoration:none;}
+a, img, input {selector-dummy: expression(this.hideFocus=true);}
+
+
+.track_no {text-align:left; font-weight:bold; font-size:11px; color:#c84f5c;}
+.track_title {text-align:left; font-weight:normal; font-size:11px; color:#585858;}
+.track_time {text-align:right; font-size:10px; font-family:Arial; color:#848484;}
+
+.album_title {text-align:left; font-size:12px; color:#bb2838; font-weight:bold; padding-left:15px;}
+.album_info {text-align:left; font-size:11px; color:#585858;}
+.album_info .price {text-align:left; font-size:11px; font-weight:bold; color:#d14659;}
+

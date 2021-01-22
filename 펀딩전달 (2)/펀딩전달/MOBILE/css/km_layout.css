@@ -1,0 +1,204 @@
+@charset "utf-8";
+.container_box { margin:0 -10px; }
+
+.main_title{display:block;padding:0 10px;min-width:280px}
+.main_title span{display:inline-block;margin:5px 0 0 0}
+.main_title:after{content:'';display:block;clear:both;}
+.main_title a{float:right}
+
+.main_title2{margin:15px 0 0;padding-left:10px;border-bottom:1px solid #b5b5b5;}
+.main_title2 .title_tab{float:left;display:block;white-space:nowrap;overflow:hidden;width:27%;height:17px;padding:7px 3px 0;margin-top:3px;background-color:#f2f2f2;border:1px solid #e2e2e2;border-bottom-width:0;text-align:center;color:#333;font-weight:bold;}
+.main_title2 .title_tab:first-child {border-left-width:1px;}
+.main_title2 .title_tab span{display:inline-block;padding:0 9px;margin:0 -9px;}
+.main_title2 .title_tab.on{padding:8px 10px 0;height:20px;margin-top:0;background-color:#fff;border-color:#b5b5b5;color:#333;margin-bottom:-1px;}
+.main_title2 .title_tab.on span {background:url('http://image.kyobobook.com/mimages/static/images/main/arr_down_orange.gif') no-repeat right center;}
+.main_title2:after{content:'';display:block;clear:both;}
+.main_title2 .btn_util{float:right;height:18px;padding:4px 7px 0;}
+@media only screen and (max-width : 300px) {
+.main_title2 .title_tab{font-size:11px;}
+}
+
+.main_title3 {padding:6px 10px 10px 15px;margin:15px 10px 0;border-bottom:1px solid #d6d5d5;box-shadow:0 -2px 0 0 #fff inset;background:#f5f5f5 url('http://image.kyobobook.com/mimages/static/images/main/arr_right_blue.gif') no-repeat 5px 10px;font-size:13px;font-weight:bold;}
+
+.btn_move_circle {position:relative; margin-top:10px;text-align:center;vertical-align:middle;}
+.btn_move_circle a {display:inline-block; width:8px;height:8px;margin:0 10px;padding:5px; font-size:0;line-height:0;color:transparent; vertical-align:middle; background:url('http://image.kyobobook.com/mimages/static/images/common/btn_move_off.gif') no-repeat center center;background-size:8px 8px;}
+.btn_move_circle a.on {background-image:url('http://image.kyobobook.com/mimages/static/images/common/btn_move_on02.gif');}
+
+.btn_move_area{margin:5px 0 10px;text-align:center;}
+.btn_move_area .btn_move_prev,
+.btn_move_area .btn_move_next {display:inline-block;width:14px;vertical-align:middle;border:1px solid #adadad;width:14px;text-align:center;padding:5px 7px 4px 7px;background:url('http://image.kyobobook.com/mimages/static/images/common/bg_gradation_white03.gif') repeat-x left bottom;}
+.btn_move_area .btn_move_prev img,
+.btn_move_area .btn_move_next img{width:7px;height:11px;margin:-3px 0 0 0;}
+.btn_move_area .btn_move_circle{margin:0;display:inline;margin:0 20px;}
+.btn_move_area .btn_move_circle a{margin:0 2px;padding:0;}
+
+/* 메인화면 태블릿 스타일 초기화 */
+#stateRank,
+#nowBook,
+#bestRank {display:block;}
+
+/* 기프트 GNB */
+#txtNaviGift {border-bottom:1px solid #d3dae2; height:40px; width:100%; overflow:hidden;position:relative;}
+#txtNaviGift ul { margin-top:12px; margin-right:2.5%;}
+#txtNaviGift ul:after {content:'';display:block;clear:both; }
+#txtNaviGift li { position:relative;float:left;width:33%;height:20px;background:url('http://image.kyobobook.com/mimages/static/images/hottracks/line_dashed.gif') left 0 repeat-y; -webkit-text-stroke-width: 0.50px; letter-spacing:0.6px; padding:0;text-align:center; font-size:14px; }
+#txtNaviGift li a { font-weight:bold;padding-bottom:11px;margin-left:1px;width:100%;display:inline-block; }
+#txtNaviGift li.on a { border-bottom: 3px solid #d4302f;color:#d4302f; }
+#txtNaviGift li img {margin:-4px 3px 0 3px; vertical-align:bottom; /*margin:-2px 3px 0 3px;*/}
+#txtNaviGift li:nth-child(1) { background:none;width:34%; }
+
+/* 기프트 - 메인배너 */
+#giftBanner { padding-bottom:10px; }
+.giftBannerSet {position:relative;overflow:hidden; padding-bottom:1px;border-bottom:1px solid #efefef;}
+.giftBannerSet li {display:none; }
+.giftBannerSet li:first-child {display:block;}
+.giftBannerSet a {display:block;width:400px;margin:auto;max-width:100%;}
+.giftBannerSet a img {width:400px; }
+@media only screen and (max-width : 400px) {
+.giftBannerSet li { }
+.giftBannerSet a {width:100%;overflow:hidden;}
+.giftBannerSet a img {width:100%; }
+}
+
+/* 기프트 - SALE */
+.list_type_kbh2{margin-bottom:20px;font-family:"돋움" , "Dotum" , "Verdana",  sans-serif;}
+
+.list_type_kbh2 .gift_info{ overflow:hidden; }
+.list_type_kbh2 .gift_info dl {overflow:hidden;padding:15px 10px;border-bottom:1px solid #cdcdcd;/*height:110px*/}/*20111027 gumihye del*/
+.list_type_kbh2 .gift_info dl dt { margin-bottom:5px;line-height:1.3em;color:#333333;font-size:15px;font-weight:bold;letter-spacing:-1px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.list_type_kbh2 .gift_info .last{border-bottom:none}
+.list_type_kbh2 .gift_info .s_tit{font-size:17px;color:#777777}
+.list_type_kbh2 .gift_info dl ul li{ float:none;line-height:1.3em; }
+.list_type_kbh2 .gift_info dl ul li img {  }
+.list_type_kbh2 .gift_info_uSearchTitile {width:100%; padding:10px 0; border-bottom:1px solid #cccccc; background:#eeeeee; font-size:14px; text-align:center; -webkit-text-stroke-width: 0.50px; letter-spacing:0.6px;}
+
+.list_type_kbh2 .gift_detail ul{overflow:hidden}
+.list_type_kbh2 .gift_detail ul li{width:230px; margin:0 0 1px 0;background:none;border:none; line-height:1.2;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+
+@media only screen and (min-width : 321px) {
+.list_type_kbh2 .gift_detail ul li{width:auto;margin:0 auto}
+}
+.list_type_kbh2 .gift_detail .write .name{color:#555555;}
+.list_type_kbh2 .gift_detail .write .publisher{margin-left:5px;padding:0 0 0 5px;color:#999999;background:url('http://image.kyobobook.com/mimages/static/images/common/line_v_gray11.gif') no-repeat 0 50%;}
+.list_type_kbh2 .gift_detail .price *{vertical-align:middle;}
+.list_type_kbh2 .gift_detail .price .won{color:#fd4700;padding:0 5px 0 0}
+.list_type_kbh2 .gift_detail .price .p_price{color:#fd4700;font-size:14px}
+.list_type_kbh2 .gift_detail .price .won{font-size:14px}
+.list_type_kbh2 .gift_detail .grade_img img{ margin-top:1px; vertical-align:middle; margin-right:2px;width:10px;height:10px}
+.list_type_kbh2 .gift_detail .grade_img .review{padding:0 0 0 9px}
+.list_type_kbh2 .gift_detail .grade_img .review .point{padding:0 0 0 5px}
+.list_type_kbh2 .gift_detail .facebook{position:relative;margin:5px 0 0 0}
+.list_type_kbh2 .gift_detail .facebook .review{position:relative;left:10px;top:3px;width:24px;height:16px;padding:0 10px;background:#efefef;font-size:12px;border:1px solid #c1c1c1;}
+.list_type_kbh2 .gift_detail .facebook img{vertical-align:top}
+.list_type_kbh2 .gift_detail .facebook .review span{position:absolute;left:-6px;width:24px;height:16px;padding:1px 0 0 4px;background:url('http://image.kyobobook.com/mimages/static/images/common/bg_baloom_left.gif') no-repeat 1px 5px;font-size:11px;vertical-align:middle;color:#555;text-align:center}
+
+/* 음반 GNB */
+#txtNaviMuc {border-bottom:1px solid #d3dae2; height:40px; width:100%; overflow:hidden;position:relative;}
+#txtNaviMuc ul { margin-top:12px; margin-right:2.5%;}
+#txtNaviMuc ul:after {content:'';display:block;clear:both; }
+#txtNaviMuc li { position:relative;float:left;width:25%;height:20px;background:url('http://image.kyobobook.com/mimages/static/images/hottracks/line_dashed.gif') left 0 repeat-y; -webkit-text-stroke-width: 0.50px; letter-spacing:0.6px; padding:0;text-align:center; font-size:14px; }
+#txtNaviMuc li a { font-weight:bold;padding-bottom:11px;margin-left:1px;width:100%;display:inline-block; }
+#txtNaviMuc li.on a { border-bottom: 3px solid #d4302f;color:#d4302f; }
+#txtNaviMuc li img {margin:-4px 3px 0 3px; vertical-align:bottom; /*margin:-2px 3px 0 3px;*/}
+#txtNaviMuc li:nth-child(1) { background:none; }
+
+/* 공통 - 강력추천/DAILY BEST */
+.list_type_kbh{overflow:hidden;margin:0;padding:50px 0 10px;}
+.list_type_kbh:after{content:'';display:block;clear:both;}
+.list_type_kbh li{position:relative;float:left; width:50%; overflow: hidden;text-align:center;}
+.list_type_kbh li a {display:inline-block;color:#333;}
+.list_type_kbh li dt,
+.list_type_kbh li dd { font-family:"돋움" , "Dotum" , "Verdana",  sans-serif;font-size:12px;line-height:15px; }
+.list_type_kbh li .img{ border: 1px solid #C6C6C6;margin: 0 15px 18px;width: 120px;text-align:center;background-color:#FFF; }
+.list_type_kbh li .img img{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);width:120px;height:120px; }
+.list_type_kbh li .img.dvd img { width:78px; }
+.list_type_kbh li .brand{padding:0 10px 0;max-width:150px;text-align:center;line-height:1.2em;height:1.2em;overflow:hidden;letter-spacing:-1px; margin-bottom:4px; text-overflow:ellipsis;white-space:nowrap;}
+.list_type_kbh li .brand:after{content:'';display:block;clear:both;}
+.list_type_kbh li .tit{padding:0 10px;text-align:center;max-width:150px;overflow:hidden;letter-spacing:-1px; margin-bottom:4px; text-overflow:ellipsis;white-space:nowrap; }
+.list_type_kbh li .tit:after{content:'';display:block;clear:both;}
+.list_type_kbh li .artist{padding:0 10px;text-align:center;overflow:hidden;letter-spacing:-1px; margin-bottom:4px; text-overflow:ellipsis;white-space:nowrap;color:#999;}
+.list_type_kbh li .artist:after{content:'';display:block;clear:both;}
+.list_type_kbh li .discount {position:absolute;top:112px;left:50%;z-index:10; margin-left:22px;width:37px; height:24px;padding:14px 0 0 1px; font-weight:bold;color:#fff;background:url('http://image.kyobobook.com/mimages/static/images/common/bg_discount.png') no-repeat left top;text-align:center;}
+.list_type_kbh li .book_price {color: #FD4700; /*-webkit-text-stroke-width: 0.50px;*/ letter-spacing: 0.6px;margin-bottom:15px; }
+.list_type_kbh li .book_price strong {font-weight:bold;}
+.list_type_kbh li .dc_rate {display:inline-block;font-weight:bold;}
+
+@media only screen and (max-width : 320px) {
+.list_type16 li a {display:block;color:#333;}
+.list_type16 li .img img { width:80%; height:auto;padding:0; }
+.list_type16 li .brand,
+.list_type16 li .tit,
+.list_type16 li .artist{ width:80%;}
+}
+
+
+#dailyBest { }
+.dailyBestSet { position:relative;overflow:hidden; display:none; }
+.dailyBestSet.on {display:block;}
+.dailyBestSet ul {display:none;}
+.dailyBestSet ul:first-child {display:block;}
+
+/* 음반 - 핫이슈 */
+#hotIssue { background-image: url("http://image.kyobobook.com/mimages/static/images/main/bg_todaybook_l.gif"), url("http://image.kyobobook.com/mimages/static/images/main/bg_todaybook_r.gif"), url("http://image.kyobobook.com/mimages/static/images/main/bg_todaybook_m.gif");background-position: left 60px, right 60px, left 60px;background-repeat: no-repeat, no-repeat, repeat-x;position:relative;margin-bottom:35px;}
+#hotIssue .hot_tit { font-family:arial;font-size: 16px;padding:10px;font-weight:bold;border-bottom:1px solid #dadada; }
+#hotIssue .hot_tit span { color:#d52f2f;background:url("http://image.kyobobook.com/mimages/static/images/hottracks/bar_tit_muc.jpg") 0 2px no-repeat;padding-left:10px; }
+
+.hotIssueSet {position:relative;overflow:hidden; padding-bottom:2px;height:180px;margin:0 30px; }
+.hotIssueSet li {display:none;height:145px;padding-top:35px; }
+.hotIssueSet li a { width:100%; }
+.hotIssueSet li dl { position:relative; }
+.hotIssueSet li .image_album { margin:0 10px 10px 0;border:1px solid #C6C6C6;width:120px;text-align:center;background-color:#FFF;position:absolute;left:0;top:0; }
+.hotIssueSet li .image_album img { width:120px;height:120px; }
+.hotIssueSet li .image_album.dvd img { width:78px; }
+.hotIssueSet li:first-child {display:block;}
+.hotIssueSet li dd { font-family:"돋움" , "Dotum" , "Verdana",  sans-serif;font-size:12px;line-height:15px;margin-left:130px; }
+.hotIssueSet li .title { font-weight:bold;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color:#000; }
+.hotIssueSet li .artist { color:#999;margin-bottom:5px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top:10px; }
+.hotIssueSet li .price { color:#1169C2; }
+.hotIssueSet li .price .p_price { font-weight:bold;color:#fc4800; }
+.hotIssueSet li .price .won { color:#fc4800; }
+.hotIssueSet li .rlse_dt { color:#999;margin-bottom:5px;font-szie:11px; }
+.hotIssueSet li .grade_img { color:#1169C2;margin-bottom:5px; }
+.hotIssueSet li .grade_img img { width:10px;height:10px;vertical-align:middle; }
+#hotIssue .btn_move_area .btn_move_prev { background:none;border:none;position:absolute;left:0;top:50%; }
+#hotIssue .btn_move_area .btn_move_prev img { width:auto;height:auto; }
+#hotIssue .btn_move_area .btn_move_next { background:none;border:none;position:absolute;right:0;top:50%; }
+#hotIssue .btn_move_area .btn_move_next img { width:auto;height:auto; }
+
+@media only screen and (max-width : 300px) {
+#hotIssue { background-position: left 185px, right 185px, left 185px; }
+.hotIssueSet { height:305px; }
+.hotIssueSet li { height:270px; }
+.hotIssueSet li .image_album { float:none;margin-right:5%; }
+}
+
+/* 음반 - 이벤트NOW */
+#eventNow { padding:20px 3%; }
+#eventNow .btn_util_kbh {
+background: url("http://image.kyobobook.com/mimages/static/images/common/bg_gradation_white.gif") repeat-x scroll left bottom rgba(0, 0, 0, 0);
+display:block;
+font-family:"돋움" , "Dotum" , "Verdana",  sans-serif;
+font-size: 12px;
+font-weight:bold;
+height: 26px;
+letter-spacing: 0.6px;
+padding-top: 12px;
+text-align: center;
+border: 1px solid #AAAAAA;
+border-radius: 3px;
+color: #555555;
+ }
+#eventNow .btn_util_kbh img { margin-left:10px;vertical-align:middle; }
+
+/* 화면 크기에 따른 조정 */
+@media only screen and (min-width : 768px) {
+
+#dailyBest {position:static;left:auto;top:auto;width:auto;height:auto;border-bottom:none;}
+    
+#mdRecm h2.txt_2 {margin-top:15px;}
+
+#bestRank .main_title2 {padding-left:10px;}
+
+#giftBanner {margin-top:0px;}
+.giftBannerSet {border-bottom:1px solid #efefef;}
+}
