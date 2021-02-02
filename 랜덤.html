@@ -2,38 +2,409 @@
 <html>
 <head>
 	<title></title>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-		})
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<style type="text/css">
 		*{margin:0; padding:0;}
 		li{list-style:none;}
-		a{text-decoration:none;}
+		a{text-decoration:none; color:#000;}
+		.wrap{width:700px; margin:0 auto; padding-top:100px; overflow:hidden;}
+		.hang{float:left; width:300px;}
+		.hang > li{margin-bottom:20px;}
+		.hang li input{display:inline-block; vertical-align:middle;}
+		.yeol{overflow:hidden; display:inline-block; vertical-align:middle; margin-left:10px;}
+		.yeol li{float:left; margin-right:10px;}
+		dl dt{color:#fff;}
+		dl dt.on{color:#000;}
+		.quiz_wrap{width:395px; float:right; text-align:center;}
+		.quiz_wrap .quiz_con{margin-bottom:20px;}
+		.quiz_wrap .quiz_con dl{font-size:80px;}
+		.quiz_wrap a{display:inline-block; width:50px; line-height:30px; text-align:center; font-weight:bold; background:#eeeeee; border:1px solid #dddddd;}
 	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var ja = [];
+			var ja_random;
+			var timer;
+			$(document).on("click", ".change", function(){
+				ja.length = 0;
+				$("input:checkbox[name=ja_check]").each(function() {
+					if($(this).is(":checked") == true){
+						for(var i = 0; i < $(this).siblings(".yeol").find("li").length; i++){
+							ja.push($(this).siblings(".yeol").find("li").eq(i).html());
+						}
+					};
+				});
+
+				ja_random = ja[Math.floor(Math.random() * ja.length)];
+				$(".quiz_con").html(ja_random);
+			});
+			$(document).on("click", ".open", function(){
+				$(this).siblings(".quiz_con").find("dt").addClass("on");
+			});
+			$(document).on("click", ".auto", function(){
+				$(this).text("정지").addClass("stop").removeClass("auto");
+				timer = setInterval(function(){
+					$(".change").click();
+					setTimeout(function(){
+						$(".open").click();
+					}, 2000);
+				}, 3000);
+			});
+			$(document).on("click", ".stop", function(){
+				$(this).text("자동").addClass("auto").removeClass("stop");
+				clearInterval(timer);
+				
+			});
+		})
+	</script>
 </head>
 <body>
-<div class="wrap">
-	<ul class="hang">
-		<li>
-			<input type="checkbox" name="">
-			<ul class="yeol">
-				<li>
-					<span class="white">あ</span>
-					<span class="black">[a]</span>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<div class="quiz_wrap">
-		<a href="#">문제내기</a>
-		<div class="quiz_con">
-			
+	<div class="wrap">
+		<p>체크한 범위에서 퀴즈가 출제됩니다.</p>
+		<ul class="hang">
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>あ</dt>
+							<dd>[a]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>い</dt>
+							<dd>[i]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>う</dt>
+							<dd>[u]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>え</dt>
+							<dd>[e]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>お</dt>
+							<dd>[o]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>か</dt>
+							<dd>[ka]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>き</dt>
+							<dd>[ki]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>く</dt>
+							<dd>[ku]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>け</dt>
+							<dd>[ke]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>こ</dt>
+							<dd>[ko]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>さ</dt>
+							<dd>[sa]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>し</dt>
+							<dd>[si]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>す</dt>
+							<dd>[su]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>せ</dt>
+							<dd>[se]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>そ</dt>
+							<dd>[so]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>た</dt>
+							<dd>[ta]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ち</dt>
+							<dd>[ti]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>つ</dt>
+							<dd>[tu]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>て</dt>
+							<dd>[te]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>と</dt>
+							<dd>[to]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>な</dt>
+							<dd>[na]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>に</dt>
+							<dd>[ni]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ぬ</dt>
+							<dd>[nu]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ね</dt>
+							<dd>[ne]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>の</dt>
+							<dd>[no]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>は</dt>
+							<dd>[ha]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ひ</dt>
+							<dd>[hi]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ふ</dt>
+							<dd>[hu]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>へ</dt>
+							<dd>[he]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ほ</dt>
+							<dd>[ho]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>ま</dt>
+							<dd>[ma]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>み</dt>
+							<dd>[mi]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>む</dt>
+							<dd>[mu]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>め</dt>
+							<dd>[me]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>も</dt>
+							<dd>[mo]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>や</dt>
+							<dd>[ya]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ゆ</dt>
+							<dd>[yu]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>よ</dt>
+							<dd>[yo]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>ら</dt>
+							<dd>[ra]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>り</dt>
+							<dd>[ri]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>る</dt>
+							<dd>[ru]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>れ</dt>
+							<dd>[re]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>ろ</dt>
+							<dd>[ro]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>わ</dt>
+							<dd>[wa]</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>を</dt>
+							<dd>[wo]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name="ja_check">
+				<ul class="yeol">
+					<li>
+						<dl>
+							<dt>ん</dt>
+							<dd>[n]</dd>
+						</dl>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="quiz_wrap">
+			<div class="quiz_con">
+				<dl>
+					<dt>あ</dt>
+					<dd>[a]</dd>
+				</dl>
+			</div>
+			<a href="#" class="change">출제</a>
+			<a href="#" class="auto">자동</a>
+			<a href="#" class="open">확인</a>
 		</div>
-		<a href="#" class="open">확인</a>
 	</div>
-</div>
 </body>
 </html>
